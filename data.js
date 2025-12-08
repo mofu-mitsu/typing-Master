@@ -92,5 +92,58 @@ const schoolData = [
         reaction_good: "絵丹師「……チッ。わかったよ。」",
         reaction_bad: "絵丹師「……集中力、散漫してるよ。」",
         image: "enishi.png"
+    },
+    { 
+        id: "inst_01", 
+        subtype: "instruction", 
+        text: "廊下を走らないこと。怪我をしますよ。", 
+        kana: "ろうかをはしらないこと。けがをしますよ。", 
+        romaji: "rouka wo hasiranai koto kega wo simasu yo", 
+        start_msg: "（生活指導部からの連絡事項です）",
+        reaction_good: "生活指導部「周知徹底、ありがとうございます。」",
+        reaction_bad: "生活指導部「先生、噛んでますよ。威厳が台無しです。」",
+        image: "teacher_03.png" // 村雨先生（冷酷物理教師）のイメージ？
+    },
+    { 
+        id: "inst_02", 
+        subtype: "instruction", 
+        text: "進路希望調査票の提出期限は明日までです。", 
+        kana: "しんろきぼうちょうさひょうのていしゅつきげんはあすまでです。", 
+        romaji: "sinrokibouchousahyou no teisyutsukigen wa asu made desu", 
+        start_msg: "（ホームルームでの伝達事項です）",
+        reaction_good: "校長「うむ。期限厳守は社会人の基本だね。」",
+        reaction_bad: "校長「おや？ 先生が期限を忘れてはいかんよ？」"
+    },
+    { 
+        id: "inst_mei", 
+        subtype: "instruction", 
+        text: "あわわっ！黒板消し落としちゃいましたぁ〜💦", 
+        kana: "あわわっ！こくばんけしおとしちゃいましたぁ〜💦", 
+        romaji: "awawa kokubankesi otosite simaimasita", 
+        start_msg: "芽衣先生「せ、先生！助けてくださぁい！」",
+        reaction_good: "芽衣先生「拾ってくれてありがとうございますぅ😭✨」",
+        reaction_bad: "芽衣先生「あぅっ…先生までつられて転ばないでくださいぃ💦」",
+        image: "mei_icon.png"
+    },
+    { 
+        id: "inst_katsumi", 
+        subtype: "instruction", 
+        text: "気合いだ！声が小さいぞ！グラウンド１０周！", 
+        kana: "きあいだ！こえがちいさいぞ！ぐらうんどじゅっしゅう！", 
+        romaji: "kiaida koe ga tiisai zo guraundo jussyuu", 
+        start_msg: "克己先生「おーい先生！生徒への檄（げき）を頼む！」",
+        reaction_good: "克己先生「いい声だ！それが青春だ！！🔥」",
+        reaction_bad: "克己先生「なんだその情けないタイプミスは！腕立て伏せだ！」",
+        image: "katsumi_icon.png"
+    },
+    { 
+        id: "inst_science", 
+        subtype: "instruction", 
+        text: "理科室のビーカーを割ったのは誰ですか？", 
+        kana: "りかしつのびーかーをわったのはだれですか？", 
+        romaji: "rikasitsu no bi-ka- wo watta no wa dare desu ka", 
+        start_msg: "（職員室にて、犯人探し中…）",
+        reaction_good: "村雨先生「…正直に名乗り出れば、減刑してやります。」",
+        reaction_bad: "村雨先生「…動揺していますね。まさか先生、貴方が？」"
     }
 ];
