@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+/* =========================================
+   全体レイアウト
+   ========================================= */
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-y: auto;
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.hidden { display: none !important; }
+
+/* =========================================
+   1. スタート画面（可愛く！）
+   ========================================= */
+#start-screen {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 2000;
+}
+
+.menu-card {
+    background: #fff;
+    width: 450px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.menu-header h1 {
+    font-size: 28px; color: #2c3e50; margin: 10px 0 5px;
+}
+.menu-header i { color: #3498db; }
+.menu-header p { color: #7f8c8d; font-size: 14px; margin-bottom: 30px; }
+
+.setting-area { text-align: left; margin-bottom: 30px; }
+.setting-group { margin-bottom: 15px; }
+.setting-group label {
+    display: block; font-weight: bold; color: #555; margin-bottom: 8px; font-size: 14px;
+}
+.setting-group select {
+    width: 100%; padding: 12px; font-size: 16px;
+    border: 2px solid #eee; border-radius: 8px; outline: none; transition: 0.3s;
+}
+.setting-group select:focus { border-color: #3498db; }
+
+.start-btn {
+    width: 100%; padding: 15px; font-size: 18px; font-weight: bold;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white; border: none; border-radius: 50px; cursor: pointer;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3); transition: 0.3s;
+}
+.start-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4); }
+
+/* =========================================
+   2. ゲーム画面コンテナ
+   ========================================= */
+#game-container {
+    width: 800px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    padding: 30px;
+    position: relative;
+}
+
+/* 🏢 一般企業モード（Business Mode） */
+.business-mode { border-top: 5px solid #2c3e50; }
+.business-mode #header h1 { color: #2c3e50; font-size: 20px; }
+.business-mode #sub-info { color: #7f8c8d; }
+
+/* 🏫 教育実習モード（School Mode）←ここを可愛く！ */
+.school-mode {
+    border: 4px solid #ffb7d2; /* 枠線をピンクに */
+    background-color: #fffcfd;  /* ほんのりピンク背景 */
+    box-shadow: 0 10px 30px rgba(255, 183, 210, 0.4);
+    font-family: "M PLUS Rounded 1c", "Varela Round", sans-serif; /* 丸文字系 */
+}
+
+/* モード専用：ヘッダー */
+.school-mode #header { border-bottom: 2px dashed #ffb7d2; padding-bottom: 15px; margin-bottom: 20px; }
+.school-mode #app-title { color: #ff66a3; font-size: 24px; text-shadow: 1px 1px 0 #fff; }
+.school-mode #sub-info { color: #ff8fb8; font-weight: bold; }
+.school-mode #back-btn { background: #ff99cc; border-radius: 20px; }
+
+/* モード専用：お題エリア */
+.school-mode #display-text {
+    color: #444;
+}
+/* LINE風吹き出し */
+.line-style #display-text {
+    background: #e9f5ff; /* 水色の吹き出し */
+    border: 2px solid #cce5ff;
+    padding: 15px 25px;
+    border-radius: 25px;
+    border-top-left-radius: 0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ヘッダー共通 */
+#header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+#app-title { margin: 0; }
+#sub-info { font-size: 14px; margin-top: 5px; }
+#back-btn {
+    background: #95a5a6; color: white; border: none; padding: 8px 15px;
+    cursor: pointer; border-radius: 5px; font-size: 14px; transition: 0.2s;
+}
+#back-btn:hover { opacity: 0.8; }
+
+/* ステータスバー */
+#status-bar {
+    display: flex; gap: 20px; margin-bottom: 20px; font-weight: bold; color: #555;
+    background: #f8f9fa; padding: 10px 15px; border-radius: 8px;
+}
+.status-item i { margin-right: 5px; color: #aaa; }
+
+/* 表示エリア */
+#char-image-box { height: 130px; margin-bottom: 15px; text-align: center; }
+#char-img { height: 100%; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); }
+
+#question-area { text-align: center; min-height: 140px; margin-bottom: 10px; }
+#sender-info { font-size: 14px; color: #888; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; gap: 5px; }
+
+#display-text { font-size: 26px; font-weight: bold; margin: 10px 0; line-height: 1.4; white-space: pre-wrap; }
+#reading-text { color: #888; font-size: 15px; margin-bottom: 5px; }
+
+/* コメント（リアクション） */
+#char-comment-box {
+    height: 40px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;
+}
+#char-comment { font-weight: bold; font-size: 16px; transition: all 0.2s; }
+
+/* 入力エリア */
+#input-area { position: relative; } /* フォーカス用のクリックエリア確保 */
+
+#romaji-display {
+    font-family: 'Courier New', monospace; font-size: 22px; letter-spacing: 2px;
+    color: #bbb; text-align: center; min-height: 35px; margin-bottom: 5px;
+}
+.typed-char { color: #2ecc71; } /* 緑 */
+.highlight-char { color: #e74c3c; font-weight: bold; font-size: 26px; } /* 赤く大きく！ */
+
+#type-input {
+    width: 100%; padding: 15px; font-size: 20px; text-align: center;
+    border: 2px solid #eee; border-radius: 10px; outline: none;
+    box-sizing: border-box; background: #fff;
+}
+#type-input:focus { border-color: #3498db; background: #fdfdfd; }
+.school-mode #type-input:focus { border-color: #ff99cc; background: #fff5f8; }
+
+/* キーボード */
+#keyboard-guide {
+    margin-top: 25px; background: #fdfdfd; padding: 20px;
+    border-radius: 12px; text-align: center; border: 1px solid #eee;
+}
+.key-row { display: flex; justify-content: center; margin-bottom: 6px; }
+.key {
+    width: 45px; height: 45px; border: 1px solid #e0e0e0; border-radius: 8px;
+    margin: 3px; display: flex; justify-content: center; align-items: center;
+    font-weight: bold; color: #777; background: #fff;
+    box-shadow: 0 3px 0 #eee; transition: 0.1s; font-size: 14px;
+}
+.space-key { width: 300px; }
+.active-key {
+    background-color: #f1c40f; border-color: #f39c12; color: #fff;
+    transform: translateY(3px); box-shadow: none;
+}
+.error-key { background-color: #ff7675 !important; color: white !important; border-color: #d63031 !important; }
+
+/* 結果画面 */
+#result-screen {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(44, 62, 80, 0.9); display: flex; justify-content: center; align-items: center; z-index: 3000;
+}
+.result-box {
+    background: #fff; padding: 50px; border-radius: 20px; text-align: center; width: 400px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.result-icon { font-size: 60px; color: #f1c40f; margin-bottom: 20px; }
+.result-stats { font-size: 18px; margin: 20px 0; color: #555; background: #f9f9f9; padding: 15px; border-radius: 10px; }
+.msg-text { font-size: 16px; font-weight: bold; color: #e67e22; margin-bottom: 30px; line-height: 1.5; }
+.retry-btn {
+    padding: 12px 30px; font-size: 16px; background: #2c3e50; color: white;
+    border: none; border-radius: 50px; cursor: pointer; transition: 0.3s;
+}
+.retry-btn:hover { background: #34495e; transform: scale(1.05); }
