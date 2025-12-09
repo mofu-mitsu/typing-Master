@@ -141,7 +141,23 @@ body {
     height: 40px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;
 }
 #char-comment { font-weight: bold; font-size: 16px; transition: all 0.2s; }
+/* コメント（リアクション）エリアの調整 */
+#char-comment-box {
+    min-height: 40px; /* 高さを自動で広がるように修正 */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 10px;
+    padding: 5px; /* 余白追加 */
+}
 
+#char-comment { 
+    font-weight: bold; 
+    font-size: 16px; 
+    transition: all 0.2s; 
+    white-space: pre-wrap; /* ★これで改行がちゃんと表示されるようになる！ */
+    line-height: 1.5;      /* 行間を少し開ける */
+}
 /* 入力エリア */
 #input-area { position: relative; } /* フォーカス用のクリックエリア確保 */
 
