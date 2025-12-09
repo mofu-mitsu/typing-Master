@@ -92,7 +92,7 @@ const schoolData = [
         text: "阿見 一人", 
         kana: "あみひとり", 
         romaji: "amihitori", 
-        start_msg: "一人「俺の真名（なまえ）を刻むがいい…！」",
+        start_msg: "一人「俺様の真名（なまえ）を刻むがいい…！」",
         reaction_good: "一人「ククク…悪くない手際だ。」", 
         reaction_bad: "一人「おいおい、右手が震えてるぞ？」",
         image: "hitori.png"
@@ -185,12 +185,12 @@ const schoolData = [
     { 
         id: "inst_katsumi", 
         subtype: "instruction", 
-        text: "気合いだ！声が小さいぞ！グラウンド１０周！", 
-        kana: "きあいだ！こえがちいさいぞ！ぐらうんどじゅっしゅう！", 
-        romaji: "kiaida koe ga tiisai zo guraundo jussyuu", 
-        start_msg: "克己先生「おーい先生！生徒への檄（げき）を頼む！」",
-        reaction_good: "克己先生「いい声だ！それが青春だ！！🔥」",
-        reaction_bad: "克己先生「なんだその情けないタイプミスは！腕立て伏せだ！」",
+        text: "気合いや！声が小さいぞ！グラウンド１０周！", 
+        kana: "きあいや！こえがちいさいぞ！ぐらうんどじゅっしゅう！", 
+        romaji: "kiaiya koe ga tiisai zo guraundo jussyuu", 
+        start_msg: "克己先生「おーい先生！生徒への檄（げき）ば頼む！」",
+        reaction_good: "克己先生「いい声や！それが青春や！！🔥」",
+        reaction_bad: "克己先生「なんやその情けなかタイプミスは！腕立て伏せや！」",
         image: "katsumi_icon.png"
     },
     { 
