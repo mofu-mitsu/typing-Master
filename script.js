@@ -10,12 +10,16 @@ let currentIndex = 0;
 let targetRomaji = "";
 let typedCount = 0;
 let startTime = 0;
+let questionStartTime = 0;
 let timerInterval = null;
 let missCount = 0;
+let currentMiss = 0;
 
-// ★状態管理フラグ
-let isPlaying = false;     // ゲーム中かどうか
-let isWaitingNext = false; // クリア後の待機時間中かどうか
+let isPlaying = false;
+let isWaitingNext = false;
+
+// セーブデータ読み込み
+let saveData = JSON.parse(localStorage.getItem('tori_save')) || {};
 
 // HTML要素取得
 const startScreen = document.getElementById('start-screen');
@@ -46,36 +50,31 @@ function updateSubMode() {
 }
 
 /* ==========================================
-   ゲーム初期化（スタート画面から遷移）
+   ゲーム初期化
    ========================================== */
 function initGame() {
     currentMode = document.getElementById('mode-select').value;
     currentSubMode = document.getElementById('sub-mode-select').value;
     maxQuestions = parseInt(document.getElementById('count-select').value);
+    saveData = JSON.parse(localStorage.getItem('tori_save')) || {};
 
-    // 画面切り替え
     startScreen.classList.add('hidden');
     gameContainer.classList.remove('hidden');
     
     applyModeStyles();
     prepareQuestions();
     
-    // 変数リセット
-    isPlaying = false; // まだ始まってない
+    isPlaying = false;
     isWaitingNext = false;
     inputField.disabled = false;
     inputField.value = "";
     inputField.placeholder = "Spaceキーで研修開始";
-    
-    // フォーカスを当てる
     inputField.focus();
 
-    // 画面クリックでフォーカスを維持する
     document.addEventListener('click', keepFocus);
 }
 
 function keepFocus() {
-    // 結果画面が表示されていない時だけフォーカスする
     if (resultScreen.classList.contains('hidden')) {
         inputField.focus();
     }
@@ -95,7 +94,6 @@ function applyModeStyles() {
         body.style.background = "linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)"; 
         title.innerText = "🏫 教育機関実務研修（とりの丘学園）";
         subInfo.innerHTML = '<i class="fa-solid fa-graduation-cap"></i> 教育実習生アカウント';
-        
         if (currentSubMode === 'line') {
             document.getElementById('question-area').classList.add('line-style');
         }
@@ -117,33 +115,30 @@ function prepareQuestions() {
             source = schoolData.filter(q => q.subtype === currentSubMode);
         }
     }
-    // ランダム選出
     currentQuestions = source.sort(() => 0.5 - Math.random()).slice(0, maxQuestions);
 }
 
 /* ==========================================
-   ★キー入力制御（ここを最強にした！）
+   キー入力制御
    ========================================== */
-
-// 1. 画面全体でSpaceキーを監視（ゲーム開始用）
 window.addEventListener('keydown', (e) => {
-    // スタート画面やリザルト画面なら無視
     if (!startScreen.classList.contains('hidden')) return;
     if (!resultScreen.classList.contains('hidden')) return;
 
-    // ゲームがまだ始まっていない場合
     if (!isPlaying) {
         if (e.code === 'Space' || e.key === ' ' || e.key === 'Spacebar') {
-            e.preventDefault(); // スクロール防止
-            console.log("Start command received!"); // デバッグ用
+            e.preventDefault();
             startGame();
+        }
+    } else {
+        // ゲーム中、スペースキーは無視（自動入力されるため）
+        if (e.code === 'Space' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
         }
     }
 });
 
-// 2. 入力欄の制御（タイピング判定用）
 inputField.addEventListener('input', (e) => {
-    // ゲーム中じゃない、または待機中は入力をすべて消す
     if (!isPlaying || isWaitingNext) {
         inputField.value = "";
         return;
@@ -153,13 +148,17 @@ inputField.addEventListener('input', (e) => {
     const lastChar = val.slice(-1);
     const expectedChar = targetRomaji[typedCount];
 
+    // ★ここ重要：入力された文字数が、期待する位置まで来ているかチェック
     if (val.length > typedCount) {
         if (lastChar === expectedChar) {
             // ✅ 正解
             typedCount++;
+            
+            // ★正解したらすぐに「次の空白」を埋める
+            skipSpaces();
+
             updateRomajiDisplay();
             
-            // Badコメント消去
             if (commentField.style.color === "rgb(231, 76, 60)") { 
                 commentField.innerText = "";
             }
@@ -172,26 +171,33 @@ inputField.addEventListener('input', (e) => {
         } else {
             // ❌ ミス
             missCount++;
+            currentMiss++;
             inputField.value = val.slice(0, -1);
             flashKeyboardError();
             
             const q = currentQuestions[currentIndex];
             if (q.reaction_bad) {
                 commentField.innerText = q.reaction_bad;
-                commentField.style.color = "#e74c3c"; // 赤字
+                commentField.style.color = "#e74c3c"; 
             }
         }
     }
 });
 
+// ★修正した関数：スペースを飛ばす時、入力欄にもスペースを追加する！
+function skipSpaces() {
+    while (typedCount < targetRomaji.length && targetRomaji[typedCount] === ' ') {
+        typedCount++;
+        inputField.value += " "; // ←これ！！これで文字数のズレが直る！
+    }
+}
+
 function startGame() {
-    console.log("Game Started!");
     isPlaying = true;
     currentIndex = 0;
     missCount = 0;
     startTime = Date.now();
     
-    // タイマー開始
     if(timerInterval) clearInterval(timerInterval);
     timerInterval = setInterval(() => {
         const time = ((Date.now() - startTime) / 1000).toFixed(1);
@@ -199,7 +205,7 @@ function startGame() {
     }, 100);
 
     inputField.placeholder = "";
-    inputField.focus(); // 念のため再フォーカス
+    inputField.focus();
     nextQuestion();
 }
 
@@ -222,11 +228,24 @@ function nextQuestion() {
     
     targetRomaji = q.romaji;
     typedCount = 0;
+    currentMiss = 0;
     inputField.value = "";
     
-    // 表示更新
-    commentField.innerText = q.start_msg ? q.start_msg : "";
-    commentField.style.color = "#555";
+    // 問題開始時もスペースがあれば埋める
+    skipSpaces();
+
+    questionStartTime = Date.now();
+    
+    let charLove = saveData[q.id] || 0;
+    let startMsg = q.start_msg;
+    
+    if (currentMode === 'school' && charLove >= 5 && q.love_msg) {
+        startMsg = q.love_msg;
+        commentField.style.color = "#ff69b4"; 
+    } else {
+        commentField.style.color = "#555";
+    }
+    commentField.innerText = startMsg ? startMsg : "";
 
     if (currentMode === 'school' && q.image) {
         charImgBox.classList.remove('hidden');
@@ -236,7 +255,7 @@ function nextQuestion() {
         charImgBox.classList.add('hidden');
     }
 
-    if (q.subtype === 'line') {
+    if (q.subtype === 'line' || q.subtype === 'chat' || q.subtype === 'request') {
         senderInfo.classList.remove('hidden');
         senderName.innerText = q.sender;
     } else {
@@ -247,18 +266,43 @@ function nextQuestion() {
     readingTextField.innerText = q.kana;
 
     updateRomajiDisplay();
-    highlightKey(targetRomaji[0]);
+    // typedCountが進んでいる可能性があるので再チェック
+    if (typedCount < targetRomaji.length) {
+        highlightKey(targetRomaji[typedCount]);
+    } else {
+        // 万やむを得ず最初から全部スペースだった場合など（ないと思うけど）
+        questionClear(); 
+    }
 }
 
 function questionClear() {
-    isWaitingNext = true; // 待機
+    isWaitingNext = true;
     const q = currentQuestions[currentIndex];
     
-    if (q.reaction_good) {
-        commentField.innerText = q.reaction_good;
-        commentField.style.color = "#27ae60"; // 緑
-    } else {
-        commentField.innerText = "OK!";
+    const endTime = Date.now();
+    const duration = (endTime - questionStartTime) / 1000;
+    const speed = targetRomaji.length / duration;
+    
+    let reaction = q.reaction_good || "OK!";
+    let color = "#27ae60";
+
+    if (currentMiss === 0) {
+        reaction = "Perfect!!✨ " + reaction;
+        color = "#f1c40f";
+    } else if (speed > 5 && q.reaction_fast) {
+        reaction = q.reaction_fast;
+        color = "#e67e22";
+    } else if (speed < 2 && q.reaction_slow) {
+        reaction = q.reaction_slow;
+        color = "#3498db";
+    }
+
+    commentField.innerText = reaction;
+    commentField.style.color = color;
+
+    if (currentMode === 'school') {
+        saveData[q.id] = (saveData[q.id] || 0) + 1;
+        localStorage.setItem('tori_save', JSON.stringify(saveData));
     }
 
     updateRomajiDisplay();
@@ -290,7 +334,6 @@ function updateRomajiDisplay() {
 function highlightKey(char) {
     keys.forEach(k => k.classList.remove('active-key'));
     if (!char) return;
-    
     let searchChar = char.toLowerCase();
     const keyElement = document.querySelector(`.key[data-key="${searchChar}"]`);
     if (keyElement) keyElement.classList.add('active-key');
@@ -312,7 +355,6 @@ function finishGame() {
     clearInterval(timerInterval);
     const finalTime = document.getElementById('time-display').innerText;
     
-    // イベントリスナー解除（リトライ時のため）
     document.removeEventListener('click', keepFocus);
 
     gameContainer.classList.add('hidden');
@@ -323,7 +365,7 @@ function finishGame() {
 
     const msg = document.getElementById('result-msg');
     if (currentMode === 'school') {
-        msg.innerHTML = "実習お疲れ様でした！<br>みりん「せんせーさすが！ジュース奢ってあげる！」";
+        msg.innerHTML = "実習お疲れ様でした！<br>キャラとの絆が少し深まった気がします…💕";
     } else {
         msg.innerText = "本日のデータ入力業務は全て完了しました。\nお疲れ様でした。";
     }
