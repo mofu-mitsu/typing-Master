@@ -324,221 +324,222 @@ const schoolData = [
         love_msg: "れい「また私？…ふふ、選ばれるのって悪くないですね。あなた、優秀です。」",
         image: "rei.png"
     },
+const roster = [
     {
-        "id": "3-1_yae",
-        "subtype": "roster",
-        "text": "藍河 八重",
-        "kana": "あいかわやえ",
-        "romaji": "aikawa yae",
-
-        "start_msg": "やえ「……先生、呼んだ？」",
-        "reaction_good": "やえ「……うん。間違ってない。」",
-        "reaction_bad": "やえ「……そこ、違うよ。」",
-
-        "reaction_fast": "やえ「……速いね。ちょっと驚いた。」",
-        "reaction_slow": "やえ「……待ってたよ。焦らなくていい。」",
-
-        "love_msg": "やえ「……先生が呼ぶと、なんか心が静かになる…不思議…。」",
-
-        "image": "yae.png"
+        id: "3-1_yae",
+        subtype: "roster",
+        text: "藍河 八重",
+        kana: "あいかわやえ",
+        romaji: "aikawa yae",
+    
+        start_msg: "やえ「……先生、呼んだ？」",
+        reaction_good: "やえ「……うん。間違ってない。」",
+        reaction_bad: "やえ「……そこ、違うよ。」",
+    
+        reaction_fast: "やえ「……速いね。ちょっと驚いた。」",
+        reaction_slow: "やえ「……待ってたよ。焦らなくていい。」",
+    
+        love_msg: "やえ「……先生が呼ぶと、なんか心が静かになる…不思議…。」",
+    
+        image: "yae.png",
     },
     {
-        "id": "3-2_akari",
-        "subtype": "roster",
-        "text": "味野 灯莉",
-        "kana": "あじのあかり",
-        "romaji": "ajino akari",
-
-        "start_msg": "あかり「はーいっ！せんせい、あかり来たよーっ🌟」",
-        "reaction_good": "あかり「すごっ！ねぇねぇ今の見た！？✨」",
-        "reaction_bad": "あかり「うへっ！？ま、まちがえてるよ〜〜💦」",
-
-        "reaction_fast": "あかり「はっやっ！？天才！？好き！！」",
-        "reaction_slow": "あかり「おっそ〜い！あかり寝ちゃうよ〜😪」",
-
-        "love_msg": "あかり「ねぇ…私の名前いっぱい打ってくれるの嬉しい…もっと呼んで？」",
-
-        "image": "akari.png"
+        id: "3-2_akari",
+        subtype: "roster",
+        text: "味野 灯莉",
+        kana: "あじのあかり",
+        romaji: "ajino akari",
+    
+        start_msg: "あかり「はーいっ！せんせい、あかり来たよーっ🌟」",
+        reaction_good: "あかり「すごっ！ねぇねぇ今の見た！？✨」",
+        reaction_bad: "あかり「うへっ！？ま、まちがえてるよ〜〜💦」",
+    
+        reaction_fast: "あかり「はっやっ！？天才！？好き！！」",
+        reaction_slow: "あかり「おっそ〜い！あかり寝ちゃうよ〜😪」",
+    
+        love_msg: "あかり「ねぇ…私の名前いっぱい打ってくれるの嬉しい…もっと呼んで？」",
+    
+        image: "akari.png",
     },
     {
-        "id": "3-3_enishi",
-        "subtype": "roster",
-        "text": "鼬川 絵丹師",
-        "kana": "いたちがわえにし",
-        "romaji": "itachigawa enishi",
-
-        "start_msg": "えにし「……呼んだが？」",
-        "reaction_good": "えにし「ふむ。悪うない動きや。」",
-        "reaction_bad": "えにし「そこ、ズレとる。見直せ。」",
-
-        "reaction_fast": "えにし「速っ……。筆の走りみたいやな。」",
-        "reaction_slow": "えにし「遅い。乾き待ちの絵の具みたいや。」",
-
-        "love_msg": "えにし「先生、ようオレの名を呼んでくれるな。……嫌いやないで。」",
-
-        "image": "enishi.png"
+        id: "3-3_enishi",
+        subtype: "roster",
+        text: "鼬川 絵丹師",
+        kana: "いたちがわえにし",
+        romaji: "itachigawa enishi",
+    
+        start_msg: "えにし「……呼んだが？」",
+        reaction_good: "えにし「ふむ。悪うない動きや。」",
+        reaction_bad: "えにし「そこ、ズレとる。見直せ。」",
+    
+        reaction_fast: "えにし「速っ……。筆の走りみたいやな。」",
+        reaction_slow: "えにし「遅い。乾き待ちの絵の具みたいや。」",
+    
+        love_msg: "えにし「先生、ようオレの名を呼んでくれるな。……嫌いやないで。」",
+    
+        image: "enishi.png",
     },
     {
-        "id": "3-4_matoi",
-        "subtype": "roster",
-        "text": "芋縄 的倭",
-        "kana": "いもなわまとい",
-        "romaji": "imonawa matoi",
-
-        "start_msg": "まとい「……なんだ。」",
-        "reaction_good": "まとい「ふん。合ってんだろ。」",
-        "reaction_bad": "まとい「そこ違ぇよ。」",
-
-        "reaction_fast": "まとい「速ぇな。ちょっと見直したわ。」",
-        "reaction_slow": "まとい「遅ぇって。置いてくぞ？」",
-
-        "love_msg": "まとい「……先生、しつこいくらい俺の名呼ぶよな。悪くねぇけど。」",
-
-        "image": "matoi.png"
+        id: "3-4_matoi",
+        subtype: "roster",
+        text: "芋縄 的倭",
+        kana: "いもなわまとい",
+        romaji: "imonawa matoi",
+    
+        start_msg: "まとい「……なんだ。」",
+        reaction_good: "まとい「ふん。合ってんだろ。」",
+        reaction_bad: "まとい「そこ違ぇよ。」",
+    
+        reaction_fast: "まとい「速ぇな。ちょっと見直したわ。」",
+        reaction_slow: "まとい「遅ぇって。置いてくぞ？」",
+    
+        love_msg: "まとい「……先生、しつこいくらい俺の名呼ぶよな。悪くねぇけど。」",
+    
+        image: "matoi.png",
     },
     {
-        "id": "3-5_suzu",
-        "subtype": "roster",
-        "text": "忍足 鈴",
-        "kana": "おしたりすず",
-        "romaji": "oshitari suzu",
-
-        "start_msg": "すず「はい、鈴です。先生、呼んでくれたんですか？」",
-        "reaction_good": "すず「きっちりうててますね。ええ感じです。」",
-        "reaction_bad": "すず「そこちょっと違いますよ。おちついてな。」",
-
-        "reaction_fast": "すず「速っ…！先生、その瞬発力すごいわ。」",
-        "reaction_slow": "すず「ゆっくりでええんですよ。焦らんでも大丈夫です。」",
-
-        "love_msg": "すず「そんなに何回も…私の名前呼んでくれるんですか。……ふふ、嬉しいです。」",
-
-        "image": "suzu.png"
+        id: "3-5_suzu",
+        subtype: "roster",
+        text: "忍足 鈴",
+        kana: "おしたりすず",
+        romaji: "oshitari suzu",
+    
+        start_msg: "すず「はい、鈴です。先生、呼んでくれたんですか？」",
+        reaction_good: "すず「きっちりうててますね。ええ感じです。」",
+        reaction_bad: "すず「そこちょっと違いますよ。おちついてな。」",
+    
+        reaction_fast: "すず「速っ…！先生、その瞬発力すごいわ。」",
+        reaction_slow: "すず「ゆっくりでええんですよ。焦らんでも大丈夫です。」",
+    
+        love_msg: "すず「そんなに何回も…私の名前呼んでくれるんですか。……ふふ、嬉しいです。」",
+    
+        image: "suzu.png",
     },
     {
-        "id": "3-6_arin",
-        "subtype": "roster",
-        "text": "小犬丸 愛凛",
-        "kana": "こいぬまるありん",
-        "romaji": "koinumaru arin",
-
-        "start_msg": "ありん「せ、先生…！呼んでくれたんだね…！」",
-        "reaction_good": "ありん「すごいよ先生…！そんなにはやくうてるんだ…！」",
-        "reaction_bad": "ありん「ちょ、ちょっと間違ってるかも…！がんばって…！」",
-
-        "reaction_fast": "ありん「は、はやすぎ…！？先生ってほんとにすごい…！」",
-        "reaction_slow": "ありん「ゆ、ゆっくりでいいよ…！私、まってるから…！」",
-
-        "love_msg": "ありん「先生…どうしてそんなに何度も私の名前よんでくれるの…？嬉しすぎて…胸がぎゅってなるよ…。」",
-
-        "image": "arin.png"
+        id: "3-6_arin",
+        subtype: "roster",
+        text: "小犬丸 愛凛",
+        kana: "こいぬまるありん",
+        romaji: "koinumaru arin",
+    
+        start_msg: "ありん「せ、先生…！呼んでくれたんだね…！」",
+        reaction_good: "ありん「すごいよ先生…！そんなにはやくうてるんだ…！」",
+        reaction_bad: "ありん「ちょ、ちょっと間違ってるかも…！がんばって…！」",
+    
+        reaction_fast: "ありん「は、はやすぎ…！？先生ってほんとにすごい…！」",
+        reaction_slow: "ありん「ゆ、ゆっくりでいいよ…！私、まってるから…！」",
+    
+        love_msg: "ありん「先生…どうしてそんなに何度も私の名前よんでくれるの…？嬉しすぎて…胸がぎゅってなるよ…。」",
+    
+        image: "arin.png",
     },
     {
-        "id": "4-1_yasashi",
-        "subtype": "roster",
-        "text": "霜降 柔",
-        "kana": "しもふりやさし",
-        "romaji": "shimofuri yasashi",
-
-        "start_msg": "やさし「せんせい、僕を呼んだんですか？ふふ、嬉しいです。」",
-        "reaction_good": "やさし「きれいに打ててますよ。すごく丁寧ですね。」",
-        "reaction_bad": "やさし「ここだけ少し違ってますね…。ゆっくりで大丈夫ですよ。」",
-
-        "reaction_fast": "やさし「おお…！はやいですね。びっくりしました…！」",
-        "reaction_slow": "やさし「ゆっくりでも全然平気ですよ。ぼく待つの得意なんです。」",
-
-        "love_msg": "やさし「こんなに僕の名前…呼んでくれるんですね…。なんだか胸があったかくなります。」",
-
-        "image": "yasashi.png"
+        id: "4-1_yasashi",
+        subtype: "roster",
+        text: "霜降 柔",
+        kana: "しもふりやさし",
+        romaji: "shimofuri yasashi",
+    
+        start_msg: "やさし「せんせい、僕を呼んだんですか？ふふ、嬉しいです。」",
+        reaction_good: "やさし「きれいに打ててますよ。すごく丁寧ですね。」",
+        reaction_bad: "やさし「ここだけ少し違ってますね…。ゆっくりで大丈夫ですよ。」",
+    
+        reaction_fast: "やさし「おお…！はやいですね。びっくりしました…！」",
+        reaction_slow: "やさし「ゆっくりでも全然平気ですよ。ぼく待つの得意なんです。」",
+    
+        love_msg: "やさし「こんなに僕の名前…呼んでくれるんですね…。なんだか胸があったかくなります。」",
+    
+        image: "yasashi.png",
     },
     {
-        "id": "4-2_rui",
-        "subtype": "roster",
-        "text": "春潮楼 塁",
-        "kana": "しゅんちょうろうるい",
-        "romaji": "shunchoro rui",
-
-        "start_msg": "るい「せんせい？呼んだかい？僕で良かったん？」",
-        "reaction_good": "るい「おぉーっ！ちゃんとうててるじゃん！すげぇな～。」",
-        "reaction_bad": "るい「んー…そこちぃっと違ぇかも。気にすんなて。」",
-
-        "reaction_fast": "るい「はっや！？なんだそりゃ！せんせい、天才か？」",
-        "reaction_slow": "るい「おっそ〜い…いや、いいんだけどさ！急がんでいいよ？」",
-
-        "love_msg": "るい「そんなになんども僕の名前よんでくれるとか…ちょっと照れるなぁ。ありがとな。」",
-
-        "image": "rui.png"
+        id: "4-2_rui",
+        subtype: "roster",
+        text: "春潮楼 塁",
+        kana: "しゅんちょうろうるい",
+        romaji: "shunchoro rui",
+    
+        start_msg: "るい「せんせい？呼んだかい？僕で良かったん？」",
+        reaction_good: "るい「おぉーっ！ちゃんとうててるじゃん！すげぇな～。」",
+        reaction_bad: "るい「んー…そこちぃっと違ぇかも。気にすんなて。」",
+    
+        reaction_fast: "るい「はっや！？なんだそりゃ！せんせい、天才か？」",
+        reaction_slow: "るい「おっそ〜い…いや、いいんだけどさ！急がんでいいよ？」",
+    
+        love_msg: "るい「そんなになんども僕の名前よんでくれるとか…ちょっと照れるなぁ。ありがとな。」",
+    
+        image: "rui.png",
     },
     {
-        "id": "4-3_makishi",
-        "subtype": "roster",
-        "text": "鈴木 槙士",
-        "kana": "すずきまきし",
-        "romaji": "suzuki makishi",
-
-        "start_msg": "まきし「よっ、せんせーっ☆呼んだ？僕来たぞー！！」",
-        "reaction_good": "まきし「おっしゃナイスッ！せんせい、やるじゃーん！！」",
-        "reaction_bad": "まきし「うわっと！？そこミスってるぞっ！どんまいどんまい☆」",
-
-        "reaction_fast": "まきし「え！？はっや！！せんせいガチ勢！？テンション上がる〜！！」",
-        "reaction_slow": "まきし「おーいせんせ〜〜ねむくなっちゃうぞ〜〜？笑」",
-
-        "love_msg": "まきし「そんな連打して僕の名前よぶとか…えっなにそれ好きじゃん！？えへへ☆」",
-
-        "image": "makishi.png"
+        id: "4-3_makishi",
+        subtype: "roster",
+        text: "鈴木 槙士",
+        kana: "すずきまきし",
+        romaji: "suzuki makishi",
+    
+        start_msg: "まきし「よっ、せんせーっ☆呼んだ？僕来たぞー！！」",
+        reaction_good: "まきし「おっしゃナイスッ！せんせい、やるじゃーん！！」",
+        reaction_bad: "まきし「うわっと！？そこミスってるぞっ！どんまいどんまい☆」",
+    
+        reaction_fast: "まきし「え！？はっや！！せんせいガチ勢！？テンション上がる〜！！」",
+        reaction_slow: "まきし「おーいせんせ〜〜ねむくなっちゃうぞ〜〜？笑」",
+    
+        love_msg: "まきし「そんな連打して僕の名前よぶとか…えっなにそれ好きじゃん！？えへへ☆」",
+    
+        image: "makishi.png",
     },
     {
-        "id": "4-4_shige",
-        "subtype": "roster",
-        "text": "仲馬 穣",
-        "kana": "ちゅうましげ",
-        "romaji": "chuma shige",
-
-        "start_msg": "しげ「……せ、せんせ…ぼ、僕呼んだと…？」",
-        "reaction_good": "しげ「おぉっ…う、打てとる…す、すごかよ…。」",
-        "reaction_bad": "しげ「え、えっと…そこ…ちょっと違うかも…。ごめん…。」",
-
-        "reaction_fast": "しげ「は、はやっ！？せ、せんせ…そげん急に打たれたら心臓もたん…！」",
-        "reaction_slow": "しげ「ゆ、ゆっくりでよか…急がんでよかけん…おれ待っとるけん…。」",
-
-        "love_msg": "しげ「何回も…僕の名前よんでくれると…なんか…胸がぎゅってなる…ありがと…。」",
-
-        "image": "shige.png"
+        id: "4-4_shige",
+        subtype: "roster",
+        text: "仲馬 穣",
+        kana: "ちゅうましげ",
+        romaji: "chuma shige",
+    
+        start_msg: "しげ「……せ、せんせ…ぼ、僕呼んだと…？」",
+        reaction_good: "しげ「おぉっ…う、打てとる…す、すごかよ…。」",
+        reaction_bad: "しげ「え、えっと…そこ…ちょっと違うかも…。ごめん…。」",
+    
+        reaction_fast: "しげ「は、はやっ！？せ、せんせ…そげん急に打たれたら心臓もたん…！」",
+        reaction_slow: "しげ「ゆ、ゆっくりでよか…急がんでよかけん…おれ待っとるけん…。」",
+    
+        love_msg: "しげ「何回も…僕の名前よんでくれると…なんか…胸がぎゅってなる…ありがと…。」",
+    
+        image: "shige.png",
     },
     {
-        "id": "4-5_hakomo",
-        "subtype": "roster",
-        "text": "出逢 箱藻",
-        "kana": "であいはこも",
-        "romaji": "deai hakomo",
-
-        "start_msg": "はこも「……先生。呼ばれた気がしたから来た…気もする。」",
-        "reaction_good": "はこも「……うん。合ってると思う。たぶん。」",
-        "reaction_bad": "はこも「……そこ違う…かも。よくわかんないけど。」",
-
-        "reaction_fast": "はこも「……速いね。そんなにぼくの名前が必要…？」",
-        "reaction_slow": "はこも「……遅いのも別に嫌いじゃない。時間ゆっくり感じるし。」",
-
-        "love_msg": "はこも「……そんなに何度も呼ばれると、不思議な気分。悪くない…と思う。」",
-
-        "image": "hakomo.png"
+        id: "4-5_hakomo",
+        subtype: "roster",
+        text: "出逢 箱藻",
+        kana: "であいはこも",
+        romaji: "deai hakomo",
+    
+        start_msg: "はこも「……先生。呼ばれた気がしたから来た…気もする。」",
+        reaction_good: "はこも「……うん。合ってると思う。たぶん。」",
+        reaction_bad: "はこも「……そこ違う…かも。よくわかんないけど。」",
+    
+        reaction_fast: "はこも「……速いね。そんなにぼくの名前が必要…？」",
+        reaction_slow: "はこも「……遅いのも別に嫌いじゃない。時間ゆっくり感じるし。」",
+    
+        love_msg: "はこも「……そんなに何度も呼ばれると、不思議な気分。悪くない…と思う。」",
+    
+        image: "hakomo.png",
     },
     {
-        "id": "4-6_shizuka",
-        "subtype": "roster",
-        "text": "灰住 鎮花",
-        "kana": "はいずみしずか",
-        "romaji": "haizumi shizuka",
-
-        "start_msg": "しずか「……はい。呼びました…よね？わ、私で間違ってませんか…？」",
-        "reaction_good": "しずか「す、すごいです…。ちゃんと打ててます…！」",
-        "reaction_bad": "しずか「そ、そこ…違います…。ごめんなさい…もっと丁寧に…。」",
-
-        "reaction_fast": "しずか「あ、あの…そんな速く打てるんですか…！？わ、私追いつけない…！」",
-        "reaction_slow": "しずか「ゆ、ゆっくりでも…大丈夫です…。私もゆっくりの方が落ち着きます…。」",
-
-        "love_msg": "しずか「な、何度も…私の名前を呼んでくれるの…？そんなの…嬉しすぎて…どうしたら…。」",
-
-        "image": "shizuka.png"
+        id: "4-6_shizuka",
+        subtype: "roster",
+        text: "灰住 鎮花",
+        kana: "はいずみしずか",
+        romaji: "haizumi shizuka",
+    
+        start_msg: "しずか「……はい。呼びました…よね？わ、私で間違ってませんか…？」",
+        reaction_good: "しずか「す、すごいです…。ちゃんと打ててます…！」",
+        reaction_bad: "しずか「そ、そこ…違います…。ごめんなさい…もっと丁寧に…。」",
+    
+        reaction_fast: "しずか「あ、あの…そんな速く打てるんですか…！？わ、私追いつけない…！」",
+        reaction_slow: "しずか「ゆ、ゆっくりでも…大丈夫です…。私もゆっくりの方が落ち着きます…。」",
+    
+        love_msg: "しずか「な、何度も…私の名前を呼んでくれるの…？そんなの…嬉しすぎて…どうしたら…。」",
+    
+        image: "shizuka.png",
     },
     { 
         id: "2-2_mirin", 
