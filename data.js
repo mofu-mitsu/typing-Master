@@ -841,12 +841,12 @@ const schoolData = [
         subtype: "chat", 
         group: "2-2",
         sender: "2年女子グル",
-        start_msg: "美琳「ねーねー、今度の連休どこいくー？🎀」\n愛芽里「えっと…うさぎカフェ…いきたいな🐰」\n美琳「いいね！センセも誘っちゃう？w」",
+        start_msg: "みりん「ねーねー、今度の連休どこいくー？🎀」\nあめり「えっと…うさぎカフェ…いきたいな🐰」\nみりん「いいね！センセも誘っちゃう？w」",
         text: "先生は仕事があるから遠慮しておきます。", 
         kana: "せんせいはしごとがあるからえんりょしておきます。", 
         romaji: "sensei wa sigoto ga aru kara enryo site okimasu", 
-        reaction_good: "美琳「えー！つまんないのー！🥺」\n愛芽里「せんせい…おしごとがんばって…」",
-        reaction_bad: "美琳「あ、センセ動揺してない？ホントは行きたいんでしょw」",
+        reaction_good: "みりん「えー！つまんないのー！🥺」\nあめり「せんせい…おしごとがんばって…」",
+        reaction_bad: "みりん「あ、センセ動揺してない？ホントは行きたいんでしょw」",
         images: ["mirin_icon.png", "ameri.png"] // ★複数画像
     },
     { 
