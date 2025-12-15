@@ -20,6 +20,7 @@
             </div>
             
             <div class="setting-area">
+                <!-- コース選択 -->
                 <div class="setting-group">
                     <label><i class="fa-solid fa-briefcase"></i> 研修コース選択</label>
                     <select id="mode-select" onchange="updateSubMode()">
@@ -29,10 +30,9 @@
                 </div>
 
                 <!-- 学校コースを選んだ時だけ出る詳細設定 -->
-                <!-- ↓↓ この部分を書き換えてね！ ↓↓ -->
                 <div class="setting-group hidden" id="sub-mode-group">
                     <label><i class="fa-solid fa-list-check"></i> 業務内容</label>
-                    <!-- ★ onchange="updateClassOptions()" を追加！ -->
+                    <!-- 業務内容を変えるとクラス選択肢も変わるように onchange を設定 -->
                     <select id="sub-mode-select" onchange="updateClassOptions()">
                         <option value="roster">📋 生徒名簿データ登録</option>
                         <option value="instruction">📣 先生の指示・業務連絡</option>
@@ -42,8 +42,8 @@
                         <option value="mix">⭐ 総合実務（ランダム）</option>
                     </select>
                 </div>
-                </div>
-                <!-- ↓↓ この部分を追加してね！ ↓↓ -->
+
+                <!-- クラス選択（ここにあった余分な </div> を削除したよ！） -->
                 <div class="setting-group hidden" id="class-select-group">
                     <label><i class="fa-solid fa-users"></i> 対象クラス（任意）</label>
                     <select id="class-select">
@@ -58,6 +58,8 @@
                         <option value="teacher">教職員</option>
                     </select>
                 </div>
+
+                <!-- 課題数 -->
                 <div class="setting-group">
                     <label><i class="fa-solid fa-stopwatch"></i> 課題数</label>
                     <select id="count-select">
@@ -66,7 +68,7 @@
                         <option value="20">20問（ハード）</option>
                     </select>
                 </div>
-            </div>
+            </div> <!-- setting-area の閉じタグはここが正解！ -->
 
             <button class="start-btn" onclick="initGame()">
                 研修を開始する <i class="fa-solid fa-play"></i>
