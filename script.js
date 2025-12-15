@@ -3,6 +3,7 @@
    ========================================== */
 let currentMode = 'business';
 let currentSubMode = 'roster';
+let currentClass = 'all'; // ★クラス選択用
 let maxQuestions = 5;
 
 let currentQuestions = [];
@@ -31,7 +32,7 @@ const readingTextField = document.getElementById('reading-text');
 const romajiDisplay = document.getElementById('romaji-display');
 const commentField = document.getElementById('char-comment');
 const charImgBox = document.getElementById('char-image-box');
-const charImg = document.getElementById('char-img');
+// const charImg = document.getElementById('char-img'); // ←これは今回使わず、動的に生成するよ！
 const senderInfo = document.getElementById('sender-info');
 const senderName = document.getElementById('sender-name');
 const keys = document.querySelectorAll('.key');
@@ -42,10 +43,14 @@ const keys = document.querySelectorAll('.key');
 function updateSubMode() {
     const mode = document.getElementById('mode-select').value;
     const subGroup = document.getElementById('sub-mode-group');
+    const classGroup = document.getElementById('class-select-group'); // ★これ！
+
     if (mode === 'school') {
         subGroup.classList.remove('hidden');
+        classGroup.classList.remove('hidden'); // ★学校モードならクラス選択を表示！
     } else {
         subGroup.classList.add('hidden');
+        classGroup.classList.add('hidden');
     }
 }
 
@@ -55,7 +60,9 @@ function updateSubMode() {
 function initGame() {
     currentMode = document.getElementById('mode-select').value;
     currentSubMode = document.getElementById('sub-mode-select').value;
+    currentClass = document.getElementById('class-select').value; // ★クラス取得
     maxQuestions = parseInt(document.getElementById('count-select').value);
+    
     saveData = JSON.parse(localStorage.getItem('tori_save')) || {};
 
     startScreen.classList.add('hidden');
@@ -93,7 +100,10 @@ function applyModeStyles() {
         gameContainer.classList.add('school-mode');
         body.style.background = "linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)"; 
         title.innerText = "🏫 教育機関実務研修（とりの丘学園）";
-        subInfo.innerHTML = '<i class="fa-solid fa-graduation-cap"></i> 教育実習生アカウント';
+        
+        let className = currentClass === 'all' ? '全校' : currentClass;
+        subInfo.innerHTML = `<i class="fa-solid fa-graduation-cap"></i> 実習対象: ${className}`;
+        
         if (currentSubMode === 'line') {
             document.getElementById('question-area').classList.add('line-style');
         }
@@ -109,12 +119,20 @@ function prepareQuestions() {
     if (currentMode === 'business') {
         source = businessData;
     } else {
-        if (currentSubMode === 'mix') {
-            source = schoolData;
-        } else {
-            source = schoolData.filter(q => q.subtype === currentSubMode);
-        }
+        // 学園モードのフィルタリング
+        source = schoolData.filter(q => {
+            let typeMatch = (currentSubMode === 'mix' || q.subtype === currentSubMode);
+            // ★クラスが合致するか、指定なしか
+            let classMatch = (currentClass === 'all' || q.group === currentClass);
+            return typeMatch && classMatch;
+        });
     }
+
+    if (source.length === 0) {
+        alert("該当するデータがありません！条件を変えてみてください。ひとまず全データから出題します。");
+        source = schoolData;
+    }
+
     currentQuestions = source.sort(() => 0.5 - Math.random()).slice(0, maxQuestions);
 }
 
@@ -131,7 +149,6 @@ window.addEventListener('keydown', (e) => {
             startGame();
         }
     } else {
-        // ゲーム中、スペースキーは無視（自動入力されるため）
         if (e.code === 'Space' || e.key === ' ' || e.key === 'Spacebar') {
             e.preventDefault();
         }
@@ -148,19 +165,21 @@ inputField.addEventListener('input', (e) => {
     const lastChar = val.slice(-1);
     const expectedChar = targetRomaji[typedCount];
 
-    // ★ここ重要：入力された文字数が、期待する位置まで来ているかチェック
     if (val.length > typedCount) {
         if (lastChar === expectedChar) {
             // ✅ 正解
             typedCount++;
-            
-            // ★正解したらすぐに「次の空白」を埋める
             skipSpaces();
-
             updateRomajiDisplay();
             
+            // Badコメント消去 & 顔を元に戻す
             if (commentField.style.color === "rgb(231, 76, 60)") { 
                 commentField.innerText = "";
+                // 好感度が高い場合はデレ顔に戻す、そうでなければ通常
+                const q = currentQuestions[currentIndex];
+                let charLove = saveData[q.id] || 0;
+                let face = (charLove >= 5) ? "love" : "normal";
+                updateCharExpression(face);
             }
 
             if (typedCount >= targetRomaji.length) {
@@ -180,15 +199,16 @@ inputField.addEventListener('input', (e) => {
                 commentField.innerText = q.reaction_bad;
                 commentField.style.color = "#e74c3c"; 
             }
+            // ★Bad顔に変更
+            updateCharExpression("bad");
         }
     }
 });
 
-// ★修正した関数：スペースを飛ばす時、入力欄にもスペースを追加する！
 function skipSpaces() {
     while (typedCount < targetRomaji.length && targetRomaji[typedCount] === ' ') {
         typedCount++;
-        inputField.value += " "; // ←これ！！これで文字数のズレが直る！
+        inputField.value += " "; 
     }
 }
 
@@ -210,8 +230,8 @@ function startGame() {
 }
 
 /* ==========================================
-   問題進行
-   ========================================== */
+   問題進行 & ★画像管理システム
+   ========================================= */
 function nextQuestion() {
     if (currentIndex >= currentQuestions.length) {
         finishGame();
@@ -231,29 +251,25 @@ function nextQuestion() {
     currentMiss = 0;
     inputField.value = "";
     
-    // 問題開始時もスペースがあれば埋める
     skipSpaces();
-
     questionStartTime = Date.now();
     
+    // 好感度チェック
     let charLove = saveData[q.id] || 0;
     let startMsg = q.start_msg;
-    
+    let initialFace = "normal"; // 最初の顔
+
     if (currentMode === 'school' && charLove >= 5 && q.love_msg) {
         startMsg = q.love_msg;
-        commentField.style.color = "#ff69b4"; 
+        commentField.style.color = "#ff69b4";
+        initialFace = "love"; // ★好感度MAXなら最初からデレ顔
     } else {
         commentField.style.color = "#555";
     }
     commentField.innerText = startMsg ? startMsg : "";
 
-    if (currentMode === 'school' && q.image) {
-        charImgBox.classList.remove('hidden');
-        charImg.src = "images/" + q.image;
-        charImg.onerror = () => { charImg.src = ""; charImgBox.classList.add('hidden'); };
-    } else {
-        charImgBox.classList.add('hidden');
-    }
+    // ★画像表示処理（ここを大改造！）
+    renderCharImages(q, initialFace);
 
     if (q.subtype === 'line' || q.subtype === 'chat' || q.subtype === 'request') {
         senderInfo.classList.remove('hidden');
@@ -266,13 +282,86 @@ function nextQuestion() {
     readingTextField.innerText = q.kana;
 
     updateRomajiDisplay();
-    // typedCountが進んでいる可能性があるので再チェック
     if (typedCount < targetRomaji.length) {
         highlightKey(targetRomaji[typedCount]);
     } else {
-        // 万やむを得ず最初から全部スペースだった場合など（ないと思うけど）
         questionClear(); 
     }
+}
+
+// ★画像を生成して表示する関数
+function renderCharImages(q, emotion) {
+    charImgBox.innerHTML = ""; // 一旦クリア
+    charImgBox.classList.remove('hidden');
+
+    if (currentMode !== 'school') {
+        charImgBox.classList.add('hidden');
+        return;
+    }
+
+    // A. グループチャット（複数画像）の場合
+    if (q.images && Array.isArray(q.images)) {
+        q.images.forEach(imgSrc => {
+            const img = document.createElement("img");
+            img.src = "images/" + imgSrc;
+            img.className = "char-img-group"; // CSSで丸アイコンにする
+            img.onerror = () => { img.style.display = "none"; }; // エラーなら消す
+            charImgBox.appendChild(img);
+        });
+        return;
+    }
+
+    // B. 単体キャラの場合（表情差分あり）
+    if (q.image) {
+        const img = document.createElement("img");
+        img.id = "single-char-img"; // 操作用ID
+        img.className = "char-img-single";
+        img.dataset.baseSrc = q.image; // 元のファイル名を保存
+        charImgBox.appendChild(img);
+        
+        // 表情セット
+        updateCharExpression(emotion);
+    } else {
+        charImgBox.classList.add('hidden');
+    }
+}
+
+// ★表情を変える関数（ファイル名を自動推測！）
+function updateCharExpression(emotion) {
+    const img = document.getElementById("single-char-img");
+    if (!img) return; // グルチャ等の場合は何もしない
+
+    const baseSrc = img.dataset.baseSrc; // "mirin.png"
+    if (!baseSrc) return;
+
+    // 拡張子とファイル名を分離
+    const dotIndex = baseSrc.lastIndexOf(".");
+    const name = baseSrc.substring(0, dotIndex); // "mirin"
+    const ext = baseSrc.substring(dotIndex);     // ".png"
+
+    let targetSrc = baseSrc; // デフォルトは通常
+
+    if (emotion === "bad") {
+        targetSrc = `${name}_bad${ext}`; // "mirin_bad.png"
+    } else if (emotion === "good") {
+        targetSrc = `${name}_good${ext}`; // "mirin_good.png"
+    } else if (emotion === "love") {
+        targetSrc = `${name}_love${ext}`; // "mirin_love.png"
+    }
+
+    // 画像セット
+    img.src = "images/" + targetSrc;
+
+    // ★もし画像がなかったら通常画像に戻す（ここが便利ポイント！）
+    img.onerror = () => {
+        if (img.src.includes(baseSrc)) {
+            // 通常画像すら無い場合は非表示
+            img.style.display = "none"; 
+        } else {
+            // 差分がない時は通常画像を表示
+            img.src = "images/" + baseSrc;
+        }
+    };
 }
 
 function questionClear() {
@@ -299,6 +388,9 @@ function questionClear() {
 
     commentField.innerText = reaction;
     commentField.style.color = color;
+    
+    // ★クリア時、Good顔に変更！
+    updateCharExpression("good");
 
     if (currentMode === 'school') {
         saveData[q.id] = (saveData[q.id] || 0) + 1;
@@ -315,7 +407,7 @@ function questionClear() {
 }
 
 /* ==========================================
-   表示更新系
+   表示更新系（変更なし）
    ========================================== */
 function updateRomajiDisplay() {
     let html = "";
