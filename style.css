@@ -88,7 +88,33 @@ body {
     box-shadow: 0 10px 30px rgba(255, 183, 210, 0.4);
     font-family: "M PLUS Rounded 1c", "Varela Round", sans-serif; /* 丸文字系 */
 }
+/* 表示エリア */
+#char-image-box { 
+    height: 130px; 
+    margin-bottom: 15px; 
+    text-align: center; 
+    /* ★複数画像用にFlexboxにする */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* 画像同士の間隔 */
+}
 
+/* ★クラス指定で画像サイズを調整 */
+.char-img-single {
+    height: 100%; 
+    object-fit: contain; 
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.char-img-group {
+    height: 80px; /* グルチャの時は少し小さく */
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%; /* 丸アイコンにする */
+    border: 3px solid #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 /* モード専用：ヘッダー */
 .school-mode #header { border-bottom: 2px dashed #ffb7d2; padding-bottom: 15px; margin-bottom: 20px; }
 .school-mode #app-title { color: #ff66a3; font-size: 24px; text-shadow: 1px 1px 0 #fff; }
