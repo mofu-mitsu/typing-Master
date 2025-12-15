@@ -29,16 +29,19 @@
                 </div>
 
                 <!-- 学校コースを選んだ時だけ出る詳細設定 -->
+                <!-- ↓↓ この部分を書き換えてね！ ↓↓ -->
                 <div class="setting-group hidden" id="sub-mode-group">
                     <label><i class="fa-solid fa-list-check"></i> 業務内容</label>
-                    <select id="sub-mode-select">
+                    <!-- ★ onchange="updateClassOptions()" を追加！ -->
+                    <select id="sub-mode-select" onchange="updateClassOptions()">
                         <option value="roster">📋 生徒名簿データ登録</option>
-                        <option value="instruction">📣 先生の指示・業務連絡</option> <!-- ★これ追加！ -->
+                        <option value="instruction">📣 先生の指示・業務連絡</option>
                         <option value="line">💬 生徒連絡（チャット）対応</option>
-                        <option value="request">🙏 生徒からの依頼（DM）</option> <!-- ★NEW -->
-                        <option value="chat">🗣️ グループチャット参加</option>   <!-- ★NEW -->
+                        <option value="request">🙏 生徒からの依頼（DM）</option>
+                        <option value="chat">🗣️ グループチャット参加</option>
                         <option value="mix">⭐ 総合実務（ランダム）</option>
                     </select>
+                </div>
                 </div>
                 <!-- ↓↓ この部分を追加してね！ ↓↓ -->
                 <div class="setting-group hidden" id="class-select-group">
