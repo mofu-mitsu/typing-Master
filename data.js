@@ -722,7 +722,7 @@ const schoolData = [
         romaji: "dame desu atorie ni iku nara houkago ni shinasai",
         start_msg: "（絵丹師からLINEが届きました）",
         reaction_good: "絵丹師「……チッ。わかったよ。」",
-        reaction_bad: "絵丹師「……集中力、散漫してるよ。」",
+        reaction_bad: "絵丹師「……集中力、散漫しとるよ。」",
         image: "enishi.png"
     },
 
