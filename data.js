@@ -798,12 +798,12 @@ const schoolData = [
         subtype: "request", 
         group: "3-1",
         sender: "栄城 縫",
-        start_msg: "縫「先生！給食のおかわり増量嘆願書を作ったから、清書して教育委員会に出してほしいんだゾッ！」",
+        start_msg: "ぬい「先生！給食のおかわり増量嘆願書を作ったから、清書して教育委員会に出してほしいんだゾッ！」",
         text: "給食におけるカレーの配給量見直しに関する嘆願書", 
         kana: "きゅうしょくにおけるかれーのはいきゅうりょうみなおしにかんするたんがんしょ", 
         romaji: "kyuusyoku ni okeru kare- no haikyuuryou minaosi ni kansuru tangansyo", 
-        reaction_good: "縫「先生ありがとうだぞ！これでカツカレーも夢じゃない！」",
-        reaction_bad: "縫「先生、お腹空いてるのか？文字が震えてるゾッ…」",
+        reaction_good: "ぬい「先生ありがとうだぞ！これでカツカレーも夢じゃない！」",
+        reaction_bad: "ぬい「先生、お腹空いてるのか？文字が震えてるゾッ…」",
         image: "nui.png"
     },
     { 
@@ -811,12 +811,12 @@ const schoolData = [
         subtype: "request", 
         group: "2-1",
         sender: "用達 怜",
-        start_msg: "怜「先生、生徒会で使う『目安箱』のポスターを作りたいのですが、キャッチコピーを入力していただけますか？」",
+        start_msg: "れい「先生、生徒会で使う『目安箱』のポスターを作りたいのですが、キャッチコピーを入力していただけますか？」",
         text: "あなたの声が学校を変える。生徒会意見箱設置中。", 
         kana: "あなたのこえががっこうをかえる。せいとかいいけんばこせっちちゅう。", 
         romaji: "anata no koe ga gakkou wo kaeru seitokai ikenbako setti cyuu", 
-        reaction_good: "怜「完璧です。美しいフォントで印刷しておきますね。」",
-        reaction_bad: "怜「先生、誤字はポスターの信頼性を損ないますよ。（黒笑）」",
+        reaction_good: "れ「完璧です。美しいフォントで印刷しておきますね。」",
+        reaction_bad: "れい「先生、誤字はポスターの信頼性を損ないますよ。（黒笑）」",
         image: "rei_icon.png"
     },
     { 
@@ -824,12 +824,12 @@ const schoolData = [
         subtype: "request", 
         group: "2-2",
         sender: "春潮楼 塁",
-        start_msg: "塁「センセ！姉ちゃんのチーズ店のメニュー表、英語がわかんなくて…代わりに入力頼める？」",
+        start_msg: "るい「センセ！姉ちゃんのチーズ店のメニュー表、英語がわかんなくて…代わりに入力頼める？」",
         text: "こだわりの濃厚カマンベールチーズとワインのセット", 
         kana: "こだわりののうこうかまんべーるちーずとわいんのせっと", 
         romaji: "kodawari no noukou kamanbe-ru ti-zu to wain no setto", 
-        reaction_good: "塁「すげー！センセ英語もいけるんスね！助かった〜！」",
-        reaction_bad: "塁「あ、センセも英語苦手？俺と同じ匂いがする…w」",
+        reaction_good: "るい「すげー！センセ英語もいけるんスね！助かった〜！」",
+        reaction_bad: "るい「あ、センセも英語苦手？俺と同じ匂いがする…w」",
         image: "rui_icon.png"
     },
 
