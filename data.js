@@ -324,7 +324,6 @@ const schoolData = [
         love_msg: "れい「また私？…ふふ、選ばれるのって悪くないですね。あなた、優秀です。」",
         image: "rei.png"
     },
-const roster = [
     {
         id: "3-1_yae",
         subtype: "roster",
