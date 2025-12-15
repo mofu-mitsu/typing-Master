@@ -140,8 +140,8 @@ const schoolData = [
         reaction_good: "あめり「す、すごい…。せんせ、指の動ききれい…。」",
         reaction_bad: "あめり「わ、わっ…！み、ミス…？だ、大丈夫、やよ…？」",
         reaction_fast: "あめり「ひゃっ…！そんな速く動くん…？びっくりした…。」",
-        reaction_slow: "あめり「えと…ゆっくりでも、あめりは嬉しいし…だいじょぶ、やよ。」",
-        love_msg: "あめり「また…あめりの名前選んでくれたが…？ふふ、なんか胸あつなる…。」",
+        reaction_slow: "あめり「えと…ゆっくりでも、私は嬉しいし…だいじょぶ、やよ。」",
+        love_msg: "あめり「また…私の名前選んでくれたが…？ふふ、なんか胸あつなる…。」",
         image: "ameri.png",
     },
     {
@@ -357,7 +357,7 @@ const schoolData = [
 
     // --- 2年2組 ---
     {
-        id: "3-1_yae", // 元IDのままにしておくね
+        id: "2-2_yae", // 元IDのままにしておくね
         subtype: "roster",
         group: "2-2", // 設定上のクラス
         text: "藍河 八重",
@@ -372,7 +372,7 @@ const schoolData = [
         image: "yae.png",
     },
     {
-        id: "3-2_akari",
+        id: "2-2_akari",
         subtype: "roster",
         group: "2-2",
         text: "味野 灯莉",
@@ -387,7 +387,7 @@ const schoolData = [
         image: "akari.png",
     },
     {
-        id: "3-3_enishi",
+        id: "2-2_enishi",
         subtype: "roster",
         group: "2-2",
         text: "鼬川 絵丹師",
@@ -402,7 +402,7 @@ const schoolData = [
         image: "enishi.png",
     },
     {
-        id: "3-4_matoi",
+        id: "2-2_matoi",
         subtype: "roster",
         group: "2-2",
         text: "芋縄 的倭",
@@ -417,7 +417,7 @@ const schoolData = [
         image: "matoi.png",
     },
     {
-        id: "3-5_suzu",
+        id: "2-2_suzu",
         subtype: "roster",
         group: "2-2",
         text: "忍足 鈴",
@@ -432,7 +432,7 @@ const schoolData = [
         image: "suzu.png",
     },
     {
-        id: "3-6_arin",
+        id: "2-2_arin",
         subtype: "roster",
         group: "2-2",
         text: "小犬丸 愛凛",
@@ -447,7 +447,7 @@ const schoolData = [
         image: "arin.png",
     },
     {
-        id: "4-1_yasashi",
+        id: "2-2_yasashi",
         subtype: "roster",
         group: "2-2",
         text: "霜降 柔",
@@ -462,7 +462,7 @@ const schoolData = [
         image: "yasashi.png",
     },
     {
-        id: "4-2_rui",
+        id: "2-2_rui",
         subtype: "roster",
         group: "2-2",
         text: "春潮楼 塁",
@@ -477,7 +477,7 @@ const schoolData = [
         image: "rui.png",
     },
     {
-        id: "4-3_makishi",
+        id: "2-2_makishi",
         subtype: "roster",
         group: "2-2",
         text: "鈴木 槙士",
@@ -492,7 +492,7 @@ const schoolData = [
         image: "makishi.png",
     },
     {
-        id: "4-4_shige",
+        id: "2-2_shige",
         subtype: "roster",
         group: "2-2",
         text: "仲馬 穣",
@@ -507,7 +507,7 @@ const schoolData = [
         image: "shige.png",
     },
     {
-        id: "4-5_hakomo",
+        id: "2-2_hakomo",
         subtype: "roster",
         group: "2-2",
         text: "出逢 箱藻",
@@ -522,7 +522,7 @@ const schoolData = [
         image: "hakomo.png",
     },
     {
-        id: "4-6_shizuka",
+        id: "2-2_shizuka",
         subtype: "roster",
         group: "2-2",
         text: "灰住 鎮花",
@@ -542,7 +542,7 @@ const schoolData = [
         group: "2-2",
         text: "萩枝 美琳", 
         kana: "はぎえだみりん", 
-        romaji: "hagiedami rin", 
+        romaji: "hagieda mirin", 
         start_msg: "みりん「えー、みりんてゃって呼んでよぉ🎀」",
         reaction_good: "みりん「やるじゃん！褒めてあげる💕」", 
         reaction_bad: "みりん「だっさw 噛んでやんのw」",
