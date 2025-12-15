@@ -91,9 +91,9 @@ const schoolData = [
         text: "相原 美里耶", 
         kana: "あいはらみりや", 
         romaji: "aiharamiriya", 
-        start_msg: "美里耶「…業務遂行します。」", 
-        reaction_good: "美里耶「迅速な対応、感謝します。」", 
-        reaction_bad: "美里耶「…ミスですか？珍しい。」", 
+        start_msg: "みりや「…業務遂行します。」", 
+        reaction_good: "みりや「迅速な対応、感謝します。」", 
+        reaction_bad: "みりや「…ミスですか？珍しい。」", 
         reaction_fast: "みりや「速い…効率的。評価します。」",
         reaction_slow: "みりや「問題ありません。正確性を優先してください。」",
         love_msg: "みりや「また私ですか。…業務効率を考えても、悪くありません。」",
@@ -649,9 +649,9 @@ const schoolData = [
         text: "薮崎 芽衣",
         kana: "やぶさきめい",
         romaji: "yabusaki mei",
-        start_msg: "芽衣「あ、あの…私なんかでいいんですかぁ？」",
-        reaction_good: "芽衣「わぁっ！すごいです先生！憧れちゃいますぅ！」",
-        reaction_bad: "芽衣「あぅっ…私みたいにドジしちゃダメですよぉ💦」",
+        start_msg: "めい「あ、あの…私なんかでいいんですかぁ？」",
+        reaction_good: "めい「わぁっ！すごいです先生！憧れちゃいますぅ！」",
+        reaction_bad: "めい「あぅっ…私みたいにドジしちゃダメですよぉ💦」",
         image: "mei.png"
     },
     {
@@ -661,9 +661,9 @@ const schoolData = [
         text: "妻鹿 克己",
         kana: "めがかつみ",
         romaji: "mega katsumi",
-        start_msg: "克己「おう！俺の名前を打つ気合はあるか！！」",
-        reaction_good: "克己「いいパンチだ！その調子で走り抜けろ！」",
-        reaction_bad: "克己「たるんどる！指立て伏せ20回だ！」",
+        start_msg: "かつみ「おう！俺の名前を打つ気合はあるか！！」",
+        reaction_good: "かつみ「いいパンチだ！その調子で走り抜けろ！」",
+        reaction_bad: "かつみ「たるんどる！指立て伏せ20回だ！」",
         image: "katsumi.png"
     },
     {
@@ -673,9 +673,9 @@ const schoolData = [
         text: "村雨 巳太楼",
         kana: "むらさめみたろう",
         romaji: "murasame mitarou",
-        start_msg: "村雨「…私の名前？時間の無駄では？」",
-        reaction_good: "村雨「…まあ、最低限の仕事はできる用ですね。」",
-        reaction_bad: "村雨「非効率的です。出直してきなさい。」",
+        start_msg: "みたろう「…私の名前？時間の無駄では？」",
+        reaction_good: "みたろう「…まあ、最低限の仕事はできる用ですね。」",
+        reaction_bad: "みたろう「非効率的です。出直してきなさい。」",
         image: "murasame.png"
     },
 
@@ -720,9 +720,9 @@ const schoolData = [
         text: "……インスピレーションが降りてきた。早退してもいいですか。",
         kana: "だめです。アトリエにいくならほうかごにしなさい。",
         romaji: "dame desu atorie ni iku nara houkago ni shinasai",
-        start_msg: "（絵丹師からLINEが届きました）",
-        reaction_good: "絵丹師「……チッ。わかったよ。」",
-        reaction_bad: "絵丹師「……集中力、散漫しとるよ。」",
+        start_msg: "（えにしからLINEが届きました）",
+        reaction_good: "えにし「……チッ。わかったよ。」",
+        reaction_bad: "えにし「……集中力、散漫しとるよ。」",
         image: "enishi.png"
     },
 
