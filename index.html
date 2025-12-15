@@ -40,7 +40,21 @@
                         <option value="mix">⭐ 総合実務（ランダム）</option>
                     </select>
                 </div>
-
+                <!-- ↓↓ この部分を追加してね！ ↓↓ -->
+                <div class="setting-group hidden" id="class-select-group">
+                    <label><i class="fa-solid fa-users"></i> 対象クラス（任意）</label>
+                    <select id="class-select">
+                        <option value="all">指定なし（全校生徒）</option>
+                        <option value="1-1">1年1組</option>
+                        <option value="1-2">1年2組</option>
+                        <option value="1-4">1年4組</option>
+                        <option value="2-1">2年1組</option>
+                        <option value="2-2">2年2組</option>
+                        <option value="3-1">3年1組</option>
+                        <option value="3-2">3年2組</option>
+                        <option value="teacher">教職員</option>
+                    </select>
+                </div>
                 <div class="setting-group">
                     <label><i class="fa-solid fa-stopwatch"></i> 課題数</label>
                     <select id="count-select">
