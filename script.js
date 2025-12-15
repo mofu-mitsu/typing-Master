@@ -3,7 +3,7 @@
    ========================================== */
 let currentMode = 'business';
 let currentSubMode = 'roster';
-let currentClass = 'all'; // ★クラス選択用
+let currentClass = 'all';
 let maxQuestions = 5;
 
 let currentQuestions = [];
@@ -19,7 +19,6 @@ let currentMiss = 0;
 let isPlaying = false;
 let isWaitingNext = false;
 
-// セーブデータ読み込み
 let saveData = JSON.parse(localStorage.getItem('tori_save')) || {};
 
 // HTML要素取得
@@ -32,25 +31,62 @@ const readingTextField = document.getElementById('reading-text');
 const romajiDisplay = document.getElementById('romaji-display');
 const commentField = document.getElementById('char-comment');
 const charImgBox = document.getElementById('char-image-box');
-// const charImg = document.getElementById('char-img'); // ←これは今回使わず、動的に生成するよ！
 const senderInfo = document.getElementById('sender-info');
 const senderName = document.getElementById('sender-name');
 const keys = document.querySelectorAll('.key');
 
 /* ==========================================
-   設定画面の制御
+   設定画面の制御（★ここをパワーアップ！）
    ========================================== */
+// 1. モード（実務/学校）を変えた時の処理
 function updateSubMode() {
     const mode = document.getElementById('mode-select').value;
     const subGroup = document.getElementById('sub-mode-group');
-    const classGroup = document.getElementById('class-select-group'); // ★これ！
+    const classGroup = document.getElementById('class-select-group');
 
     if (mode === 'school') {
         subGroup.classList.remove('hidden');
-        classGroup.classList.remove('hidden'); // ★学校モードならクラス選択を表示！
+        classGroup.classList.remove('hidden');
+        // ★学校モードが出たら、選択肢の整理も一度実行する
+        updateClassOptions();
     } else {
         subGroup.classList.add('hidden');
         classGroup.classList.add('hidden');
+    }
+}
+
+// 2. ★新機能：業務内容に合わせてクラス選択肢を出し分ける！
+function updateClassOptions() {
+    const subMode = document.getElementById('sub-mode-select').value;
+    const classGroup = document.getElementById('class-select-group'); // クラス選択エリア全体
+    const classSelect = document.getElementById('class-select');      // プルダウン本体
+    const teacherOption = classSelect.querySelector('option[value="teacher"]'); // 「教職員」の選択肢
+
+    // 一旦リセット（全部表示・有効化）
+    classGroup.classList.remove('hidden');
+    teacherOption.disabled = false;
+    teacherOption.hidden = false;
+
+    // --- 条件分岐 ---
+
+    if (subMode === 'instruction') {
+        // パターンA：先生の指示
+        // → 生徒は関係ないのでクラス選択自体を隠す & 強制的に「教職員」を選択
+        classSelect.value = 'teacher';
+        classGroup.classList.add('hidden'); // 隠す
+    } 
+    else if (['line', 'request', 'chat'].includes(subMode)) {
+        // パターンB：生徒系（LINE, 依頼, チャット）
+        // → 「教職員」は選べないようにする
+        if (classSelect.value === 'teacher') {
+            classSelect.value = 'all'; // もし教職員が選ばれてたら全校に戻す
+        }
+        teacherOption.disabled = true; // 選択不可
+        teacherOption.hidden = true;   // リストから消す
+    } 
+    else {
+        // パターンC：名簿 (roster) や 総合 (mix)
+        // → 制限なし（先生も生徒も選べる）
     }
 }
 
@@ -60,7 +96,7 @@ function updateSubMode() {
 function initGame() {
     currentMode = document.getElementById('mode-select').value;
     currentSubMode = document.getElementById('sub-mode-select').value;
-    currentClass = document.getElementById('class-select').value; // ★クラス取得
+    currentClass = document.getElementById('class-select').value;
     maxQuestions = parseInt(document.getElementById('count-select').value);
     
     saveData = JSON.parse(localStorage.getItem('tori_save')) || {};
@@ -102,6 +138,9 @@ function applyModeStyles() {
         title.innerText = "🏫 教育機関実務研修（とりの丘学園）";
         
         let className = currentClass === 'all' ? '全校' : currentClass;
+        // 教職員が選ばれている時の表示
+        if (currentClass === 'teacher') className = '教職員';
+        
         subInfo.innerHTML = `<i class="fa-solid fa-graduation-cap"></i> 実習対象: ${className}`;
         
         if (currentSubMode === 'line') {
@@ -119,17 +158,15 @@ function prepareQuestions() {
     if (currentMode === 'business') {
         source = businessData;
     } else {
-        // 学園モードのフィルタリング
         source = schoolData.filter(q => {
             let typeMatch = (currentSubMode === 'mix' || q.subtype === currentSubMode);
-            // ★クラスが合致するか、指定なしか
             let classMatch = (currentClass === 'all' || q.group === currentClass);
             return typeMatch && classMatch;
         });
     }
 
     if (source.length === 0) {
-        alert("該当するデータがありません！条件を変えてみてください。ひとまず全データから出題します。");
+        alert("該当するデータがありません！全データから出題します。");
         source = schoolData;
     }
 
@@ -137,7 +174,7 @@ function prepareQuestions() {
 }
 
 /* ==========================================
-   キー入力制御
+   キー入力制御（変更なし）
    ========================================== */
 window.addEventListener('keydown', (e) => {
     if (!startScreen.classList.contains('hidden')) return;
@@ -172,10 +209,8 @@ inputField.addEventListener('input', (e) => {
             skipSpaces();
             updateRomajiDisplay();
             
-            // Badコメント消去 & 顔を元に戻す
             if (commentField.style.color === "rgb(231, 76, 60)") { 
                 commentField.innerText = "";
-                // 好感度が高い場合はデレ顔に戻す、そうでなければ通常
                 const q = currentQuestions[currentIndex];
                 let charLove = saveData[q.id] || 0;
                 let face = (charLove >= 5) ? "love" : "normal";
@@ -199,7 +234,6 @@ inputField.addEventListener('input', (e) => {
                 commentField.innerText = q.reaction_bad;
                 commentField.style.color = "#e74c3c"; 
             }
-            // ★Bad顔に変更
             updateCharExpression("bad");
         }
     }
@@ -230,7 +264,7 @@ function startGame() {
 }
 
 /* ==========================================
-   問題進行 & ★画像管理システム
+   問題進行 & 画像管理
    ========================================= */
 function nextQuestion() {
     if (currentIndex >= currentQuestions.length) {
@@ -257,18 +291,17 @@ function nextQuestion() {
     // 好感度チェック
     let charLove = saveData[q.id] || 0;
     let startMsg = q.start_msg;
-    let initialFace = "normal"; // 最初の顔
+    let initialFace = "normal";
 
     if (currentMode === 'school' && charLove >= 5 && q.love_msg) {
         startMsg = q.love_msg;
         commentField.style.color = "#ff69b4";
-        initialFace = "love"; // ★好感度MAXなら最初からデレ顔
+        initialFace = "love"; 
     } else {
         commentField.style.color = "#555";
     }
     commentField.innerText = startMsg ? startMsg : "";
 
-    // ★画像表示処理（ここを大改造！）
     renderCharImages(q, initialFace);
 
     if (q.subtype === 'line' || q.subtype === 'chat' || q.subtype === 'request') {
@@ -289,9 +322,8 @@ function nextQuestion() {
     }
 }
 
-// ★画像を生成して表示する関数
 function renderCharImages(q, emotion) {
-    charImgBox.innerHTML = ""; // 一旦クリア
+    charImgBox.innerHTML = ""; 
     charImgBox.classList.remove('hidden');
 
     if (currentMode !== 'school') {
@@ -299,66 +331,56 @@ function renderCharImages(q, emotion) {
         return;
     }
 
-    // A. グループチャット（複数画像）の場合
     if (q.images && Array.isArray(q.images)) {
         q.images.forEach(imgSrc => {
             const img = document.createElement("img");
             img.src = "images/" + imgSrc;
-            img.className = "char-img-group"; // CSSで丸アイコンにする
-            img.onerror = () => { img.style.display = "none"; }; // エラーなら消す
+            img.className = "char-img-group"; 
+            img.onerror = () => { img.style.display = "none"; }; 
             charImgBox.appendChild(img);
         });
         return;
     }
 
-    // B. 単体キャラの場合（表情差分あり）
     if (q.image) {
         const img = document.createElement("img");
-        img.id = "single-char-img"; // 操作用ID
+        img.id = "single-char-img"; 
         img.className = "char-img-single";
-        img.dataset.baseSrc = q.image; // 元のファイル名を保存
+        img.dataset.baseSrc = q.image; 
         charImgBox.appendChild(img);
-        
-        // 表情セット
         updateCharExpression(emotion);
     } else {
         charImgBox.classList.add('hidden');
     }
 }
 
-// ★表情を変える関数（ファイル名を自動推測！）
 function updateCharExpression(emotion) {
     const img = document.getElementById("single-char-img");
-    if (!img) return; // グルチャ等の場合は何もしない
+    if (!img) return; 
 
-    const baseSrc = img.dataset.baseSrc; // "mirin.png"
+    const baseSrc = img.dataset.baseSrc; 
     if (!baseSrc) return;
 
-    // 拡張子とファイル名を分離
     const dotIndex = baseSrc.lastIndexOf(".");
-    const name = baseSrc.substring(0, dotIndex); // "mirin"
-    const ext = baseSrc.substring(dotIndex);     // ".png"
+    const name = baseSrc.substring(0, dotIndex); 
+    const ext = baseSrc.substring(dotIndex);     
 
-    let targetSrc = baseSrc; // デフォルトは通常
+    let targetSrc = baseSrc; 
 
     if (emotion === "bad") {
-        targetSrc = `${name}_bad${ext}`; // "mirin_bad.png"
+        targetSrc = `${name}_bad${ext}`; 
     } else if (emotion === "good") {
-        targetSrc = `${name}_good${ext}`; // "mirin_good.png"
+        targetSrc = `${name}_good${ext}`; 
     } else if (emotion === "love") {
-        targetSrc = `${name}_love${ext}`; // "mirin_love.png"
+        targetSrc = `${name}_love${ext}`; 
     }
 
-    // 画像セット
     img.src = "images/" + targetSrc;
 
-    // ★もし画像がなかったら通常画像に戻す（ここが便利ポイント！）
     img.onerror = () => {
         if (img.src.includes(baseSrc)) {
-            // 通常画像すら無い場合は非表示
             img.style.display = "none"; 
         } else {
-            // 差分がない時は通常画像を表示
             img.src = "images/" + baseSrc;
         }
     };
@@ -389,7 +411,6 @@ function questionClear() {
     commentField.innerText = reaction;
     commentField.style.color = color;
     
-    // ★クリア時、Good顔に変更！
     updateCharExpression("good");
 
     if (currentMode === 'school') {
