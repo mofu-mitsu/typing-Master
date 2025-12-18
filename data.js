@@ -987,19 +987,19 @@ const schoolData = [
         image: "yukihiko.png"
     },
     { 
-        id: "1-4_yuki", 
+        id: "1-4_yuuki", 
         subtype: "roster",
         group: "1-4",
         text: "市川 宥暉", 
         kana: "いちかわ ゆうき", 
-        romaji: "ichikawa yuki", 
+        romaji: "ichikawa yuuki", 
         start_msg: "ゆうき「市川宥暉です！先生、あとで占いしてあげよっか？」",
         reaction_good: "ゆうき「うんうん、いい流れ来てるよ〜！」", 
         reaction_bad: "ゆうき「あれ？星の巡り的にそこ違うかも？」",
         reaction_fast: "ゆうき「はやっ！今日ツイてるね、先生！」", 
         reaction_slow: "ゆうき「ゆっくりで大丈夫〜、運命は逃げないからさ」", 
         love_msg: "ゆうき「先生に名前呼ばれると、ちょっと運気上がる気する」",
-        image: "yuki.png"
+        image: "yuuki.png"
     },
     { 
         id: "1-4_maaya", 
