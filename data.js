@@ -102,15 +102,15 @@ const schoolData = [
         id: "1-1_mimika",
         subtype: "roster",
         group: "1-1",
-        text: "今度 美々香",
+        text: "近藤 美々香",
         kana: "こんどうみみか",
         romaji: "kondo mimika",
-        start_msg: "みみか「……名簿ね。合理的でいい判断だと思うわ、せんせ」",
+        start_msg: "みみか「……名簿ね。合理的でいい判断だと思うわ、先生」",
         reaction_good: "みみか「正確。無駄がないわ。さすがね」",
-        reaction_bad: "みみか「誤字。確認不足よ、せんせ。やり直して」",
+        reaction_bad: "みみか「誤字。確認不足よ、先生。やり直して」",
         reaction_fast: "みみか「……想定より早いわね。効率的で助かる」",
         reaction_slow: "みみか「遅延。工程管理、見直した方がいいわ」",
-        love_msg: "みみか「せんせが呼ぶなら…その名前で問題ないわ」",
+        love_msg: "みみか「先生が呼ぶなら…その名前で問題ないわ」",
         image: "mimika.png"
     },
     { 
@@ -150,12 +150,12 @@ const schoolData = [
         text: "天雨 聖奈",
         kana: "あまうせいな",
         romaji: "amau seina",
-        start_msg: "せいな「はい、せんせ。名簿ならテキパキお願いね」",
+        start_msg: "せいな「はい、先生。名簿ならテキパキお願いします」",
         reaction_good: "せいな「よし、完璧。ちゃんとしてるじゃない」",
-        reaction_bad: "せいな「ちょっと！そこ違うでしょ！確認して！」",
+        reaction_bad: "せいな「ちょっと！そこ違うでしょ！確認してください！」",
         reaction_fast: "せいな「判断早いわね。嫌いじゃないわ」",
         reaction_slow: "せいな「遅い！もっとシャキッとしなさい！」",
-        love_msg: "せいな「……せんせがちゃんと呼ぶなら、文句ないわ」",
+        love_msg: "せいな「……先生がちゃんと呼ぶなら、文句ないわ」",
         image: "seina.png"
     },
     { 
@@ -260,7 +260,7 @@ const schoolData = [
         reaction_bad: "こまり「それ、ちょっと違うよ？直してほしいな」",
         reaction_fast: "こまり「はやいね。びっくりしちゃった」",
         reaction_slow: "こまり「ゆっくりでもいいけど…忘れないでね」",
-        love_msg: "こまり「先生に名前呼ばれるの、嬉しいよ」",
+        love_msg: "こまり「せんせいに名前呼ばれるの、嬉しいよ」",
         image: "komari.png"
     },
     { 
@@ -469,7 +469,7 @@ const schoolData = [
         start_msg: "しるべ「……名簿。うん」",
         reaction_good: "しるべ「……合ってる」",
         reaction_bad: "しるべ「……違う。そこ」",
-        reaction_fast: "しるべ「……早いな」",
+        reaction_fast: "しるべ「……早い」",
         reaction_slow: "しるべ「……別に、いい」",
         love_msg: "しるべ「……呼ばれるのは、嫌じゃない」",
         image: "shirube.png"
@@ -1127,7 +1127,7 @@ const schoolData = [
         group: "1-4",
         text: "寺田 山茶花", 
         kana: "てらだ さやか", 
-        romaji: "terada sayaka", 
+        romaji: "teluada sayaka", 
         start_msg: "さやか「寺田山茶花です……よろしゅうお願いします」",
         reaction_good: "さやか「あ……合ってます。ありがとうございます」", 
         reaction_bad: "さやか「そ、そこ……違うと思いますえ」",
@@ -1483,31 +1483,18 @@ const schoolData = [
         image: "migiwa.png"
     },
     {
-        id: "2-1_ryogo_ni_fix",
+        id: "2-1_ryogo",
         subtype: "roster",
         group: "2-1",
         text: "水上 亮吾",
         kana: "みずかみりょうご",
         romaji: "mizukami_ryogo",
-        
-        // Ni修正：「データ」より「構成要素」。「バグ」より「矛盾」
-        start_msg: "りょうご「入力、お願いします。……僕を構成する要素、矛盾なく記述できるでしょうか」",
-        
-        // Ni修正：ただの正確さではなく「本質を捉えた」ことを褒める
-        reaction_good: "りょうご「……完璧です。表面的なデータだけでなく、本質まで捉えられていますね」",
-        
-        // Ni修正：間違いは「解釈違い」
-        reaction_bad: "りょうご「……先生、ノイズが混じっています。その定義だと、僕は機能しません」",
-        
-        // Ni修正：速さ＝先読み
-        reaction_fast: "りょうご「……速い。入力する前から、完成形が見えていたんですね。素晴らしい直観です」",
-        
-        // Ni修正：遅さ＝シミュレーション
-        reaction_slow: "りょうご「大丈夫ですよ。あらゆるパターンを検証しているんですよね。その慎重さ、信頼します」",
-        
-        // Ni修正：恋愛＝予測不能の特異点
-        love_msg: "りょうご「……僕を指名？ ……おかしいな。あらゆる予測パターンにも、その未来はなかったのに」",
-        
+        start_msg: "りょうご「では…入力、お願いします。僕も確認しますね。」",
+        reaction_good: "りょうご「正確ですね。素晴らしい…本当に。」",
+        reaction_bad: "りょうご「すみません、少しズレてます…もう一度だけ調整を。」",
+        reaction_fast: "りょうご「速い…！回路のように正確なリズムです…すごい。」",
+        reaction_slow: "りょうご「ゆっくりで大丈夫ですよ。丁寧さは武器ですから。」",
+        love_msg: "りょうご「また僕を…？その、えっと…すごく信頼されてる気がして…嬉しいです。」",
         image: "ryogo.png"
     },
     {
@@ -2467,10 +2454,10 @@ const schoolData = [
         start_msg: "（りょうごからLINEが届きました）",
         
         // Ni修正：時系列だけじゃなく「因果関係」
-        reaction_good: "りょうご「了解しました。遅延の理由と因果関係、後ほどまとめて報告します」",
+        reaction_good: "りょうご「ありがとうございます。後ほど報告します。」",
         
         // Ni修正：精度の低下＝思考の乱れの予兆
-        reaction_bad: "りょうご「……先生、入力リズムが乱れています。思考のノイズ、除去した方がいい」",
+        reaction_bad: "りょうご「……先生、入力精度が下がっていませんか？」",
         
         // Ni修正：タイムラグのなさ＝思考の同期
         reaction_fast: "りょうご「即レス、助かります。思考が同期しているみたいで……悪くないですね」",
@@ -2964,6 +2951,1369 @@ const schoolData = [
         reaction_slow: "まほ「…ゆっくりでいいよ。わたしも、ゆっくりだから。」",
         image: "maho.png"
     },
+        // --- 3年2組 ---
+    { 
+        id: "msg_shiori", 
+        subtype: "line",
+        group: "3-2",
+        sender: "稲地 栞",
+        text: "先生！今日配布されたプリント、休んでた子の分もまとめて預かってます！あとで渡しておきますね！",
+        kana: "ありがとう。助かります。無理しすぎないようにしてください。",
+        romaji: "arigatou. tasukarimasu. muri shisuginai you ni shite kudasai.",
+        start_msg: "（しおりからLINEが届きました）",
+        reaction_good: "しおり「えへへ、役に立ててよかったです！」",
+        reaction_bad: "しおり「先生、そこ誤字ありますよ〜？」",
+        reaction_fast: "しおり「はやっ！確認ありがとうございます！」",
+        reaction_slow: "しおり「あ、忙しかったですよね！大丈夫です！」",
+        image: "shiori.png"
+    },
+
+    { 
+        id: "msg_hitomi", 
+        subtype: "line",
+        group: "3-2",
+        sender: "笑原 瞳",
+        text: "先生、今日の授業内容、少し難しそうな子がいました。後でフォローできたらと思います。",
+        kana: "気づいてくれてありがとう。無理のない範囲で大丈夫ですよ。",
+        romaji: "kizuite kurete arigatou. muri no nai han'i de daijoubu desu yo.",
+        start_msg: "（ひとみからLINEが届きました）",
+        reaction_good: "ひとみ「そう言っていただけて、少し安心しました。」",
+        reaction_bad: "ひとみ「先生、誤字があります…。大丈夫ですか？」",
+        reaction_fast: "ひとみ「すぐにお返事をいただけて嬉しいです。」",
+        reaction_slow: "ひとみ「後ででも問題ありません。ありがとうございます。」",
+        image: "hitomi.png"
+    },
+
+    { 
+        id: "msg_toro", 
+        subtype: "line",
+        group: "3-2",
+        sender: "一適 土呂",
+        text: "先生。弓道部の用具、少し傷んでます。確認だけしといた方がいいです。",
+        kana: "報告ありがとうございます。後日こちらで確認します。",
+        romaji: "houkoku arigatou gozaimasu. gojitsu kochira de kakunin shimasu.",
+        start_msg: "（とろからLINEが届きました）",
+        reaction_good: "とろ「了解です。」",
+        reaction_bad: "とろ「…先生、字ちがいます。」",
+        reaction_fast: "とろ「はやいですね。」",
+        reaction_slow: "とろ「後ででも大丈夫です。」",
+        image: "toro.png"
+    },
+
+    { 
+        id: "msg_sumire", 
+        subtype: "line",
+        group: "3-2",
+        sender: "草摘 菫",
+        text: "先生、校庭のお花がきれいに咲いてました。少しだけ、気持ちが楽になりました。",
+        kana: "そうですか。教えてくれてありがとうございます。",
+        romaji: "sou desu ka. oshiete kurete arigatou gozaimasu.",
+        start_msg: "（すみれからLINEが届きました）",
+        reaction_good: "すみれ「…はい。ありがとうございます。」",
+        reaction_bad: "すみれ「あ、先生…そこ、間違ってます…。」",
+        reaction_fast: "すみれ「すぐ返してくれて、うれしいです。」",
+        reaction_slow: "すみれ「ゆっくりで大丈夫です。」",
+        image: "sumire.png"
+    },
+
+    { 
+        id: "msg_urara", 
+        subtype: "line",
+        group: "3-2",
+        sender: "並河 麗",
+        text: "先生、あの花壇、勝手に触られた形跡あるんだけど。注意した方がいいんじゃない？",
+        kana: "確認します。情報ありがとうございます。",
+        romaji: "kakunin shimasu. jouhou arigatou gozaimasu.",
+        start_msg: "（うららからLINEが届きました）",
+        reaction_good: "うらら「でしょ？ちゃんと見てくださいよ。」",
+        reaction_bad: "うらら「は？先生、誤字ってるし。」",
+        reaction_fast: "うらら「対応早いじゃない。」",
+        reaction_slow: "うらら「…遅いんだけど？」",
+        image: "urara.png"
+    },
+
+    { 
+        id: "msg_mayuko", 
+        subtype: "line",
+        group: "3-2",
+        sender: "畑奈 麻由子",
+        text: "せんせー！今日ダンスめっちゃ上手くできた気する！見せたかったな〜！",
+        kana: "それは良かったですね。次の機会を楽しみにしています。",
+        romaji: "sore wa yokatta desu ne. tsugi no kikai wo tanoshimi ni shiteimasu.",
+        start_msg: "（まゆこからLINEが届きました）",
+        reaction_good: "まゆこ「えへへ！がんばる〜！」",
+        reaction_bad: "まゆこ「先生、なんか変な字になってるよ？」",
+        reaction_fast: "まゆこ「はやっ！うれしー！」",
+        reaction_slow: "まゆこ「あれ？寝てた？まあいっか！」",
+        image: "mayuko.png"
+    },
+    { 
+        id: "msg_aiko", 
+        subtype: "line",
+        group: "3-2",
+        sender: "蜂ケ崎 敢惟子",
+        text: "先生、放課後の準備はあたしが仕切っといたよ。人手も配置も問題なし。",
+        kana: "ありがとう。段取りしてくれて助かります。",
+        romaji: "arigatou. dantori shite kurete tasukarimasu.",
+        start_msg: "（あいこからLINEが届きました）",
+        reaction_good: "あいこ「当然だね！」",
+        reaction_bad: "あいこ「先生、そこ字が違うよ？」",
+        reaction_fast: "あいこ「仕事早いね、先生。」",
+        reaction_slow: "あいこ「ま、忙しいなら仕方ないか。」",
+        image: "aiko.png"
+    },
+
+    { 
+        id: "msg_yayoi", 
+        subtype: "line",
+        group: "3-2",
+        sender: "深名 弥生",
+        text: "先生、今日もアトリエ借ります。少し作業が長引きそうで。",
+        kana: "わかりました。戸締まりだけ気をつけてください。",
+        romaji: "wakarimashita. tojimari dake ki wo tsukete kudasai.",
+        start_msg: "（やよいからLINEが届きました）",
+        reaction_good: "やよい「了解です。」",
+        reaction_bad: "やよい「先生、変な変換してますよ。」",
+        reaction_fast: "やよい「早いですね。」",
+        reaction_slow: "やよい「後で見ときます。」",
+        image: "yayoi.png"
+    },
+
+    { 
+        id: "msg_satsuki", 
+        subtype: "line",
+        group: "3-2",
+        sender: "普賢 総都喜",
+        text: "先生、次の生徒会資料ですが、少し補足を加えた方がよいかと思われます。",
+        kana: "確認します。意見をありがとうございます。",
+        romaji: "kakunin shimasu. iken wo arigatou gozaimasu.",
+        start_msg: "（さつきからLINEが届きました）",
+        reaction_good: "さつき「お役に立てれば幸いです。」",
+        reaction_bad: "さつき「先生、誤字がございます。」",
+        reaction_fast: "さつき「迅速なご対応、感謝します。」",
+        reaction_slow: "さつき「ご都合のよい時で構いません。」",
+        image: "satsuki.png"
+    },
+
+    { 
+        id: "msg_hotomo", 
+        subtype: "line",
+        group: "3-2",
+        sender: "扶蘇 補知",
+        text: "先生、漬物できたんで、余ってたら職員室置いときます。",
+        kana: "ありがとうございます。気持ちだけいただきますね。",
+        romaji: "arigatou gozaimasu. kimochi dake itadakimasu ne.",
+        start_msg: "（ほともからLINEが届きました）",
+        reaction_good: "ほとも「そっすか。了解です。」",
+        reaction_bad: "ほとも「先生、打ち間違えてますよ。」",
+        reaction_fast: "ほとも「はや。」",
+        reaction_slow: "ほとも「あとででいいですよ。」",
+        image: "hotomo.png"
+    },
+
+    { 
+        id: "msg_hoshi", 
+        subtype: "line",
+        group: "3-2",
+        sender: "松気之宮 星",
+        text: "先生、今夜星がよく見えそうっす。屋上、使ってもいいですか？",
+        kana: "安全に配慮した上で、短時間なら許可します。",
+        romaji: "anzen ni hairyo shita ue de, tanjikan nara kyoka shimasu.",
+        start_msg: "（ほしからLINEが届きました）",
+        reaction_good: "ほし「ありがとうございます！」",
+        reaction_bad: "ほし「先生、そこ違いますよ〜。」",
+        reaction_fast: "ほし「即レス助かります！」",
+        reaction_slow: "ほし「あとででも大丈夫っす！」",
+        image: "hoshi.png"
+    },
+
+    { 
+        id: "msg_nami", 
+        subtype: "line",
+        group: "3-2",
+        sender: "村瀬 奈美",
+        text: "先生、さっき廊下で面白い光景を見ましたわ。ふふ。",
+        kana: "詳しい内容は控えてください。",
+        romaji: "kuwashii naiyou wa hikaete kudasai.",
+        start_msg: "（なみからLINEが届きました）",
+        reaction_good: "なみ「さすが先生、冷静ですわね。」",
+        reaction_bad: "なみ「あら、先生？誤字ですわ。」",
+        reaction_fast: "なみ「反応がお早いですわ〜。」",
+        reaction_slow: "なみ「気づいたらで結構ですのよ。」",
+        image: "nami.png"
+    },
+        // --- 1年1組 ---
+    { 
+        id: "msg_momoka",
+        subtype: "line",
+        group: "1-1",
+        sender: "遠藤 桃花",
+        text: "ねぇ先生。今日の体育、あたし一番だったんだけど？ちゃんと見てた？🐾✨",
+        kana: "きょうはよくがんばっていましたね。けがもなくてよかったです。",
+        romaji: "kyou wa yoku ganbatte imashita ne. kega mo nakute yokatta desu.",
+        start_msg: "（ももかからLINEが届きました）",
+        reaction_good: "ももか「……べ、別に褒めてほしかったわけじゃないし///」",
+        reaction_bad: "ももか「は？先生、文おかしくない？ちゃんと書きなさいよ」",
+        reaction_fast: "ももか「即レス？ふーん…まぁ、悪くないわね」",
+        reaction_slow: "ももか「……ふん。あとでまとめて返すとか言わないでよ」",
+        image: "momoka.png"
+    },
+    { 
+        id: "msg_mimika",
+        subtype: "line",
+        group: "1-1",
+        sender: "近藤 美々香",
+        text: "先生、本日の給食ですが栄養バランスは問題ありませんでした。桃花がデザートを狙っていましたが。",
+        kana: "ほうこくありがとう。みんなでなかよくたべるようにつたえてください。",
+        romaji: "houkoku arigatou. minna de nakayoku taberu you ni tsutaete kudasai.",
+        start_msg: "（みみかからLINEが届きました）",
+        reaction_good: "みみか「ふふ、了解しました。さすが先生です」",
+        reaction_bad: "みみか「先生、誤字があります。落ち着いて入力してください」",
+        reaction_fast: "みみか「迅速な対応、感謝します」",
+        reaction_slow: "みみか「少し返信が遅いようですね。業務多忙でしょうか？」",
+        image: "mimika.png"
+    },
+    { 
+        id: "msg_hinaka",
+        subtype: "line",
+        group: "1-1",
+        sender: "辻山 妃菜華",
+        text: "せんせー！今日の掃除めっちゃ早く終わったでー！うちら最強じゃない？😺✨",
+        kana: "そうですね。みなさんがきょうりょくしてくれたおかげです。",
+        romaji: "sou desu ne. minasan ga kyouryoku shite kureta okage desu.",
+        start_msg: "（ひなかからLINEが届きました）",
+        reaction_good: "ひなか「えへへ〜！先生わかっとるわ〜！」",
+        reaction_bad: "ひなか「先生、文字へんじゃない？大丈夫そ？」",
+        reaction_fast: "ひなか「はやっ！即レス神やん！」",
+        reaction_slow: "ひなか「まだかな〜って待っとったんだけど〜」",
+        image: "hinaka.png"
+    },
+    { 
+        id: "msg_hikaru",
+        subtype: "line",
+        group: "1-1",
+        sender: "黒見 晃",
+        text: "なぁ先生！今日ハロウィンの飾り見た？オレあれテンション上がるんだけど！🎃🐈‍⬛",
+        kana: "たのしみにできるのはいいことですね。ただしじゅんびはきそくをまもりましょう。",
+        romaji: "tanoshimi ni dekiru no wa ii koto desu ne. tadashi junbi wa kisoku o mamorimashou.",
+        start_msg: "（ひかるからLINEが届きました）",
+        reaction_good: "ひかる「さすが先生！話わかる〜！」",
+        reaction_bad: "ひかる「先生、そこ噛んでない？w」",
+        reaction_fast: "ひかる「即返事くるの嬉しいわ〜！」",
+        reaction_slow: "ひかる「あれ？寝てる？それとも忙しい？」",
+        image: "hikaru.png"
+    },
+    { 
+        id: "msg_seina",
+        subtype: "line",
+        group: "1-1",
+        sender: "天雨 聖奈",
+        text: "先生、明日の体操部の朝練、校庭使っていいですよね？確認です。",
+        kana: "はい、しようきょかはとっています。あんぜんにちゅういしてください。",
+        romaji: "hai, shiyou kyoka wa totte imasu. anzen ni chuui shite kudasai.",
+        start_msg: "（せいなからLINEが届きました）",
+        reaction_good: "せいな「了解です。助かります」",
+        reaction_bad: "せいな「先生、誤字多くないですか？」",
+        reaction_fast: "せいな「即確認ありがとうございます」",
+        reaction_slow: "せいな「返信まだですか？準備に影響出ます」",
+        image: "seina.png"
+    },
+    { 
+        id: "msg_tetsu",
+        subtype: "line",
+        group: "1-1",
+        sender: "市宮 哲",
+        text: "せんせー！今日の実験めっちゃ楽しかったです！みんな個性バラバラで最高でした！🐱🧪",
+        kana: "そういってもらえてうれしいです。つぎもあんぜんにたのしみましょう。",
+        romaji: "sou itte moraete ureshii desu. tsugi mo anzen ni tanoshimimashou.",
+        start_msg: "（てつからLINEが届きました）",
+        reaction_good: "てつ「えへへ〜！先生だいすきです！」",
+        reaction_bad: "てつ「先生、誤字ってますよ〜？」",
+        reaction_fast: "てつ「即レス！先生ほんと優しい〜！」",
+        reaction_slow: "てつ「あとでまとめてでも大丈夫ですよ〜！」",
+        image: "tetsu.png"
+    },
+    { 
+        id: "msg_towa",
+        subtype: "line",
+        group: "1-1",
+        sender: "右幸 永遠",
+        text: "先生〜今日の授業ちょっと長く感じたっす！オレ頑張った方じゃない？🧀🎮",
+        kana: "さいごまでよくさんかしていましたね。このちょうしでいきましょう。",
+        romaji: "saigo made yoku sanka shite imashita ne. kono choushi de ikimashou.",
+        start_msg: "（とわからLINEが届きました）",
+        reaction_good: "とわ「よっしゃ！褒められた！」",
+        reaction_bad: "とわ「先生、そこ変換ミスってない？」",
+        reaction_fast: "とわ「即レスありがと！テンション上がる〜！」",
+        reaction_slow: "とわ「まぁ忙しいならしゃーないっすね！」",
+        image: "towa.png"
+    },
+    { 
+        id: "msg_mai",
+        subtype: "line",
+        group: "1-1",
+        sender: "岡田 麻衣",
+        text: "先生、今日の掃除当番、私一人でやっておきました。みんな忙しそうだったので。",
+        kana: "ほうこくありがとう。ただし、つぎからはみんなでぶんたんしましょう。",
+        romaji: "houkoku arigatou. tadashi, tsugi kara wa minna de buntan shimashou.",
+        start_msg: "（まいからLINEが届きました）",
+        reaction_good: "まい「……ふふ、先生って優しいですね」",
+        reaction_bad: "まい「先生、誤字ありますよ。わざとですか？」",
+        reaction_fast: "まい「即レスですね。暇なんですか？」",
+        reaction_slow: "まい「あとで返すって、そういうの嫌いじゃないです」",
+        image: "mai.png"
+    },
+    { 
+        id: "msg_kosaku",
+        subtype: "line",
+        group: "1-1",
+        sender: "小路 虎作",
+        text: "せんせー！今日のお昼のお好み焼き、マジで俺ん家レベルやったで！誇ってええ？",
+        kana: "そうですね。じまんはほどほどにして、まわりにもきをくばりましょう。",
+        romaji: "sou desu ne. jiman wa hodohodo ni shite, mawari ni mo ki o kubarimashou.",
+        start_msg: "（こさくからLINEが届きました）",
+        reaction_good: "こさく「さすが先生、ツッコミ上手やな〜！」",
+        reaction_bad: "こさく「先生、そこ日本語おかしない？w」",
+        reaction_fast: "こさく「即レスやん！ノリええな〜！」",
+        reaction_slow: "こさく「まぁ忙しいんはええことやで！」",
+        image: "kosaku.png"
+    },
+    { 
+        id: "msg_kotarou",
+        subtype: "line",
+        group: "1-1",
+        sender: "川曽 虎太郎",
+        text: "先生、今日ちょっとクラスの雰囲気良かったと思うんです。みんな笑顔でした。",
+        kana: "そう感じたなら、とてもいいことですね。これからもたいせつにしましょう。",
+        romaji: "sou kanjita nara, totemo ii koto desu ne. kore kara mo taisetsu ni shimashou.",
+        start_msg: "（こたろうからLINEが届きました）",
+        reaction_good: "こたろう「ありがとうございます。嬉しいです」",
+        reaction_bad: "こたろう「先生、誤字ありますよ？」",
+        reaction_fast: "こたろう「すぐ返してくれるの、安心します」",
+        reaction_slow: "こたろう「後でも大丈夫ですよ」",
+        image: "kotarou.png"
+    },
+    { 
+        id: "msg_koto",
+        subtype: "line",
+        group: "1-1",
+        sender: "雑敷 言",
+        text: "先生、写真部の申請出しちょきました。今日はちょっと寒かったです。",
+        kana: "れんらくありがとう。からだをひやさないようにしてください。",
+        romaji: "renraku arigatou. karada o hiyasanai you ni shite kudasai.",
+        start_msg: "（ことからLINEが届きました）",
+        reaction_good: "こと「気にかけてくれて助かります」",
+        reaction_bad: "こと「先生、文字間違うちゅうが」",
+        reaction_fast: "こと「返信はやいですね」",
+        reaction_slow: "こと「忙しいがやったら無理せんで」",
+        image: "koto.png"
+    },
+    { 
+        id: "msg_komari",
+        subtype: "line",
+        group: "1-1",
+        sender: "杉山 虎毱",
+        text: "せんせい、これ見て。おうちで作った棚なの。教室に置いてもいいかな？",
+        kana: "すてきですね。あんぜんをかくにんしてからそうだんしましょう。",
+        romaji: "suteki desu ne. anzen o kakunin shite kara soudan shimashou.",
+        start_msg: "（こまりからLINEが届きました）",
+        reaction_good: "こまり「よかった…ほめられた」",
+        reaction_bad: "こまり「せんせい、へんな文字あるよ？」",
+        reaction_fast: "こまり「すぐ見てくれてありがとう」",
+        reaction_slow: "こまり「あとででもいいよ」",
+        image: "komari.png"
+    },
+    { 
+        id: "msg_ai",
+        subtype: "line",
+        group: "1-1",
+        sender: "園田 藍",
+        text: "先生、本日もお疲れさまです。クラス運営、大変そうでいらっしゃいますね。",
+        kana: "きづかいありがとうございます。これからもよろしくおねがいします。",
+        romaji: "kizukai arigatou gozaimasu. kore kara mo yoroshiku onegaishimasu.",
+        start_msg: "（あいからLINEが届きました）",
+        reaction_good: "あい「ふふ…素直に返されると、つまらないですわね」",
+        reaction_bad: "あい「あら？先生、誤字ですわ。余裕がありませんの？」",
+        reaction_fast: "あい「即レスとは…優等生ですわ」",
+        reaction_slow: "あい「放置ですか。ふーん…」",
+        image: "ai.png"
+    },
+    { 
+        id: "msg_akaru",
+        subtype: "line",
+        group: "1-1",
+        sender: "成政 明流",
+        text: "先生見て見てー！今日も新作パーティーハット完成！被る？🎉🐱",
+        kana: "きもちだけうけとっておきます。がっこうではひかえましょう。",
+        romaji: "kimochi dake uketotte okimasu. gakkou de wa hikaemashou.",
+        start_msg: "（あかるからLINEが届きました）",
+        reaction_good: "あかる「さすが先生！ノリわかってる〜！」",
+        reaction_bad: "あかる「先生、変換ミスってるよ〜！」",
+        reaction_fast: "あかる「即レスうれしー！」",
+        reaction_slow: "あかる「忙しいなら仕方ないっすね！」",
+        image: "akaru.png"
+    },
+    { 
+        id: "msg_kojiro",
+        subtype: "line",
+        group: "1-1",
+        sender: "二瓶 小次郎",
+        text: "先生、今日の音楽室、少し長く使ってしまいました。問題ありませんでしたか？",
+        kana: "れんらくありがとう。つぎからはじかんをいしきしましょう。",
+        romaji: "renraku arigatou. tsugi kara wa jikan o ishiki shimashou.",
+        start_msg: "（こじろうからLINEが届きました）",
+        reaction_good: "こじろう「はい、気をつけます」",
+        reaction_bad: "こじろう「先生、変換が違います」",
+        reaction_fast: "こじろう「すぐ確認していただいて助かります」",
+        reaction_slow: "こじろう「後でで大丈夫です」",
+        image: "kojiro.png"
+    },
+    { 
+        id: "msg_kaede",
+        subtype: "line",
+        group: "1-1",
+        sender: "速川 楓",
+        text: "先生さぁ、今日の写真、私が一番可愛く写ってないんだけど？撮り直ししない？",
+        kana: "しゃしんはこうへいにあつかいます。ごりかいください。",
+        romaji: "shashin wa kouhei ni atsukaimasu. gorikai kudasai.",
+        start_msg: "（かえでからLINEが届きました）",
+        reaction_good: "かえで「ふーん…まぁいっか」",
+        reaction_bad: "かえで「先生、日本語ヘンじゃない？」",
+        reaction_fast: "かえで「即レス？意外と仕事できるじゃん」",
+        reaction_slow: "かえで「放置はちょっと傷つくんだけど」",
+        image: "kaede.png"
+    },
+    { 
+        id: "msg_sei",
+        subtype: "line",
+        group: "1-1",
+        sender: "腹巻 青",
+        text: "先生！明日の準備、クラス代表として俺がまとめます！指示ください！",
+        kana: "たのもしいですね。むりのないはんいでおねがいします。",
+        romaji: "tanomoshii desu ne. muri no nai hani de onegaishimasu.",
+        start_msg: "（せいからLINEが届きました）",
+        reaction_good: "せい「はい！全力でやります！」",
+        reaction_bad: "せい「先生、誤字あります！」",
+        reaction_fast: "せい「即返信ありがとうございます！」",
+        reaction_slow: "せい「後ででも待ちます！」",
+        image: "sei.png"
+    },
+    { 
+        id: "msg_setsuna",
+        subtype: "line",
+        group: "1-1",
+        sender: "谷幡 節捺",
+        text: "せんせぇ…メモ帳どこ入れたか分からんくなったと。新聞のネタも一緒に消えた…",
+        kana: "まずはおちついて、かばんのなかをいっしょにかくにんしましょう。",
+        romaji: "mazu wa ochitsuite, kaban no naka o issho ni kakunin shimashou.",
+        start_msg: "（せつなからLINEが届きました）",
+        reaction_good: "せつな「やさしかぁ…助かる」",
+        reaction_bad: "せつな「せんせ、へんな字あるばい」",
+        reaction_fast: "せつな「すぐ返ってきた！」",
+        reaction_slow: "せつな「あとででよかよ〜」",
+        image: "setsuna.png"
+    },
+    { 
+        id: "msg_kofuku",
+        subtype: "line",
+        group: "1-1",
+        sender: "山神 小福",
+        text: "先生、本日も山の巡回を終えました。異常はありません。",
+        kana: "ほうこくありがとう。あんぜんをさいゆうせんで。",
+        romaji: "houkoku arigatou. anzen o sai yuusen de.",
+        start_msg: "（こふくからLINEが届きました）",
+        reaction_good: "こふく「了解しました」",
+        reaction_bad: "こふく「先生、表記が違います」",
+        reaction_fast: "こふく「迅速な対応、感謝します」",
+        reaction_slow: "こふく「問題ありません」",
+        image: "kofuku.png"
+    },
+    { 
+        id: "msg_masaki",
+        subtype: "line",
+        group: "1-1",
+        sender: "勇惣 柾季",
+        text: "先生、少し相談したいことがあります。明日、時間をいただけますか。",
+        kana: "わかりました。あした、ほうかごにきてください。",
+        romaji: "wakarimashita. ashita, houkago ni kite kudasai.",
+        start_msg: "（まさきからLINEが届きました）",
+        reaction_good: "まさき「ありがとうございます」",
+        reaction_bad: "まさき「先生、誤字があります」",
+        reaction_fast: "まさき「すぐ対応していただいて助かります」",
+        reaction_slow: "まさき「お忙しいところすみません」",
+        image: "masaki.png"
+    },
+        // --- 1年2組 ---
+    { 
+        id: "msg_mari",
+        subtype: "line",
+        group: "1-2",
+        sender: "愛野 麻理",
+        text: "せんせい…今日の課題、まだ途中です。提出、遅れても大丈夫でしょうか…",
+        kana: "だいじょうぶですよ。むりのないぺーすでしあげてください。",
+        romaji: "daijoubu desu yo. muri no nai peesu de shiagete kudasai.",
+        start_msg: "（まりからLINEが届きました）",
+        reaction_good: "まり「……ありがとうございます」",
+        reaction_bad: "まり「せんせい、へんかんがちがいます…」",
+        reaction_fast: "まり「すぐ返してくれて、少し安心しました」",
+        reaction_slow: "まり「いそいでないので、大丈夫です…」",
+        image: "mari.png"
+    },
+    { 
+        id: "msg_machie",
+        subtype: "line",
+        group: "1-2",
+        sender: "井漕 舞茅依",
+        text: "先生、本日の活動についてご報告です。全体の士気も高く、良い流れでした。",
+        kana: "ほうこくありがとうございます。これからもよろしくおねがいします。",
+        romaji: "houkoku arigatou gozaimasu. kore kara mo yoroshiku onegaishimasu.",
+        start_msg: "（まちえからLINEが届きました）",
+        reaction_good: "まちえ「はい！期待に応えます」",
+        reaction_bad: "まちえ「先生、誤字がありますよ」",
+        reaction_fast: "まちえ「迅速なご返信、助かります」",
+        reaction_slow: "まちえ「後ほどで結構です」",
+        image: "machie.png"
+    },
+    { 
+        id: "msg_hebiki",
+        subtype: "line",
+        group: "1-2",
+        sender: "石原 蛇喜",
+        text: "せんせー、明日ちょっと体調あやしくてさー。無理せんほうがいいかな？",
+        kana: "たいちょうがさいゆうせんです。むりはしないでください。",
+        romaji: "taichou ga sai yuusen desu. muri wa shinaide kudasai.",
+        start_msg: "（へびきからLINEが届きました）",
+        reaction_good: "へびき「ありがとねー、助かるさー」",
+        reaction_bad: "へびき「せんせ、へんな字あるよー？」",
+        reaction_fast: "へびき「即返信ありがとー！」",
+        reaction_slow: "へびき「あとででいいさー」",
+        image: "hebiki.png"
+    },
+    { 
+        id: "msg_mirai",
+        subtype: "line",
+        group: "1-2",
+        sender: "岩結 未来",
+        text: "先生！今日のテスト、悔しかったけど次はもっと上げたいです！",
+        kana: "そのいきごみはだいじです。つぎもいっしょにがんばりましょう。",
+        romaji: "sono ikigomi wa daiji desu. tsugi mo issho ni ganbarimashou.",
+        start_msg: "（みらいからLINEが届きました）",
+        reaction_good: "みらい「はい！やる気出ました！」",
+        reaction_bad: "みらい「先生、打ち間違いありますよ！」",
+        reaction_fast: "みらい「即レス最高です！」",
+        reaction_slow: "みらい「忙しいですよね、大丈夫です！」",
+        image: "mirai.png"
+    },
+    { 
+        id: "msg_miru",
+        subtype: "line",
+        group: "1-2",
+        sender: "遠藤 海松",
+        text: "せんせー！今日ね、めっちゃ笑ったんだけど聞いてほしい〜！",
+        kana: "またあした、がっこうでおはなしをきかせてください。",
+        romaji: "mata ashita, gakkou de ohanashi o kikasete kudasai.",
+        start_msg: "（みるからLINEが届きました）",
+        reaction_good: "みる「やったー！絶対話す！」",
+        reaction_bad: "みる「せんせ、へんかんミスってる！」",
+        reaction_fast: "みる「即レス嬉しすぎ！」",
+        reaction_slow: "みる「あとでもいーよー！」",
+        image: "miru.png"
+    },
+    { 
+        id: "msg_shirube",
+        subtype: "line",
+        group: "1-2",
+        sender: "鬼弦 導",
+        text: "……先生。提出物、机に置いてあります。",
+        kana: "かくにんしました。れんらくありがとう。",
+        romaji: "kakunin shimashita. renraku arigatou.",
+        start_msg: "（しるべからLINEが届きました）",
+        reaction_good: "しるべ「……はい」",
+        reaction_bad: "しるべ「……ちがう」",
+        reaction_fast: "しるべ「……もう見たんだ」",
+        reaction_slow: "しるべ「……問題ない」",
+        image: "shirube.png"
+    },
+    { 
+        id: "msg_yuu",
+        subtype: "line",
+        group: "1-2",
+        sender: "柏倉 佑",
+        text: "先生、これ可愛いと思って買ったんですけど…男が持ってても変じゃないですか？",
+        kana: "すきなものをたいせつにしていいとおもいますよ。",
+        romaji: "suki na mono o taisetsu ni shite ii to omoimasu yo.",
+        start_msg: "（ゆうからLINEが届きました）",
+        reaction_good: "ゆう「……少し自信出ました」",
+        reaction_bad: "ゆう「先生、文字まちがってます…」",
+        reaction_fast: "ゆう「すぐ返してくれて嬉しいです」",
+        reaction_slow: "ゆう「お時間あるときで大丈夫です」",
+        image: "yuu.png"
+    },
+    { 
+        id: "msg_kanon",
+        subtype: "line",
+        group: "1-2",
+        sender: "雲然 翔暖",
+        text: "せんせー！今日さ、オレのモノマネ見た？🐦✨ ちょっと似とらんかった？w",
+        kana: "もくひょうをもってれんしゅうするのは、とてもいいことですよ。",
+        romaji: "mokuhyou o motte renshuu suru no wa totemo ii koto desu yo",
+        start_msg: "（かのんからLINEが届きました）",
+        reaction_good: "かのん「やろ〜？えへへ、せんせーにほめられた✨」",
+        reaction_bad: "かのん「せんせ、そこ誤字しとるちゃ！w」",
+        reaction_fast: "かのん「はやっ！即レスうれし〜！」",
+        reaction_slow: "かのん「寝とった？まぁいっか〜」",
+        image: "kanon.png"
+    },
+    { 
+        id: "msg_bunta",
+        subtype: "line",
+        group: "1-2",
+        sender: "小桂 文太",
+        text: "せんせ、新聞部の原稿〆切、ちょい伸ばしてもええ？📰",
+        kana: "しめきりはだいじです。けいかくてきにすすめましょう。",
+        romaji: "shimekiri wa daiji desu keikakuteki ni susumemashou",
+        start_msg: "（ぶんたからLINEが届きました）",
+        reaction_good: "ぶんた「さすが先生、話わかるわ」",
+        reaction_bad: "ぶんた「先生、誤字ってんで？w」",
+        reaction_fast: "ぶんた「仕事はや…助かるわ」",
+        reaction_slow: "ぶんた「まぁ忙しいわな」",
+        image: "bunta.png"
+    },
+    { 
+        id: "msg_fumiko",
+        subtype: "line",
+        group: "1-2",
+        sender: "小玉 史子",
+        text: "先生、オカリナの音、うるさくなかったでしょうか…？",
+        kana: "まわりにきづかいできていて、とてもりっぱですよ。",
+        romaji: "mawari ni kizukai dekite ite totemo rippa desu yo",
+        start_msg: "（ふみこからLINEが届きました）",
+        reaction_good: "ふみこ「…ありがとうございます。安心しました」",
+        reaction_bad: "ふみこ「せ、先生…誤字があります…」",
+        reaction_fast: "ふみこ「すぐお返事くださって、嬉しいです」",
+        reaction_slow: "ふみこ「お忙しいところ、すみません…」",
+        image: "fumiko.png"
+    },
+    { 
+        id: "msg_kome",
+        subtype: "line",
+        group: "1-2",
+        sender: "素麺 米",
+        text: "せんせぇ…あしたのじゅんび、まだなにもしてないんだけど……",
+        kana: "すこしずつでいいので、じぶんでやってみましょう。",
+        romaji: "sukoshi zutsu de ii node jibun de yatte mimashou",
+        start_msg: "（こめからLINEが届きました）",
+        reaction_good: "こめ「えぇ〜…がんばるぅ…」",
+        reaction_bad: "こめ「せんせ、まちがってるよぉ？」",
+        reaction_fast: "こめ「まだおきてたんだ〜」",
+        reaction_slow: "こめ「……ねちゃった？」",
+        image: "kome.png"
+    },
+    { 
+        id: "msg_yuji",
+        subtype: "line",
+        group: "1-2",
+        sender: "高槁 優侍",
+        text: "先生、本日の規則違反について確認したい点があります。",
+        kana: "きそくはみんなをまもるためのものです。",
+        romaji: "kisoku wa minna o mamoru tame no mono desu",
+        start_msg: "（ゆうじからLINEが届きました）",
+        reaction_good: "ゆうじ「はい。納得しました」",
+        reaction_bad: "ゆうじ「先生、誤字は看過できません」",
+        reaction_fast: "ゆうじ「迅速な対応、感謝します」",
+        reaction_slow: "ゆうじ「後ほどで構いません」",
+        image: "yuji.png"
+    },
+    { 
+        id: "msg_kyo",
+        subtype: "line",
+        group: "1-2",
+        sender: "辻山 郷",
+        text: "……先生。これ、提出しといた方がいいですか。",
+        kana: "はい、きょうのうちにだしておきましょう。",
+        romaji: "hai kyou no uchi ni dashite okimashou",
+        start_msg: "（きょうからLINEが届きました）",
+        reaction_good: "きょう「……わかりました」",
+        reaction_bad: "きょう「……誤字、あります」",
+        reaction_fast: "きょう「……助かります」",
+        reaction_slow: "きょう「……後でいいです」",
+        image: "kyo.png"
+    },
+    { 
+        id: "msg_ayu",
+        subtype: "line",
+        group: "1-2",
+        sender: "鳥飼 歩",
+        text: "せんせー！今日のHR、ちょっと元気出た！ありがとー！",
+        kana: "そういってもらえて、せんせいもうれしいです。",
+        romaji: "sou itte moraete sensei mo ureshii desu",
+        start_msg: "（あゆからLINEが届きました）",
+        reaction_good: "あゆ「えへへ！また話そ！」",
+        reaction_bad: "あゆ「先生、誤字ってるってば〜w」",
+        reaction_fast: "あゆ「即レス！最高〜！」",
+        reaction_slow: "あゆ「あとででも大丈夫だよ！」",
+        image: "ayu.png"
+    },
+    { 
+        id: "msg_kohaku",
+        subtype: "line",
+        group: "1-2",
+        sender: "西 琥博",
+        text: "先生。本日、廊下を走っていた生徒を注意しました。対応に問題はありませんでしたか。",
+        kana: "てきせつなたいおうだったとおもいます。つづけてください。",
+        romaji: "tekisetsu na taiou datta to omoimasu tsuzukete kudasai",
+        start_msg: "（こはくからLINEが届きました）",
+        reaction_good: "こはく「…承知しました」",
+        reaction_bad: "こはく「先生、誤字があります。確認を」",
+        reaction_fast: "こはく「迅速な返信、感謝します」",
+        reaction_slow: "こはく「後ほどで構いません」",
+        image: "kohaku.png"
+    },
+    { 
+        id: "msg_megumu",
+        subtype: "line",
+        group: "1-2",
+        sender: "根峯 萠",
+        text: "先生、クラスのことで少し気になることがあってさ。今度時間もらえる？",
+        kana: "はい、らいしゅうでよければはなしをききますよ。",
+        romaji: "hai raishuu de yokereba hanashi o kikimasu yo",
+        start_msg: "（めぐむからLINEが届きました）",
+        reaction_good: "めぐむ「助かる。やっぱ先生だわ」",
+        reaction_bad: "めぐむ「先生、誤字ってるからw」",
+        reaction_fast: "めぐむ「仕事早いね」",
+        reaction_slow: "めぐむ「忙しいよね、後でいいよ」",
+        image: "megumu.png"
+    },
+    { 
+        id: "msg_yutasuke",
+        subtype: "line",
+        group: "1-2",
+        sender: "身浦 柚太允",
+        text: "先生…今日の授業、少し難しかったですけど、楽しかったです。",
+        kana: "そういってもらえてうれしいです。よくがんばりましたね。",
+        romaji: "sou itte moraete ureshii desu yoku ganbarimashita ne",
+        start_msg: "（ゆたすけからLINEが届きました）",
+        reaction_good: "ゆたすけ「ありがとうございます…」",
+        reaction_bad: "ゆたすけ「せ、先生…誤字が…」",
+        reaction_fast: "ゆたすけ「すぐ返してくれて嬉しいです」",
+        reaction_slow: "ゆたすけ「お忙しいところ、すみません」",
+        image: "yutasuke.png"
+    },
+    { 
+        id: "msg_suo",
+        subtype: "line",
+        group: "1-2",
+        sender: "村瀬 蘇芳",
+        text: "先生ってさ、なんでそんな真面目に相手してくれるわけ？",
+        kana: "ひとりひとりとむきあうのが、せんせいのしごとです。",
+        romaji: "hitori hitori to mukiau no ga sensei no shigoto desu",
+        start_msg: "（すおうからLINEが届きました）",
+        reaction_good: "すおう「ふーん…物好き」",
+        reaction_bad: "すおう「誤字ってるよ、先生」",
+        reaction_fast: "すおう「即レスとは意外」",
+        reaction_slow: "すおう「まぁ気長に待つけど」",
+        image: "suo.png"
+    },
+    { 
+        id: "msg_elua",
+        subtype: "line",
+        group: "1-2",
+        sender: "茂地 榎留愛",
+        text: "先生、今日ちょっと元気なかったけど、大丈夫？",
+        kana: "きづかってくれてありがとう。だいじょうぶですよ。",
+        romaji: "kizukatte kurete arigatou daijoubu desu yo",
+        start_msg: "（えるあからLINEが届きました）",
+        reaction_good: "えるあ「ならいいけど」",
+        reaction_bad: "えるあ「先生、そこ誤字」",
+        reaction_fast: "えるあ「早いね」",
+        reaction_slow: "えるあ「無理しないで」",
+        image: "elua.png"
+    },
+    { 
+        id: "msg_mibana",
+        subtype: "line",
+        group: "1-2",
+        sender: "本梶 美花",
+        text: "先生。別に相談じゃないけど…今日の判断、悪くなかったと思う。",
+        kana: "そういってもらえると、せんせいもほっとします。",
+        romaji: "sou itte moraeru to sensei mo hotto shimasu",
+        start_msg: "（みばなからLINEが届きました）",
+        reaction_good: "みばな「……べつに」",
+        reaction_bad: "みばな「誤字。気づいてないでしょ」",
+        reaction_fast: "みばな「…はや」",
+        reaction_slow: "みばな「あとで読んどく」",
+        image: "mibana.png"
+    },
+    { 
+        id: "msg_rinon",
+        subtype: "line",
+        group: "1-3",
+        sender: "浅苧 李音",
+        text: "先生。次の発表、私が一番取ります。結果、見ててください。",
+        kana: "いしきがたかいのはよいことです。じゅんびもしっかりしましょう。",
+        romaji: "ishiki ga takai no wa yoi koto desu junbi mo shikkari shimashou",
+        start_msg: "（りのんからLINEが届きました）",
+        reaction_good: "りのん「はい。期待に応えます」",
+        reaction_bad: "りのん「先生、そこ誤字です」",
+        reaction_fast: "りのん「早いですね。助かります」",
+        reaction_slow: "りのん「後で見てもらえれば大丈夫です」",
+        image: "rinon.png"
+    },
+    { 
+        id: "msg_kisora",
+        subtype: "line",
+        group: "1-3",
+        sender: "井之尾 希空",
+        text: "あのね…先生。きそら、ちゃんとできてた…？",
+        kana: "はい。きちんとできていましたよ。あんしんしてください。",
+        romaji: "hai kichinto dekite imashita yo anshin shite kudasai",
+        start_msg: "（きそらからLINEが届きました）",
+        reaction_good: "きそら「……よかった」",
+        reaction_bad: "きそら「せ、先生…まちがってる」",
+        reaction_fast: "きそら「すぐ返ってきた…！」",
+        reaction_slow: "きそら「いそがしかったら、あとでいいよ」",
+        image: "kisora.png"
+    },
+    { 
+        id: "msg_soji",
+        subtype: "line",
+        group: "1-3",
+        sender: "牛沢 蒼司",
+        text: "先生！俺さ、もっとデカいことやっていい？イキってこーぜ！",
+        kana: "いきごみはたいせつですが、るーるはまもりましょう。",
+        romaji: "ikigomi wa taisetsu desu ga ruuru wa mamorimashou",
+        start_msg: "（そうじからLINEが届きました）",
+        reaction_good: "そうじ「さすが先生、現実的！」",
+        reaction_bad: "そうじ「先生、そこミスってね？」",
+        reaction_fast: "そうじ「ノリ早っ！」",
+        reaction_slow: "そうじ「まぁ気長に待つけど！」",
+        image: "soji.png"
+    },
+    { 
+        id: "msg_ritsu",
+        subtype: "line",
+        group: "1-3",
+        sender: "大江 浬積",
+        text: "先生、今日の僕どうだった？ちゃんと美しかったよね☆",
+        kana: "せいりされたみだしなみで、こうかんがもてましたよ。",
+        romaji: "seiri sareta midashinami de koukan ga motemashita yo",
+        start_msg: "（りつからLINEが届きました）",
+        reaction_good: "りつ「ふふ☆やっぱりね！」",
+        reaction_bad: "りつ「先生、誤字は美しくないよ？」",
+        reaction_fast: "りつ「即レス…愛を感じる☆」",
+        reaction_slow: "りつ「あとででも大丈夫だよ☆」",
+        image: "ritsu.png"
+    },
+    { 
+        id: "msg_honoka",
+        subtype: "line",
+        group: "1-3",
+        sender: "大野 蓬乃果",
+        text: "ねぇ先生、それって本当に正しいと思って言ってる？",
+        kana: "いけんのひとつとして、きちょうにうけとめます。",
+        romaji: "iken no hitotsu to shite kichou ni uketomemasu",
+        start_msg: "（ほのかからLINEが届きました）",
+        reaction_good: "ほのか「へぇ、意外と冷静じゃん」",
+        reaction_bad: "ほのか「先生、誤字ってるけど？」",
+        reaction_fast: "ほのか「レス早いのは評価する」",
+        reaction_slow: "ほのか「まぁ忙しいよね」",
+        image: "honoka.png"
+    },
+    { 
+        id: "msg_yui",
+        subtype: "line",
+        group: "1-3",
+        sender: "土市 結衣",
+        text: "先生ぇ…今日、ゆいちょっと不安でさ。かまってほしいな。",
+        kana: "きもちがふあんなときは、むりしなくていいですよ。",
+        romaji: "kimochi ga fuanna toki wa muri shinakute ii desu yo",
+        start_msg: "（ゆいからLINEが届きました）",
+        reaction_good: "ゆい「……先生やさしい」",
+        reaction_bad: "ゆい「ねぇ、そこ誤字だよ？」",
+        reaction_fast: "ゆい「即レスうれしい…」",
+        reaction_slow: "ゆい「既読ついたから安心」",
+        image: "yui.png"
+    },
+    { 
+        id: "msg_tayori",
+        subtype: "line",
+        group: "1-3",
+        sender: "自念 頼",
+        text: "先生、クラスの雰囲気が少し不安定な気がします。僕にできること、ありますか？",
+        kana: "きづいてくれてありがとうございます。むりのないはんいでだいじょうぶですよ。",
+        romaji: "kizuite kurete arigatou gozaimasu muri no nai hani de daijoubu desu yo",
+        start_msg: "（たよりからLINEが届きました）",
+        reaction_good: "たより「少し安心しました」",
+        reaction_bad: "たより「先生、そこ誤字ですね」",
+        reaction_fast: "たより「早い返信、助かります」",
+        reaction_slow: "たより「落ち着いたらで構いません」",
+        image: "tayori.png"
+    },
+    { 
+        id: "msg_mugi",
+        subtype: "line",
+        group: "1-3",
+        sender: "素麺 麦",
+        text: "せんせー！きょうさぁ、むぎめっちゃねむくてさ〜！でもがんばったっけ！えらい！？",
+        kana: "がんばったのはえらいですね。じゅぎょうちゅうはしっかりおきましょう。",
+        romaji: "ganbatta no wa erai desu ne jugyou chuu wa shikkari okimashou",
+        start_msg: "（むぎからLINEが届きました）",
+        reaction_good: "むぎ「でしょでしょ〜！むぎ天才らてば！」",
+        reaction_bad: "むぎ「せんせ、そこまちがってる！」",
+        reaction_fast: "むぎ「はやっ！せんせ神だっけ！」",
+        reaction_slow: "むぎ「まぁいっか〜そのうちで〜」",
+        image: "mugi.png"
+    },
+    { 
+        id: "msg_aoi",
+        subtype: "line",
+        group: "1-3",
+        sender: "二十八 碧",
+        text: "先生、今日の作業、少し難しかったですけど…やりきれました。",
+        kana: "さいごまでやれたのはりっぱですよ。つぎもがんばりましょう。",
+        romaji: "saigo made yareta no wa rippa desu yo tsugi mo ganbarimashou",
+        start_msg: "（あおいからLINEが届きました）",
+        reaction_good: "あおい「ありがとうございます」",
+        reaction_bad: "あおい「あ、先生…誤字あります」",
+        reaction_fast: "あおい「すぐ返ってきて嬉しいです」",
+        reaction_slow: "あおい「お忙しいですよね」",
+        image: "aoi.png"
+    },
+    { 
+        id: "msg_yuhi",
+        subtype: "line",
+        group: "1-3",
+        sender: "直宿 夕日",
+        text: "先生さw 今日の授業ちょっと長くね？俺もう限界なんだけどw",
+        kana: "たいりょくのかんりもたいせつです。きゅうけいはとりましょう。",
+        romaji: "tairyoku no kanri mo taisetsu desu kyuukei wa torimashou",
+        start_msg: "（ゆうひからLINEが届きました）",
+        reaction_good: "ゆうひ「ま、先生にしては優しいじゃんw」",
+        reaction_bad: "ゆうひ「先生、誤字ってて草」",
+        reaction_fast: "ゆうひ「レスはえーw」",
+        reaction_slow: "ゆうひ「既読ついたからOKw」",
+        image: "yuhi.png"
+    },
+    { 
+        id: "msg_atsushi",
+        subtype: "line",
+        group: "1-3",
+        sender: "天王寺 淳志",
+        text: "先生！夜って暗いからさ、ぼく星になったらいいと思わない？",
+        kana: "すてきなかんがえですが、いまはがくぎょうをたいせつにしましょう。",
+        romaji: "suteki na kangae desu ga ima wa gakugyou wo taisetsu ni shimashou",
+        start_msg: "（あつしからLINEが届きました）",
+        reaction_good: "あつし「えへへ！ほしのじゅんし！」",
+        reaction_bad: "あつし「あれ？先生まちがえてる？」",
+        reaction_fast: "あつし「もう返ってきた！」",
+        reaction_slow: "あつし「あとででもいいよ〜」",
+        image: "atsushi.png"
+    },
+    { 
+        id: "msg_kuu",
+        subtype: "line",
+        group: "1-3",
+        sender: "中井 空羽",
+        text: "……別に用はない。ただ連絡来てたから。",
+        kana: "れんらくしてくれてありがとう。ようがあればいつでもどうぞ。",
+        romaji: "renraku shite kurete arigatou you ga areba itsu demo douzo",
+        start_msg: "（くうからLINEが届きました）",
+        reaction_good: "くう「……ふん」",
+        reaction_bad: "くう「誤字。ださい」",
+        reaction_fast: "くう「即レスかよ」",
+        reaction_slow: "くう「別にいい」",
+        image: "kuu.png"
+    },
+    { 
+        id: "msg_noriomi",
+        subtype: "line",
+        group: "1-3",
+        sender: "永丘 紀臣",
+        text: "先生、お疲れ様です。今日も平和で何よりですね。",
+        kana: "そうですね。あんていしたいちにちでした。",
+        romaji: "sou desu ne antei shita ichinichi deshita",
+        start_msg: "（のりおみからLINEが届きました）",
+        reaction_good: "のりおみ「それは何よりです」",
+        reaction_bad: "のりおみ「先生、誤字がありますよ」",
+        reaction_fast: "のりおみ「迅速ですね」",
+        reaction_slow: "のりおみ「お忙しいのでしょう」",
+        image: "noriomi.png"
+    },
+    {
+        id: "msg_meri",
+        subtype: "line",
+        group: "1-3",
+        sender: "仲村 愛梨",
+        text: "先生…！今日、わたしが貸した本、生徒さんがよごしちゃって……でも、わたしのかんりがわるかったのかもって……すみません……📖🐰",
+        kana: "きにしなくていいですよ。せんせいのほうで、あとで対応します。",
+        romaji: "kinishinakute ii desu yo sensei no hou de ato de taiou shimasu",
+        start_msg: "（めりからLINEが届きました）",
+        reaction_good: "めり「……ありがとうございます。せんせい、やさしいです……☺️」",
+        reaction_bad: "めり「……あの、その……漢字、ちがってます……💦」",
+        reaction_fast: "めり「すぐお返事……！ほんとうに、ありがとうございます……🐇✨」",
+        reaction_slow: "めり「……お忙しいですよね。大丈夫です……」",
+        image: "meri.png"
+    },
+    {
+        id: "msg_soushi",
+        subtype: "line",
+        group: "1-3",
+        sender: "美戸 創至",
+        text: "せんせい、この前考えたアイデア、じつは特許になるかもしれなくて……！もしよかったら、意見もらえますか？🚀",
+        kana: "いいですね。あとで、くわしく聞かせてください。",
+        romaji: "ii desu ne ato de kuwashiku kikasete kudasai",
+        start_msg: "（そうしからLINEが届きました）",
+        reaction_good: "そうし「やった……！せんせいにそういってもらえて、嬉しいです！」",
+        reaction_bad: "そうし「……あ、そこ、ちょっと誤字ありますね……🙂」",
+        reaction_fast: "そうし「即レス……！これはもう、発明の神に祝福されてます！」",
+        reaction_slow: "そうし「あとででも大丈夫です！待ってますね🌱」",
+        image: "soushi.png"
+    },
+    {
+        id: "msg_kouta",
+        subtype: "line",
+        group: "1-3",
+        sender: "桃山 小歌",
+        text: "先生。今日の会議のないよう、まとめておきました。なにか足りないところがあれば、ご指摘ください。",
+        kana: "ありがとうございます。とても助かります。",
+        romaji: "arigatou gozaimasu totemo tasukarimasu",
+        start_msg: "（こうたからLINEが届きました）",
+        reaction_good: "こうた「お役に立てたなら、うれしいです……！」",
+        reaction_bad: "こうた「……先生、そこ誤字があります。確認お願いします。」",
+        reaction_fast: "こうた「迅速なご確認、ありがとうございます。励みになります。」",
+        reaction_slow: "こうた「ご多忙のところ、失礼しました。後ほどで構いません。」",
+        image: "kouta.png"
+    },
+    {
+        id: "msg_misaki",
+        subtype: "line",
+        group: "1-3",
+        sender: "勇惣 岬咲",
+        text: "せんせい……お兄ちゃんに、手紙書いたんですけど……この漢字、あってますか……？✉️",
+        kana: "きもちが伝わっていますよ。そのままで大丈夫です。",
+        romaji: "kimochi ga tsutawatteimasu yo sono mama de daijoubu desu",
+        start_msg: "（みさきからLINEが届きました）",
+        reaction_good: "みさき「……よかったです。ありがとうございます……！」",
+        reaction_bad: "みさき「……あの……先生の返事、まちがってます……💦」",
+        reaction_fast: "みさき「すぐお返事……！お兄ちゃんにも、そうつたえます……☺️」",
+        reaction_slow: "みさき「後ででも、全然大丈夫です……」",
+        image: "misaki.png"
+    },
+    {
+        id: "msg_nagisa",
+        subtype: "line",
+        group: "1-3",
+        sender: "代々木 渚",
+        text: "ねぇせんせ！きょうのルール、ちょっと厳しすぎじゃない？まぁ守るけどさ〜🐻",
+        kana: "いけんは受け取りました。ありがとうございます。",
+        romaji: "iken wa uketorimashita arigatou gozaimasu",
+        start_msg: "（なぎさからLINEが届きました）",
+        reaction_good: "なぎさ「うわ、ちゃんと聞いてくれるんだ。やるじゃん先生！」",
+        reaction_bad: "なぎさ「先生、誤字ってるよ？そこ、地味にダサいよ？w」",
+        reaction_fast: "なぎさ「即レス！？先生ヒマなの？それとも私特別？w」",
+        reaction_slow: "なぎさ「まぁ忙しいよね〜。既読ついたしヨシ！」",
+        image: "nagisa.png"
+    },
+    {
+        id: "msg_hibiki",
+        subtype: "line",
+        group: "1-3",
+        sender: "楽得 響",
+        text: "せんせぇぇ！！あしたの体育、ぜったいオレが一番やからな！！コケコッコー！！！🐔🔥",
+        kana: "けがをしないように、がんばってください。",
+        romaji: "kega o shinai you ni ganbatte kudasai",
+        start_msg: "（ひびきからLINEが届きました）",
+        reaction_good: "ひびき「おう！！せんせも見とけよォ！！」",
+        reaction_bad: "ひびき「はぁ！？せんせ、誤字っとるやんけ！！」",
+        reaction_fast: "ひびき「はやっ！！せんせ、ノリええやん！！」",
+        reaction_slow: "ひびき「既読おっそ！！まぁええわ！！」",
+        image: "hibiki.png"
+    },
+    {
+        id: "msg_yukihiko",
+        subtype: "line",
+        group: "1-4",
+        sender: "池里 雪彦",
+        text: "せんせー！きょう、わちのノートどっかいっちゃってさ〜！ゆきひこ団のだいじなページだったのに〜！！🐩💦",
+        kana: "おちついて、まわりをよくさがしてみましょう。",
+        romaji: "ochitsuite mawari o yoku sagashite mimashou",
+        start_msg: "（ゆきひこからLINEが届きました）",
+        reaction_good: "ゆきひこ「さすがせんせー！わち、ちょっと元気でた！」",
+        reaction_bad: "ゆきひこ「えっ、せんせ、そこ誤字ってるよ！？わちでもわかる！」",
+        reaction_fast: "ゆきひこ「はやっ！せんせー、わちのこと見てた！？」",
+        reaction_slow: "ゆきひこ「まぁいっか！そのうち出てくる気がするし！」",
+        image: "yukihiko.png"
+    },
+    {
+        id: "msg_yuuki",
+        subtype: "line",
+        group: "1-4",
+        sender: "市川 宥暉",
+        text: "せんせ、きょうの運勢みる？いまなら無料だよ〜🔮✨",
+        kana: "ありがとう。でも、じゅぎょうをゆうせんしてください。",
+        romaji: "arigatou demo jugyou o yuusen shite kudasai",
+        start_msg: "（ゆうきからLINEが届きました）",
+        reaction_good: "ゆうき「さすが先生！現実派だね〜！」",
+        reaction_bad: "ゆうき「あれ？先生、漢字ちがくない？占いより気になるw」",
+        reaction_fast: "ゆうき「即レス！これは今日ツイてるやつ！」",
+        reaction_slow: "ゆうき「忙しそうだね〜、あとで声かけるよ！」",
+        image: "yuuki.png"
+    },
+    {
+        id: "msg_maaya",
+        subtype: "line",
+        group: "1-4",
+        sender: "卯瀧 真綾",
+        text: "先生、今日の授業、とても心に残りました……思い出として、大切にいたします🌸",
+        kana: "そういってもらえて、うれしいです。",
+        romaji: "sou itte moraete ureshii desu",
+        start_msg: "（まあやからLINEが届きました）",
+        reaction_good: "まあや「こちらこそ、ありがとうございます……✨」",
+        reaction_bad: "まあや「あの……先生、少し誤字がございますね……」",
+        reaction_fast: "まあや「お早いお返事……上品で素敵です……」",
+        reaction_slow: "まあや「ご多忙のところ、失礼いたしました……」",
+        image: "maaya.png"
+    },
+    {
+        id: "msg_uruu",
+        subtype: "line",
+        group: "1-4",
+        sender: "槐原 潤",
+        text: "せんせ、これ提出でよかですか？ちょっと工作、がんばったとです✂️",
+        kana: "はい。きちんとできていますよ。",
+        romaji: "hai kichinto dekiteimasu yo",
+        start_msg: "（うるうからLINEが届きました）",
+        reaction_good: "うるう「よかった……それ聞いて安心したと」",
+        reaction_bad: "うるう「あれ？せんせ、そこ文字ちがうとよ？」",
+        reaction_fast: "うるう「はやか……助かりました」",
+        reaction_slow: "うるう「あとででよかですよ〜」",
+        image: "uruu.png"
+    },
+    {
+        id: "msg_haruka",
+        subtype: "line",
+        group: "1-4",
+        sender: "栢島 遥香",
+        text: "先生ー！きょうのクラス、なんか雰囲気よくないですか？みんな仲良くなれそう〜♪",
+        kana: "そうですね。いいクラスにしていきましょう。",
+        romaji: "sou desu ne ii kurasu ni shite ikimashou",
+        start_msg: "（はるかからLINEが届きました）",
+        reaction_good: "はるか「ですよねですよね！先生、最高！」",
+        reaction_bad: "はるか「先生〜、そこ誤字！でも気持ちは伝わる！」",
+        reaction_fast: "はるか「即レス！？嬉しすぎるんですけど！」",
+        reaction_slow: "はるか「忙しいですよね！また話しましょー！」",
+        image: "haruka.png"
+    },
+    {
+        id: "msg_sui",
+        subtype: "line",
+        group: "1-4",
+        sender: "狩生 彗威",
+        text: "せんせ、廊下走んなって言われたんだけどさ、オレ悪くなくね？",
+        kana: "ルールは守りましょう。",
+        romaji: "ruuru wa mamorimashou",
+        start_msg: "（すいからLINEが届きました）",
+        reaction_good: "すい「チッ……まぁ、しゃーねぇか」",
+        reaction_bad: "すい「は？先生、誤字ってんじゃん。ダセぇ」",
+        reaction_fast: "すい「即レスとかマジかよ……」",
+        reaction_slow: "すい「既読ついたからいーや」",
+        image: "sui.png"
+    },
+    {
+        id: "msg_ayato",
+        subtype: "line",
+        group: "1-4",
+        sender: "後等 綺乙",
+        text: "せんせー！授業ちょっと退屈でオラ、椅子から落っこちた！納豆は投げてねぇから安心して！",
+        kana: "まず、けがはありませんか。",
+        romaji: "mazu kega wa arimasen ka",
+        start_msg: "（あやとからLINEが届きました）",
+        reaction_good: "あやと「へへっ、せんせやさし〜！」",
+        reaction_bad: "あやと「せんせ、そこ文字ちげぇぞ！w」",
+        reaction_fast: "あやと「はっや！オラ見張られてる？」",
+        reaction_slow: "あやと「まぁいっか！オラ元気だし！」",
+        image: "ayato.png"
+    },
+    {
+        id: "msg_mikoto",
+        subtype: "line",
+        group: "1-4",
+        sender: "櫻井 甫詞",
+        text: "せんせ、今日の判断、うち的には悪うなかった思いますえ。場の空気、よう見てはりましたなぁ🦭",
+        kana: "そう言ってもらえて助かります。",
+        romaji: "sou itte moraete tasukarimasu",
+        start_msg: "（みことからLINEが届きました）",
+        reaction_good: "みこと「ふふ、せんせ、なかなか肝が据わってはりますな」",
+        reaction_bad: "みこと「ん？先生、そこ誤字してはるえ？」",
+        reaction_fast: "みこと「即断即決…嫌いやないですわ」",
+        reaction_slow: "みこと「忙しそうどすな。無理せんといて」",
+        image: "mikoto.png"
+    },
+    {
+        id: "msg_taichi",
+        subtype: "line",
+        group: "1-4",
+        sender: "土川 卓逸",
+        text: "先生、提出物…これで全部揃ってますよね？一応、三回確認しました。",
+        kana: "はい、きちんとそろっています。",
+        romaji: "hai kichinto sorotteimasu",
+        start_msg: "（たいちからLINEが届きました）",
+        reaction_good: "たいち「よかった……安心しました」",
+        reaction_bad: "たいち「あ、先生……そこ誤字です……」",
+        reaction_fast: "たいち「は、早い……ありがとうございます」",
+        reaction_slow: "たいち「急ぎじゃないので、大丈夫です」",
+        image: "taichi.png"
+    },
+    {
+        id: "msg_roi",
+        subtype: "line",
+        group: "1-4",
+        sender: "손 로이",
+        text: "先生、今日の授業内容、合理的でした。無駄が少ない。評価します…ニダ。",
+        kana: "そう感じてもらえたなら、うれしいです。",
+        romaji: "sou kanjite moraetanara ureshii desu",
+        start_msg: "（ろいからLINEが届きました）",
+        reaction_good: "ろい「感情論ではなく、事実で返す…良いニダ」",
+        reaction_bad: "ろい「先生、誤字がある。修正推奨ニダ」",
+        reaction_fast: "ろい「即レス…想定より早い」",
+        reaction_slow: "ろい「返信は不要でした。問題ないニダ」",
+        image: "roi.png"
+    },
+    {
+        id: "msg_sayaka",
+        subtype: "line",
+        group: "1-4",
+        sender: "寺田 山茶花",
+        text: "先生……あの……今日の授業、少しだけ……安心しましたえ🍵",
+        kana: "そう言ってもらえて、よかったです。",
+        romaji: "sou itte moraete yokatta desu",
+        start_msg: "（さやかからLINEが届きました）",
+        reaction_good: "さやか「……ありがとうございます……」",
+        reaction_bad: "さやか「せ、先生……そこ……誤字どす……」",
+        reaction_fast: "さやか「すぐ返ってきて……びっくりしました」",
+        reaction_slow: "さやか「お忙しいところ、すみません……」",
+        image: "sayaka.png"
+    },
+    {
+        id: "msg_akatsuki",
+        subtype: "line",
+        group: "1-4",
+        sender: "二瓶 暁",
+        text: "……先生、ピアノのことなんだけどさ。別に、相談ってほどじゃない。",
+        kana: "話したくなったら、いつでも聞きます。",
+        romaji: "hanashitakunattara itsudemo kikimasu",
+        start_msg: "（あかつきからLINEが届きました）",
+        reaction_good: "あかつき「……そ。じゃあ、また今度」",
+        reaction_bad: "あかつき「は？先生、誤字ってるし」",
+        reaction_fast: "あかつき「……即レスとか、やりにくい」",
+        reaction_slow: "あかつき「……まぁ、いいや」",
+        image: "akatsuki.png"
+    },
+    {
+        id: "msg_enya",
+        subtype: "line",
+        group: "1-4",
+        sender: "暗 援也",
+        text: "先生、今日もクラスは平和だったろ？つまりオレのおかげってことでOK？🐺✨",
+        kana: "みんなの協力のおかげです。",
+        romaji: "minna no kyouryoku no okage desu",
+        start_msg: "（えんやからLINEが届きました）",
+        reaction_good: "えんや「だよな！やっぱオレ、ヒーローだわ！」",
+        reaction_bad: "えんや「先生、誤字ってるぞ？ヒーローは見逃さない！」",
+        reaction_fast: "えんや「即レス！これは信頼されてる証！」",
+        reaction_slow: "えんや「まぁ忙しいよな、世界守ってるし！」",
+        image: "enya.png"
+    },
+    {
+        id: "msg_maya",
+        subtype: "line",
+        group: "1-4",
+        sender: "保福 真夜",
+        text: "せんせ……さっき、他の子と話してましたよね。べつに……いいですけど。",
+        kana: "順番に話していますから、心配しなくて大丈夫ですよ。",
+        romaji: "junban ni hanashiteimasu kara shinpai shinakute daijoubu desu",
+        start_msg: "（まやからLINEが届きました）",
+        reaction_good: "まや「……なら、いいです」",
+        reaction_bad: "まや「先生、そこ……誤字。ちゃんと見てますから」",
+        reaction_fast: "まや「すぐ返してくれるんですね……」",
+        reaction_slow: "まや「……既読、ついてましたよね？」",
+        image: "maya.png"
+    },
+    {
+        id: "msg_yoru",
+        subtype: "line",
+        group: "1-4",
+        sender: "御厨 夜",
+        text: "せんせ〜、あした朝ムリかもしれん。夜、全然寝れんかったとよ🐈‍⬛",
+        kana: "無理のないように、気をつけて来てください。",
+        romaji: "muri no nai you ni ki o tsukete kite kudasai",
+        start_msg: "（よるからLINEが届きました）",
+        reaction_good: "よる「やさしか〜……」",
+        reaction_bad: "よる「先生、誤字しとるばい？」",
+        reaction_fast: "よる「まだ起きとったと？」",
+        reaction_slow: "よる「……もう寝たん？」",
+        image: "yoru.png"
+    },
+    {
+        id: "msg_sadama",
+        subtype: "line",
+        group: "1-4",
+        sender: "満山 渉守",
+        text: "先生、今後このクラスで問題が起きた場合、対応は事前に共有されますか？",
+        kana: "必要なことは、事前に伝えます。",
+        romaji: "hitsuyou na koto wa jizen ni tsutaemasu",
+        start_msg: "（さだまからLINEが届きました）",
+        reaction_good: "さだま「了解しました。合理的ですね」",
+        reaction_bad: "さだま「先生、誤字があります。確認を」",
+        reaction_fast: "さだま「即答、助かります」",
+        reaction_slow: "さだま「後ほどで構いません」",
+        image: "sadama.png"
+    },
+    {
+        id: "msg_kaji",
+        subtype: "line",
+        group: "1-4",
+        sender: "源口 舵",
+        text: "せんせー！今日さ！新聞紙に描いたねこ、みんなに配った！ダメだった！？",
+        kana: "次からは、事前に相談してください。",
+        romaji: "tsugi kara wa jizen ni soudan shite kudasai",
+        start_msg: "（かじからLINEが届きました）",
+        reaction_good: "かじ「えー！でも楽しかった！」",
+        reaction_bad: "かじ「せんせ、誤字ってるよ〜！」",
+        reaction_fast: "かじ「はやっ！見てた！？」",
+        reaction_slow: "かじ「……もう片付けたけど！」",
+        image: "kaji.png"
+    },
+    {
+        id: "msg_alice",
+        subtype: "line",
+        group: "1-4",
+        sender: "恵 愛麗糸",
+        text: "……先生。昼寝、邪魔しないでほしい。夢の方が現実よりマシだから。",
+        kana: "授業中は、起きていましょう。",
+        romaji: "jugyou chuu wa okite imashou",
+        start_msg: "（ありすからLINEが届きました）",
+        reaction_good: "ありす「……ちぇ」",
+        reaction_bad: "ありす「先生、誤字。現実見て？」",
+        reaction_fast: "ありす「……起きてる時に返すんだ」",
+        reaction_slow: "ありす「もう寝たからいいや」",
+        image: "alice.png"
+    },
+    {
+        id: "msg_shunki",
+        subtype: "line",
+        group: "1-4",
+        sender: "吉岡 俊樹",
+        text: "先生〜、赤点ってさ、人生にどれくらい影響すると思う？🦉",
+        kana: "努力次第で、いくらでも変えられます。",
+        romaji: "doryoku shidai de ikurademo kaeraremasu",
+        start_msg: "（しゅんきからLINEが届きました）",
+        reaction_good: "しゅんき「おー、希望系の答え！」",
+        reaction_bad: "しゅんき「先生、誤字は不苦労じゃないよ？」",
+        reaction_fast: "しゅんき「まだ起きてたんだ」",
+        reaction_slow: "しゅんき「まぁ、あとで聞くわ」",
+        image: "shunki.png"
+    },
     // -------------------------------------
     // 📣 先生の指示
     // -------------------------------------
@@ -3268,7 +4618,7 @@ const schoolData = [
         text: "あなたの声が学校を変える。生徒会意見箱設置中。", 
         kana: "あなたのこえががっこうをかえる。せいとかいいけんばこせっちちゅう。", 
         romaji: "anata no koe ga gakkou wo kaeru seitokai ikenbako setti cyuu", 
-        reaction_good: "れ「完璧です。美しいフォントで印刷しておきますね。」",
+        reaction_good: "れい「完璧です。美しいフォントで印刷しておきますね。」",
         reaction_bad: "れい「先生、誤字はポスターの信頼性を損ないますよ。（黒笑）」",
         image: "rei.png"
     },
@@ -3511,43 +4861,1345 @@ const schoolData = [
     // -------------------------------------
     // 🗣️ グループチャット参加
     // -------------------------------------
+    // --- 2-1 ---
     { 
-        id: "chat_girls", 
+        id: "chat_suibeibu_after_teacher_fix",
+        subtype: "chat",
+        group: "2-1", // 修正！
+        sender: "水兵部・現場組",
+        start_msg:
+            "けつい「点検の件、先生にも共有しとくけぇ」\n" +
+            "みぎわ「了解〜。一応ちゃんとしとこ」\n" +
+            "りょうご「写真、時系列順に整理して送る」" ,// ただの整理じゃなくTi的な秩序
+        text: "任せます。", 
+        reaction_good:
+            "（先生がグループを退出しました）\n" +
+            "みぎわ「……っはー！やっと抜けた！」\n" +
+            "けつい「お前なw まぁ空気変わるわな」\n" +
+            "りょうご「……正直、監視されてるような圧はあった」\n"+ // Ni的な「圧」の感知
+            "みぎわ「で？ぶっちゃけ今日の点検どうなん」\n" +
+            "けつい「潮が悪い。無理はせん」\n" +
+            "りょうご「同意。計器の数値も、いつもと微妙にズレてる」" ,// Niの違和感+Tiのデータ
+        reaction_bad:
+            "みぎわ「先生まだ見とるん？！じゃあ黙るわ！」\n" +
+            "けつい「おいw」",
+        images: ["ketsui.png", "migiwa.png", "ryogo.png"]
+    }, 
+    { 
+        id: "chat_suigun_fix",
         subtype: "chat", 
+        group: "2-1", // 修正！
+        sender: "🌊 水兵部・作戦会議",
+        images: ["ketsui.png", "migiwa.png", "ryogo.png"], 
+        start_msg: 
+            "けつい「次の航海、ルートどうする？」\n" +
+            "みぎわ「うちは南の島がええ！アジサシ見たい！」\n" +
+            "りょうご「……今の燃料備蓄だと、南は帰還率が下がる」", // リスク計算（Ni-Ti）
+        text: "安全第一で計画を立ててください。", 
+        reaction_good: 
+            "けつい「お、ええ判断じゃ！」\n" +
+            "みぎわ「さすが先生、わかっとる〜！」\n" +
+            "りょうご「……妥当な判断。冒険は準備が整ってから」",
+        reaction_bad: 
+            "けつい「おっと、舵取りミスか？」\n" +
+            "みぎわ「先生、それ座礁コースよ〜w」\n" +
+            "りょうご「……航路、再計算した方がいいと思う」"
+    }, 
+    { 
+        id: "chat_top_rankers_fix", 
+        subtype: "chat", 
+        group: "2-1", // 修正！
+        sender: "成績上位グル",
+        start_msg: 
+            "ともき「次の模試、全体の底上げは必要だろ」\n" +
+            "あきら「平均の話しても意味ない。トップが突き抜ければいい」\n"+ // ENTJらしさ追加
+            "れい「でも全体が上がれば、クラスの評価も安定するわよ」\n" + 
+            "りょうご「正規分布的には、底上げした方が全体の偏差値効率はいい」", // Ti全開ｗ
+        text: "無理に競わず、それぞれの強みを活かそう。", 
+        reaction_good: 
+            "れい「まぁ、悪くない考えね」\n" +
+            "ともき「現実的だ」\n" +
+            "りょうご「納得。無駄な摩擦は避けるべき」" ,// Tiの省エネ思考
+        reaction_bad: 
+            "あきら「……甘いな」\n" +
+            "ともき「競争は必要だろ」\n" +
+            "れい「価値観の違い、ってやつね」",
+        images: ["rei.png", "tomoki.png", "akira.png", "ryogo.png"]
+    }, 
+    { 
+        id: "chat_suibeibu_field_observe", 
+        subtype: "chat", 
+        group: "2-1",
+        sender: "水兵部・現場組",
+        start_msg: 
+            "けつい「今日の放課後、船の点検するけぇの。集合な」\n" +
+            "みぎわ「りょーかい！……って言いたいけど、時間ちょい押してない？」\n" +
+            "りょうご「燃料計の誤差、昨日直しといた。今日は短時間で済むと思う」\n" +
+            "れい「……ふぅん。ちゃんと効率上がってるのね」",
+        text: "今日は予定通り点検を進めてください。", 
+        kana: "きょうはよていどおりてんけんをすすめてください。", 
+        romaji: "kyou wa yotei doori tenken o susumete kudasai", 
+        reaction_good: 
+            "けつい「了解じゃ。あとで進捗、見といてもええよ」\n" +
+            "りょうご「写真まとめとく」\n" +
+            "れい「流れ、きれいじゃない。悪くないわ」",
+        reaction_bad: 
+            "みぎわ「え、今それ言う？！空気読んで先生！」\n" +
+            "けつい「まぁまぁ、焦らんでええ」\n" +
+            "りょうご「工程的には問題ないけどな」\n" +
+            "れい「……一気に緊張走ったわね」",
+        images: ["ketsui.png", "migiwa.png", "ryogo.png", "rei.png"]
+    },
+    { 
+        id: "chat_suibeibu_field_observe", 
+        subtype: "chat", 
+        group: "2-1",
+        sender: "水兵部・現場組",
+        start_msg: 
+            "けつい「今日の放課後、船の点検するけぇの。集合な」\n" +
+            "みぎわ「りょーかい！……って言いたいけど、時間ちょい押してない？」\n" +
+            "りょうご「燃料計の誤差、昨日直しといた。今日は短時間で済むと思う」\n" +
+            "れい「……ふぅん。ちゃんと効率上がってるのね」",
+        text: "今日は予定通り点検を進めてください。", 
+        kana: "きょうはよていどおりてんけんをすすめてください。", 
+        romaji: "kyou wa yotei doori tenken o susumete kudasai", 
+        reaction_good: 
+            "けつい「了解じゃ。あとで進捗、見といてもええよ」\n" +
+            "りょうご「写真まとめとく」\n" +
+            "れい「流れ、きれいじゃない。悪くないわ」",
+        reaction_bad: 
+            "みぎわ「え、今それ言う？！空気読んで先生！」\n" +
+            "けつい「まぁまぁ、焦らんでええ」\n" +
+            "りょうご「工程的には問題ないけどな」\n" +
+            "れい「……一気に緊張走ったわね」",
+        images: ["ketsui.png", "migiwa.png", "ryogo.png", "rei.png"]
+    },
+    { 
+        id: "chat_suibeibu_inner", 
+        subtype: "chat", 
+        group: "2-1",
+        sender: "水兵部",
+        start_msg: 
+            "みぎわ「今日の風、なんか嫌な感じせん？」\n" +
+            "けつい「潮がズレとるな。無理せんほうがええ」\n" +
+            "りょうご「数値的にも横流れ強い」",
+        text: "無理はしないで、状況を見て判断しよう。", 
+        kana: "むりはしないで、じょうきょうをみてはんだんしよう。", 
+        romaji: "muri wa shinaide, joukyou o mite handan shiyou", 
+        reaction_good: 
+            "けつい「ほら、意見一致じゃ」\n" +
+            "みぎわ「珍し！全会一致とか！」",
+        reaction_bad: 
+            "みぎわ「それ今さら言わんでもええじゃろ！」\n" +
+            "りょうご「判断材料としては遅いな」",
+        images: ["ketsui.png", "migiwa.png", "ryogo.png"]
+    },
+    { 
+        id: "chat_rei_akira_duel",
+        subtype: "chat",
+        group: "2-1",
+        sender: "れい＆あきら",
+        start_msg:
+            "あきら「……で、1位様は今回も余裕か？」\n" +
+            "れい「余裕かどうかは関係ないわ。結果が全て」\n" +
+            "あきら「結果“だけ”見てるのが気に入らない」\n" +
+            "れい「過程に酔うのは三流のやることよ」\n" +
+            "あきら「……言うな」\n" +
+            "れい「でも、あなたの詰め方は嫌いじゃないわ」",
+        text: "冷静に話し合おう。", 
+        kana: "れいせいにはなしあおう。",
+        romaji: "reisei ni hanashiaou",
+        reaction_good:
+            "れい「……ふふ。先生、今いないんだけど？」\n" +
+            "あきら「空気読め。これは殴り合いだ」",
+        reaction_bad:
+            "あきら「今の入力、論点ズレてる」\n" +
+            "れい「介入するなら、もっと的確にお願い」",
+        images: ["rei.png", "akira.png"]
+    },
+    { 
+        id: "chat_top3",
+        subtype: "chat",
+        group: "2-1",
+        sender: "トップ3",
+        start_msg:
+            "ともき「次の模試、全体の平均が下がってる」\n" +
+            "あきら「だから言っただろ。甘やかすな」\n" +
+            "れい「競争だけ煽っても、質は上がらないわ」\n" +
+            "ともき「……1位と3位が真逆だな」\n" +
+            "あきら「だから面白い」\n" +
+            "れい「ふふ、否定しないわ」",
+        text: "全体を引き上げる方法を考えて。", 
+        kana: "ぜんたいをひきあげるほうほうをかんがえて。",
+        romaji: "zentai o hikiageru houhou o kangaete",
+        reaction_good:
+            "ともき「役割分担だな」\n" +
+            "れい「合理的ね」\n" +
+            "あきら「……まぁ、それならいい」",
+        reaction_bad:
+            "あきら「曖昧すぎる」\n" +
+            "れい「具体性に欠けるわ」\n" +
+            "ともき「指示として弱い」",
+        images: ["rei.png", "tomoki.png", "akira.png"]
+    },
+    { 
+        id: "chat_ryogo_backstage",
+        subtype: "chat",
+        group: "2-1",
+        sender: "りょうご",
+        start_msg:
+            "りょうご「……僕の感覚なんだけど」\n" +
+            "りょうご「今の流れ、このまま行くと一回どこかで詰まる」\n" +
+            "りょうご「みぎわは気配で動くし、けついは経験で判断する」\n" +
+            "りょうご「それ自体は悪くないけど、噛み合ってない」\n" +
+            "りょうご「……嫌な予感がする時って、大体当たるんだ」",
+        text: "みんな大事な仲間だよ。", 
+        kana: "みんなだいじななかまだよ。",
+        romaji: "minna daiji na nakama da yo",
+        reaction_good:
+            "りょうご「……うん、それは前提」\n" +
+            "りょうご「だからこそ、衝突する前に軌道修正したい」",
+        reaction_bad:
+            "りょうご「……そういう話じゃない」\n" +
+            "りょうご「今は、感情の問題じゃない」",
+        images: ["ryogo.png"]
+    },
+    { 
+        id: "chat_akira_tomoki_duel",
+        subtype: "chat",
+        group: "学年成績上位",
+        sender: "あきら＆ともき",
+        start_msg:
+            "ともき「また平均下げたな、牧羊犬」\n" +
+            "あきら「うるせぇ。無駄な層を切らないからだ」\n" +
+            "ともき「切る前提で話すな。オレは使えるようにする」\n" +
+            "あきら「その甘さが全体を鈍らせる」\n" +
+            "ともき「吠えてろよ、犬男。結果出してから言え」\n" +
+            "あきら「……番犬がいなきゃ群れは崩壊する」",
+        text: "冷静に議論しなさい。", 
+        kana: "れいせいにぎろんしなさい。",
+        romaji: "reisei ni giron shinasai",
+        reaction_good:
+            "ともき「チッ……まぁ、続けるか」\n" +
+            "あきら「オレは最初から冷静だ」",
+        reaction_bad:
+            "ともき「割り込み方が雑だ」\n" +
+            "あきら「論点がズレてる」",
+        images: ["akira.png", "tomoki.png"]
+    },
+    { 
+        id: "chat_ryogo_rei_quiet",
+        subtype: "chat",
+        group: "水兵部・知性",
+        sender: "りょうご＆れい",
+        start_msg:
+            "りょうご「……最近、少し流れが歪んでる気がする」\n" +
+            "れい「歪み、か。具体的には？」\n" +
+            "りょうご「誰も間違ってないのに、噛み合ってない」\n" +
+            "れい「ふふ、感覚的だけど的確ね」\n" +
+            "れい「論理の前に、配置の問題かも」",
+        text: "続けて。", 
+        kana: "つづけて。",
+        romaji: "tsuzukete",
+        reaction_good:
+            "りょうご「僕も、そう思う」\n" +
+            "れい「やっぱり。じゃあ修正点は――」",
+        reaction_bad:
+            "りょうご「……いや、今はいい」\n" +
+            "れい「無理に言語化しなくてもいいわ」",
+        images: ["ryogo.png", "rei.png"]
+    },
+    { 
+        id: "chat_tomoki_ketsui_field",
+        subtype: "chat",
+        group: "水兵部",
+        sender: "ともき＆けつい",
+        start_msg:
+            "ともき「現場判断に任せすぎだ」\n" +
+            "けつい「現場知らん机上論は沈むけぇ」\n" +
+            "ともき「だから統制が要る」\n" +
+            "けつい「だから信頼が要るんじゃ」",
+        text: "どっちも正しい。", 
+        kana: "どっちもただしい。",
+        romaji: "docchi mo tadashii",
+        reaction_good:
+            "ともき「……だな」\n" +
+            "けつい「ほう。ええこと言うじゃん」",
+        reaction_bad:
+            "ともき「曖昧だ」\n" +
+            "けつい「中途半端じゃのう」",
+        images: ["tomoki.png", "ketsui.png"]
+    },
+    { 
+        id: "chat_migiwa_rei",
+        subtype: "chat",
         group: "2-2",
-        sender: "2年女子グル",
-        start_msg: "みりん「ねーねー、今度の連休どこいくー？🎀」\nあめり「えっと…うさぎカフェ…いきたいな🐰」\nみりん「いいね！センセも誘っちゃう？w」",
-        text: "先生は仕事があるから遠慮しておきます。", 
-        kana: "せんせいはしごとがあるからえんりょしておきます。", 
-        romaji: "sensei wa sigoto ga aru kara enryo site okimasu", 
-        reaction_good: "みりん「えー！つまんないのー！🥺」\nあめり「せんせい…おしごとがんばって…」",
-        reaction_bad: "みりん「あ、センセ動揺してない？ホントは行きたいんでしょw」",
-        images: ["mirin.png", "ameri.png"] // ★複数画像
+        sender: "みぎわ＆れい",
+        start_msg:
+            "みぎわ「れいちゃんってさ、全部見えとるじゃろ？」\n" +
+            "れい「そんなことないわ」\n" +
+            "みぎわ「でも黙っとる時が一番怖い」\n" +
+            "れい「……それ、褒め言葉？」",
+        text: "仲良さそうだね。", 
+        kana: "なかよさそうだね。",
+        romaji: "nakayosou da ne",
+        reaction_good:
+            "みぎわ「まあね！」\n" +
+            "れい「ええ、悪くない関係よ」",
+        reaction_bad:
+            "みぎわ「気遣いすぎた？」\n" +
+            "れい「少しだけ」",
+        images: ["migiwa.png", "rei.png"]
     },
     { 
-        id: "chat_game", 
-        subtype: "chat", 
-        group: "3-1",
-        sender: "ゲーマーズ",
-        start_msg: "一人「ククク…昨日のランクマ、俺の右腕が暴走して負けた…」\n縫「ただの操作ミスだろ！だぞ！」\n一人「貴様…！俺の闇の力を疑うのか…先生、言ってやれ！」",
-        text: "ゲームは一日一時間。宿題は終わったの？", 
-        kana: "げーむはいちにちいちじかん。しゅくだいはおわったの？", 
-        romaji: "ge-mu wa itiniti itijikan syukudai wa owatta no", 
-        reaction_good: "一人「ぐっ…現実という名の結界に阻まれるとは…」\n縫「先生正論すぎるゾッ…」",
-        reaction_bad: "一人「先生、コマンド入力ミスってるぞ。エイムが悪いな。」",
-        images: ["hitori.png", "nui.png"]
+        id: "chat_fuwa_introvert",
+        subtype: "chat",
+        group: "ふわ内向",
+        sender: "ゆめかわ組",
+        start_msg:
+            "あめり「……あの……おはよう、です……🐰」\n" +
+            "ゆこ「今日、静かでいいですね」\n" +
+            "ざくろ「……」\n" +
+            "まりあ「ふふ、落ち着くね✨」",
+        text: "今日はゆっくりで大丈夫だよ。", 
+        kana: "きょうはゆっくりでだいじょうぶだよ。",
+        romaji: "kyou wa yukkuri de daijoubu da yo",
+        reaction_good:
+            "あめり「……ほっ」\n" +
+            "ゆこ「安心しました」\n" +
+            "ざくろ「……了解」\n" +
+            "まりあ「ありがとうございます」",
+        reaction_bad:
+            "（全員が一瞬、黙る）",
+        images: ["ameri.png", "yuko.png", "zakuro.png", "maria.png"]
     },
     { 
-        id: "chat_teacher", 
-        subtype: "chat", 
-        group: "teacher",
-        sender: "【極秘】教員連絡網",
-        start_msg: "克己「今日の体育、グラウンド100周に変更するか！」\n芽衣「えぇっ！？生徒が倒れちゃいますよぉ💦」\n克己「甘い！甘すぎる！なぁ先生、お前もそう思うだろ！？」",
-        text: "妻鹿先生、それはさすがにやりすぎです。", 
-        kana: "めがせんせい、それはさすがにやりすぎです。", 
-        romaji: "megasensei sore wa sasuga ni yarisugi desu", 
-        reaction_good: "克己「むぅ…先生がそう言うなら50周にしておくか…」\n芽衣「ホッ…ありがとうございますぅ〜🍵」",
-        reaction_bad: "克己「なんだその入力は！お前も走り足りないようだな！！」",
-        images: ["katsumi.png", "mei.png"]
-    }
+        id: "chat_teacher_out",
+        subtype: "chat",
+        group: "2-2",
+        sender: "クラス",
+        start_msg:
+            "れい「先生、ここまでで大丈夫です」\n" +
+            "ともき「了解です」\n" +
+            "あきら「……はい」",
+        text: "じゃあ、任せたよ。", 
+        kana: "じゃあ、まかせたよ。",
+        romaji: "jaa makaseta yo",
+        reaction_good:
+            "（先生が退出しました）\n" +
+            "ともき「……で？」\n" +
+            "あきら「やっと本題だな」\n" +
+            "れい「話、戻しましょう」",
+        reaction_bad:
+            "（先生が退出しました）\n" +
+            "ともき「ちっ、時間の無駄だった」\n" +
+            "あきら「建前会議」",
+        images: ["rei.png", "tomoki.png", "akira.png"]
+    },
+    { 
+        id: "chat_top3_hell",
+        subtype: "chat",
+        group: "学年成績上位",
+        sender: "れい＆あきら＆ともき",
+        start_msg:
+            "ともき「結論から言う。今の配分は非効率だ」\n" +
+            "あきら「非効率なのは、無能を残してるからだ」\n" +
+            "れい「二人とも、前提が違うわ」\n" +
+            "ともき「違わない。結果がすべてだ」\n" +
+            "あきら「結果を出せない奴は切る。それだけ」\n" +
+            "れい「切った後の責任は誰が取るの？」",
+        text: "落ち着いて。", 
+        kana: "おちついて。",
+        romaji: "ochitsuite",
+        reaction_good:
+            "ともき「……続ける」\n" +
+            "あきら「話は終わってない」\n" +
+            "れい「ええ。むしろ、ここから」",
+        reaction_bad:
+            "ともき「感情論は要らない」\n" +
+            "あきら「同情で回る組織は腐る」\n" +
+            "れい「……二人とも、聞く気がないのね」",
+        images: ["rei.png", "akira.png", "tomoki.png"]
+    },
+    { 
+        id: "chat_ameri_mikina",
+        subtype: "chat",
+        group: "女子",
+        sender: "あめり＆みきな",
+        start_msg:
+            "みきな「そのうさぎのキーホルダー、かわいいね」\n" +
+            "あめり「……え、あ……ありがとう……🐰」\n" +
+            "みきな「緊張しすぎじゃない？」\n" +
+            "あめり「して……るかも……」",
+        text: "仲良さそうだね。", 
+        kana: "なかよさそうだね。",
+        romaji: "nakayosou da ne",
+        reaction_good:
+            "みきな「でしょ？」\n" +
+            "あめり「……うん」",
+        reaction_bad:
+            "あめり「……」\n" +
+            "みきな「……あ、ごめん」",
+        images: ["ameri.png", "mikina.png"]
+    },
+    { 
+        id: "chat_maria_yuko",
+        subtype: "chat",
+        group: "女子",
+        sender: "まりあ＆ゆこ",
+        start_msg:
+            "まりあ「今日は少し静かですね」\n" +
+            "ゆこ「……落ち着いてて、助かります」\n" +
+            "まりあ「無理してない？」\n" +
+            "ゆこ「……少しだけ」",
+        text: "大丈夫そう？", 
+        kana: "だいじょうぶそう？",
+        romaji: "daijoubu sou?",
+        reaction_good:
+            "ゆこ「今は」\n" +
+            "まりあ「よかった」",
+        reaction_bad:
+            "ゆこ「……ごめんなさい」\n" +
+            "まりあ「謝らなくていいのよ」",
+        images: ["maria.png", "yuko.png"]
+    },
+    { 
+        id: "chat_mikina_makishi",
+        subtype: "chat",
+        group: "2-1",
+        sender: "みきな＆まきし",
+        start_msg:
+            "みきな「……ねぇ」\n" +
+            "まきし「なに？」\n" +
+            "みきな「またマヨかけてるでしょ」\n" +
+            "まきし「え？普通じゃない？」\n" +
+            "みきな「普通じゃないから言ってるんだけど」\n" +
+            "まきし「え〜？人生楽しまなきゃ損じゃん！」",
+        text: "ほどほどにしなさい。", 
+        kana: "ほどほどにしなさい。",
+        romaji: "hodohodo ni shinasai",
+        reaction_good:
+            "まきし「はーい先生！」\n" +
+            "みきな「……絶対減らさないよね」",
+        reaction_bad:
+            "みきな「ほら、先生にも言われた」\n" +
+            "まきし「え〜？厳しくない？」",
+        images: ["mikina.png", "makishi.png"]
+    },
+    { 
+        id: "chat_makishi_rei",
+        subtype: "chat",
+        group: "2-1",
+        sender: "まきし＆れい",
+        start_msg:
+            "まきし「ケチャップとマヨ、一緒が最強じゃん？」\n" +
+            "れい「それは味覚の怠慢よ」\n" +
+            "まきし「え、喧嘩売ってる？」\n" +
+            "れい「事実を述べているだけよ」\n" +
+            "まきし「人生、合理性だけじゃないよ？」\n" +
+            "れい「だからこそ、基準が必要なの」",
+        text: "食の好みは自由だよ。", 
+        kana: "しょくのこのみはじゆうだよ。",
+        romaji: "shoku no konomi wa jiyuu da yo",
+        reaction_good:
+            "まきし「だよね！」\n" +
+            "れい「……先生がそう言うなら」",
+        reaction_bad:
+            "れい「論点が逸れてます」\n" +
+            "まきし「え、今いい話してたよ？」",
+        images: ["makishi.png", "rei.png"]
+    },
+    { 
+        id: "chat_hitori_iseri",
+        subtype: "chat",
+        group: "2-1",
+        sender: "ひとり＆いせり",
+        start_msg:
+            "ひとり「……左腕が疼く」\n" +
+            "いせり「またかいな！」\n" +
+            "ひとり「封印が……」\n" +
+            "いせり「それ成長痛ちゃう？」",
+        text: "静かにしなさい。", 
+        kana: "しずかにしなさい。",
+        romaji: "shizuka ni shinasai",
+        reaction_good:
+            "ひとり「……了解」\n" +
+            "いせり「はーい」",
+        reaction_bad:
+            "いせり「先生もノリ悪いなぁ！」\n" +
+            "ひとり「貴様も敵か……」",
+        images: ["hitori.png", "iseri.png"]
+    },
+    { 
+        id: "chat_shogo_ameri",
+        subtype: "chat",
+        group: "2-1",
+        sender: "しょうご＆あめり",
+        start_msg:
+            "しょうご「寒くなってきたね」\n" +
+            "あめり「……うん……」\n" +
+            "しょうご「温かいの飲む？」\n" +
+            "あめり「……ありがとう」",
+        text: "いい雰囲気だね。", 
+        kana: "いいふんいきだね。",
+        romaji: "ii funiki da ne",
+        reaction_good:
+            "しょうご「そうかな？」\n" +
+            "あめり「……えへ」",
+        reaction_bad:
+            "あめり「……」\n" +
+            "しょうご「あ、ごめん」",
+        images: ["shogo.png", "ameri.png"]
+    },
+    { 
+        id: "chat_rei_ryogo",
+        subtype: "chat",
+        group: "2-1",
+        sender: "れい＆りょうご",
+        start_msg:
+            "れい「あなたの視点、興味深いわ」\n" +
+            "りょうご「僕は、全体の流れを見てるだけだよ」\n" +
+            "れい「未来を読む、という意味で？」\n" +
+            "りょうご「……結果として、そうなることもあるな」",
+        text: "難しい話してるね。", 
+        kana: "むずかしいはなししてるね。",
+        romaji: "muzukashii hanashi shiteru ne",
+        reaction_good:
+            "れい「説明しましょうか」\n" +
+            "りょうご「先生向けに噛み砕きます」",
+        reaction_bad:
+            "りょうご「……今は省略します」\n" +
+            "れい「時間が足りませんね」",
+        images: ["rei.png", "ryogo.png"]
+    },
+    { 
+        id: "chat_kotori_hitori",
+        subtype: "chat",
+        group: "2-1",
+        sender: "ことり＆ひとり",
+        start_msg:
+            "ことり「だる〜…今日もう帰らん？」\n" +
+            "ひとり「フッ……俺の左腕が騒いでいる」\n" +
+            "ことり「それ昨日も言っとったやん」\n" +
+            "ひとり「昨日とは質が違う」\n" +
+            "ことり「知らんがな」",
+        text: "ちゃんと授業受けなさい。", 
+        kana: "ちゃんとじゅぎょううけなさい。",
+        romaji: "chanto jugyou ukenasai",
+        reaction_good:
+            "ことり「はーいはい」\n" +
+            "ひとり「……封印するか」",
+        reaction_bad:
+            "ことり「先生ノリ悪〜」\n" +
+            "ひとり「貴様も敵か」",
+        images: ["kotori.png", "hitori.png"]
+    },
+    { 
+        id: "chat_kotori_akira",
+        subtype: "chat",
+        group: "2-1",
+        sender: "ことり＆あきら",
+        start_msg:
+            "ことり「頑張る意味ってさ、ある？」\n" +
+            "あきら「ないなら落ちろ」\n" +
+            "ことり「極端すぎん？」\n" +
+            "あきら「中途半端が一番邪魔だ」\n" +
+            "ことり「うわ、牧羊犬こわ」",
+        text: "落ち着いて話しなさい。", 
+        kana: "おちついてはなしなさい。",
+        romaji: "ochitsuite hanashi nasai",
+        reaction_good:
+            "あきら「……続ける」\n" +
+            "ことり「まぁ聞くだけ聞くわ」",
+        reaction_bad:
+            "あきら「論点が浅い」\n" +
+            "ことり「それ褒めてる？」",
+        images: ["kotori.png", "akira.png"]
+    },
+    { 
+        id: "chat_jiha_tomoki",
+        subtype: "chat",
+        group: "2-1",
+        sender: "じは＆ともき",
+        start_msg:
+            "じは「なーなー、ともき」\n" +
+            "ともき「今忙しい」\n" +
+            "じは「今ヒマでしょ」\n" +
+            "ともき「ヒマでもお前の相手はしない」\n" +
+            "じは「うわ冷たっ」",
+        text: "仲良くしなさい。", 
+        kana: "なかよくしなさい。",
+        romaji: "nakayoku shinasai",
+        reaction_good:
+            "ともき「努力はする」\n" +
+            "じは「言い方〜！」",
+        reaction_bad:
+            "ともき「指示が抽象的だ」\n" +
+            "じは「めんどくさ〜！」",
+        images: ["jiha.png", "tomoki.png"]
+    },
+    { 
+        id: "chat_ryogo_yuko",
+        subtype: "chat",
+        group: "2-1",
+        sender: "りょうご＆ゆこ",
+        start_msg:
+            "りょうご「このクラス、流れ変わりそうだね」\n" +
+            "ゆこ「……私もそう思ってた」\n" +
+            "りょうご「たぶん中心は、あきらとともき」\n" +
+            "ゆこ「衝突は避けられないね」",
+        text: "何の話？", 
+        kana: "なんのはなし？",
+        romaji: "nan no hanashi?",
+        reaction_good:
+            "りょうご「今は言わない」\n" +
+            "ゆこ「そのうち分かるよ」",
+        reaction_bad:
+            "りょうご「説明すると長い」\n" +
+            "ゆこ「今は黙っとこ」",
+        images: ["ryogo.png", "yuko.png"]
+    },
+    { 
+        id: "chat_migiwa_maria",
+        subtype: "chat",
+        group: "2-1",
+        sender: "みぎわ＆まりあ",
+        start_msg:
+            "みぎわ「また男子らが騒いどる…」\n" +
+            "まりあ「ふふ、大変そうね」\n" +
+            "みぎわ「放っとくと事故るけぇ」\n" +
+            "まりあ「神様に祈っておくよ✨」",
+        text: "頼りにしてるよ。", 
+        kana: "たよりにしてるよ。",
+        romaji: "tayori ni shiteru yo",
+        reaction_good:
+            "みぎわ「任せて！」\n" +
+            "まりあ「がんばります」",
+        reaction_bad:
+            "みぎわ「先生も手伝って！」\n" +
+            "まりあ「あらあら…」",
+        images: ["migiwa.png", "maria.png"]
+    },
+    { 
+        id: "chat_hidden_ni_triangle",
+        subtype: "chat",
+        group: "2−1",
+        sender: "りょうご＆あきら＆れい",
+        start_msg:
+            "りょうご「……先生、出たね」\n" +
+            "あきら「今のうちだ。さっきの設問、構造が甘い」\n" +
+            "れい「甘いというより、前提条件がズレてるわ」\n" +
+            "りょうご「たぶん意図は評価基準の揺さぶりだと思う」\n" +
+            "あきら「だったら尚更、切り分けが必要だ」\n" +
+            "れい「結論を急ぐと、誤差が残るもの」",
+        text: "静かにしなさい。", 
+        kana: "しずかにしなさい。",
+        romaji: "shizuka ni shinasai",
+        reaction_good:
+            "りょうご「……了解」\n" +
+            "れい「続きは後でね」\n" +
+            "あきら「覚えとく」",
+        reaction_bad:
+            "あきら「遮る意味がない」\n" +
+            "れい「今のは必要な確認よ」\n" +
+            "りょうご「ノイズが増えただけだね」",
+        images: ["ryogo.png", "akira.png", "rei.png"]
+    },
+    { 
+        id: "chat_miriya_formal_strike",
+        subtype: "chat",
+        group: "2−1",
+        sender: "みりや＆ひとり",
+        start_msg:
+            "ひとり「……左腕が疼く。これは何か起きるな」\n" +
+            "みりや「そのような根拠のない発言はお控えください」\n" +
+            "ひとり「は？ノリだろ」\n" +
+            "みりや「場の進行を乱しております」\n" +
+            "ひとり「チッ……堅いな」",
+        text: "落ち着きなさい。", 
+        kana: "おちつきなさい。",
+        romaji: "ochitsuki nasai",
+        reaction_good:
+            "みりや「ご協力、感謝いたします」\n" +
+            "ひとり「……はいはい」",
+        reaction_bad:
+            "みりや「その態度は看過できません」\n" +
+            "ひとり「説教かよ」",
+        images: ["miriya.png", "hitori.png"]
+    },
+    { 
+        id: "chat_rei_zakuro_silence",
+        subtype: "chat",
+        group: "2−1",
+        sender: "れい＆ざくろ",
+        start_msg:
+            "ざくろ「……この問題、解法が二通りある」\n" +
+            "れい「ええ。遠回りだけど、そっちの方が安定するわ」\n" +
+            "ざくろ「君、気づいとったんや」\n" +
+            "れい「当然よ。見落とす理由がないもの」\n" +
+            "ざくろ「……無駄があらへんな」",
+        text: "私語は控えましょう。", 
+        kana: "しごはひかえましょう。",
+        romaji: "shigo wa hikaemashou",
+        reaction_good:
+            "れい「後でまとめましょう」\n" +
+            "ざくろ「うん」",
+        reaction_bad:
+            "ざくろ「今止めるんか」\n" +
+            "れい「今だから止めるの」",
+        images: ["rei.png", "zakuro.png"]
+    },
+    { 
+        id: "chat_jiha_kotori_deluail",
+        subtype: "chat",
+        group: "2−1",
+        sender: "じは＆ことり",
+        start_msg:
+            "じは「なぁなぁ、それ今やる意味あるん？」\n" +
+            "ことり「あるって思うならやるし、思わんかったらやらん」\n" +
+            "じは「ほらもうズレとるやん」\n" +
+            "ことり「ズレとるのが一番楽しかろ」\n" +
+            "じは「先生戻ってきたら終わりやで？」\n" +
+            "ことり「戻ってきてから考えりゃよか」",
+        text: "話を戻しなさい。", 
+        kana: "はなしをもどしなさい。",
+        romaji: "hanashi o modoshi nasai",
+        reaction_good:
+            "じは「しゃーなしやな」\n" +
+            "ことり「はいはい、現実」",
+        reaction_bad:
+            "ことり「戻す気せん」\n" +
+            "じは「それが問題なんよ」",
+        images: ["jiha.png", "kotori.png"]
+    },
+    { 
+        id: "chat_migiwa_ketsui_pressure",
+        subtype: "chat",
+        group: "2−1",
+        sender: "みぎわ＆けつい",
+        start_msg:
+            "みぎわ「船の整備、また後回しにしとるじゃろ」\n" +
+            "けつい「ちゃんと順番決めとるけぇ」\n" +
+            "みぎわ「その順番が甘い言うとんじゃ」\n" +
+            "けつい「急ぎすぎると事故るけぇの」\n" +
+            "みぎわ「だからって遅すぎるんは困るんよ」",
+        text: "言い合いは控えなさい。", 
+        kana: "いいあいはひかえなさい。",
+        romaji: "iiai wa hikae nasai",
+        reaction_good:
+            "けつい「……分かった」\n" +
+            "みぎわ「後で詰めよう」",
+        reaction_bad:
+            "みぎわ「話、聞いとる？」\n" +
+            "けつい「聞いとるけぇ」",
+        images: ["migiwa.png", "ketsui.png"]
+    },
+    { 
+        id: "chat_ameri_zakuro_soft",
+        subtype: "chat",
+        group: "2−1",
+        sender: "あめり＆ざくろ",
+        start_msg:
+            "あめり「……この問題、遠回りの方が安全やと思うん」\n" +
+            "ざくろ「せやな。計算は増えるけど、崩れにくい」\n" +
+            "あめり「急ぐと、怖いし……」\n" +
+            "ざくろ「無理せんでええ」\n" +
+            "あめり「……ありがと」",
+        text: "集中しなさい。", 
+        kana: "しゅうちゅうしなさい。",
+        romaji: "shuuchuu shinasai",
+        reaction_good:
+            "ざくろ「続きは後でな」\n" +
+            "あめり「うん」",
+        reaction_bad:
+            "ざくろ「今の遮断は痛い」\n" +
+            "あめり「……思考切れた」",
+        images: ["ameri.png", "zakuro.png"]
+    },
+    { 
+        id: "chat_iseri_hitori_noise",
+        subtype: "chat",
+        group: "2−1",
+        sender: "いせり＆ひとり",
+        start_msg:
+            "いせり「なぁ兄ちゃん、それ絶対ちゃうで」\n" +
+            "ひとり「黙れ、今左腕が疼いてる」\n" +
+            "いせり「知らんがな！」\n" +
+            "ひとり「これは運命だ」\n" +
+            "いせり「運命うるさいわ！」",
+        text: "静かにしなさい。", 
+        kana: "しずかにしなさい。",
+        romaji: "shizuka ni shinasai",
+        reaction_good:
+            "いせり「ほら見て、怒られた」\n" +
+            "ひとり「……チッ」",
+        reaction_bad:
+            "ひとり「黙る理由がない」\n" +
+            "いせり「余計あかんやつ！」",
+        images: ["iseri.png", "hitori.png"]
+    },
+    { 
+        id: "chat_shogo_yuko_air",
+        subtype: "chat",
+        group: "2−1",
+        sender: "しょうご＆ゆこ",
+        start_msg:
+            "しょうご「ここ、意見分かれてるけどさ」\n" +
+            "ゆこ「……あえて今は触れない方がいい気もする」\n" +
+            "しょうご「なるほど、場の温度的に？」\n" +
+            "ゆこ「ええ。波風は立てたくないの」\n" +
+            "しょうご「じゃ、後で整理しよっか」",
+        text: "相談は静かにしなさい。", 
+        kana: "そうだんはしずかにしなさい。",
+        romaji: "soudan wa shizuka ni shinasai",
+        reaction_good:
+            "ゆこ「助かるわ」\n" +
+            "しょうご「お互い様だね」",
+        reaction_bad:
+            "しょうご「今じゃなかったか」\n" +
+            "ゆこ「……そういう時もあるわ」",
+        images: ["shogo.png", "yuko.png"]
+    },
+    { 
+        id: "chat_wataru_ryogo_pressure",
+        subtype: "chat",
+        group: "2−1",
+        sender: "わたる＆りょうご",
+        start_msg:
+            "わたる「その仮定、根拠は？」\n" +
+            "りょうご「傾向からの推測」\n" +
+            "わたる「推測で進めるのは危険だ」\n" +
+            "りょうご「でも、当たる確率は高い」\n" +
+            "わたる「……検証する」",
+        text: "議論は簡潔に。", 
+        kana: "ぎろんはかんけつに。",
+        romaji: "giron wa kanketsu ni",
+        reaction_good:
+            "りょうご「了解」\n" +
+            "わたる「続けよう」",
+        reaction_bad:
+            "わたる「話が長い」\n" +
+            "りょうご「……そうかも」",
+        images: ["wataru.png", "ryogo.png"]
+    },
+    { 
+        id: "chat_maria_iseri",
+        subtype: "chat",
+        group: "2-1",
+        sender: "まりあ＆いせり",
+        start_msg:
+            "いせり「なぁなぁ、それ絶対ちゃうって！」\n" +
+            "まりあ「ふふ、声大きいよ〜」\n" +
+            "いせり「え、そう？」\n" +
+            "まりあ「周りがびっくりしてるよ💦」\n" +
+            "いせり「ごめんって〜！」",
+        text: "声量を下げなさい。", 
+        kana: "せいりょうをさげなさい。",
+        romaji: "seiryou o sage nasai",
+        reaction_good:
+            "まりあ「ありがとう✨」\n" +
+            "いせり「気ぃつけるわ！」",
+        reaction_bad:
+            "いせり「先生、タイポしとるで！」\n" +
+            "まりあ「ふふ、落ち着いてね」",
+        images: ["maria.png", "iseri.png"]
+    },
+    { 
+        id: "chat_rei_akira_silent",
+        subtype: "chat",
+        group: "2−1",
+        sender: "れい＆あきら",
+        start_msg:
+            "れい「その解法、効率はいいけど」\n" +
+            "あきら「リスクが残る」\n" +
+            "れい「ええ、同意」\n" +
+            "あきら「なら別案だ」\n" +
+            "れい「……それが最適ね」",
+        text: "無言で睨まない。", 
+        kana: "むごんでにらまない。",
+        romaji: "mugon de niramanai",
+        reaction_good:
+            "れい「続けましょ」\n" +
+            "あきら「時間が惜しい」",
+        reaction_bad:
+            "あきら「邪魔だ」\n" +
+            "れい「それは違うわ」",
+        images: ["rei.png", "akira.png"]
+    },
+    { 
+        id: "chat_miriya_hitori_strike",
+        subtype: "chat",
+        group: "2−1",
+        sender: "みりや＆ひとり",
+        start_msg:
+            "ひとり「左腕が……」\n" +
+            "みりや「それは今関係ありません」\n" +
+            "ひとり「黙れ」\n" +
+            "みりや「黙りません」\n" +
+            "ひとり「……チッ」",
+        text: "落ち着きなさい。", 
+        kana: "おちつきなさい。",
+        romaji: "ochitsuki nasai",
+        reaction_good:
+            "みりや「助かります」\n" +
+            "ひとり「覚えてろ」",
+        reaction_bad:
+            "ひとり「命令するな」\n" +
+            "みりや「命令ではありません」",
+        images: ["miriya.png", "hitori.png"]
+    },
+    { 
+        id: "chat_suiheibu_accident",
+        subtype: "chat",
+        group: "2−1",
+        sender: "けつい＆みぎわ＆りょうご",
+        start_msg:
+            "みぎわ「ちょ、けつい！そのロープ結び甘いんじゃが！」\n" +
+            "けつい「大丈夫じゃろ、潮の向き見とるけぇ」\n" +
+            "りょうご「……いや、その二つ前提ズレてる」\n" +
+            "みぎわ「は？」\n" +
+            "けつい「ん？」\n" +
+            "りょうご「今の波、計算に入ってない」",
+        text: "落ち着いて確認しなさい。", 
+        kana: "おちついてかくにんしなさい。",
+        romaji: "ochitsuite kakunin shinasai",
+        reaction_good:
+            "けつい「……あ、マジじゃ」\n" +
+            "みぎわ「だから言うたじゃろ！」\n" +
+            "りょうご「今なら修正できる」",
+        reaction_bad:
+            "みぎわ「センセ邪魔！」\n" +
+            "けつい「今いいとこなんじゃけぇ！」\n" +
+            "りょうご「……事故る」",
+        images: ["ketsui.png", "migiwa.png", "ryogo.png"]
+    },
+    { 
+        id: "chat_enfp_infinite",
+        subtype: "chat",
+        group: "2−1",
+        sender: "みきな＆まきし",
+        start_msg:
+            "まきし「なぁ聞いて！今日マヨ新作見つけた！」\n" +
+            "みきな「え、どこの？てかマヨって新作あるんだ」\n" +
+            "まきし「ある！しかも辛いやつ！」\n" +
+            "みきな「辛いの！？それポテト用？」\n" +
+            "まきし「いやパスタにもいける！」\n" +
+            "みきな「パスタ！？え、でもそれならさ——」",
+        text: "話をまとめなさい。", 
+        kana: "はなしをまとめなさい。",
+        romaji: "hanashi o matome nasai",
+        reaction_good:
+            "みきな「え、どこまで話したっけ？」\n" +
+            "まきし「マヨの話！」",
+        reaction_bad:
+            "まきし「まだ途中なんだけど！」\n" +
+            "みきな「終わる気なくない？」",
+        images: ["mikina.png", "makishi.png"]
+    },
+    { 
+        id: "chat_ni_freeze",
+        subtype: "chat",
+        group: "2−1",
+        sender: "ざくろ＆りょうご",
+        start_msg:
+            "ざくろ「……それ、最終的に破綻せぇへん？」\n" +
+            "りょうご「うん、だから別ルート考えてた」\n" +
+            "ざくろ「……同じこと考えてたわ」\n" +
+            "りょうご「……だよね」\n" +
+            "ざくろ「…………」\n" +
+            "りょうご「…………」",
+        text: "何か話しなさい。", 
+        kana: "なにかはなしなさい。",
+        romaji: "nanika hanashi nasai",
+        reaction_good:
+            "ざくろ「今、頭の中で完結した」\n" +
+            "りょうご「僕も」",
+        reaction_bad:
+            "ざくろ「無理」\n" +
+            "りょうご「今じゃない」",
+        images: ["zakuro.png", "ryogo.png"]
+    },
+    { 
+        id: "chat_maria_jiha_tempest",
+        subtype: "chat",
+        group: "2−1",
+        sender: "まりあ＆じは",
+        start_msg:
+            "じは「なぁ聞いて！今ひらめいたんやけど！」\n" +
+            "まりあ「うん、でもそれ昨日も言ってた」\n" +
+            "じは「昨日とは違う！」\n" +
+            "まりあ「だいたい同じだよ」\n" +
+            "じは「ひど！」",
+        text: "順番に話しなさい。", 
+        kana: "じゅんばんにはなしなさい。",
+        romaji: "junban ni hanashi nasai",
+        reaction_good:
+            "まりあ「はい、どうぞ」\n" +
+            "じは「今度こそ聞いてな！」",
+        reaction_bad:
+            "じは「止めんといて！」\n" +
+            "まりあ「止めてないよ？」",
+        images: ["maria.png", "jiha.png"]
+    },
+    { 
+        id: "chat_all_teacher_enters",
+        subtype: "chat",
+        group: "2−1",
+        sender: "クラス全体",
+        start_msg:
+            "ひとり「このクラス…闇が渦巻いている…」\n" +
+            "じは「ねぇそれ何回目〜？」\n" +
+            "いせり「腹減ったんやけど！」\n" +
+            "ことり「もう帰ろーぜ」\n" +
+            "みぎわ「ちょ、廊下うるさいって！」\n" +
+            "けつい「まぁまぁ、落ち着きんさい」\n" +
+            "（ガラッ）\n" +
+            "しょうご「……先生来た」\n" +
+            "全員「……」",
+        text: "静かにしてください。", 
+        kana: "しずかにしてください。",
+        romaji: "shizuka ni shite kudasai",
+        reaction_good:
+            "ひとり「……封印した」\n" +
+            "じは「はーい」\n" +
+            "いせり「了解や！」",
+        reaction_bad:
+            "わたる「姿勢がなっていない」\n" +
+            "ともき「切り替え遅いぞ」",
+        images: ["class.png"]
+    },
+    { 
+        id: "chat_rei_silence",
+        subtype: "chat",
+        group: "2−1",
+        sender: "れい",
+        start_msg:
+            "あきら「非効率だな」\n" +
+            "ともき「結論を急ぎすぎだ」\n" +
+            "じは「ねぇねぇケンカ？」\n" +
+            "ひとり「フッ…争いは力を呼ぶ…」\n" +
+            "れい「――今、授業中」",
+        text: "続けるなら外で。", 
+        kana: "つづけるならそとで。",
+        romaji: "tsuzukeru nara soto de",
+        reaction_good:
+            "あきら「……了解」\n" +
+            "ともき「やめとく」",
+        reaction_bad:
+            "れい「記録つけるけど？」\n" +
+            "全員「……」",
+        images: ["rei.png"]
+    },
+    { 
+        id: "chat_miriya_formation",
+        subtype: "chat",
+        group: "2−1",
+        sender: "みりや",
+        start_msg:
+            "いせり「机ずらそーぜ！」\n" +
+            "ことり「いいね、それ」\n" +
+            "みぎわ「ちょっと勝手に――」\n" +
+            "みりや「……皆さん」",
+        text: "元の席にお戻りください。", 
+        kana: "もとのせきにもどってください。",
+        romaji: "moto no seki ni modotte kudasai",
+        reaction_good:
+            "いせり「はっや……」\n" +
+            "ことり「戻る戻る」\n" +
+            "みぎわ「助かった…」",
+        reaction_bad:
+            "みりや「報告が必要でしょうか？」\n" +
+            "全員「戻ります」",
+        images: ["miriya.png"]
+    },
+    { 
+        id: "chat_ketsui_migiwa_rival",
+        subtype: "chat",
+        group: "2−1",
+        sender: "けつい＆みぎわ",
+        start_msg:
+            "みぎわ「また勝手に決めとるじゃろ」\n" +
+            "けつい「効率ええ思うたんじゃ」\n" +
+            "みぎわ「副部長の意見は無視？」\n" +
+            "けつい「無視はしとらん」\n" +
+            "みぎわ「顔がそう言うとる！」",
+        text: "落ち着いて話してください。", 
+        kana: "おちついてはなしてください。",
+        romaji: "ochitsuite hanashite kudasai",
+        reaction_good:
+            "けつい「……悪かった」\n" +
+            "みぎわ「……まぁええわ」",
+        reaction_bad:
+            "みぎわ「もう知らん！」\n" +
+            "けつい「待て言うとるじゃろ！」",
+        images: ["ketsui.png", "migiwa.png"]
+    },
+    { 
+        id: "chat_hitori_ignored",
+        subtype: "chat",
+        group: "2−1",
+        sender: "ひとり",
+        start_msg:
+            "ひとり「この左腕が…騒ぎ出している…」\n" +
+            "じは「でさ〜」\n" +
+            "いせり「それ昨日も言うてたで」\n" +
+            "ひとり「闇を恐れぬ者だけが――」\n" +
+            "しょうご「次のページ行こう」",
+        text: "私語を控えなさい。", 
+        kana: "しごをひかえなさい。",
+        romaji: "shigo o hikaenasai",
+        reaction_good:
+            "ひとり「……封印した」",
+        reaction_bad:
+            "ひとり「理解者がいない世界だ」",
+        images: ["hitori.png"]
+    },
+    { 
+        id: "chat_ameri_small_voice",
+        subtype: "chat",
+        group: "2−1",
+        sender: "あめり",
+        start_msg:
+            "あめり「……あの……」\n" +
+            "じは「ねぇ聞いてこれ！」\n" +
+            "いせり「それより昼メシ！」\n" +
+            "あめり「……うん……」",
+        text: "順番に発言してください。", 
+        kana: "じゅんばんにはつげんしてください。",
+        romaji: "junban ni hatsugen shite kudasai",
+        reaction_good:
+            "あめり「……ありがとう」",
+        reaction_bad:
+            "あめり「……だいじょうぶ」",
+        images: ["ameri.png"]
+    },
+    { 
+        id: "chat_wataru_strict",
+        subtype: "chat",
+        group: "2−1",
+        sender: "わたる",
+        start_msg:
+            "じは「適当でよくない？」\n" +
+            "ことり「楽な方でいこーぜ」\n" +
+            "わたる「それでは基準を満たさない」\n" +
+            "ことり「うわ正論」",
+        text: "話を続けてください。", 
+        kana: "はなしをつづけてください。",
+        romaji: "hanashi o tsuzukete kudasai",
+        reaction_good:
+            "わたる「以上だ」",
+        reaction_bad:
+            "ことり「はい終了」",
+        images: ["wataru.png", "kotori.png"]
+    },
+    { 
+        id: "chat_zakuro_core",
+        subtype: "chat",
+        group: "2−1",
+        sender: "ざくろ",
+        start_msg:
+            "ともき「結局まとめ役が必要だ」\n" +
+            "あきら「統率できる者がやるべきだ」\n" +
+            "ざくろ「……どっちも自分の話」",
+        text: "続けて。", 
+        kana: "つづけて。",
+        romaji: "tsuzukete",
+        reaction_good:
+            "ともき「……一理ある」\n" +
+            "あきら「……否定できん」",
+        reaction_bad:
+            "ざくろ「……まぁいい」",
+        images: ["zakuro.png"]
+    },
+    { 
+        id: "chat_teacher_enters",
+        subtype: "chat",
+        group: "2−1",
+        sender: "クラス全体",
+        start_msg:
+            "じは「それでさ〜！」\n" +
+            "いせり「だからオレが言うたやろ！」\n" +
+            "ことり「まぁどうでもよかろ」\n" +
+            "（ガラッ）\n" +
+            "全員「……」",
+        text: "着席してください。", 
+        kana: "ちゃくせきしてください。",
+        romaji: "chakuseki shite kudasai",
+        reaction_good:
+            "全員「はい」",
+        reaction_bad:
+            "わたる「……遅い」",
+        images: ["jiha.png", "kotori.png","iseri.png","wataru.png"]
+    },
+    { 
+        id: "chat_rei_silence",
+        subtype: "chat",
+        group: "2−1",
+        sender: "れい",
+        start_msg:
+            "ともき「効率的には――」\n" +
+            "あきら「数字が――」\n" +
+            "じは「えー難し！」\n" +
+            "れい「今、授業中」",
+        text: "静かに。", 
+        kana: "しずかに。",
+        romaji: "shizuka ni",
+        reaction_good:
+            "ともき「……了解」\n" +
+            "あきら「……悪い」",
+        reaction_bad:
+            "じは「はい黙ります」",
+        images: ["rei.png"]
+    },
+    { 
+        id: "chat_miriya_align",
+        subtype: "chat",
+        group: "2−1",
+        sender: "みりや",
+        start_msg:
+            "いせり「まだ始まらんの？」\n" +
+            "ひとり「封印が――」\n" +
+            "みりや「先生、全員そろってます」",
+        text: "ありがとう。", 
+        kana: "ありがとう。",
+        romaji: "arigatou",
+        reaction_good:
+            "みりや「はい」",
+        reaction_bad:
+            "みりや「……次はもっと早くします」",
+        images: ["miriya.png"]
+    },
+    { 
+        id: "chat_kotori_zakuro_freeze",
+        subtype: "chat",
+        group: "2−1",
+        sender: "ことり＆ざくろ",
+        start_msg:
+            "ことり「……」\n" +
+            "ざくろ「……」\n" +
+            "ことり「考え中」\n" +
+            "ざくろ「……同じ」",
+        text: "進めてください。", 
+        kana: "すすめてください。",
+        romaji: "susumete kudasai",
+        reaction_good:
+            "ことり「まぁそのうち」\n" +
+            "ざくろ「……うん」",
+        reaction_bad:
+            "ことり「無理」",
+        images: ["kotori.png", "zakuro.png"]
+    },
+    { 
+        id: "chat_yuko_soft_control",
+        subtype: "chat",
+        group: "2−1",
+        sender: "ゆこ",
+        start_msg:
+            "じは「それ絶対ウケるって！」\n" +
+            "あきら「くだらん」\n" +
+            "ゆこ「……次の問題、見よっか」",
+        text: "話を戻しましょう。", 
+        kana: "はなしをもどしましょう。",
+        romaji: "hanashi o modoshimashou",
+        reaction_good:
+            "じは「はーい」",
+        reaction_bad:
+            "あきら「……助かる」",
+        images: ["yuko.png"]
+    },
+    { 
+        id: "chat_shogo_smile",
+        subtype: "chat",
+        group: "2−1",
+        sender: "しょうご",
+        start_msg:
+            "いせり「ややこし！」\n" +
+            "みきな「めんどい〜」\n" +
+            "しょうご「まぁまぁ、順番にやろう」",
+        text: "いい提案です。", 
+        kana: "いいていあんです。",
+        romaji: "ii teian desu",
+        reaction_good:
+            "みきな「さすが〜」",
+        reaction_bad:
+            "いせり「はいはい」",
+        images: ["shogo.png"]
+    },
+    { 
+        id: "chat_maria_soft",
+        subtype: "chat",
+        group: "2−1",
+        sender: "まりあ",
+        start_msg:
+            "ともき「議論が散ってる」\n" +
+            "あきら「無駄が多い」\n" +
+            "まりあ「まぁまぁ、深呼吸しよ✨」",
+        text: "続けて。", 
+        kana: "つづけて。",
+        romaji: "tsuzukete",
+        reaction_good:
+            "ともき「……そうだな」",
+        reaction_bad:
+            "あきら「……調子狂う」",
+        images: ["maria.png"]
+    },
+    { 
+        id: "chat_ryogo_solution",
+        subtype: "chat",
+        group: "2−1",
+        sender: "りょうご",
+        start_msg:
+            "ともき「方法が多すぎる」\n" +
+            "あきら「統一しろ」\n" +
+            "りょうご「……これで解決する」",
+        text: "説明してください。", 
+        kana: "せつめいしてください。",
+        romaji: "setsumei shite kudasai",
+        reaction_good:
+            "ともき「採用」\n" +
+            "あきら「……認める」",
+        reaction_bad:
+            "りょうご「……いい」",
+        images: ["ryogo.png"]
+    },
+    // --- 2-2 ---
+        { 
+            id: "chat_girls", 
+            subtype: "chat", 
+            group: "2-2",
+            sender: "2年女子グル",
+            start_msg: "みりん「ねーねー、今度の連休どこいくー？🎀」\nあめり「えっと…うさぎカフェ…いきたいな🐰」\nみりん「いいね！センセも誘っちゃう？w」",
+            text: "先生は仕事があるから遠慮しておきます。", 
+            kana: "せんせいはしごとがあるからえんりょしておきます。", 
+            romaji: "sensei wa sigoto ga aru kara enryo site okimasu", 
+            reaction_good: "みりん「えー！つまんないのー！🥺」\nあめり「せんせい…おしごとがんばって…」",
+            reaction_bad: "みりん「あ、センセ動揺してない？ホントは行きたいんでしょw」",
+            images: ["mirin.png", "ameri.png"] // ★複数画像
+        },
+        { 
+            id: "chat_game", 
+            subtype: "chat", 
+            group: "3-1",
+            sender: "ゲーマーズ",
+            start_msg: "一人「ククク…昨日のランクマ、俺の右腕が暴走して負けた…」\n縫「ただの操作ミスだろ！だぞ！」\n一人「貴様…！俺の闇の力を疑うのか…先生、言ってやれ！」",
+            text: "ゲームは一日一時間。宿題は終わったの？", 
+            kana: "げーむはいちにちいちじかん。しゅくだいはおわったの？", 
+            romaji: "ge-mu wa itiniti itijikan syukudai wa owatta no", 
+            reaction_good: "一人「ぐっ…現実という名の結界に阻まれるとは…」\n縫「先生正論すぎるゾッ…」",
+            reaction_bad: "一人「先生、コマンド入力ミスってるぞ。エイムが悪いな。」",
+            images: ["hitori.png", "nui.png"]
+        },
+        { 
+            id: "chat_teacher", 
+            subtype: "chat", 
+            group: "teacher",
+            sender: "【極秘】教員連絡網",
+            start_msg: "克己「今日の体育、グラウンド100周に変更するか！」\n芽衣「えぇっ！？生徒が倒れちゃいますよぉ💦」\n克己「甘い！甘すぎる！なぁ先生、お前もそう思うだろ！？」",
+            text: "妻鹿先生、それはさすがにやりすぎです。", 
+            kana: "めがせんせい、それはさすがにやりすぎです。", 
+            romaji: "megasensei sore wa sasuga ni yarisugi desu", 
+            reaction_good: "克己「むぅ…先生がそう言うなら50周にしておくか…」\n芽衣「ホッ…ありがとうございますぅ〜🍵」",
+            reaction_bad: "克己「なんだその入力は！お前も走り足りないようだな！！」",
+            images: ["katsumi.png", "mei.png"]
+        },
 ];
