@@ -646,7 +646,7 @@ const schoolData = [
         text: "村瀬 蘇芳", 
         kana: "むらせ すおう", 
         romaji: "murase suo", 
-        start_msg: "すおう「村瀬蘇芳。……やだね、形式ばって」",
+        start_msg: "すおう「村瀬蘇芳。……やだな、形式ばって」",
         reaction_good: "すおう「へぇ、合ってるじゃん。意外」", 
         reaction_bad: "すおう「そこ違うよ先生。雑だねぇ」",
         reaction_fast: "すおう「早すぎ。さては慣れてるね？」", 
@@ -6192,6 +6192,1776 @@ const schoolData = [
     // -------------------------------------
     // 🗣️ グループチャット参加
     // -------------------------------------
+    // --- 1-1 ---
+    {
+        id: "chat_momoka_mimika_logic",
+        subtype: "chat",
+        group: "1-1",
+        sender: "ももか＆みみか",
+        start_msg:
+            "ももか「ねぇ、今の問題さ。あたしの解法の方が速いでしょ？」\n" +
+            "みみか「速いけど雑。条件の扱いが甘い」\n" +
+            "ももか「勝てばいいのよ、勝てば！」\n" +
+            "みみか「その思考が事故る原因」\n" +
+            "ももか「はぁ？あたしは負けないんだから」\n" +
+            "みみか「……そこが好きだけど」",
+        text: "落ち着いて続きを確認しましょう。",
+        kana: "おちついてつづきをかくにんしましょう。",
+        romaji: "ochitsuite tsuzuki o kakunin shimashou",
+        reaction_good:
+            "みみか「その判断は合理的」\n" +
+            "ももか「ふん。あたしの勝ちね」",
+        reaction_bad:
+            "ももか「何その入力。集中してる？」\n" +
+            "みみか「誤字が多い。見直して」",
+        images: ["momoka.png", "mimika.png"]
+    },
+    {
+        id: "chat_hinaka_hikaru_noise",
+        subtype: "chat",
+        group: "1-1",
+        sender: "ひなか＆ひかる",
+        start_msg:
+            "ひなか「え〜？その答え、ちょー早すぎん？雑じゃない？」\n" +
+            "ひかる「は？感覚でいけるって！」\n" +
+            "ひなか「それが一番あぶない言うとるが！」\n" +
+            "ひかる「だいじょぶだって！ほら、ほぼ合ってる！」\n" +
+            "ひなか「“ほぼ”は正解じゃないけんね？」",
+        text: "順序立てて説明してください。",
+        kana: "じゅんじょだててせつめいしてください。",
+        romaji: "junjo datete setsumei shite kudasai",
+        reaction_good:
+            "ひかる「お、おう……説明すっか」\n" +
+            "ひなか「そうそう、それでええけん！」",
+        reaction_bad:
+            "ひなか「先生、今の打ち間違い多すぎん？」\n" +
+            "ひかる「落ち着けって！」",
+        images: ["hinaka.png", "hikaru.png"]
+    },
+    {
+        id: "chat_seina_tetsu_care",
+        subtype: "chat",
+        group: "1-1",
+        sender: "せいな＆てつ",
+        start_msg:
+            "せいな「はいはい、そこ違う。貸して」\n" +
+            "てつ「え〜？でもこの考え方も良くない？」\n" +
+            "せいな「良いけど今は違う！」\n" +
+            "てつ「うーん、みんな違ってみんないいと思うんだけどなぁ」\n" +
+            "せいな「今は統一するの！」",
+        text: "意見を整理しましょう。",
+        kana: "いけんをせいりしましょう。",
+        romaji: "iken o seiri shimashou",
+        reaction_good:
+            "せいな「そう、それ！」\n" +
+            "てつ「なるほど〜！」",
+        reaction_bad:
+            "せいな「入力ミス。やり直し」\n" +
+            "てつ「あ、ほんとだ〜？」",
+        images: ["seina.png", "tetsu.png"]
+    },
+    {
+        id: "chat_towa_akaru_party",
+        subtype: "chat",
+        group: "1-1",
+        sender: "とわ＆あかる",
+        start_msg:
+            "とわ「なぁ、これ終わったら飯じゃね？」\n" +
+            "あかる「いいね！終わってなくても食べよ！」\n" +
+            "とわ「それ最高」\n" +
+            "あかる「チーズあるよ？」\n" +
+            "とわ「神か？」",
+        text: "今は課題を優先してください。",
+        kana: "いまはかだいをゆうせんしてください。",
+        romaji: "ima wa kadai o yuusen shite kudasai",
+        reaction_good:
+            "とわ「はーい……」\n" +
+            "あかる「あとでね！」",
+        reaction_bad:
+            "とわ「先生、ミスってる」\n" +
+            "あかる「酔ってる？」",
+        images: ["towa.png", "akaru.png"]
+    },
+    {
+        id: "chat_mai_ai_abyss",
+        subtype: "chat",
+        group: "1-1",
+        sender: "まい＆あい",
+        start_msg:
+            "まい「……それ、本当に正解だと思ってる？」\n" +
+            "あい「あらあら〜。そう思っていらっしゃるなら幸せですねぇ」\n" +
+            "まい「嘘つくのも疲れるんだけど」\n" +
+            "あい「嘘だと分かってて聞いてあげてるんですよ？」\n" +
+            "まい「……性格悪」\n" +
+            "あい「褒め言葉として受け取りますねぇ」",
+        text: "感情的にならず進めてください。",
+        kana: "かんじょうてきにならずすすめてください。",
+        romaji: "kanjouteki ni narazu susumete kudasai",
+        reaction_good:
+            "あい「あら、先生。空気が読めていらっしゃる」\n" +
+            "まい「……今のは助かった」",
+        reaction_bad:
+            "まい「先生、誤字。見てて不安」\n" +
+            "あい「その入力精度で指導は、少々滑稽ですねぇ」",
+        images: ["mai.png", "ai.png"]
+    },
+    {
+        id: "chat_kotaro_momoka_dog",
+        subtype: "chat",
+        group: "1-1",
+        sender: "こたろう＆ももか",
+        start_msg:
+            "ももか「ちょっと、そこ違うでしょ」\n" +
+            "こたろう「あ、ほんとだ。ありがとう」\n" +
+            "ももか「……素直すぎない？」\n" +
+            "こたろう「だって助かったし」\n" +
+            "ももか「……ふん」\n" +
+            "こたろう「でも、ももかの考え方は好きだよ」",
+        text: "協力して進めましょう。",
+        kana: "きょうりょくしてすすめましょう。",
+        romaji: "kyouryoku shite susumemashou",
+        reaction_good:
+            "こたろう「うん、そうしよう」\n" +
+            "ももか「……別に嫌じゃない」",
+        reaction_bad:
+            "ももか「先生、そこ打ち間違えてる」\n" +
+            "こたろう「落ち着いてください」",
+        images: ["kotaro.png", "momoka.png"]
+    },
+    {
+        id: "chat_koto_setsuna_photo",
+        subtype: "chat",
+        group: "1-1",
+        sender: "こと＆せつな",
+        start_msg:
+            "こと「その角度、今の光ええな」\n" +
+            "せつな「あ、ほんとだねぇ……あれ？何の話だっけ？」\n" +
+            "こと「さっきのやつ」\n" +
+            "せつな「あ〜……忘れた」\n" +
+            "こと「メモ帳は？」\n" +
+            "せつな「あっ、カバンの奥！」",
+        text: "話題を整理してください。",
+        kana: "わだいをせいりしてください。",
+        romaji: "wadai o seiri shite kudasai",
+        reaction_good:
+            "せつな「メモ見たら思い出した〜！」\n" +
+            "こと「ほらな」",
+        reaction_bad:
+            "こと「先生、そこ誤字や」\n" +
+            "せつな「えへへ、間違っとるよ〜」",
+        images: ["koto.png", "setsuna.png"]
+    },
+    {
+        id: "chat_kaede_mount",
+        subtype: "chat",
+        group: "1-1",
+        sender: "かえで",
+        start_msg:
+            "かえで「ねぇ先生、これ簡単すぎない？」\n" +
+            "かえで「まぁ、私が美しくて頭もいいからだけど」\n" +
+            "かえで「クラスで一番理解してるの私だし」\n" +
+            "かえで「異論ある？」",
+        text: "謙虚に取り組みましょう。",
+        kana: "けんきょにとりくみましょう。",
+        romaji: "kenkyo ni torikumimashou",
+        reaction_good:
+            "かえで「……まぁ、先生が言うなら？」",
+        reaction_bad:
+            "かえで「先生、誤字多くない？」\n" +
+            "かえで「その入力で私を導こうとしてるの？」",
+        images: ["kaede.png"]
+    },
+    {
+        id: "chat_momoka_hikaru_balloon",
+        subtype: "chat",
+        group: "1-1",
+        sender: "ももか＆ひかる",
+        start_msg:
+            "ひかる「なぁ、またその顔してる」\n" +
+            "ももか「なによ」\n" +
+            "ひかる「噛みつく前の顔」\n" +
+            "ももか「……うるさい」\n" +
+            "ひかる「この前もそうやってさ、風船――」\n" +
+            "ももか「言うな！！」\n" +
+            "ひかる「はは、相変わらずだな」",
+        text: "落ち着いて続けてください。",
+        kana: "おちついてつづけてください。",
+        romaji: "ochitsuite tsuzukete kudasai",
+        reaction_good:
+            "ひかる「ま、やるか」\n" +
+            "ももか「……ちゃんとやりなさいよ」",
+        reaction_bad:
+            "ももか「先生、誤字」\n" +
+            "ひかる「そこ違くね？」",
+        images: ["momoka.png", "hikaru.png"]
+    },
+    {
+        id: "chat_setsuna_reporter",
+        subtype: "chat",
+        group: "1-1",
+        sender: "せつな",
+        start_msg:
+            "せつな「あっ、それニュースになるやつじゃなか？」\n" +
+            "せつな「ちょっと待って、メモ……あれ？」\n" +
+            "せつな「写真撮らなん！」\n" +
+            "せつな「……あれ？何撮るんだっけ」",
+        text: "課題に集中してください。",
+        kana: "かだいにしゅうちゅうしてください。",
+        romaji: "kadai ni shuuchuu shite kudasai",
+        reaction_good:
+            "せつな「あっ、ごめん！戻るね〜」",
+        reaction_bad:
+            "せつな「先生、そこ打ち間違えとるよ〜」\n" +
+            "せつな「スクープ以前の問題たい」",
+        images: ["setsuna.png"]
+    },
+    {
+        id: "chat_kotaro_kojiro_safe",
+        subtype: "chat",
+        group: "1-1",
+        sender: "こたろう＆こじろう",
+        start_msg:
+            "こじろう「この流れ、ここで一度整理しよう」\n" +
+            "こたろう「うん、その方が分かりやすいね」\n" +
+            "こじろう「焦らなくていい」\n" +
+            "こたろう「ありがとう。助かる」",
+        text: "良いペースです。",
+        kana: "よいぺーすです。",
+        romaji: "yoi peesu desu",
+        reaction_good:
+            "こじろう「その評価は嬉しいです」\n" +
+            "こたろう「このままいこう」",
+        reaction_bad:
+            "こじろう「先生、誤字があります」\n" +
+            "こたろう「落ち着いてください」",
+        images: ["kotaro.png", "kojiro.png"]
+    },
+    {
+        id: "chat_masaki_komari_gentle",
+        subtype: "chat",
+        group: "1-1",
+        sender: "まさき＆こまり",
+        start_msg:
+            "こまり「これ、自分で作ったんだ！」\n" +
+            "まさき「……すごく丁寧だね」\n" +
+            "こまり「えへへ」\n" +
+            "まさき「その感覚、大事にした方がいい」\n" +
+            "こまり「うん。ありがと」",
+        text: "そのまま続けてください。",
+        kana: "そのままつづけてください。",
+        romaji: "sono mama tsuzukete kudasai",
+        reaction_good:
+            "まさき「この雰囲気、いいですね」\n" +
+            "こまり「落ち着く〜」",
+        reaction_bad:
+            "こまり「先生、そこ違うよ」\n" +
+            "まさき「誤字があります」",
+        images: ["masaki.png", "komari.png"]
+    },
+    {
+    "id": "chat_momoka_pose_lesson",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "ももか＆みみか＆ひなか",
+    "start_msg":
+        "ももか「見てなさい。これが“セレブ座り”よ」\n" +
+        "ひなか「えっ、なにそれ！島根にはないけん新鮮だわ〜！」\n" +
+        "みみか「背筋、尻尾の角度、視線。全部計算されてる」\n" +
+        "ももか「当然でしょ。無様な姿は見せられないの」\n" +
+        "ひなか「ほえ〜！写真撮っていい？」\n" +
+        "ももか「……一枚だけよ。ブレたら噛む」",
+    "text": "姿勢に気をつけてね。",
+    "kana": "しせいにきをつけてね。",
+    "romaji": "shisei ni ki o tsukete ne",
+    "reaction_good":
+        "みみか「先生、意外と観察眼ある」\n" +
+        "ももか「ふん…悪くないわ」",
+    "reaction_bad":
+        "ひなか「先生、誤字っとるけん意味変わっとるよ？」\n" +
+        "ももか「指導する側が噛むとか論外ね」",
+    "images": ["momoka.png", "mimika.png", "hinaka.png"]
+    },
+    {
+    "id": "chat_kofuku_ai_coldwar",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "こふく＆あい",
+    "start_msg":
+        "こふく「……また山に入ったね」\n" +
+        "あい「あらあら〜、見回りご苦労さま♡」\n" +
+        "こふく「荒らすなら、静かにしてほしい」\n" +
+        "あい「荒らすだなんて失礼ですね。観察、ですよ」\n" +
+        "こふく「……あなたの観察は、刃がある」\n" +
+        "あい「ふふ。気づいてしまいました？」",
+    "text": "仲良くしなさい。",
+    "kana": "なかよくしなさい。",
+    "romaji": "nakayoku shinasai",
+    "reaction_good":
+        "こふく「……忠告として受け取る」\n" +
+        "あい「先生、平和主義なんですねぇ」",
+    "reaction_bad":
+        "あい「先生、誤字です。その程度の注意で止まると？」\n" +
+        "こふく「言葉は正確に」",
+    "images": ["kofuku.png", "ai.png"]
+    },
+    {
+    "id": "chat_sei_kaede_clash",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "せい＆かえで",
+    "start_msg":
+        "せい「全体の士気を考えて行動しろ！」\n" +
+        "かえで「は？私が目立つ方がクラスの華でしょ」\n" +
+        "せい「自分本位すぎる！」\n" +
+        "かえで「情熱だけで回るほど甘くないんだけど？」\n" +
+        "せい「だからこそ、心を一つに！」\n" +
+        "かえで「暑苦しいのよ！」",
+    "text": "落ち着いて話そう。",
+    "kana": "おちついてはなそう。",
+    "romaji": "ochitsuite hanasou",
+    "reaction_good":
+        "せい「……すまん、少し熱くなった」\n" +
+        "かえで「まぁ、嫌いじゃないけどね」",
+    "reaction_bad":
+        "かえで「先生、誤字って説得力ゼロ」\n" +
+        "せい「そこはキッチリしてくれ！」",
+    "images": ["sei.png", "kaede.png"]
+    },
+    {
+    "id": "chat_kojiro_koto_music",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "こじろう＆こと",
+    "start_msg":
+        "こじろう「その写真、音が聞こえそうだね」\n" +
+        "こと「瞬間を切り取るだけや」\n" +
+        "こじろう「曲も同じ。一瞬の感情」\n" +
+        "こと「なるほどな。今度撮らせてや」\n" +
+        "こじろう「いいよ。静かな曲の時に」",
+    "text": "いい交流だね。",
+    "kana": "いいこうりゅうだね。",
+    "romaji": "ii kouryuu da ne",
+    "reaction_good":
+        "こと「先生、わかっとるやん」\n" +
+        "こじろう「嬉しいな」",
+    "reaction_bad":
+        "こと「先生、誤字。空気は読めとる？」\n" +
+        "こじろう「細かいところ、大事だよ」",
+    "images": ["kojiro.png", "koto.png"]
+    },
+    {
+    "id": "chat_towa_akaru_chaos",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "とわ＆あかる",
+    "start_msg":
+        "とわ「なぁあかる、それ食っていい？」\n" +
+        "あかる「え、オレの？いいよいいよ！」\n" +
+        "とわ「やった！…うまっ！」\n" +
+        "あかる「ちょっと！半分以上いってない！？」\n" +
+        "とわ「うまいもんは勢いだろ」\n" +
+        "あかる「まぁ楽しいからいっか！はい帽子！」\n" +
+        "とわ「被せんなって！」",
+    "text": "教室では節度を守りましょう。",
+    "kana": "きょうしつではせつどをまもりましょう。",
+    "romaji": "kyoushitsu dewa setsudo o mamorimashou",
+    "reaction_good":
+        "あかる「はーい！ほどほどにしまーす！」\n" +
+        "とわ「ほどほどってなんだ？」",
+    "reaction_bad":
+        "とわ「先生、誤字ってる。勢い止める気ないでしょ」\n" +
+        "あかる「注意文で噛むのはダサいっすよ〜！」",
+    "images": ["towa.png", "akaru.png"]
+    },
+    {
+    "id": "chat_mai_ai_mindgame",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "まい＆あい",
+    "start_msg":
+        "まい「それ、本当だと思う？」\n" +
+        "あい「あらあら〜、さぁどうでしょう？」\n" +
+        "まい「信じてるふり、楽しいよね」\n" +
+        "あい「ええ。騙されてあげる人を見るのも」\n" +
+        "まい「じゃあ、私が嘘ついてるとしたら？」\n" +
+        "あい「ふふ…それも含めて、可愛いです」",
+    "text": "穏やかに話してください。",
+    "kana": "おだやかにはなしてください。",
+    "romaji": "odayaka ni hanashite kudasai",
+    "reaction_good":
+        "あい「先生、表面しか見てませんねぇ」\n" +
+        "まい「それでいいと思うよ」",
+    "reaction_bad":
+        "あい「誤字ですよ先生。嘘より先に気づくべきでは？」\n" +
+        "まい「指摘されてる時点で負け」",
+    "images": ["mai.png", "ai.png"]
+    },
+    {
+    "id": "chat_setsuna_koto_report",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "せつな＆こと",
+    "start_msg":
+        "せつな「ことくん、今の表情いい！」\n" +
+        "こと「おい、急に撮るなや」\n" +
+        "せつな「スクープの予感がして！」\n" +
+        "こと「新聞部、勢いで動くな」\n" +
+        "せつな「大丈夫！あとで忘れるから！」\n" +
+        "こと「それが一番問題やろ」",
+    "text": "撮影は許可を取ろう。",
+    "kana": "さつえいはきょかをとろう。",
+    "romaji": "satsuei wa kyoka o torou",
+    "reaction_good":
+        "せつな「はーい！メモするね！」\n" +
+        "こと「それ忘れるやつや」",
+    "reaction_bad":
+        "こと「先生、誤字。説得力落ちとる」\n" +
+        "せつな「あっ、先生もメモしよ！」",
+    "images": ["setsuna.png", "koto.png"]
+    },
+    {
+    "id": "chat_setsuna_momoka_celeb",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "せつな＆ももか",
+    "start_msg":
+        "せつな「ももかちゃん！そのポーズ…！」\n" +
+        "ももか「撮るなら一言いいなさい」\n" +
+        "せつな「セレブ特集いけるもん！」\n" +
+        "ももか「勝手に価値つけないで」\n" +
+        "せつな「えー！でも輝いとる！」\n" +
+        "ももか「……一枚だけよ」",
+    "text": "落ち着いて行動しましょう。",
+    "kana": "おちついてこうどうしましょう。",
+    "romaji": "ochitsuite koudou shimashou",
+    "reaction_good":
+        "ももか「礼儀は分かってるわね」\n" +
+        "せつな「やったー！スクープ！」",
+    "reaction_bad":
+        "ももか「先生、誤字。注意する側が乱れてどうするの」\n" +
+        "せつな「あっ、そこも撮っとこ！」",
+    "images": ["setsuna.png", "momoka.png"]
+    },
+    {
+    "id": "chat_setsuna_kosaku_blackhole",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "せつな＆こさく",
+    "start_msg":
+        "こさく「なぁせつな！オレのスマホ知らん？」\n" +
+        "せつな「えー？見てないよぉ」\n" +
+        "こさく「さっきまでここで使っとってん！」\n" +
+        "せつな「……あ、今カバン動いた」\n" +
+        "こさく「は？生きとるん？」\n" +
+        "せつな「ブラックホール期かも」",
+    "text": "持ち物は各自で管理しましょう。",
+    "kana": "もちものはかくじでかんりしましょう。",
+    "romaji": "mochimono wa kakujide kanri shimashou",
+    "reaction_good":
+        "こさく「次から名札つけるわ！」\n" +
+        "せつな「それでも吸われそう」",
+    "reaction_bad":
+        "せつな「先生、字抜けとるよ」\n" +
+        "こさく「管理以前の問題やん」",
+    "images": ["setsuna.png", "kosaku.png"]
+    },
+    {
+    "id": "chat_setsuna_mimika_blackhole",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "せつな＆みみか",
+    "start_msg":
+        "みみか「……私のメモ帳、知らない？」\n" +
+        "せつな「あっ」\n" +
+        "みみか「その反応は黒」\n" +
+        "せつな「昨日インタビューした気がする」\n" +
+        "みみか「それは私の記憶」\n" +
+        "せつな「じゃあ吸われたね」",
+    "text": "人の物は勝手に触らないこと。",
+    "kana": "ひとのものはかってにさわらないこと。",
+    "romaji": "hito no mono wa katte ni sawaranaikoto",
+    "reaction_good":
+        "みみか「後で回収するわ」\n" +
+        "せつな「ブラックホール整理する…多分」",
+    "reaction_bad":
+        "みみか「先生、助詞がおかしい」\n" +
+        "せつな「冷静すぎてこわい」",
+    "images": ["setsuna.png", "mimika.png"]
+    },
+    {
+    "id": "chat_mimika_momoka_besties",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "みみか＆ももか",
+    "start_msg":
+        "ももか「またひかるがちょっかい出してきたんだけど」\n" +
+        "みみか「無視すればいい」\n" +
+        "ももか「吠えた方が早いでしょ」\n" +
+        "みみか「効率は悪い」\n" +
+        "ももか「でもスッキリするわ」\n" +
+        "みみか「……それも否定はしない」",
+    "text": "落ち着いて行動しましょう。",
+    "kana": "おちついてこうどうしましょう。",
+    "romaji": "ochitsuite koudou shimashou",
+    "reaction_good":
+        "ももか「みみかが味方なら無敵ね」\n" +
+        "みみか「当然」",
+    "reaction_bad":
+        "みみか「先生、表現が曖昧」\n" +
+        "ももか「説得力ないわね」",
+    "images": ["mimika.png", "momoka.png"]
+    },
+    {
+    "id": "chat_mimika_ai_mindgame",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "みみか＆あい",
+    "start_msg":
+        "あい「あらあら〜、随分静かね」\n" +
+        "みみか「無駄な発話をしていないだけ」\n" +
+        "あい「効率主義？」\n" +
+        "みみか「感情は必要な時だけ使う」\n" +
+        "あい「ふふ…似てるようで違うわね」\n" +
+        "みみか「あなたは遊んでいる」",
+    "text": "他人を挑発しないように。",
+    "kana": "たにんをちょうはつしないように。",
+    "romaji": "tanin o chouhatsu shinai youni",
+    "reaction_good":
+        "あい「ご明察〜♡」\n" +
+        "みみか「自覚があるなら尚更厄介」",
+    "reaction_bad":
+        "あい「先生、誤字ですよ？」\n" +
+        "みみか「注意文の精度が低い」",
+    "images": ["mimika.png", "ai.png"]
+    },
+    {
+    "id": "chat_hinaka_momoka_energy",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "ひなか＆ももか",
+    "start_msg":
+        "ひなか「もったんこ、今日もピリピリしとるね〜！」\n" +
+        "ももか「アンタが近いのよ」\n" +
+        "ひなか「えー？仲良しの距離じゃん！」\n" +
+        "ももか「吠えるわよ？」\n" +
+        "ひなか「それも可愛いけん！」",
+    "text": "適切な距離を保ちましょう。",
+    "kana": "てきせつなきょりをたもちましょう。",
+    "romaji": "tekisetsuna kyori o tamochimashou",
+    "reaction_good":
+        "ひなか「先生わかっとる〜！」\n" +
+        "ももか「まぁ、悪くない」",
+    "reaction_bad":
+        "ももか「誤字多すぎ」\n" +
+        "ひなか「注意文の方が荒れとるよ？」",
+    "images": ["hinaka.png", "momoka.png"]
+    },
+    {
+    "id": "chat_setsuna_bag_explosion",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "せつな＆ももか＆みみか",
+    "start_msg":
+        "せつな「ちょっとカバン開けるね〜」\n" +
+        "ももか「待ちなさい、嫌な予感しかしない」\n" +
+        "みみか「統計的に危険」\n" +
+        "せつな「えいっ」\n" +
+        "ももか「……私の首輪」\n" +
+        "みみか「私のメモ帳」\n" +
+        "せつな「あ、昨日のスクープ写真もある」",
+    "text": "他人の持ち物は返却しましょう。",
+    "kana": "たにんのもちものはへんきゃくしましょう。",
+    "romaji": "tanin no mochimono wa henkyaku shimashou",
+    "reaction_good":
+        "ももか「全部回収したわ」\n" +
+        "みみか「ブラックホール、危険指定」",
+    "reaction_bad":
+        "みみか「先生、誤字」\n" +
+        "ももか「注意文が雑ね」",
+    "images": ["setsuna.png", "momoka.png", "mimika.png"]
+    },
+    {
+    "id": "chat_momoka_celebrity_win",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "ももか＆ひかる＆せいな",
+    "start_msg":
+        "ひかる「またキメ顔してんな」\n" +
+        "ももか「これは勝利のポーズよ」\n" +
+        "せいな「何に勝ったの？」\n" +
+        "ももか「全てに」\n" +
+        "ひかる「意味わかんねぇけど強そう」\n" +
+        "ももか「当然でしょ」",
+    "text": "自慢しすぎないように。",
+    "kana": "じまんしすぎないように。",
+    "romaji": "jiman shisuginai youni",
+    "reaction_good":
+        "せいな「まぁ結果出してるしね」\n" +
+        "ももか「でしょ？」",
+    "reaction_bad":
+        "ももか「先生、語尾変」\n" +
+        "ひかる「威厳ゼロ」",
+    "images": ["momoka.png", "hikaru.png", "seina.png"]
+    },
+    {
+    "id": "chat_ai_psychological_pressure",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "あい＆とわ＆こさく",
+    "start_msg":
+        "あい「あらあら〜、また宿題忘れたんですか？」\n" +
+        "とわ「うっ……」\n" +
+        "こさく「今日はたまたまや！」\n" +
+        "あい「その“たまたま”何回目です？」\n" +
+        "とわ「笑顔が一番怖い」\n" +
+        "あい「褒め言葉です♡」",
+    "text": "相手を責めすぎないでください。",
+    "kana": "あいてをせめすぎないでください。",
+    "romaji": "aite o semesuginai de kudasai",
+    "reaction_good":
+        "あい「自覚はあります〜」\n" +
+        "とわ「止める気ねぇな」",
+    "reaction_bad":
+        "あい「先生、誤字ですよ？」\n" +
+        "こさく「説得力どこ行ったん」",
+    "images": ["ai.png", "towa.png", "kosaku.png"]
+    },
+    {
+    "id": "chat_surprise_momoka",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "ひなか＆みみか＆ももか",
+    "start_msg":
+        "ひなか「もったんこちゃん、目つぶって！」\n" +
+        "ももか「……怪しい」\n" +
+        "みみか「危険性は低い」\n" +
+        "ひなか「じゃーん！」\n" +
+        "ももか「……」\n" +
+        "ももか「悪くないわね」",
+    "text": "サプライズは程々に。",
+    "kana": "さぷらいずはほどほどに。",
+    "romaji": "sapuraizu wa hodohodo ni",
+    "reaction_good":
+        "ひなか「成功〜！」\n" +
+        "みみか「計画通り」",
+    "reaction_bad":
+        "ももか「先生、読みにくい」\n" +
+        "ひなか「雰囲気壊しとるよ？」",
+    "images": ["hinaka.png", "mimika.png", "momoka.png"]
+    },
+    {
+    "id": "chat_akaru_kosaku_energy",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "あかる＆こさく",
+    "start_msg":
+        "あかる「この帽子どう？」\n" +
+        "こさく「派手すぎやろ！」\n" +
+        "あかる「じゃあ倍にする！」\n" +
+        "こさく「なんでやねん！」\n" +
+        "あかる「楽しいから！」\n" +
+        "こさく「否定できんわ！」",
+    "text": "教室では静かにしましょう。",
+    "kana": "きょうしつではしずかにしましょう。",
+    "romaji": "kyoushitsu dewa shizuka ni shimashou",
+    "reaction_good":
+        "あかる「元気出たでしょ！」\n" +
+        "こさく「まぁな！」",
+    "reaction_bad":
+        "こさく「先生、誤字やで」\n" +
+        "あかる「ツッコミ助かる〜！」",
+    "images": ["akaru.png", "kosaku.png"]
+    },
+    {
+    "id": "chat_blackhole_trial",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "せつな＆ももか＆みみか＆せいな",
+    "start_msg":
+        "せいな「これより裁判を始める」\n" +
+        "ももか「被告はカバン」\n" +
+        "せつな「え〜？そんなに？」\n" +
+        "みみか「証拠は十分」\n" +
+        "せつな「昨日なくした記憶も出てきた」\n" +
+        "ももか「有罪」",
+    "text": "冷静に話し合いましょう。",
+    "kana": "れいせいにはなしあいましょう。",
+    "romaji": "reisei ni hanashiaimashou",
+    "reaction_good":
+        "せいな「判決、カバン没収」\n" +
+        "せつな「えぇ〜！？」",
+    "reaction_bad":
+        "みみか「先生、漢字違う」\n" +
+        "ももか「威厳が足りない」",
+    "images": ["setsuna.png", "momoka.png", "mimika.png", "seina.png"]
+    },
+    {
+    "id": "chat_kojiro_music_breakdown",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "こじろう＆ももか＆てつ",
+    "start_msg":
+        "こじろう「少し弾くね」\n" +
+        "ももか「……」\n" +
+        "てつ「ちょ、涙出てきた」\n" +
+        "ももか「……綺麗」\n" +
+        "こじろう「え？」\n" +
+        "てつ「クラス全員泣くやつだこれ」",
+    "text": "授業中の演奏は控えてください。",
+    "kana": "じゅぎょうちゅうのえんそうはひかえてください。",
+    "romaji": "jugyouchuu no ensou wa hikaete kudasai",
+    "reaction_good":
+        "こじろう「次は放課後にする」\n" +
+        "ももか「それは来る」",
+    "reaction_bad":
+        "てつ「先生、読点多いよ〜」\n" +
+        "ももか「集中切れる」",
+    "images": ["kojiro.png", "momoka.png", "tetsu.png"]
+    },
+    {
+    "id": "chat_ai_vs_mimika",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "あい＆みみか",
+    "start_msg":
+        "あい「あらあら〜、理論派ですね」\n" +
+        "みみか「感情論より正確」\n" +
+        "あい「その正確さ、孤独ですよ？」\n" +
+        "みみか「孤独は効率的」\n" +
+        "あい「ふふ、面白い」",
+    "text": "喧嘩はやめましょう。",
+    "kana": "けんかはやめましょう。",
+    "romaji": "kenka wa yamemashou",
+    "reaction_good":
+        "あい「喧嘩ではありません♡」\n" +
+        "みみか「議論」",
+    "reaction_bad":
+        "みみか「先生、定義が曖昧」\n" +
+        "あい「止め方が甘いですねぇ」",
+    "images": ["ai.png", "mimika.png"]
+    },
+    {
+    "id": "chat_tetsu_kotaro",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "てつ＆こたろう",
+    "start_msg":
+        "てつ「今日も平和だねぇ」\n" +
+        "こたろう「うん、いいクラスだ」\n" +
+        "てつ「みんな違ってて楽しい」\n" +
+        "こたろう「それが強みだよね」",
+    "text": "仲良くしましょう。",
+    "kana": "なかよくしましょう。",
+    "romaji": "nakayoku shimashou",
+    "reaction_good":
+        "てつ「はーい！」\n" +
+        "こたろう「もちろん」",
+    "reaction_bad":
+        "てつ「先生、平仮名多い〜」\n" +
+        "こたろう「ちょっと幼い」",
+    "images": ["tetsu.png", "kotaro.png"]
+    },
+    {
+    "id": "chat_kofuku_masaki",
+    "subtype": "chat",
+    "group": "1-1",
+    "sender": "こふく＆まさき",
+    "start_msg":
+        "こふく「今日は風が穏やかだ」\n" +
+        "まさき「うん、落ち着くね」\n" +
+        "こふく「山も静かだ」\n" +
+        "まさき「…少し、救われる」",
+    "text": "静かに過ごしましょう。",
+    "kana": "しずかにすごしましょう。",
+    "romaji": "shizuka ni sugoshimashou",
+    "reaction_good":
+        "こふく「望ましい」\n" +
+        "まさき「ありがとう」",
+    "reaction_bad":
+        "こふく「文が崩れている」\n" +
+        "まさき「読みづらいかも」",
+    "images": ["kofuku.png", "masaki.png"]
+    },
+    {
+    id: "chat_sei_koto",
+    subtype: "chat",
+    group: "1-1",
+    sender: "せい＆こと",
+    start_msg:
+        "せい「よし！まず目標を明確にするぞ！」\n" +
+        "こと「まぁまぁ、そんな肩に力入れんでも」\n" +
+        "せい「やるからには全力だ！」\n" +
+        "こと「力入れすぎると、長持ちせんき」\n" +
+        "せい「熱意は大事だろ！」\n" +
+        "こと「熱意と空回りは紙一重やぞ」",
+    text: "落ち着いて進めましょう。",
+    kana: "おちついてすすめましょう。",
+    romaji: "ochitsuite susumemashou",
+    reaction_good:
+        "せい「……よし、役割分担から行く！」\n" +
+        "こと「それなら付き合えるき」",
+    reaction_bad:
+        "こと「先生、今の誤字多すぎや」\n" +
+        "せい「伝わらなきゃ意味ないぞ！」",
+    images: ["sei.png", "koto.png"]
+    },
+    {
+    id: "chat_momoka_hikaru",
+    subtype: "chat",
+    group: "1-1",
+    sender: "ももか＆ひかる",
+    start_msg:
+        "ひかる「なぁ桃花、また眉間シワ寄ってんぞ」\n" +
+        "ももか「うるさい！集中してんの！」\n" +
+        "ひかる「はいはい、噛みつかないで〜」\n" +
+        "ももか「……あんたは真剣さが足りないのよ」\n" +
+        "ひかる「でもさ、楽しんだ方がうまくいくって！」",
+    text: "話をまとめてください。",
+    kana: "はなしをまとめてください。",
+    romaji: "hanashi o matomete kudasai",
+    reaction_good:
+        "ももか「……後で文句言うから覚悟しなさい」\n" +
+        "ひかる「はいはい、褒め言葉な！」",
+    reaction_bad:
+        "ももか「先生、変なとこで切らないで」\n" +
+        "ひかる「それだと意味ズレるべ？」",
+    images: ["momoka.png", "hikaru.png"]
+    },
+    {
+    id: "chat_mimika_ai",
+    subtype: "chat",
+    group: "1-1",
+    sender: "みみか＆あい",
+    start_msg:
+        "みみか「……非合理ね」\n" +
+        "あい「あらあら〜そう見えます？」\n" +
+        "みみか「感情で誤魔化しているだけよ」\n" +
+        "あい「ふふ、理屈だけで世界は回りませんよ？」\n" +
+        "みみか「……回すわ」",
+    text: "冷静に意見交換しましょう。",
+    kana: "れいせいにいけんこうかんしましょう。",
+    romaji: "reisei ni iken koukan shimashou",
+    reaction_good:
+        "あい「まあ、今回は譲ってあげます」\n" +
+        "みみか「恩着せがましい」",
+    reaction_bad:
+        "みみか「先生、論理が破綻しています」\n" +
+        "あい「入力、落ち着いてなさそうですねぇ」",
+    images: ["mimika.png", "ai.png"]
+    },
+    {
+    id: "chat_seina_kosaku",
+    subtype: "chat",
+    group: "1-1",
+    sender: "せいな＆こさく",
+    start_msg:
+        "せいな「で？ちゃんと考えて来た？」\n" +
+        "こさく「まあまあ！なんとかなるやろ！」\n" +
+        "せいな「ならないから聞いてんの！」\n" +
+        "こさく「細かいなぁ〜」\n" +
+        "せいな「詰めが甘いのよ！」",
+    text: "計画的に進めてください。",
+    kana: "けいかくてきにすすめてください。",
+    romaji: "keikakuteki ni susumete kudasai",
+    reaction_good:
+        "こさく「しゃーない、真面目にやるわ！」\n" +
+        "せいな「最初からそうしなさい」",
+    reaction_bad:
+        "せいな「先生、その書き方だと誤解生む」\n" +
+        "こさく「日本語むずかしなっとるで？」",
+    images: ["seina.png", "kosaku.png"]
+    },
+    {
+    id: "chat_tetsu_komari",
+    subtype: "chat",
+    group: "1-1",
+    sender: "てつ＆こまり",
+    start_msg:
+        "てつ「それ、すごく丁寧だねぇ！」\n" +
+        "こまり「うん、ここは譲れんの」\n" +
+        "てつ「いいと思うよ！個性だもん！」\n" +
+        "こまり「……そう言われると安心する」",
+    text: "良い点をまとめましょう。",
+    kana: "よいてんをまとめましょう。",
+    romaji: "yoi ten o matomemashou",
+    reaction_good:
+        "こまり「じゃあ、この案で行く」\n" +
+        "てつ「やったぁ！」",
+    reaction_bad:
+        "こまり「先生、そこ意味違ってくるよ」\n" +
+        "てつ「一文字抜けてるかも？」",
+    images: ["tetsu.png", "komari.png"]
+    },
+    {
+    id: "chat_momoka_sei",
+    subtype: "chat",
+    group: "1-1",
+    sender: "ももか＆せい",
+    start_msg:
+        "ももか「指示が遅いわ。決断は一瞬でしなさい」\n" +
+        "せい「いや、全員の意見を聞いてからだ！」\n" +
+        "ももか「それで機会逃したら意味ないでしょ」\n" +
+        "せい「独断じゃ人はついてこない！」\n" +
+        "ももか「結果出せば黙るわ」\n" +
+        "せい「結果は“みんなで”出すんだ！」",
+    text: "意見を整理してください。",
+    kana: "いけんをせいりしてください。",
+    romaji: "iken o seiri shite kudasai",
+    reaction_good:
+        "ももか「……役割分担なら認める」\n" +
+        "せい「よし！前線は任せた！」",
+    reaction_bad:
+        "ももか「先生、主語が抜けてる」\n" +
+        "せい「それじゃ誤解されるぞ！」",
+    images: ["momoka.png", "sei.png"]
+    },
+    {
+    id: "chat_tetsu_koto",
+    subtype: "chat",
+    group: "1-1",
+    sender: "てつ＆こと",
+    start_msg:
+        "てつ「みんなの気持ちも大事にしたいな〜」\n" +
+        "こと「まぁ、それもええけど」\n" +
+        "てつ「無理してる子、いそうじゃない？」\n" +
+        "こと「無理してるなら休ませりゃええ」\n" +
+        "てつ「割り切り早いねぇ」\n" +
+        "こと「長引かせる方がしんどいき」",
+    text: "意見を共有しましょう。",
+    kana: "いけんをきょうゆうしましょう。",
+    romaji: "iken o kyouyuu shimashou",
+    reaction_good:
+        "てつ「なるほど〜！助かる〜！」\n" +
+        "こと「それなら役に立ったな」",
+    reaction_bad:
+        "こと「先生、今の文わかりにくいき」\n" +
+        "てつ「一文長すぎかも？」",
+    images: ["tetsu.png", "koto.png"]
+    },
+    {
+    id: "chat_mimika_kofuku",
+    subtype: "chat",
+    group: "1-1",
+    sender: "みみか＆こふく",
+    start_msg:
+        "みみか「感情論は不要よ」\n" +
+        "こふく「同意する」\n" +
+        "みみか「では最短ルートで」\n" +
+        "こふく「山道でも問題ない」",
+    text: "話を進めてください。",
+    kana: "はなしをすすめてください。",
+    romaji: "hanashi o susumete kudasai",
+    reaction_good:
+        "みみか「無駄がないですね」\n" +
+        "こふく「当然だ」",
+    reaction_bad:
+        "みみか「先生、論点が飛躍しています」\n" +
+        "こふく「読み直した方がいい」",
+    images: ["mimika.png", "kofuku.png"]
+    },
+    {
+    id: "chat_towa_akaru",
+    subtype: "chat",
+    group: "1-1",
+    sender: "とわ＆あかる",
+    start_msg:
+        "とわ「なぁ、それより飯じゃね？」\n" +
+        "あかる「え！それな！！」\n" +
+        "とわ「チーズあったら最高」\n" +
+        "あかる「帽子被る？」\n" +
+        "とわ「今！？」",
+    text: "集中してください。",
+    kana: "しゅうちゅうしてください。",
+    romaji: "shuuchuu shite kudasai",
+    reaction_good:
+        "あかる「はいはい〜」\n" +
+        "とわ「戻る戻る」",
+    reaction_bad:
+        "とわ「先生、話止まってる」\n" +
+        "あかる「入力ミスってない？」",
+    images: ["towa.png", "akaru.png"]
+    },
+    {
+    id: "chat_hinaka_kotaro",
+    subtype: "chat",
+    group: "1-1",
+    sender: "ひなか＆こたろう",
+    start_msg:
+        "ひなか「それ、めっちゃええと思うわ〜！」\n" +
+        "こたろう「ありがとう。具体化しよう」\n" +
+        "ひなか「細かいの苦手〜！」\n" +
+        "こたろう「俺がまとめるよ」",
+    text: "協力して進めましょう。",
+    kana: "きょうりょくしてすすめましょう。",
+    romaji: "kyouryoku shite susumemashou",
+    reaction_good:
+        "ひなか「助かる〜！」\n" +
+        "こたろう「任せて」",
+    reaction_bad:
+        "こたろう「先生、表現が曖昧です」\n" +
+        "ひなか「どっちの意味？」",
+    images: ["hinaka.png", "kotaro.png"]
+    },
+    { 
+        id: "chat_towa_akaru_skip",
+        subtype: "chat",
+        group: "1-1",
+        sender: "とわ＆あかる",
+        start_msg:
+            "とわ「なぁあかる、今日の数学さ…黒板見るだけで眠くね？」\n" +
+            "あかる「わかる！脳がシャットダウンする音したもん！」\n" +
+            "とわ「屋上行かね？風気持ちいいし、チーズの話しよ」\n" +
+            "あかる「行こ行こ！授業よりチーズの方が栄養あるし！」\n" +
+            "とわ「それ科学的に証明できそうじゃね？」\n" +
+            "あかる「よしサボり理由できたな！」",
+        text: "授業中ですよ。席に戻りなさい。", 
+        kana: "じゅぎょうちゅうですよ。せきにもどりなさい。",
+        romaji: "jugyouchuu desu yo. seki ni modorinasai",
+        reaction_good:
+            "とわ「え〜マジかぁ…しゃーない戻るわ」\n" +
+            "あかる「はーい先生！屋上は放課後ね！」",
+        reaction_bad:
+            "とわ「先生、誤字ってるけど大丈夫？」\n" +
+            "あかる「集中力、先に席戻ってない？」",
+        images: ["towa.png", "akaru.png"]
+    },
+    { 
+        id: "chat_momoka_sei_leader",
+        subtype: "chat",
+        group: "1-1",
+        sender: "ももか＆せい",
+        start_msg:
+            "ももか「アンタ指示多すぎ。現場見て言いなさいよ」\n" +
+            "せい「全体を回すには必要だ！感情論で動くな！」\n" +
+            "ももか「結果出してから吠えなさいよ、人間」\n" +
+            "せい「吠えるのは君だろ！責任感が違う！」\n" +
+            "ももか「責任は取る主義なの。逃げないから」",
+        text: "二人とも落ち着いてください。", 
+        kana: "ふたりともおちついてください。",
+        romaji: "futari tomo ochitsuite kudasai",
+        reaction_good:
+            "ももか「……チッ。今回は引くわ」\n" +
+            "せい「議論は後で続けよう」",
+        reaction_bad:
+            "ももか「先生、変換ミスってるわよ」\n" +
+            "せい「指導する前に文章整えてください！」",
+        images: ["momoka.png", "sei.png"]
+    },
+    { 
+        id: "chat_tetsu_koto_lab",
+        subtype: "chat",
+        group: "1-1",
+        sender: "てつ＆こと",
+        start_msg:
+            "てつ「ねえこと、これ混ぜたら色変わると思う？」\n" +
+            "こと「変わる思うけど…匂いがもう危険やき」\n" +
+            "てつ「大丈夫大丈夫！科学は挑戦だよ！」\n" +
+            "こと「挑戦で済まん結果になりそうやけどな」\n" +
+            "てつ「でもワクワクしない？」\n" +
+            "こと「まぁ…それはちょっとする」",
+        text: "安全確認をしてください。", 
+        kana: "あんぜんかくにんをしてください。",
+        romaji: "anzen kakunin wo shite kudasai",
+        reaction_good:
+            "てつ「あっ、ごめん！確認するね！」\n" +
+            "こと「ちゃんと見るき」",
+        reaction_bad:
+            "てつ「先生、字抜けてますよ〜？」\n" +
+            "こと「それじゃ注意の説得力ないき」",
+        images: ["tetsu.png", "koto.png"]
+    },
+    { 
+        id: "chat_towa_kosaku_skip",
+        subtype: "chat",
+        group: "1-1",
+        sender: "とわ＆こさく",
+        start_msg:
+            "こさく「なぁとわ、今日の授業長ない？」\n" +
+            "とわ「体感3時間。まだ10分」\n" +
+            "こさく「それもう事件やん！」\n" +
+            "とわ「購買行こ。パンが俺を呼んでる」\n" +
+            "こさく「食欲は正義やな！」",
+        text: "二人とも席について。", 
+        kana: "ふたりともせきについて。",
+        romaji: "futari tomo seki ni tsuite",
+        reaction_good:
+            "とわ「はーい、戻りまーす」\n" +
+            "こさく「しゃあないなぁ」",
+        reaction_bad:
+            "とわ「先生、助詞迷子じゃん」\n" +
+            "こさく「ツッコまれる前に直しとこ？」",
+        images: ["towa.png", "kosaku.png"]
+    },
+    { 
+        id: "chat_ai_observation",
+        subtype: "chat",
+        group: "1-1",
+        sender: "あい＆ももか＆みみか",
+        start_msg:
+            "あい「ふふ…今日もサボり組、元気そうですねぇ」\n" +
+            "ももか「元気すぎ。首輪つけたいレベル」\n" +
+            "みみか「行動パターンが完全に固定化してるわ」\n" +
+            "あい「とわくんは快楽優先、あかるくんは同調型…」\n" +
+            "ももか「分析ごっこ楽しい？」\n" +
+            "あい「観察ですよぉ。弱点探し♡」",
+        text: "こそこそ話さないでください。", 
+        kana: "こそこそはなさないでください。",
+        romaji: "kososoko hanasanaide kudasai",
+        reaction_good:
+            "あい「あらあら…聞こえてました？」\n" +
+            "みみか「静かにするわ」\n" +
+            "ももか「チッ…」",
+        reaction_bad:
+            "あい「先生、言葉一個抜けてますよ？」\n" +
+            "ももか「その注意、説得力ないわね」",
+        images: ["ai.png", "momoka.png", "mimika.png"]
+    },
+    { 
+        id: "chat_skip_vs_sei",
+        subtype: "chat",
+        group: "1-1",
+        sender: "せい＆とわ＆あかる",
+        start_msg:
+            "せい「お前ら！また授業抜けただろ！」\n" +
+            "とわ「いや〜風が俺を呼んでてさ」\n" +
+            "あかる「屋上が最高の教室だったんすよ！」\n" +
+            "せい「言い訳するな！集団行動の自覚を持て！」\n" +
+            "とわ「チーズは個人行動派なんで」\n" +
+            "あかる「ほら〜せいくん顔赤い！」",
+        text: "落ち着いて指導してください。", 
+        kana: "おちついてしどうしてください。",
+        romaji: "ochitsuite shidou shite kudasai",
+        reaction_good:
+            "せい「……深呼吸する」\n" +
+            "とわ「お、冷却成功？」\n" +
+            "あかる「えらいえらい！」",
+        reaction_bad:
+            "とわ「先生、誤字ってますよ」\n" +
+            "あかる「説教前に整えよ？」",
+        images: ["sei.png", "towa.png", "akaru.png"]
+    },
+    { 
+        id: "chat_halloween_hikaru",
+        subtype: "chat",
+        group: "1-1",
+        sender: "ひかる＆ももか",
+        start_msg:
+            "ひかる「今日はハロウィンだべ？テンション上がんね？」\n" +
+            "ももか「…その帽子、似合ってるわね」\n" +
+            "ひかる「マジ？黒猫パワー復活かも！」\n" +
+            "ももか「前は噛んで悪かったわ」\n" +
+            "ひかる「気にしてねぇよ！穴も含めて思い出だし！」\n" +
+            "ももか「……バカ」",
+        text: "廊下で騒がないでください。", 
+        kana: "ろうかでさわがないでください。",
+        romaji: "rouka de sawaganaide kudasai",
+        reaction_good:
+            "ひかる「はーい、静かにするべ！」\n" +
+            "ももか「…行くわよ」",
+        reaction_bad:
+            "ひかる「先生、変換おかしくね？」\n" +
+            "ももか「集中切れてるわよ」",
+        images: ["hikaru.png", "momoka.png"]
+    },
+    { 
+        id: "chat_towa_ai_notice",
+        subtype: "chat",
+        group: "1-1",
+        sender: "とわ＆あい",
+        start_msg:
+            "とわ「なぁ…視線感じね？」\n" +
+            "あい「気のせいじゃないですかぁ？」\n" +
+            "とわ「いや絶対あいちゃんだろ」\n" +
+            "あい「観察される側の気分、どうです？」\n" +
+            "とわ「うわ…ゾクっとした」",
+        text: "私語を控えましょう。", 
+        kana: "しごをひかえましょう。",
+        romaji: "shigo wo hikaemashou",
+        reaction_good:
+            "とわ「はーい」\n" +
+            "あい「従順ですねぇ」",
+        reaction_bad:
+            "あい「先生、助詞落ちてますよ？」\n" +
+            "とわ「見られてんの先生じゃね？」",
+        images: ["towa.png", "ai.png"]
+    },
+    { 
+        id: "chat_momoka_incident",
+        subtype: "chat",
+        group: "1-1",
+        sender: "ももか＆みみか",
+        start_msg:
+            "ももか「……ちょっと待って」\n" +
+            "みみか「どうしたの？」\n" +
+            "ももか「今、変な匂いしなかった？」\n" +
+            "みみか「……」\n" +
+            "ももか「ねぇ、したでしょ？」\n" +
+            "みみか「あなたの後ろからよ」\n" +
+            "ももか「……は？」",
+        text: "静かにしてください。", 
+        kana: "しずかにしてください。",
+        romaji: "shizuka ni shite kudasai",
+        reaction_good:
+            "みみか「話は後で」\n" +
+            "ももか「……チッ」",
+        reaction_bad:
+            "ももか「誤字ってるわよ」\n" +
+            "みみか「注意が雑ね」",
+        images: ["momoka.png", "mimika.png"]
+    },
+    { 
+        id: "chat_towa_careless",
+        subtype: "chat",
+        group: "1-1",
+        sender: "とわ＆ひなか",
+        start_msg:
+            "とわ「今の空気、なんか重くね？」\n" +
+            "ひなか「ちょ、言わんでいいけん！」\n" +
+            "とわ「え？事実じゃん」\n" +
+            "ひなか「命の危機感じるわ！」\n" +
+            "とわ「チーズは正直者なんで」",
+        text: "静かにしなさい。", 
+        kana: "しずかにしなさい。",
+        romaji: "shizuka ni shinasai",
+        reaction_good:
+            "とわ「はーい」\n" +
+            "ひなか「助かった…」",
+        reaction_bad:
+            "とわ「先生、誤字」\n" +
+            "ひなか「今それどころじゃないけん」",
+        images: ["towa.png", "hinaka.png"]
+    },
+    { 
+        id: "chat_momoka_hikaru_daily",
+        subtype: "chat",
+        group: "1-1",
+        sender: "ももか＆ひかる",
+        start_msg:
+            "ひかる「さっきの、ももかだべ？」\n" +
+            "ももか「……何の話？」\n" +
+            "ひかる「いや、別に？」\n" +
+            "ももか「余計なこと言ったら噛むわよ」\n" +
+            "ひかる「はいはい、番犬さん」",
+        text: "会話をやめてください。", 
+        kana: "かいわをやめてください。",
+        romaji: "kaiwa wo yamete kudasai",
+        reaction_good:
+            "ひかる「了解〜」\n" +
+            "ももか「……ふん」",
+        reaction_bad:
+            "ももか「指示文おかしいわよ」\n" +
+            "ひかる「先生も焦ってね？」",
+        images: ["momoka.png", "hikaru.png"]
+    },
+    { 
+        id: "chat_1-1_setsuna_mimika_momoka_news",
+        subtype: "chat",
+        group: "1-1",
+        sender: "せつな＆みみか＆ももか",
+        start_msg:
+            "せつな「ねぇねぇ〜、最近さぁ…『普段は強気だけど、特定の単語で挙動がおかしくなる存在』がおるらしかよ〜」\n" +
+            "みみか「その表現、ほぼ名指しに近いけど」\n" +
+            "ももか「は？ なにそれ。くだらな…」\n" +
+            "せつな「しかもその単語が“家族関連”らしくて〜」\n" +
+            "ももか「……。」\n" +
+            "みみか「反応速度、0.3秒。分かりやすすぎ」\n" +
+            "せつな「記事タイトルどうしよっかな〜。“優雅な獣、急に静止”とか」\n" +
+            "ももか「……それ載せたら噛むから」",
+        text: "取材は慎重にしなさい。",
+        kana: "しゅざいはしんちょうにしなさい。",
+        romaji: "shuzai wa shinchou ni shinasai",
+        reaction_good:
+            "せつな「はーい。遠回しに書くけん大丈夫たい」\n" +
+            "みみか「遠回しが一番刺さるけどね」",
+        reaction_bad:
+            "せつな「先生、誤字あるよ〜？そのまま載せてよか？」\n" +
+            "みみか「新聞部にtypoは致命的」",
+        images: ["setsuna.png", "mimika.png", "momoka.png"]
+    },
+    { 
+        id: "chat_1-1_momoka_hikaru_papa",
+        subtype: "chat",
+        group: "1-1",
+        sender: "ももか＆ひかる",
+        start_msg:
+            "ひかる「なぁももか、今日さ…お前の――」\n" +
+            "ももか「待て」\n" +
+            "ひかる「え？」\n" +
+            "ももか「その続き、言うな」\n" +
+            "ひかる「いや、まだ何も言ってねぇけど…パ――」\n" +
+            "ももか「っ！！！」\n" +
+            "ひかる「うわ！？ なんで今だけ急に耳下がんの！？」\n" +
+            "ももか「……別に」\n" +
+            "ひかる「絶対動揺してんじゃん」",
+        text: "落ち着いて話しなさい。",
+        kana: "おちついてはなしなさい。",
+        romaji: "ochitsuite hanashi nasai",
+        reaction_good:
+            "ひかる「ほら深呼吸な。吸って〜」\n" +
+            "ももか「……うるさい」",
+        reaction_bad:
+            "ひかる「先生も噛んでるぞ、それ」\n" +
+            "ももか「……今のは先生のミス」",
+        images: ["momoka.png", "hikaru.png"]
+    },
+    { 
+        id: "chat_1-1_seina_setsuna_news",
+        subtype: "chat",
+        group: "1-1",
+        sender: "せいな＆せつな",
+        start_msg:
+            "せいな「ちょっと、あの記事どういう意味？」\n" +
+            "せつな「どの記事〜？」\n" +
+            "せいな「“強気な存在が特定の呼称で機能停止”ってやつ」\n" +
+            "せつな「あ〜、あれは一般論たい」\n" +
+            "せいな「誰が信じるのよ」\n" +
+            "せつな「でも事実は事実やけん」\n" +
+            "せいな「……あの子、今朝もパパって聞いた瞬間固まってたし」\n" +
+            "せつな「ほら〜」",
+        text: "憶測で書かないように。",
+        kana: "おくそくでかかないように。",
+        romaji: "okusoku de kakanai you ni",
+        reaction_good:
+            "せつな「事実をやわらかく包んどるだけたい」\n" +
+            "せいな「それが一番タチ悪いのよ」",
+        reaction_bad:
+            "せつな「先生、その漢字違っとる」\n" +
+            "せいな「新聞部に突っ込まれるの草」",
+        images: ["seina.png", "setsuna.png"]
+    },
+    { 
+        id: "chat_1-1_ai_mimika_analysis",
+        subtype: "chat",
+        group: "1-1",
+        sender: "あい＆みみか",
+        start_msg:
+            "あい「ふふ…面白いですねぇ。あれほど威圧的なのに」\n" +
+            "みみか「“パパ”という音声刺激だけで戦闘力が落ちる」\n" +
+            "あい「条件反射、可愛いです」\n" +
+            "みみか「本人は認めないだろうけど」\n" +
+            "あい「記事にしたら燃えますか？」\n" +
+            "みみか「もうされてる」",
+        text: "陰口は控えなさい。",
+        kana: "かげぐちはひかえなさい。",
+        romaji: "kageguchi wa hikae nasai",
+        reaction_good:
+            "あい「あらあら…これは観察です」\n" +
+            "みみか「学術目的」",
+        reaction_bad:
+            "あい「先生、typo多いですねぇ？」\n" +
+            "みみか「信頼度が下がる」",
+        images: ["ai.png", "mimika.png"]
+    },
+    { 
+        id: "chat_1-1_setsuna_tetsu_momoka_news",
+        subtype: "chat",
+        group: "1-1",
+        sender: "せつな＆てつ＆ももか",
+        start_msg:
+            "せつな「今度の新聞さ〜、“最近よく吠える子ほど静かになる瞬間”って特集どうかなぁ」\n" +
+            "てつ「えっなにそれ！動物特集？」\n" +
+            "ももか「……なに書く気？」\n" +
+            "せつな「別に〜？名前も出さんし」\n" +
+            "てつ「でも実話ベースだよね？」\n" +
+            "せつな「そらそうたい」\n" +
+            "ももか「……余計なこと書いたら許さないから」\n" +
+            "せつな「その“余計”がどこか、読んだ人に任せるだけたい」",
+        text: "憶測で誤解を生まないように。",
+        kana: "おくそくでごかいをうまないように。",
+        romaji: "okusoku de gokai o umanai you ni",
+        reaction_good:
+            "せつな「大丈夫です。事実しか書かんけん」\n" +
+            "てつ「それが一番強いんだよね〜」",
+        reaction_bad:
+            "せつな「先生、そこ誤字っとるよ？」\n" +
+            "ももか「新聞部に突っ込まれるとかだっさ」",
+        images: ["setsuna.png", "tetsu.png", "momoka.png"]
+    },
+    { 
+        id: "chat_1-1_momoka_mimika_weakpoint",
+        subtype: "chat",
+        group: "1-1",
+        sender: "ももか＆みみか",
+        start_msg:
+            "みみか「今日も姿勢が完璧」\n" +
+            "ももか「当然」\n" +
+            "みみか「パパに褒められた？」\n" +
+            "ももか「……別に」\n" +
+            "みみか「声、半音下がった」\n" +
+            "ももか「気のせい」\n" +
+            "みみか「瞳孔も広がってる」\n" +
+            "ももか「……観察やめろ」",
+        text: "話題を変えましょう。",
+        kana: "わだいをかえましょう。",
+        romaji: "wadai o kaemashou",
+        reaction_good:
+            "みみか「了解。これ以上は非効率」\n" +
+            "ももか「……助かる」",
+        reaction_bad:
+            "みみか「先生、そこ入力ミス」\n" +
+            "ももか「typoで止めに来るな」",
+        images: ["momoka.png", "mimika.png"]
+    },
+    { 
+        id: "chat_1-1_hikaru_momoka_papa",
+        subtype: "chat",
+        group: "1-1",
+        sender: "ひかる＆ももか",
+        start_msg:
+            "ひかる「なぁももか、昨日さ……」\n" +
+            "ももか「言い方による」\n" +
+            "ひかる「え？」\n" +
+            "ももか「その前置き、嫌な予感しかしない」\n" +
+            "ひかる「いや普通に、パ――」\n" +
+            "ももか「……っ」\n" +
+            "ひかる「あ、ごめん！今のナシ！」\n" +
+            "ももか「……もう遅い」",
+        text: "落ち着いて続けなさい。",
+        kana: "おちついてつづけなさい。",
+        romaji: "ochitsuite tsudzuke nasai",
+        reaction_good:
+            "ひかる「深呼吸な、はい」\n" +
+            "ももか「……一回だけだから」",
+        reaction_bad:
+            "ひかる「先生も言い間違えてる」\n" +
+            "ももか「今日ミス多くない？」",
+        images: ["hikaru.png", "momoka.png"]
+    },
+    {
+        id: "chat_kaede_kosaku",
+        subtype: "chat",
+        group: "1-1",
+        sender: "かえで＆こさく",
+        start_msg:
+            "かえで「は？鏡見た？今日も世界一かわいいんだけど」\n" +
+            "こさく「出た出た〜自己評価インフレ姫やん。せやけど否定できひんのが悔しいわ」\n" +
+            "かえで「でしょ？アンタ分かってるじゃん」\n" +
+            "こさく「いやいや、せやからって調子乗りすぎやろ」\n" +
+            "かえで「乗れる才能があるの。凡人と一緒にしないで」\n" +
+            "こさく「うわぁ…その自信、少し分けてほしいわ」",
+        text: "落ち着いて話しなさい。",
+        kana: "おちついてはなしなさい。",
+        romaji: "ochitsuite hanashi nasai",
+        reaction_good:
+            "かえで「はーい？先生の前では一応ね」\n" +
+            "こさく「一応て。まぁええわ、続きは後でな」",
+        reaction_bad:
+            "かえで「日本語ミスってるけど？」\n" +
+            "こさく「先生、入力焦りすぎやで。深呼吸し？」",
+        images: ["kaede.png", "kosaku.png"]
+    },
+    {
+        id: "chat_momoka_mimika",
+        subtype: "chat",
+        group: "1-1",
+        sender: "ももか＆みみか",
+        start_msg:
+            "ももか「……あいつら、また騒いでる」\n" +
+            "みみか「効率が悪いね。集中力が散ってる」\n" +
+            "ももか「群れは吠える生き物だから仕方ないでしょ」\n" +
+            "みみか「もったんこは吠えないの？」\n" +
+            "ももか「……必要な時だけ」\n" +
+            "みみか「ふふ。じゃあ私は料理で黙らせる」",
+        text: "仲良しですね。",
+        kana: "なかよしですね。",
+        romaji: "nakayoshi desu ne",
+        reaction_good:
+            "ももか「別に」\n" +
+            "みみか「否定はしないよ」",
+        reaction_bad:
+            "ももか「先生、変換ミス多くない？」\n" +
+            "みみか「落ち着いて入力しよ。焦ると精度落ちる」",
+        images: ["momoka.png", "mimika.png"]
+    },
+    {
+        id: "chat_hinaka_hikaru",
+        subtype: "chat",
+        group: "1-1",
+        sender: "ひなか＆ひかる",
+        start_msg:
+            "ひなか「ねぇひかるくん！それ、昨日も同じ話しとったよ！」\n" +
+            "ひかる「え、マジ？でもよ〜、この話好きなんだわ」\n" +
+            "ひなか「ほんと自由人だねぇ！」\n" +
+            "ひかる「ひなかも大概だっぺ」\n" +
+            "ひなか「え〜？あたしは元気なだけだに！」",
+        text: "静かにしましょう。",
+        kana: "しずかにしましょう。",
+        romaji: "shizuka ni shimashou",
+        reaction_good:
+            "ひかる「はいはい、分かりました〜」\n" +
+            "ひなか「あとでまた話そ！」",
+        reaction_bad:
+            "ひなか「先生、入力噛んどるよ？」\n" +
+            "ひかる「落ち着けって〜」",
+        images: ["hinaka.png", "hikaru.png"]
+    },
+    {
+        id: "chat_ai_tetsu",
+        subtype: "chat",
+        group: "1-1",
+        sender: "あい＆てつ",
+        start_msg:
+            "あい「あらあら…今日も賑やかですね」\n" +
+            "てつ「みんな元気でいいじゃん！」\n" +
+            "あい「元気と無秩序は別物ですよ？」\n" +
+            "てつ「うーん、でもそれも個性だよ！」\n" +
+            "あい「……ふふ、甘いですね」",
+        text: "何の話ですか？",
+        kana: "なんのはなしですか？",
+        romaji: "nan no hanashi desu ka",
+        reaction_good:
+            "あい「内緒です♡」\n" +
+            "てつ「難しい話じゃないよ〜」",
+        reaction_bad:
+            "あい「誤字…可愛いですね」\n" +
+            "てつ「先生も人間だね！」",
+        images: ["ai.png", "tetsu.png"]
+    },
+    {
+        id: "chat_kaede_momoka",
+        subtype: "chat",
+        group: "1-1",
+        sender: "かえで＆ももか",
+        start_msg:
+            "かえで「ねぇ桃花。あたしと並んで立つの、緊張しない？」\n" +
+            "ももか「は？なんで私が」\n" +
+            "かえで「だって美の頂点が二つ並ぶわけじゃん？」\n" +
+            "ももか「……自信過剰」\n" +
+            "かえで「負け犬の遠吠え？」\n" +
+            "ももか「吠えるのは勝つ時だけよ」",
+        text: "落ち着いてください。",
+        kana: "おちついてください。",
+        romaji: "ochitsuite kudasai",
+        reaction_good:
+            "ももか「チッ……」\n" +
+            "かえで「ま、先生の顔立てたげる」",
+        reaction_bad:
+            "かえで「先生、日本語迷子？」\n" +
+            "ももか「誤字って威厳下げてるわよ」",
+        images: ["kaede.png", "momoka.png"]
+    },
+    {
+        id: "chat_hikaru_akaru",
+        subtype: "chat",
+        group: "1-1",
+        sender: "ひかる＆あかる",
+        start_msg:
+            "あかる「ひかる〜！この帽子被ってみ？」\n" +
+            "ひかる「え、派手すぎっぺ」\n" +
+            "あかる「似合う似合う！ほら！」\n" +
+            "ひかる「ちょ、勝手に被せんなって！」\n" +
+            "あかる「いいじゃん！テンション上がるっしょ！」",
+        text: "遊びすぎですよ。",
+        kana: "あそびすぎですよ。",
+        romaji: "asobisugi desu yo",
+        reaction_good:
+            "ひかる「はーい」\n" +
+            "あかる「あとで続きな！」",
+        reaction_bad:
+            "あかる「先生、入力荒れてるぞー？」\n" +
+            "ひかる「焦りすぎだっぺ」",
+        images: ["hikaru.png", "akaru.png"]
+    },
+    {
+        id: "chat_seina_komari",
+        subtype: "chat",
+        group: "1-1",
+        sender: "せいな＆こまり",
+        start_msg:
+            "せいな「それ、自分で作ったの？」\n" +
+            "こまり「うん。昨日の夜やった」\n" +
+            "せいな「夜更かし禁止って言ったでしょ」\n" +
+            "こまり「でも納得いかんかったし…」\n" +
+            "せいな「もう…体調管理も作品のうちよ？」",
+        text: "いい関係ですね。",
+        kana: "いいかんけいですね。",
+        romaji: "ii kankei desu ne",
+        reaction_good:
+            "こまり「…うん」\n" +
+            "せいな「でしょ？」",
+        reaction_bad:
+            "せいな「先生、誤字ってる」\n" +
+            "こまり「直した方がええよ」",
+        images: ["seina.png", "komari.png"]
+    },
+    {
+        id: "chat_kotarou_sei",
+        subtype: "chat",
+        group: "1-1",
+        sender: "こたろう＆せい",
+        start_msg:
+            "せい「次の行事、俺がまとめる！」\n" +
+            "こたろう「いいけど、全体の意見も聞こう」\n" +
+            "せい「スピードも大事だ！」\n" +
+            "こたろう「暴走するとついてこれない人が出る」\n" +
+            "せい「……なるほど」",
+        text: "建設的ですね。",
+        kana: "けんせつてきですね。",
+        romaji: "kensetsuteki desu ne",
+        reaction_good:
+            "せい「よし、役割分担だ！」\n" +
+            "こたろう「うん、それでいこう」",
+        reaction_bad:
+            "こたろう「先生、変換ミス」\n" +
+            "せい「落ち着いて打て！」",
+        images: ["kotarou.png", "sei.png"]
+    },
+    {
+        id: "chat_koto_kofuku",
+        subtype: "chat",
+        group: "1-1",
+        sender: "こと＆こふく",
+        start_msg:
+            "こと「その写真、山か？」\n" +
+            "こふく「ああ。今朝の光が良かった」\n" +
+            "こと「構図、嫌いじゃない」\n" +
+            "こふく「無駄がない」\n" +
+            "こと「…静かでいいな」",
+        text: "渋い会話ですね。",
+        kana: "しぶいかいわですね。",
+        romaji: "shibui kaiwa desu ne",
+        reaction_good:
+            "こと「まぁな」\n" +
+            "こふく「問題ない」",
+        reaction_bad:
+            "こと「誤字しとる」\n" +
+            "こふく「修正した方がいい」",
+        images: ["koto.png", "kofuku.png"]
+    },
+    {
+        id: "chat_kojiro_masaki",
+        subtype: "chat",
+        group: "1-1",
+        sender: "こじろう＆まさき",
+        start_msg:
+            "こじろう「この曲、妹さん好きそう」\n" +
+            "まさき「……ありがとう」\n" +
+            "こじろう「無理しないでね」\n" +
+            "まさき「君も、弾きすぎないように」",
+        text: "優しいですね。",
+        kana: "やさしいですね。",
+        romaji: "yasashii desu ne",
+        reaction_good:
+            "まさき「……はい」\n" +
+            "こじろう「ふふ」",
+        reaction_bad:
+            "こじろう「先生、誤字あります」\n" +
+            "まさき「直した方がいいです」",
+        images: ["kojiro.png", "masaki.png"]
+    },
+    {
+        id: "chat_tetsu_kojiro",
+        subtype: "chat",
+        group: "1-1",
+        sender: "てつ＆こじろう",
+        start_msg:
+            "てつ「ねぇねぇ！この前の曲、すっごく良かったよ！」\n" +
+            "こじろう「ありがとう。みんなに届けばいいなって」\n" +
+            "てつ「絶対届くよ！優しい音だもん」\n" +
+            "こじろう「てつさんの言葉も、優しいです」",
+        text: "いい雰囲気ですね。",
+        kana: "いいふんいきですね。",
+        romaji: "ii funiki desu ne",
+        reaction_good:
+            "てつ「えへへ〜！」\n" +
+            "こじろう「ありがとうございます」",
+        reaction_bad:
+            "てつ「先生、変換ちがうよ？」\n" +
+            "こじろう「修正した方が良さそうです」",
+        images: ["tetsu.png", "kojiro.png"]
+    },
+    {
+        id: "chat_seina_setsuna",
+        subtype: "chat",
+        group: "1-1",
+        sender: "せいな＆せつな",
+        start_msg:
+            "せいな「また物なくしたの？」\n" +
+            "せつな「うーん……たぶんカバンの中」\n" +
+            "せいな「“たぶん”で済ませない！」\n" +
+            "せつな「でもさぁ、探すと出てこんのよ」\n" +
+            "せいな「もう！あとで一緒に整理するわよ！」",
+        text: "面倒見がいいですね。",
+        kana: "めんどうみがいいですね。",
+        romaji: "mendoumi ga ii desu ne",
+        reaction_good:
+            "せいな「当然でしょ」\n" +
+            "せつな「助かる〜」",
+        reaction_bad:
+            "せいな「先生、誤字」\n" +
+            "せつな「落ち着こ？」",
+        images: ["seina.png", "setsuna.png"]
+    },
+    {
+        id: "chat_komari_koto",
+        subtype: "chat",
+        group: "1-1",
+        sender: "こまり＆こと",
+        start_msg:
+            "こまり「これ、今作っとる途中なんよ」\n" +
+            "こと「手、器用やな」\n" +
+            "こまり「ほんと？」\n" +
+            "こと「写真に残しときたいくらい」\n" +
+            "こまり「え、ちょっと恥ずかしいんだけど」",
+        text: "集中してますね。",
+        kana: "しゅうちゅうしてますね。",
+        romaji: "shuuchuu shitemasu ne",
+        reaction_good:
+            "こと「邪魔せん」\n" +
+            "こまり「ありがと」",
+        reaction_bad:
+            "こと「先生、誤字や」\n" +
+            "こまり「直した方がええよ」",
+        images: ["komari.png", "koto.png"]
+    },
+    {
+        id: "chat_kotarou_kofuku",
+        subtype: "chat",
+        group: "1-1",
+        sender: "こたろう＆こふく",
+        start_msg:
+            "こたろう「山の写真、すごいね」\n" +
+            "こふく「守っているだけだ」\n" +
+            "こたろう「その姿勢、尊敬するよ」\n" +
+            "こふく「……悪くない」",
+        text: "落ち着いた会話ですね。",
+        kana: "おちついたかいわですね。",
+        romaji: "ochitsuita kaiwa desu ne",
+        reaction_good:
+            "こたろう「ありがとうございます」\n" +
+            "こふく「問題ない」",
+        reaction_bad:
+            "こふく「誤字だ」\n" +
+            "こたろう「修正しましょう」",
+        images: ["kotarou.png", "kofuku.png"]
+    },
+    // --- 1-2 ---
+    // --- 1-3 ---
+    {
+        id: "chat_masaki_misaki",
+        subtype: "chat",
+        group: "1-3",
+        sender: "まさき＆みさき",
+        start_msg:
+            "みさき「お兄ちゃん……これ」\n" +
+            "まさき「……手紙？」\n" +
+            "みさき「うん。漢字、ちょっと変かもだけど」\n" +
+            "まさき「……ありがとう。ちゃんと読めるよ」\n" +
+            "みさき「無理、してない？」\n" +
+            "まさき「してない……大丈夫」\n" +
+            "みさき「……そっか。じゃあ、よかった」",
+        text: "優しい兄妹ですね。",
+        kana: "やさしいきょうだいですね。",
+        romaji: "yasashii kyoudai desu ne",
+        reaction_good:
+            "まさき「……はい」\n" +
+            "みさき「えへへ」",
+        reaction_bad:
+            "みさき「せ、先生……誤字あります」\n" +
+            "まさき「直した方がいいです」",
+        images: ["masaki.png", "misaki.png"]
+    },
+    // --- 1-4 ---
     // --- 2-1 ---
     { 
         id: "chat_suibeibu_after_teacher_fix",
