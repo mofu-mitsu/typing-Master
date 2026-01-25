@@ -11920,8 +11920,8 @@ const schoolData = [
         images: ["kotarou.png", "towa.png"]
     },
     {
-        id: chat_ai_kotarou_pressure,
-        subtype: chat,
+        id: "chat_ai_kotarou_pressure",
+        subtype: "chat",
         group: "1-1",
         sender: "あい＆こたろう",
         start_msg:
@@ -12593,8 +12593,8 @@ const schoolData = [
     images: ["megumu.png", "erua.png"]
     },
     {
-        id: chat_momoka_ritsu_puppy,
-        subtype: chat,
+        id: "chat_momoka_ritsu_puppy",
+        subtype: "chat",
         group: "1-1_1-3",
         sender: "ももか＆りつ",
         start_msg:
@@ -12613,8 +12613,8 @@ const schoolData = [
         images: ["momoka.png", "ritsu.png"]
     },
     {
-        id: chat_mirin_suo_trick,
-        subtype: chat,
+        id: "chat_mirin_suo_trick",
+        subtype: "chat",
         group: "2-2_1-2",
         sender: "みりん＆すおう",
         start_msg:
@@ -12632,8 +12632,8 @@ const schoolData = [
         images: ["mirin.png", "suo.png"]
     },
     {
-        id: chat_kohaku_jun_clean,
-        subtype: chat,
+        id: "chat_kohaku_jun_clean",
+        subtype: "chat",
         group: "1-2_3-1",
         sender: "こはく＆じゅん",
         start_msg:
@@ -12651,8 +12651,8 @@ const schoolData = [
         images: ["kohaku.png", "jun.png"]
     },
     {
-        id: chat_yutasuke_sumire_soft,
-        subtype: chat,
+        id: "chat_yutasuke_sumire_soft",
+        subtype: "chat",
         group: "1-2_3-2",
         sender: "ゆたすけ＆すみれ",
         start_msg:
@@ -12670,7 +12670,7 @@ const schoolData = [
         images: ["yutasuke.png", "sumire.png"]
     },
     {
-        id: chat_nagisa_suo_philosophy,
+        id: "chat_nagisa_suo_philosophy",
         subtype: "chat",
         group: "1-3×1-2",
         sender: "なぎさ＆すおう",
@@ -12691,7 +12691,7 @@ const schoolData = [
         images: ["nagisa.png", "suo.png"]
     },
     {
-        id: chat_momoka_yuuhi_trade,
+        id: "chat_momoka_yuuhi_trade",
         subtype: "chat",
         group: "1-1×1-3",
         sender: "ももか＆ゆうひ",
@@ -12712,7 +12712,7 @@ const schoolData = [
         images: ["momoka.png", "yuhi.png"]
     },
     {
-        id: chat_nui_shinon_emotion,
+        id: "chat_nui_shinon_emotion",
         subtype: "chat",
         group: "3-1×2-2",
         sender: "ご褒美＆しのん",
@@ -12733,7 +12733,7 @@ const schoolData = [
         images: ["nui.png", "shinon.png"]
     },
     {
-        id: chat_mirin_suo_tease,
+        id: "chat_mirin_suo_tease",
         subtype: "chat",
         group: "2-2×1-2",
         sender: "みりん＆すおう",
@@ -12754,7 +12754,7 @@ const schoolData = [
         images: ["mirin.png", "suo.png"]
     },
     {
-        id: chat_mari_noriomi_empathyhell,
+        id: "chat_mari_noriomi_empathyhell",
         subtype: chat,
         group: "1-2×1-3",
         sender: "まり＆のりおみ",
@@ -12777,7 +12777,7 @@ const schoolData = [
         images: ["mari.png", "noriomi.png"]
     },
     {
-        id: chat_ryogo_arisu_structure,
+        id: "chat_ryogo_arisu_structure",
         subtype: chat,
         group: "2-1×1-4",
         sender: "りょうご＆ありす",
