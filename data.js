@@ -2657,16 +2657,18 @@ const schoolData = [
         image: "makishi.png"
     },
     {
-        id: "req_shige",
-        subtype: "request",
+        id: "msg_shige",
+        subtype: "line",
         group: "2-2",
         sender: "仲馬 穣",
-        start_msg: "しげ「せ、先生……昼休みの目標、入力お願いしてもよかですか……？」",
-        text: "自分のペースで、落ち着いて食事をする",
-        kana: "じぶんのぺーすでおちついてしょくじをする",
-        romaji: "jibun no peesu de ochitsuite shokuji o suru",
-        reaction_good: "しげ「あ……ありがとうございます。これなら、できそうです。」",
-        reaction_bad: "しげ「す、すみません……先生、意味がちょっと違う気がして……」",
+        text: "先生……あの、今日の昼ごはんなんですけど……無理のない量にしても、だいじょうぶでしょうか。",
+        kana: "はい。むりしなくていいですよ。",
+        romaji: "hai muri shinakute ii desu yo",
+        start_msg: "（しげからLINEが届きました）",
+        reaction_good: "しげ「……ありがとうございます。少し安心しました。」",
+        reaction_bad: "しげ「……あ、先生、文字……ちょっと違っとります。」",
+        reaction_fast: "しげ「……すぐ返ってきて、ほっとしました。」",
+        reaction_slow: "しげ「……お忙しかったら、大丈夫です。」",
         image: "shige.png"
     },
     { 
@@ -4761,19 +4763,17 @@ const schoolData = [
     image: "makishi.png"
     },
     {
-        id: msg_shige,
-        subtype: "line",
-        group: "2-2",
-        sender: "仲馬 穣",
-        text: "先生……あの、今日の昼ごはんなんですけど……無理のない量にしても、だいじょうぶでしょうか。",
-        kana: "はい。むりしなくていいですよ。",
-        romaji: "hai muri shinakute ii desu yo",
-        start_msg: "（しげからLINEが届きました）",
-        reaction_good: "しげ「……ありがとうございます。少し安心しました。」",
-        reaction_bad: "しげ「……あ、先生、文字……ちょっと違っとります。」",
-        reaction_fast: "しげ「……すぐ返ってきて、ほっとしました。」",
-        reaction_slow: "しげ「……お忙しかったら、大丈夫です。」",
-        image: "shige.png"
+    id: "req_shige",
+    subtype: "request",
+    group: "2-2",
+    sender: "仲馬 穣",
+    start_msg: "しげ「せ、先生……昼休みの目標、入力お願いしてもよかですか……？」",
+    text: "自分のペースで、落ち着いて食事をする",
+    kana: "じぶんのぺーすでおちついてしょくじをする",
+    romaji: "jibun no peesu de ochitsuite shokuji o suru",
+    reaction_good: "しげ「あ……ありがとうございます。これなら、できそうです。」",
+    reaction_bad: "しげ「す、すみません……先生、意味がちょっと違う気がして……」",
+    image: "shige.png"
     },
     {
     id: "req_hakomo",
