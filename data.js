@@ -2657,7 +2657,7 @@ const schoolData = [
         image: "makishi.png"
     },
     {
-        id: req_shige,
+        id: "req_shige",
         subtype: "request",
         group: "2-2",
         sender: "仲馬 穣",
