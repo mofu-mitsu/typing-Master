@@ -84,9 +84,15 @@
                 <h1 id="app-title">実務データ入力演習</h1>
                 <div id="sub-info"><i class="fa-solid fa-id-card"></i> 教務課・データ管理担当</div>
             </div>
-            <button id="back-btn" onclick="location.reload()">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i> 終了
-            </button>
+            <div class="header-right">
+                <!-- ★音量切り替えボタン -->
+                <button id="sound-btn" onclick="toggleSound()">
+                    <i id="sound-icon" class="fa-solid fa-volume-high"></i>
+                </button>
+                <button id="back-btn" onclick="location.reload()">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> 終了
+                </button>
+            </div>
         </header>
 
         <main>
@@ -145,15 +151,40 @@
         </main>
     </div>
 
-    <!-- 3. 結果画面 -->
+    <!-- ↓ 結果画面（result-box）の中身を大幅改造！ ↓ -->
     <div id="result-screen" class="hidden">
         <div class="result-box">
-            <div class="result-icon"><i class="fa-solid fa-flag-checkered"></i></div>
+            <div id="rank-badge">-</div> <!-- ランクSとか出る場所 -->
             <h2 id="result-title">業務完了</h2>
-            <div class="result-stats">
-                <p>タイム: <span id="result-time">0.0</span>秒</p>
-                <p>ミス: <span id="result-miss">0</span>回</p>
+            
+            <div class="result-grid">
+                <div class="result-item">
+                    <span class="label">スコア</span>
+                    <span class="value" id="result-score">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">ランク</span>
+                    <span class="value" id="result-rank">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">タイム</span>
+                    <span class="value"><span id="result-time">0.0</span>s</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">ミス</span>
+                    <span class="value" id="result-miss">0</span>
+                </div>
             </div>
+
+            <!-- ★新機能：ベストスコア比較 & 苦手キー -->
+            <div class="analysis-area">
+                <p id="best-score-info"><i class="fa-solid fa-crown"></i> 自己ベスト: ---</p>
+                <div id="weak-keys-area">
+                    <p>⚠️ 苦手なキー</p>
+                    <div id="weak-keys-list">なし</div>
+                </div>
+            </div>
+
             <p id="result-msg" class="msg-text"></p>
             <button onclick="location.reload()" class="retry-btn"><i class="fa-solid fa-rotate-right"></i> タイトルに戻る</button>
         </div>
