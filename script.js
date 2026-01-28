@@ -36,9 +36,8 @@ const senderName = document.getElementById('sender-name');
 const keys = document.querySelectorAll('.key');
 
 /* ==========================================
-   設定画面の制御（★ここをパワーアップ！）
+   設定画面の制御
    ========================================== */
-// 1. モード（実務/学校）を変えた時の処理
 function updateSubMode() {
     const mode = document.getElementById('mode-select').value;
     const subGroup = document.getElementById('sub-mode-group');
@@ -47,7 +46,6 @@ function updateSubMode() {
     if (mode === 'school') {
         subGroup.classList.remove('hidden');
         classGroup.classList.remove('hidden');
-        // ★学校モードが出たら、選択肢の整理も一度実行する
         updateClassOptions();
     } else {
         subGroup.classList.add('hidden');
@@ -55,39 +53,27 @@ function updateSubMode() {
     }
 }
 
-// 2. ★新機能：業務内容に合わせてクラス選択肢を出し分ける！
 function updateClassOptions() {
     const subMode = document.getElementById('sub-mode-select').value;
-    const classGroup = document.getElementById('class-select-group'); // クラス選択エリア全体
-    const classSelect = document.getElementById('class-select');      // プルダウン本体
-    const teacherOption = classSelect.querySelector('option[value="teacher"]'); // 「教職員」の選択肢
+    const classGroup = document.getElementById('class-select-group');
+    const classSelect = document.getElementById('class-select');
+    const teacherOption = classSelect.querySelector('option[value="teacher"]');
 
-    // 一旦リセット（全部表示・有効化）
     classGroup.classList.remove('hidden');
     teacherOption.disabled = false;
     teacherOption.hidden = false;
 
-    // --- 条件分岐 ---
-
     if (subMode === 'instruction') {
-        // パターンA：先生の指示
-        // → 生徒は関係ないのでクラス選択自体を隠す & 強制的に「教職員」を選択
         classSelect.value = 'teacher';
-        classGroup.classList.add('hidden'); // 隠す
+        classGroup.classList.add('hidden');
     } 
     else if (['line', 'request', 'chat'].includes(subMode)) {
-        // パターンB：生徒系（LINE, 依頼, チャット）
-        // → 「教職員」は選べないようにする
         if (classSelect.value === 'teacher') {
-            classSelect.value = 'all'; // もし教職員が選ばれてたら全校に戻す
+            classSelect.value = 'all';
         }
-        teacherOption.disabled = true; // 選択不可
-        teacherOption.hidden = true;   // リストから消す
+        teacherOption.disabled = true;
+        teacherOption.hidden = true;
     } 
-    else {
-        // パターンC：名簿 (roster) や 総合 (mix)
-        // → 制限なし（先生も生徒も選べる）
-    }
 }
 
 /* ==========================================
@@ -138,7 +124,6 @@ function applyModeStyles() {
         title.innerText = "🏫 教育機関実務研修（とりの丘学園）";
         
         let className = currentClass === 'all' ? '全校' : currentClass;
-        // 教職員が選ばれている時の表示
         if (currentClass === 'teacher') className = '教職員';
         
         subInfo.innerHTML = `<i class="fa-solid fa-graduation-cap"></i> 実習対象: ${className}`;
@@ -174,7 +159,7 @@ function prepareQuestions() {
 }
 
 /* ==========================================
-   キー入力制御（変更なし）
+   キー入力制御
    ========================================== */
 window.addEventListener('keydown', (e) => {
     if (!startScreen.classList.contains('hidden')) return;
@@ -203,7 +188,15 @@ inputField.addEventListener('input', (e) => {
     const expectedChar = targetRomaji[typedCount];
 
     if (val.length > typedCount) {
-        if (lastChar === expectedChar) {
+        // 1. 普通に合ってるかチェック
+        let isMatch = (lastChar === expectedChar);
+
+        // 2. 合ってない場合、別解（si とか ti）じゃないかチェック！
+        if (!isMatch) {
+            isMatch = checkFlexibleInput(lastChar);
+        }
+
+        if (isMatch) {
             // ✅ 正解
             typedCount++;
             skipSpaces();
@@ -238,6 +231,52 @@ inputField.addEventListener('input', (e) => {
         }
     }
 });
+
+// ★新機能：柔軟な入力判定ロジック
+function checkFlexibleInput(inputChar) {
+    const remaining = targetRomaji.substring(typedCount); // 今残っている文字（例：shi...）
+    const prevChar = typedCount > 0 ? targetRomaji[typedCount - 1] : ""; // 1つ前に打った文字
+
+    // 変換ルールリスト
+    const replacements = [
+        // 文頭などで使える置き換え
+        { from: "shi", to: "si" }, 
+        { from: "chi", to: "ti" }, 
+        { from: "tsu", to: "tu" }, 
+        { from: "fu",  to: "hu" }, 
+        { from: "ji",  to: "zi" }, 
+        
+        // 拗音（しゃ、ちゃ、じゃ）
+        { from: "sha", to: "sya" }, { from: "shu", to: "syu" }, { from: "sho", to: "syo" },
+        { from: "cha", to: "tya" }, { from: "chu", to: "tyu" }, { from: "cho", to: "tyo" },
+        { from: "ja",  to: "zya" }, { from: "ju",  to: "zyu" }, { from: "jo",  to: "zyo" },
+
+        // ★2文字目以降の置き換え（重要：sを打った後にhじゃなくてiが来た時など）
+        { from: "hi", to: "i", prev: "s" },  // s + hi(shi) -> s + i(si)
+        { from: "su", to: "u", prev: "t" },  // t + su(tsu) -> t + u(tu)
+        { from: "ha", to: "ya", prev: "s" }, // s + ha(sha) -> s + ya(sya)
+        { from: "hu", to: "yu", prev: "s" }, // s + hu(shu) -> s + yu(syu)
+        { from: "ho", to: "yo", prev: "s" }, // s + ho(sho) -> s + yo(syo)
+        // 他にも必要ならここに追加！
+    ];
+
+    for (let r of replacements) {
+        // 前の文字条件がある場合、一致しなければスキップ
+        if (r.prev && r.prev !== prevChar) continue;
+
+        // 今の正解データが 'from' で始まり、ユーザー入力が 'to' の1文字目と一致するか？
+        if (remaining.startsWith(r.from)) {
+            if (r.to.startsWith(inputChar)) {
+                // 一致！正解データを書き換える（例：shi -> si）
+                const newTail = r.to + remaining.substring(r.from.length);
+                const head = targetRomaji.substring(0, typedCount);
+                targetRomaji = head + newTail;
+                return true; // 正解扱いにする
+            }
+        }
+    }
+    return false;
+}
 
 function skipSpaces() {
     while (typedCount < targetRomaji.length && targetRomaji[typedCount] === ' ') {
@@ -288,7 +327,6 @@ function nextQuestion() {
     skipSpaces();
     questionStartTime = Date.now();
     
-    // 好感度チェック
     let charLove = saveData[q.id] || 0;
     let startMsg = q.start_msg;
     let initialFace = "normal";
@@ -428,7 +466,7 @@ function questionClear() {
 }
 
 /* ==========================================
-   表示更新系（変更なし）
+   表示更新系
    ========================================== */
 function updateRomajiDisplay() {
     let html = "";
