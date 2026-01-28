@@ -13248,7 +13248,7 @@ const schoolData = [
         reaction_bad:
             "ありす「今のタイプミス、注意力が現実に戻ってない証拠」\n" +
             "りょうご「はは……確かに」",
-        images: ["ryogo.png", "arisu.png"]
+        images: ["ryogo.png", "alice.png"]
     },
     {
         id: "chat_yui_suo_mindgame",
@@ -49265,7 +49265,7 @@ const schoolData = [
         reaction_bad:
             "そうじ「先生、今の噛んでたよね？」\n" +
             "こはく「注意が不正確だ」",
-        images: ["kohaku.png", "souji.png"]
+        images: ["kohaku.png", "soji.png"]
     },
     {
         id: "chat_alice_roi_observe",
