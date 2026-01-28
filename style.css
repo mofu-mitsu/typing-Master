@@ -161,7 +161,64 @@ body {
 
 #display-text { font-size: 26px; font-weight: bold; margin: 10px 0; line-height: 1.4; white-space: pre-wrap; }
 #reading-text { color: #888; font-size: 15px; margin-bottom: 5px; }
+/* ヘッダーのボタンエリア */
+.header-right { display: flex; gap: 10px; align-items: center; }
+#sound-btn {
+    background: none; border: 2px solid rgba(255,255,255,0.5); color: #fff;
+    width: 36px; height: 36px; border-radius: 50%; cursor: pointer;
+    display: flex; justify-content: center; align-items: center; transition: 0.2s;
+}
+#sound-btn:hover { background: rgba(255,255,255,0.2); }
+.business-mode #sound-btn { color: #fff; border-color: #fff; }
+.school-mode #sound-btn { color: #fff; border-color: #fff; background: #ff99cc; border: none; }
 
+/* 結果画面のリッチ化 */
+.result-box {
+    width: 500px; padding: 40px; position: relative;
+    /* ランクバッジのための余白 */
+    padding-top: 60px; 
+}
+
+/* ランクバッジ（SとかAとか） */
+#rank-badge {
+    position: absolute; top: -40px; left: 50%; transform: translateX(-50%);
+    width: 80px; height: 80px; background: #f1c40f; color: #fff;
+    font-size: 40px; font-weight: bold; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    border: 5px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+/* ランクごとの色 */
+.rank-s { background: linear-gradient(135deg, #ffd700, #fdb931) !important; border-color: #fff8dc !important; } /* 金 */
+.rank-a { background: #e74c3c !important; } /* 赤 */
+.rank-b { background: #3498db !important; } /* 青 */
+.rank-c { background: #2ecc71 !important; } /* 緑 */
+.rank-d { background: #95a5a6 !important; } /* グレー */
+
+.result-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 15px;
+    margin-bottom: 20px;
+}
+.result-item {
+    background: #f8f9fa; padding: 15px; border-radius: 8px;
+    display: flex; flex-direction: column; align-items: center;
+}
+.result-item .label { font-size: 12px; color: #7f8c8d; margin-bottom: 5px; }
+.result-item .value { font-size: 24px; font-weight: bold; color: #2c3e50; }
+
+/* 苦手キー・分析エリア */
+.analysis-area {
+    margin-bottom: 20px; padding: 15px; background: #fff0f5;
+    border-radius: 10px; border: 1px dashed #ffb7d2;
+}
+#best-score-info { font-weight: bold; color: #e67e22; margin-bottom: 10px; }
+
+#weak-keys-list { display: flex; justify-content: center; gap: 10px; }
+.weak-key {
+    background: #e74c3c; color: white; width: 30px; height: 30px;
+    border-radius: 5px; display: flex; justify-content: center; align-items: center;
+    font-weight: bold; font-family: 'Courier New', monospace;
+}
 /* =========================================
    💬 セリフ・チャットログエリアの修正
    ========================================= */
