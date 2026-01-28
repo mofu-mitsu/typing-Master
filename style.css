@@ -162,27 +162,55 @@ body {
 #display-text { font-size: 26px; font-weight: bold; margin: 10px 0; line-height: 1.4; white-space: pre-wrap; }
 #reading-text { color: #888; font-size: 15px; margin-bottom: 5px; }
 
-/* コメント（リアクション） */
+/* =========================================
+   💬 セリフ・チャットログエリアの修正
+   ========================================= */
+
+/* セリフが入る箱（ここをスクロール可能にする！） */
 #char-comment-box {
-    height: 40px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;
-}
-#char-comment { font-weight: bold; font-size: 16px; transition: all 0.2s; }
-/* コメント（リアクション）エリアの調整 */
-#char-comment-box {
-    min-height: 40px; /* 高さを自動で広がるように修正 */
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    margin-bottom: 10px;
-    padding: 5px; /* 余白追加 */
+    width: 85%;            /* 横幅を少し狭めて見やすく */
+    max-height: 100px;     /* ★高さの上限を決める（これ以上は伸びない） */
+    overflow-y: auto;      /* ★中身があふれたらスクロールバーを出す */
+    
+    background-color: #fff; /* 背景を白くして文字を読みやすく */
+    border: 2px solid #eee; /* 薄い枠線をつける */
+    border-radius: 12px;    /* 角を丸く */
+    
+    margin: 15px auto;      /* 上下に余白をとって重なり防止！ */
+    padding: 10px 15px;     /* 内側の余白 */
+    
+    /* 影をつけて浮き上がらせる */
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); 
+    
+    /* フレックス解除（スクロールさせるためブロック要素にする） */
+    display: block; 
 }
 
-#char-comment { 
-    font-weight: bold; 
-    font-size: 16px; 
-    transition: all 0.2s; 
-    white-space: pre-wrap; /* ★これで改行がちゃんと表示されるようになる！ */
-    line-height: 1.5;      /* 行間を少し開ける */
+/* 中の文字 */
+#char-comment {
+    font-size: 15px;
+    font-weight: normal;  /* 太字だと読みづらいので普通に */
+    color: #555;
+    line-height: 1.6;     /* 行間を広げて読みやすく */
+    text-align: left;     /* ★会話文なので左寄せにする！ */
+    white-space: pre-wrap;/* 改行を反映 */
+    display: block;
+}
+
+/* ピンクのスクロールバーで可愛くする魔法（Chrome/Safari用） */
+#char-comment-box::-webkit-scrollbar {
+    width: 8px;
+}
+#char-comment-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+#char-comment-box::-webkit-scrollbar-thumb {
+    background: #ffb7d2; /* みつきカラーのピンク！ */
+    border-radius: 10px;
+}
+#char-comment-box::-webkit-scrollbar-thumb:hover {
+    background: #ff99cc;
 }
 /* 入力エリア */
 #input-area { position: relative; } /* フォーカス用のクリックエリア確保 */
@@ -238,3 +266,4 @@ body {
     border: none; border-radius: 50px; cursor: pointer; transition: 0.3s;
 }
 .retry-btn:hover { background: #34495e; transform: scale(1.05); }
+
