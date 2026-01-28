@@ -15,11 +15,28 @@ let questionStartTime = 0;
 let timerInterval = null;
 let missCount = 0;
 let currentMiss = 0;
+let totalTyped = 0; // 総タイプ数（スコア計算用）
+
+// ★苦手キー分析用
+let missedKeysMap = {}; // {'a': 5, 'k': 2} みたいに記録
 
 let isPlaying = false;
 let isWaitingNext = false;
 
+// ★音の設定
+let isMuted = false;
+const soundCorrect = new Audio('sounds/correct.mp3');
+const soundMiss = new Audio('sounds/miss.mp3');
+const soundClear = new Audio('sounds/clear.mp3');
+
+// 音量調整（うるさすぎないように）
+soundCorrect.volume = 0.5;
+soundMiss.volume = 0.3;
+soundClear.volume = 0.6;
+
 let saveData = JSON.parse(localStorage.getItem('tori_save')) || {};
+// ★ベストスコア用データも読み込む
+let scoreData = JSON.parse(localStorage.getItem('tori_score')) || {};
 
 // HTML要素取得
 const startScreen = document.getElementById('start-screen');
@@ -34,6 +51,34 @@ const charImgBox = document.getElementById('char-image-box');
 const senderInfo = document.getElementById('sender-info');
 const senderName = document.getElementById('sender-name');
 const keys = document.querySelectorAll('.key');
+const soundIcon = document.getElementById('sound-icon');
+
+/* ==========================================
+   音の制御
+   ========================================== */
+function toggleSound() {
+    isMuted = !isMuted;
+    if (isMuted) {
+        soundIcon.className = "fa-solid fa-volume-xmark";
+    } else {
+        soundIcon.className = "fa-solid fa-volume-high";
+    }
+}
+
+function playSound(type) {
+    if (isMuted) return;
+    // 連続再生できるように時間をリセット
+    if (type === 'correct') {
+        soundCorrect.currentTime = 0;
+        soundCorrect.play();
+    } else if (type === 'miss') {
+        soundMiss.currentTime = 0;
+        soundMiss.play();
+    } else if (type === 'clear') {
+        soundClear.currentTime = 0;
+        soundClear.play();
+    }
+}
 
 /* ==========================================
    設定画面の制御
@@ -86,6 +131,7 @@ function initGame() {
     maxQuestions = parseInt(document.getElementById('count-select').value);
     
     saveData = JSON.parse(localStorage.getItem('tori_save')) || {};
+    scoreData = JSON.parse(localStorage.getItem('tori_score')) || {};
 
     startScreen.classList.add('hidden');
     gameContainer.classList.remove('hidden');
@@ -113,6 +159,7 @@ function applyModeStyles() {
     const body = document.body;
     const title = document.getElementById('app-title');
     const subInfo = document.getElementById('sub-info');
+    const soundBtn = document.getElementById('sound-btn');
     
     gameContainer.className = "";
     document.getElementById('question-area').className = "";
@@ -188,17 +235,16 @@ inputField.addEventListener('input', (e) => {
     const expectedChar = targetRomaji[typedCount];
 
     if (val.length > typedCount) {
-        // 1. 普通に合ってるかチェック
+        // フレックス入力チェック
         let isMatch = (lastChar === expectedChar);
-
-        // 2. 合ってない場合、別解（si とか ti）じゃないかチェック！
-        if (!isMatch) {
-            isMatch = checkFlexibleInput(lastChar);
-        }
+        if (!isMatch) isMatch = checkFlexibleInput(lastChar);
 
         if (isMatch) {
             // ✅ 正解
             typedCount++;
+            totalTyped++; // 総タイプ数加算
+            playSound('correct'); // 音！
+            
             skipSpaces();
             updateRomajiDisplay();
             
@@ -219,6 +265,13 @@ inputField.addEventListener('input', (e) => {
             // ❌ ミス
             missCount++;
             currentMiss++;
+            playSound('miss'); // 音！
+            
+            // ★苦手キーの記録
+            if (expectedChar) {
+                missedKeysMap[expectedChar] = (missedKeysMap[expectedChar] || 0) + 1;
+            }
+
             inputField.value = val.slice(0, -1);
             flashKeyboardError();
             
@@ -232,46 +285,28 @@ inputField.addEventListener('input', (e) => {
     }
 });
 
-// ★新機能：柔軟な入力判定ロジック
 function checkFlexibleInput(inputChar) {
-    const remaining = targetRomaji.substring(typedCount); // 今残っている文字（例：shi...）
-    const prevChar = typedCount > 0 ? targetRomaji[typedCount - 1] : ""; // 1つ前に打った文字
+    const remaining = targetRomaji.substring(typedCount);
+    const prevChar = typedCount > 0 ? targetRomaji[typedCount - 1] : "";
 
-    // 変換ルールリスト
     const replacements = [
-        // 文頭などで使える置き換え
-        { from: "shi", to: "si" }, 
-        { from: "chi", to: "ti" }, 
-        { from: "tsu", to: "tu" }, 
-        { from: "fu",  to: "hu" }, 
-        { from: "ji",  to: "zi" }, 
-        
-        // 拗音（しゃ、ちゃ、じゃ）
+        { from: "shi", to: "si" }, { from: "chi", to: "ti" }, { from: "tsu", to: "tu" }, 
+        { from: "fu",  to: "hu" }, { from: "ji",  to: "zi" }, 
         { from: "sha", to: "sya" }, { from: "shu", to: "syu" }, { from: "sho", to: "syo" },
         { from: "cha", to: "tya" }, { from: "chu", to: "tyu" }, { from: "cho", to: "tyo" },
         { from: "ja",  to: "zya" }, { from: "ju",  to: "zyu" }, { from: "jo",  to: "zyo" },
-
-        // ★2文字目以降の置き換え（重要：sを打った後にhじゃなくてiが来た時など）
-        { from: "hi", to: "i", prev: "s" },  // s + hi(shi) -> s + i(si)
-        { from: "su", to: "u", prev: "t" },  // t + su(tsu) -> t + u(tu)
-        { from: "ha", to: "ya", prev: "s" }, // s + ha(sha) -> s + ya(sya)
-        { from: "hu", to: "yu", prev: "s" }, // s + hu(shu) -> s + yu(syu)
-        { from: "ho", to: "yo", prev: "s" }, // s + ho(sho) -> s + yo(syo)
-        // 他にも必要ならここに追加！
+        { from: "hi", to: "i", prev: "s" }, { from: "su", to: "u", prev: "t" }, 
+        { from: "ha", to: "ya", prev: "s" }, { from: "hu", to: "yu", prev: "s" }, { from: "ho", to: "yo", prev: "s" }
     ];
 
     for (let r of replacements) {
-        // 前の文字条件がある場合、一致しなければスキップ
         if (r.prev && r.prev !== prevChar) continue;
-
-        // 今の正解データが 'from' で始まり、ユーザー入力が 'to' の1文字目と一致するか？
         if (remaining.startsWith(r.from)) {
             if (r.to.startsWith(inputChar)) {
-                // 一致！正解データを書き換える（例：shi -> si）
                 const newTail = r.to + remaining.substring(r.from.length);
                 const head = targetRomaji.substring(0, typedCount);
                 targetRomaji = head + newTail;
-                return true; // 正解扱いにする
+                return true; 
             }
         }
     }
@@ -289,6 +324,9 @@ function startGame() {
     isPlaying = true;
     currentIndex = 0;
     missCount = 0;
+    currentMiss = 0;
+    totalTyped = 0;
+    missedKeysMap = {}; // 苦手キーリセット
     startTime = Date.now();
     
     if(timerInterval) clearInterval(timerInterval);
@@ -438,6 +476,7 @@ function questionClear() {
     if (currentMiss === 0) {
         reaction = "Perfect!!✨ " + reaction;
         color = "#f1c40f";
+        playSound('correct'); // クリア音鳴らすのもありだけど、ここはあえて静かに
     } else if (speed > 5 && q.reaction_fast) {
         reaction = q.reaction_fast;
         color = "#e67e22";
@@ -465,9 +504,7 @@ function questionClear() {
     }, 2000); 
 }
 
-/* ==========================================
-   表示更新系
-   ========================================== */
+// ...（表示更新系は省略、そのまま）...
 function updateRomajiDisplay() {
     let html = "";
     for (let i = 0; i < targetRomaji.length; i++) {
@@ -499,24 +536,80 @@ function flashKeyboardError() {
 }
 
 /* ==========================================
-   終了画面
+   ★終了画面（ランク・ベストスコア・苦手キー計算！）
    ========================================== */
 function finishGame() {
     isPlaying = false;
     clearInterval(timerInterval);
-    const finalTime = document.getElementById('time-display').innerText;
-    
-    document.removeEventListener('click', keepFocus);
+    playSound('clear'); // 業務完了音！
 
+    const finalTime = parseFloat(document.getElementById('time-display').innerText);
+    const wpm = (totalTyped / finalTime) * 60; // 1分あたりの打鍵数
+    
+    // スコア計算: (WPM * 10) - (ミス * 50)
+    let score = Math.round((wpm * 10) - (missCount * 50));
+    if (score < 0) score = 0;
+
+    // ランク計算
+    let rank = "D";
+    let rankClass = "rank-d";
+    if (score >= 3000) { rank = "S"; rankClass = "rank-s"; }
+    else if (score >= 2000) { rank = "A"; rankClass = "rank-a"; }
+    else if (score >= 1000) { rank = "B"; rankClass = "rank-b"; }
+    else if (score >= 500) { rank = "C"; rankClass = "rank-c"; }
+
+    // ベストスコア保存・取得
+    // 保存キー例: "best_school_roster_2-1_5" (モード_サブ_クラス_問数)
+    const saveKey = `best_${currentMode}_${currentSubMode}_${currentClass}_${maxQuestions}`;
+    const prevBest = scoreData[saveKey] || 0;
+
+    if (score > prevBest) {
+        scoreData[saveKey] = score;
+        localStorage.setItem('tori_score', JSON.stringify(scoreData));
+    }
+
+    // 苦手キー分析（ミスの多い順にソート）
+    const sortedWeakKeys = Object.entries(missedKeysMap)
+        .sort((a, b) => b[1] - a[1]) // 回数多い順
+        .slice(0, 5); // トップ5
+
+    let weakKeysHtml = "";
+    if (sortedWeakKeys.length > 0) {
+        sortedWeakKeys.forEach(item => {
+            weakKeysHtml += `<div class="weak-key" title="${item[1]}回ミス">${item[0].toUpperCase()}</div>`;
+        });
+    } else {
+        weakKeysHtml = "なし (Perfect!)";
+    }
+
+    // 結果表示
+    document.removeEventListener('click', keepFocus);
     gameContainer.classList.add('hidden');
     resultScreen.classList.remove('hidden');
 
+    const rankBadge = document.getElementById('rank-badge');
+    rankBadge.innerText = rank;
+    rankBadge.className = ""; // クラスリセット
+    rankBadge.classList.add(rankClass);
+
+    document.getElementById('result-score').innerText = score;
+    document.getElementById('result-rank').innerText = rank;
     document.getElementById('result-time').innerText = finalTime;
     document.getElementById('result-miss').innerText = missCount;
+    
+    document.getElementById('best-score-info').innerHTML = 
+        score > prevBest 
+        ? `<i class="fa-solid fa-trophy"></i> 自己ベスト更新！ (旧: ${prevBest})` 
+        : `<i class="fa-solid fa-crown"></i> 自己ベスト: ${prevBest}`;
+
+    document.getElementById('weak-keys-list').innerHTML = weakKeysHtml;
 
     const msg = document.getElementById('result-msg');
     if (currentMode === 'school') {
-        msg.innerHTML = "実習お疲れ様でした！<br>キャラとの絆が少し深まった気がします…💕";
+        let comment = "実習お疲れ様でした！";
+        if (rank === "S") comment = "みりん「えっ神！？センセ凄すぎ！惚れ直した！」";
+        else if (rank === "A") comment = "みりん「おぉ〜やるね！いい感じ！」";
+        msg.innerHTML = comment;
     } else {
         msg.innerText = "本日のデータ入力業務は全て完了しました。\nお疲れ様でした。";
     }
