@@ -53704,7 +53704,7 @@ const schoolData = [
             "れい「困ります……！」",
         text: "善意が理解を追い越しています。",
         kana: "ぜんい が りかい を おいこして います。",
-        romaji: "zeni ga rikai o oikoshite imasu",
+        romaji: "zeni ga rikai wo oikoshite imasu",
         reaction_good:
             "れい「……丁寧に\n断れてよかった……」",
         reaction_bad:
