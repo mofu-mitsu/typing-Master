@@ -17805,7 +17805,7 @@ const schoolData = [
             "こうた「……僕は、誰のために書いてるんだろう」",
         text: "自分の言葉で書いてみなさい。",
         kana: "じぶんのことばでかいてみなさい。",
-        romaji: "jibun no kotoba de kaite mimasai",
+        romaji: "jibun no kotoba de kaite minasai",
         reaction_good:
             "たより「うん、その方がこうたらしい」\n" +
             "こうた「……ありがとう。少し、楽になった」",
