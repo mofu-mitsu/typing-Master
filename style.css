@@ -12,7 +12,7 @@ body {
     background-color: #f4f6f9;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /* 上寄せにする */
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -20,7 +20,7 @@ body {
 .hidden { display: none !important; }
 
 /* =========================================
-   1. スタート画面（可愛く！）
+   1. スタート画面
    ========================================= */
 #start-screen {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -37,6 +37,8 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     text-align: center;
     border: 1px solid #eee;
+    max-height: 90vh; /* 画面からはみ出さないように */
+    overflow-y: auto; /* メニューが長い場合はスクロール */
 }
 
 .menu-header h1 {
@@ -60,7 +62,7 @@ body {
     width: 100%; padding: 15px; font-size: 18px; font-weight: bold;
     background: linear-gradient(to right, #3498db, #2980b9);
     color: white; border: none; border-radius: 50px; cursor: pointer;
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3); transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s;
 }
 .start-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4); }
 
@@ -74,34 +76,31 @@ body {
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     padding: 30px;
     position: relative;
+    margin-bottom: 50px; /* 下に余裕を持たせる */
 }
 
-/* 🏢 一般企業モード（Business Mode） */
+/* 🏢 一般企業モード */
 .business-mode { border-top: 5px solid #2c3e50; }
 .business-mode #header h1 { color: #2c3e50; font-size: 20px; }
 .business-mode #sub-info { color: #7f8c8d; }
+.business-mode #sound-btn { color: #555; border-color: #ccc; }
 
-/* 🏫 教育実習モード（School Mode）←ここを可愛く！ */
+/* 🏫 教育実習モード */
 .school-mode {
-    border: 4px solid #ffb7d2; /* 枠線をピンクに */
-    background-color: #fffcfd;  /* ほんのりピンク背景 */
+    border: 4px solid #ffb7d2;
+    background-color: #fffcfd;
     box-shadow: 0 10px 30px rgba(255, 183, 210, 0.4);
-    font-family: "M PLUS Rounded 1c", "Varela Round", sans-serif; /* 丸文字系 */
+    font-family: "M PLUS Rounded 1c", "Varela Round", sans-serif;
 }
-
-/* モード専用：ヘッダー */
 .school-mode #header { border-bottom: 2px dashed #ffb7d2; padding-bottom: 15px; margin-bottom: 20px; }
 .school-mode #app-title { color: #ff66a3; font-size: 24px; text-shadow: 1px 1px 0 #fff; }
 .school-mode #sub-info { color: #ff8fb8; font-weight: bold; }
 .school-mode #back-btn { background: #ff99cc; border-radius: 20px; }
+.school-mode #sound-btn { background: #ffb7d2; color: #fff; border: none; }
 
-/* モード専用：お題エリア */
-.school-mode #display-text {
-    color: #444;
-}
 /* LINE風吹き出し */
 .line-style #display-text {
-    background: #e9f5ff; /* 水色の吹き出し */
+    background: #e9f5ff;
     border: 2px solid #cce5ff;
     padding: 15px 25px;
     border-radius: 25px;
@@ -111,13 +110,22 @@ body {
 
 /* ヘッダー共通 */
 #header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.header-right { display: flex; gap: 10px; align-items: center; }
 #app-title { margin: 0; }
 #sub-info { font-size: 14px; margin-top: 5px; }
+
 #back-btn {
     background: #95a5a6; color: white; border: none; padding: 8px 15px;
     cursor: pointer; border-radius: 5px; font-size: 14px; transition: 0.2s;
 }
 #back-btn:hover { opacity: 0.8; }
+
+#sound-btn {
+    background: none; border: 2px solid #ccc; color: #555;
+    width: 36px; height: 36px; border-radius: 50%; cursor: pointer;
+    display: flex; justify-content: center; align-items: center; transition: 0.2s;
+}
+#sound-btn:hover { background: rgba(0,0,0,0.05); }
 
 /* ステータスバー */
 #status-bar {
@@ -132,31 +140,29 @@ body {
 
 /* 画像が入る箱（Flexboxで真ん中に寄せる！） */
 #char-image-box { 
-    height: 140px;          /*高さを確保*/
+    height: 140px;
     margin-bottom: 15px; 
-    
-    /* ★ここが重要！画像を中央揃えにする設定 */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;              /* グルチャで複数並ぶ時の間隔 */
+    gap: 15px; /* グルチャ用 */
 }
 
-/* ① 単体キャラの画像設定 */
+/* ① 単体キャラの画像設定（★これでデカくなりすぎない！） */
 .char-img-single {
-    height: 100%;           /* 箱の高さ（140px）に合わせる */
-    width: auto;            /* 横幅は自動（比率を崩さない） */
-    object-fit: contain;    /* はみ出さずに全体を表示 */
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); /* 影をつけて浮き上がらせる */
+    height: 100%;           /* 箱の高さに合わせる */
+    width: auto;            /* 比率維持 */
+    object-fit: contain;    /* はみ出さない */
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
 }
 
 /* ② グルチャ用の丸アイコン設定 */
 .char-img-group {
-    height: 80px;           /* 少し小さめにする */
-    width: 80px;            /* 正方形 */
-    object-fit: cover;      /* トリミングして埋める */
-    border-radius: 50%;     /* 丸くする */
-    border: 3px solid #fff; /* 白いフチをつける */
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
@@ -167,63 +173,54 @@ body {
     margin-bottom: 10px; 
 }
 
-/* 送信者情報（○○からLINEが届きました、とか） */
+/* 送信者情報 */
 #sender-info { 
-    font-size: 14px; 
-    color: #888; 
-    margin-bottom: 5px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    gap: 5px; 
+    font-size: 14px; color: #888; margin-bottom: 5px; 
+    display: flex; align-items: center; justify-content: center; gap: 5px; 
 }
 
 /* メインの日本語テキスト */
 #display-text { 
-    font-size: 26px; 
-    font-weight: bold; 
-    margin: 10px 0; 
-    line-height: 1.4; 
-    white-space: pre-wrap; 
+    font-size: 26px; font-weight: bold; margin: 10px 0; 
+    line-height: 1.4; white-space: pre-wrap; 
 }
 
 /* 読み仮名 */
-#reading-text { 
-    color: #888; 
-    font-size: 15px; 
-    margin-bottom: 5px; 
-}
-/* コメント（リアクション） */
-#char-comment-box {
-    height: 40px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;
-}
-#char-comment { font-weight: bold; font-size: 16px; transition: all 0.2s; }
+#reading-text { color: #888; font-size: 15px; margin-bottom: 5px; }
+
 /* コメント（リアクション）エリアの調整 */
 #char-comment-box {
-    min-height: 40px; /* 高さを自動で広がるように修正 */
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    margin-bottom: 10px;
-    padding: 5px; /* 余白追加 */
+    width: 85%;
+    max-height: 100px;
+    overflow-y: auto; /* スクロール可能に */
+    background-color: #fff;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    margin: 15px auto;
+    padding: 10px 15px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    display: block;
 }
 
 #char-comment { 
-    font-weight: bold; 
-    font-size: 16px; 
-    transition: all 0.2s; 
-    white-space: pre-wrap; /* ★これで改行がちゃんと表示されるようになる！ */
-    line-height: 1.5;      /* 行間を少し開ける */
+    font-size: 15px; font-weight: normal; color: #555;
+    line-height: 1.6; text-align: left; white-space: pre-wrap; display: block;
 }
+
+/* スクロールバー装飾 */
+#char-comment-box::-webkit-scrollbar { width: 8px; }
+#char-comment-box::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+#char-comment-box::-webkit-scrollbar-thumb { background: #ffb7d2; border-radius: 10px; }
+
 /* 入力エリア */
-#input-area { position: relative; } /* フォーカス用のクリックエリア確保 */
+#input-area { position: relative; } 
 
 #romaji-display {
     font-family: 'Courier New', monospace; font-size: 22px; letter-spacing: 2px;
     color: #bbb; text-align: center; min-height: 35px; margin-bottom: 5px;
 }
-.typed-char { color: #2ecc71; } /* 緑 */
-.highlight-char { color: #e74c3c; font-weight: bold; font-size: 26px; } /* 赤く大きく！ */
+.typed-char { color: #2ecc71; }
+.highlight-char { color: #e74c3c; font-weight: bold; font-size: 26px; }
 
 #type-input {
     width: 100%; padding: 15px; font-size: 20px; text-align: center;
@@ -252,9 +249,8 @@ body {
 }
 .error-key { background-color: #ff7675 !important; color: white !important; border-color: #d63031 !important; }
 
-/* 結果画面 */
 /* =========================================
-   結果画面（見切れ対策版！）
+   3. 結果画面（見切れ対策＆デザイン修正）
    ========================================= */
 
 #result-screen {
@@ -263,16 +259,17 @@ body {
     left: 0; 
     width: 100%; 
     height: 100%;
-    background: rgba(44, 62, 80, 0.9); 
+    background: rgba(44, 62, 80, 0.95); /* 少し濃くした */
     z-index: 3000;
     
-    /* ★ここが修正ポイント！ */
+    /* ★ここが重要！上寄せにしてスクロールさせる */
     display: flex; 
     justify-content: center; 
-    align-items: flex-start; /* 上下中央（center）をやめて上寄せにする */
+    align-items: flex-start; 
     
-    overflow-y: auto; /* 縦スクロールを許可する */
-    padding: 20px;    /* スマホなどで端っこがくっつかないように */
+    overflow-y: auto; /* 縦スクロールOK */
+    padding-top: 80px; /* ★上に見切れないように余白を確保！ */
+    padding-bottom: 50px;
 }
 
 .result-box {
@@ -280,44 +277,78 @@ body {
     padding: 40px; 
     border-radius: 20px; 
     text-align: center; 
-    width: 450px; /* 幅を少し広げて余裕を持たせる */
-    max-width: 90%; /* スマホでは画面幅に合わせる */
+    width: 500px; 
+    max-width: 90%; 
     
     box-shadow: 0 20px 50px rgba(0,0,0,0.3);
     position: relative; /* バッジの位置基準 */
-    
-    /* ★ここもポイント！ */
-    margin-top: 80px;    /* 上にスペースを空けて、バッジが見切れないようにする */
-    margin-bottom: 50px; /* 下にもスペースを */
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;     /* 横方向中央揃え */
 }
 
-/* ランクバッジ（位置はそのまま） */
+/* ランクバッジ */
 #rank-badge {
     position: absolute; 
     top: -40px; 
     left: 50%; 
     transform: translateX(-50%);
-    width: 80px; 
-    height: 80px; 
+    width: 80px; height: 80px; 
     background: #f1c40f; 
     color: #fff;
-    font-size: 40px; 
-    font-weight: bold; 
+    font-size: 40px; font-weight: bold; 
     border-radius: 50%;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
+    display: flex; justify-content: center; align-items: center;
     border: 5px solid #fff; 
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     z-index: 10;
 }
-.result-icon { font-size: 60px; color: #f1c40f; margin-bottom: 20px; }
-.result-stats { font-size: 18px; margin: 20px 0; color: #555; background: #f9f9f9; padding: 15px; border-radius: 10px; }
-.msg-text { font-size: 16px; font-weight: bold; color: #e67e22; margin-bottom: 30px; line-height: 1.5; }
-.retry-btn {
-    padding: 12px 30px; font-size: 16px; background: #2c3e50; color: white;
-    border: none; border-radius: 50px; cursor: pointer; transition: 0.3s;
+.rank-s { background: linear-gradient(135deg, #ffd700, #fdb931) !important; border-color: #fff8dc !important; }
+.rank-a { background: #e74c3c !important; }
+.rank-b { background: #3498db !important; }
+.rank-c { background: #2ecc71 !important; }
+.rank-d { background: #95a5a6 !important; }
+
+#result-title { margin-top: 20px; margin-bottom: 30px; font-size: 24px; color: #2c3e50; }
+
+/* ★ここが消えてたやつ！復活！ */
+.result-grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+    margin-bottom: 30px;
 }
-.retry-btn:hover { background: #34495e; transform: scale(1.05); }
+
+.result-item {
+    background: #f8f9fa; 
+    padding: 15px; 
+    border-radius: 8px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    border: 1px solid #eee; /* 薄い枠線で見やすく */
+}
+.result-item .label { font-size: 12px; color: #7f8c8d; margin-bottom: 5px; }
+.result-item .value { font-size: 24px; font-weight: bold; color: #2c3e50; }
+
+/* 苦手キー・分析エリア */
+.analysis-area {
+    margin-bottom: 20px; padding: 20px; background: #fff5f8;
+    border-radius: 10px; border: 1px dashed #ffb7d2;
+}
+#best-score-info { font-weight: bold; color: #e67e22; margin-bottom: 15px; }
+
+#weak-keys-list { display: flex; justify-content: center; gap: 10px; }
+.weak-key {
+    background: #e74c3c; color: white; width: 35px; height: 35px;
+    border-radius: 8px; display: flex; justify-content: center; align-items: center;
+    font-weight: bold; font-family: 'Courier New', monospace;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.msg-text { font-size: 16px; font-weight: bold; color: #e67e22; margin-bottom: 30px; line-height: 1.5; }
+
+.retry-btn {
+    padding: 12px 40px; font-size: 16px; background: #2c3e50; color: white;
+    border: none; border-radius: 50px; cursor: pointer; transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.retry-btn:hover { background: #34495e; transform: translateY(-2px); }
