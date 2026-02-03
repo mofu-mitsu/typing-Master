@@ -126,16 +126,73 @@ body {
 }
 .status-item i { margin-right: 5px; color: #aaa; }
 
-/* 表示エリア */
-#char-image-box { height: 130px; margin-bottom: 15px; text-align: center; }
-#char-img { height: 100%; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); }
+/* =========================================
+   表示エリア（画像・テキスト）
+   ========================================= */
 
-#question-area { text-align: center; min-height: 140px; margin-bottom: 10px; }
-#sender-info { font-size: 14px; color: #888; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; gap: 5px; }
+/* 画像が入る箱（Flexboxで真ん中に寄せる！） */
+#char-image-box { 
+    height: 140px;          /*高さを確保*/
+    margin-bottom: 15px; 
+    
+    /* ★ここが重要！画像を中央揃えにする設定 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;              /* グルチャで複数並ぶ時の間隔 */
+}
 
-#display-text { font-size: 26px; font-weight: bold; margin: 10px 0; line-height: 1.4; white-space: pre-wrap; }
-#reading-text { color: #888; font-size: 15px; margin-bottom: 5px; }
+/* ① 単体キャラの画像設定 */
+.char-img-single {
+    height: 100%;           /* 箱の高さ（140px）に合わせる */
+    width: auto;            /* 横幅は自動（比率を崩さない） */
+    object-fit: contain;    /* はみ出さずに全体を表示 */
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); /* 影をつけて浮き上がらせる */
+}
 
+/* ② グルチャ用の丸アイコン設定 */
+.char-img-group {
+    height: 80px;           /* 少し小さめにする */
+    width: 80px;            /* 正方形 */
+    object-fit: cover;      /* トリミングして埋める */
+    border-radius: 50%;     /* 丸くする */
+    border: 3px solid #fff; /* 白いフチをつける */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* お題テキストエリア */
+#question-area { 
+    text-align: center; 
+    min-height: 140px; 
+    margin-bottom: 10px; 
+}
+
+/* 送信者情報（○○からLINEが届きました、とか） */
+#sender-info { 
+    font-size: 14px; 
+    color: #888; 
+    margin-bottom: 5px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 5px; 
+}
+
+/* メインの日本語テキスト */
+#display-text { 
+    font-size: 26px; 
+    font-weight: bold; 
+    margin: 10px 0; 
+    line-height: 1.4; 
+    white-space: pre-wrap; 
+}
+
+/* 読み仮名 */
+#reading-text { 
+    color: #888; 
+    font-size: 15px; 
+    margin-bottom: 5px; 
+}
 /* コメント（リアクション） */
 #char-comment-box {
     height: 40px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;
