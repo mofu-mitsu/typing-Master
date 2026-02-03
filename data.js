@@ -5,74 +5,74 @@
    ========================================= */
 const businessData = [
     { id: "b1", text: "お世話になっております", kana: "おせわになっております", romaji: "osewaninatteorimasu", subtype: "basic" },
-    { id: "b2", text: "報告・連絡・相談", kana: "ほうこく・れんらく・そうだん", romaji: "houkoku/renraku/soudan", subtype: "basic" },
+    { id: "b2", text: "報告・連絡・相談", kana: "ほうこく・れんらく・そうだん", romaji: "houkoku/renraku/soudann", subtype: "basic" },
     { id: "b3", text: "議事録の作成", kana: "ぎじろくのさくせい", romaji: "gijirokunosakusei", subtype: "basic" },
     { id: "b4", text: "株式会社とりの丘", kana: "かぶしきがいしゃとりのおか", romaji: "kabusikigaisyatorinooka", subtype: "basic" },
     { id: "b5", text: "承知いたしました", kana: "しょうちいたしました", romaji: "syoutiitasimasita", subtype: "basic" },
     { id: "b6",  text: "よろしくお願いいたします", kana: "よろしくおねがいいたします", romaji: "yoroshikuonegaishimasu", subtype: "basic" },
-    { id: "b7",  text: "ご確認のほどお願いいたします", kana: "ごかくにんのほどおねがいいたします", romaji: "gokakuninnnohodoonregaishimasu", subtype: "basic" },
+    { id: "b7",  text: "ご確認のほどお願いいたします", kana: "ごかくにんのほどおねがいいたします", romaji: "gokakuninnnohodoonegaishimasu", subtype: "basic" },
     { id: "b8",  text: "資料を添付いたします", kana: "しりょうをてんぷいたします", romaji: "siryouotennpuitasimasu", subtype: "basic" },
-    { id: "b9",  text: "本日の予定をご共有します", kana: "ほんじつのよていをごきょうゆうします", romaji: "honjitsunoyoteiwokyouyuusimasu", subtype: "basic" },
+    { id: "b9",  text: "本日の予定をご共有します", kana: "ほんじつのよていをごきょうゆうします", romaji: "honnjitsunoyoteiwokyouyuusimasuu", subtype: "basic" },
     { id: "b10", text: "在席しております", kana: "ざいせきしております", romaji: "zaisekisiteorimasu", subtype: "basic" },
 
     { id: "b11", text: "席を外しております", kana: "せきをはずしております", romaji: "sekiwohazusiteorimasu", subtype: "basic" },
     { id: "b12", text: "会議の準備を行います", kana: "かいぎのじゅんびをおこないます", romaji: "kaiginojunbiwookonaimasu", subtype: "basic" },
-    { id: "b13", text: "書類をファイリングします", kana: "しょるいをふぁいりんぐします", romaji: "soruiwofairingusimasu", subtype: "basic" },
-    { id: "b14", text: "スケジュールを調整します", kana: "すけじゅーるをちょうせいします", romaji: "sukejuuruwotyouseisimasu", subtype: "basic" },
+    { id: "b13", text: "書類をファイリングします", kana: "しょるいをふぁいりんぐします", romaji: "syoruiwofairingusimasu", subtype: "basic" },
+    { id: "b14", text: "スケジュールを調整します", kana: "すけじゅーるをちょうせいします", romaji: "sukejyu-ruwotyouseisimasu", subtype: "basic" },
     { id: "b15", text: "Excelで集計します", kana: "えくせるでしゅうけいします", romaji: "ekuserudeshuukeisimasu", subtype: "basic" },
 
-    { id: "b16", text: "データ入力を行います", kana: "でーたにゅうりょくをおこないます", romaji: "deetanyuuryokuwookonaimasu", subtype: "basic" },
-    { id: "b17", text: "郵便物を仕分けします", kana: "ゆうびんぶつをしわけします", romaji: "yuubinbutusosiwakesimasu", subtype: "basic" },
+    { id: "b16", text: "データ入力を行います", kana: "でーたにゅうりょくをおこないます", romaji: "de-tanyuuryokuwookonaimasu", subtype: "basic" },
+    { id: "b17", text: "郵便物を仕分けします", kana: "ゆうびんぶつをしわけします", romaji: "yuubinbutuwosiwakesimasu", subtype: "basic" },
     { id: "b18", text: "勤怠の確認をお願いします", kana: "きんたいのかくにんをおねがいします", romaji: "kintainokakuninnwoonegaishimasu", subtype: "basic" },
     { id: "b19", text: "ご連絡ありがとうございます", kana: "ごれんらくありがとうございます", romaji: "gorenrakuarigatougozaimasu", subtype: "basic" },
-    { id: "b20", text: "本日中に対応いたします", kana: "ほんじつちゅうにたいおういたします", romaji: "honjituchuunitaiouitasimasu", subtype: "basic" },
+    { id: "b20", text: "本日中に対応いたします", kana: "ほんじつちゅうにたいおういたします", romaji: "honjitsuchuunitaiouitasimasu", subtype: "basic" },
 
-    { id: "b21", text: "データを更新しました", kana: "でーたをこうしんしました", romaji: "deetawokousinsimasu", subtype: "basic" },
+    { id: "b21", text: "データを更新しました", kana: "でーたをこうしんしました", romaji: "de-tawokousinnsimasita", subtype: "basic" },
     { id: "b22", text: "ファイル名を変更しました", kana: "ふぁいるめいをへんこうしました", romaji: "fairumeiwohenkousimasita", subtype: "basic" },
-    { id: "b23", text: "パスワードを共有します", kana: "ぱすわーどをきょうゆうします", romaji: "pasuwaadowokyouyuusimasu", subtype: "basic" },
+    { id: "b23", text: "パスワードを共有します", kana: "ぱすわーどをきょうゆうします", romaji: "pasuwa-dowokyouyuusimasu", subtype: "basic" },
     { id: "b24", text: "本件につきまして", kana: "ほんけんにつきまして", romaji: "honkennitsukimashite", subtype: "basic" },
     { id: "b25", text: "ご査収ください", kana: "ごさしゅうください", romaji: "gosasyuukudasai", subtype: "basic" },
     { id: "b26", text: "ご対応ありがとうございます", kana: "ごたいおうありがとうございます", romaji: "gotaiouarigatougozaimasu", subtype: "basic" },
     { id: "b27", text: "引き続きよろしくお願いいたします", kana: "ひきつづきよろしくおねがいいたします", romaji: "hikitsuzukiyoroshikuonegaishimasu", subtype: "basic" },
-    { id: "b28", text: "メールを確認いたしました", kana: "めーるをかくにんいたしました", romaji: "meeruwokakuninitaishimasu", subtype: "basic" },
-    { id: "b29", text: "資料をご提出ください", kana: "しりょうをごていしゅつください", romaji: "siryouogoteishutukudasai", subtype: "basic" },
-    { id: "b30", text: "会議室を予約します", kana: "かいぎしつをよやくします", romaji: "kaigisituwoyoyakusimasu", subtype: "basic" },
+    { id: "b28", text: "メールを確認いたしました", kana: "めーるをかくにんいたしました", romaji: "me-ruwokakuninnitaishimasita", subtype: "basic" },
+    { id: "b29", text: "資料をご提出ください", kana: "しりょうをごていしゅつください", romaji: "siryouwogoteishutsukudasai", subtype: "basic" },
+    { id: "b30", text: "会議室を予約します", kana: "かいぎしつをよやくします", romaji: "kaigisitsuwoyoyakusimasu", subtype: "basic" },
 
-    { id: "b31", text: "本日の業務を開始します", kana: "ほんじつのぎょうむをかいしします", romaji: "honjitunogyomuwokaishisimasu", subtype: "basic" },
-    { id: "b32", text: "進捗をご報告します", kana: "しんちょくをごほうこくします", romaji: "shintyokugohoukokusimasu", subtype: "basic" },
+    { id: "b31", text: "本日の業務を開始します", kana: "ほんじつのぎょうむをかいしします", romaji: "honjitsunogyomuwokaishisimasu", subtype: "basic" },
+    { id: "b32", text: "進捗をご報告します", kana: "しんちょくをごほうこくします", romaji: "shinncyokuwogohoukokusimasu", subtype: "basic" },
     { id: "b33", text: "不備がないか確認してください", kana: "ふびがないかかくにんしてください", romaji: "fubiganai kakakuninsitekudasai", subtype: "basic" },
     { id: "b34", text: "担当者に共有いたします", kana: "たんとうしゃにきょうゆういたします", romaji: "tantousyanikyouyuuitasimasu", subtype: "basic" },
     { id: "b35", text: "ご指摘ありがとうございます", kana: "ごしてきありがとうございます", romaji: "gositekiarigatougozaimasu", subtype: "basic" },
 
-    { id: "b36", text: "変更内容を反映しました", kana: "へんこうないようをはんえいしました", romaji: "henkounaijyouwohanneisimasita", subtype: "basic" },
-    { id: "b37", text: "本件につきご連絡いたします", kana: "ほんけんにつきごれんらくいたします", romaji: "honkennitsukigorenrakuitasimasu", subtype: "basic" },
+    { id: "b36", text: "変更内容を反映しました", kana: "へんこうないようをはんえいしました", romaji: "henkounaiyouwohanneisimasita", subtype: "basic" },
+    { id: "b37", text: "本件につきご連絡いたします", kana: "ほんけんにつきごれんらくいたします", romaji: "honkennitsukigorennrakuitasimasu", subtype: "basic" },
     { id: "b38", text: "ご都合のよい日時を教えてください", kana: "ごつごうのよいにちじをおしえてください", romaji: "gotsugounoyoinitijiwoosietekudasai", subtype: "basic" },
-    { id: "b39", text: "確認後あらためてご連絡します", kana: "かくにんごあらためてごれんらくします", romaji: "kakuningoaratametegorenrakusimasu", subtype: "basic" },
-    { id: "b40", text: "添付ファイルをご確認ください", kana: "てんぷふぁいるをごかくにんください", romaji: "tenpufairuwogakunin kudasai", subtype: "basic" },
+    { id: "b39", text: "確認後あらためてご連絡します", kana: "かくにんごあらためてごれんらくします", romaji: "kakuningoaratametegorennrakusimasu", subtype: "basic" },
+    { id: "b40", text: "添付ファイルをご確認ください", kana: "てんぷふぁいるをごかくにんください", romaji: "tenpufairuwogokakuninn kudasai", subtype: "basic" },
 
     { id: "b41", text: "至急ご対応お願いいたします", kana: "しきゅうごたいおうおねがいいたします", romaji: "shikyuugotaiouonegaishimasu", subtype: "basic" },
-    { id: "b42", text: "電話を転送いたしました", kana: "でんわをてんそういたしました", romaji: "denwawotensouitasimasu", subtype: "basic" },
+    { id: "b42", text: "電話を転送いたしました", kana: "でんわをてんそういたしました", romaji: "denwawotensouitasimasita", subtype: "basic" },
     { id: "b43", text: "席に戻りました", kana: "せきにもどりました", romaji: "sekini modorimasita", subtype: "basic" },
     { id: "b44", text: "不在のため折り返します", kana: "ふざいのためおりかえします", romaji: "fuzainotameorikaesimasu", subtype: "basic" },
     { id: "b45", text: "資料を再送いたします", kana: "しりょうをさいそういたします", romaji: "siryouosaisouitasimasu", subtype: "basic" },
 
-    { id: "b46", text: "承認をお願いいたします", kana: "しょうにんをおねがいいたします", romaji: "shouninwoonegaishimasu", subtype: "basic" },
+    { id: "b46", text: "承認をお願いいたします", kana: "しょうにんをおねがいいたします", romaji: "shouninwoonegaiitashimasu", subtype: "basic" },
     { id: "b47", text: "会議が開始されました", kana: "かいぎがかいしされました", romaji: "kaigigakaishisaremashita", subtype: "basic" },
     { id: "b48", text: "議題を共有いたします", kana: "ぎだいをきょうゆういたします", romaji: "gidaiwokyouyuuitasimasu", subtype: "basic" },
-    { id: "b49", text: "担当者へ引き継ぎました", kana: "たんとうしゃへひきつぎました", romaji: "tantousyaehikitsugimasita", subtype: "basic" },
-    { id: "b50", text: "問題を確認中です", kana: "もんだいをかくにんちゅうです", romaji: "mondaikakuninchuudesu", subtype: "basic" },
+    { id: "b49", text: "担当者へ引き継ぎました", kana: "たんとうしゃへひきつぎました", romaji: "tantousyahehikitsugimasita", subtype: "basic" },
+    { id: "b50", text: "問題を確認中です", kana: "もんだいをかくにんちゅうです", romaji: "monndaikakuninnchuudesu", subtype: "basic" },
 
     { id: "b51", text: "回覧資料を回付します", kana: "かいらんしりょうをかいふします", romaji: "kairannsiryouokaifusimasu", subtype: "basic" },
-    { id: "b52", text: "誤字を修正いたしました", kana: "ごじをしゅうせいいたしました", romaji: "gojioshuseiitasimasu", subtype: "basic" },
-    { id: "b53", text: "最新版を共有いたします", kana: "さいしんばんをきょうゆういたします", romaji: "saishinbanwokyouyuuitasimasu", subtype: "basic" },
-    { id: "b54", text: "担当者へ確認しています", kana: "たんとうしゃへかくにんしています", romaji: "tantousyahekakuninsiteimasu", subtype: "basic" },
-    { id: "b55", text: "会議資料を追加しました", kana: "かいぎしりょうをついかしました", romaji: "kaigisiryouotsuikasimasu", subtype: "basic" },
+    { id: "b52", text: "誤字を修正いたしました", kana: "ごじをしゅうせいいたしました", romaji: "gojioshuuseiitasimasita", subtype: "basic" },
+    { id: "b53", text: "最新版を共有いたします", kana: "さいしんばんをきょうゆういたします", romaji: "saishinnbannwokyouyuuitasimasu", subtype: "basic" },
+    { id: "b54", text: "担当者へ確認しています", kana: "たんとうしゃへかくにんしています", romaji: "tantousyahekakuninnsiteimasu", subtype: "basic" },
+    { id: "b55", text: "会議資料を追加しました", kana: "かいぎしりょうをついかしました", romaji: "kaigisiryouwotsuikasimasita", subtype: "basic" },
 
-    { id: "b56", text: "記入漏れがないか確認します", kana: "きにゅうもれがないかかくにんします", romaji: "kinyuumoreganaikakakuninshimasu", subtype: "basic" },
-    { id: "b57", text: "本日のタスクを整理します", kana: "ほんじつのたすくをせいりします", romaji: "honjitunotaskwoseirisimasu", subtype: "basic" },
-    { id: "b58", text: "メール送信を完了しました", kana: "めーるそうしんをかんりょうしました", romaji: "meerusousinwokanryousimasu", subtype: "basic" },
-    { id: "b59", text: "必要書類を提出しました", kana: "ひつようしょるいをていしゅつしました", romaji: "hitsuuyousyoruiteishutsusimasu", subtype: "basic" },
-    { id: "b60", text: "予定をカレンダーに反映しました", kana: "よていをかれんだーにはんえいしました", romaji: "yoteiwocarenda-nihanneisimasu", subtype: "basic" }
+    { id: "b56", text: "記入漏れがないか確認します", kana: "きにゅうもれがないかかくにんします", romaji: "kinyuumoreganaikakakuninnshimasu", subtype: "basic" },
+    { id: "b57", text: "本日のタスクを整理します", kana: "ほんじつのたすくをせいりします", romaji: "honjitunotasukuwoseirisimasu", subtype: "basic" },
+    { id: "b58", text: "メール送信を完了しました", kana: "めーるそうしんをかんりょうしました", romaji: "me-rusousinnwokannryousimasita", subtype: "basic" },
+    { id: "b59", text: "必要書類を提出しました", kana: "ひつようしょるいをていしゅつしました", romaji: "hitsuyousyoruiteishutsusimasita", subtype: "basic" },
+    { id: "b60", text: "予定をカレンダーに反映しました", kana: "よていをかれんだーにはんえいしました", romaji: "yoteiwocarenda-nihanneisimasita", subtype: "basic" }
 ];
 
 /* =========================================
@@ -1127,7 +1127,7 @@ const schoolData = [
         group: "1-4",
         text: "寺田 山茶花", 
         kana: "てらだ さやか", 
-        romaji: "teruada sayaka", 
+        romaji: "terada sayaka", 
         start_msg: "さやか「寺田山茶花です……よろしゅうお願いします」",
         reaction_good: "さやか「あ……合ってます。ありがとうございます」", 
         reaction_bad: "さやか「そ、そこ……違うと思いますえ」",
@@ -3657,7 +3657,7 @@ const schoolData = [
         sender: "山神 小福",
         text: "先生、本日も山の巡回を終えました。異常はありません。",
         kana: "ほうこくありがとう。あんぜんをさいゆうせんで。",
-        romaji: "houkoku arigatou. anzen o sai yuusen de.",
+        romaji: "houkoku arigatou. annzen wo sai yuusen de.",
         start_msg: "（こふくからLINEが届きました）",
         reaction_good: "こふく「了解しました」",
         reaction_bad: "こふく「先生、表記が違います」",
@@ -3853,7 +3853,7 @@ const schoolData = [
         sender: "高槁 優侍",
         text: "先生、本日の規則違反について確認したい点があります。",
         kana: "きそくはみんなをまもるためのものです。",
-        romaji: "kisoku wa minna o mamoru tame no mono desu",
+        romaji: "kisoku wa minna wo mamoru tame no mono desu",
         start_msg: "（ゆうじからLINEが届きました）",
         reaction_good: "ゆうじ「はい。納得しました」",
         reaction_bad: "ゆうじ「先生、誤字は看過できません」",
@@ -5860,7 +5860,7 @@ const schoolData = [
     start_msg: "こはく「先生。校内掲示用の注意文を作成してください。」",
     text: "校則は全生徒が守るべき重要な規律です",
     kana: "こうそくはぜんせいとがまもるべきじゅうようなきりつです",
-    romaji: "kousoku wa zenseito ga mamorubeki juuyou na kiritsu desu",
+    romaji: "kousoku wa zennseito ga mamorubeki juuyou na kiritsu desu",
     reaction_good: "こはく「確認しました。問題ありません。」",
     reaction_bad: "こはく「……誤字があります。修正を。」",
     image: "kohaku.png"
@@ -11124,7 +11124,7 @@ const schoolData = [
         "こたろう「人柱！？それもまた英雄の役割か！？」",
         text: "生徒を電源にしないこと。",
         kana: "せいとをでんげんにしないこと。",
-        romaji: "seito wo dengen ni shinai koto",
+        romaji: "seito wo denngenn ni shinai koto",
         reaction_good:
         "てつ「ちぇっ、先生はエコじゃないね〜」\n" +
         "こたろう「先生！僕のエネルギーは自由のために使います！」",
@@ -12469,7 +12469,7 @@ const schoolData = [
             "ゆうじ「……その態度が気に入らない」",
         text: "感情的にならず、話し合いましょう。",
         kana: "かんじょうてきにならず、はなしあいましょう。",
-        romaji: "kanjouteki ni narazu, hanashiai mashou",
+        romaji: "kannjouteki ni narazu, hanashiai mashou",
         reaction_good:
             "ゆうじ「……失礼しました。続けます」\n" +
             "すおう「ふふ、先生は中立なんだ」",
@@ -13349,7 +13349,7 @@ const schoolData = [
             "なみ「でも嫌いじゃありませんわ」",
         text: "二人とも相手の裏を理解した上で、遊んでいる。",
         kana: "ふたりともあいてのうらをりかいしたうえで、あそんでいる。",
-        romaji: "futari tomo aite no ura o rikai shita ue de, asondeiru",
+        romaji: "futari tomo aite no ura wo rikai shita ue de, asonndeiru",
         reaction_good:
             "なみ「よく見えてますわ」\n" +
             "みりん「さすが〜！」",
@@ -14897,7 +14897,7 @@ const schoolData = [
             "こはく「褒めるな。集中しろ」",
         text: "私語を慎みなさい。",
         kana: "しごをつつしみなさい。",
-        romaji: "shigo o tsutsushimi nasai",
+        romaji: "shigo wo tsutsushimi nasai",
         reaction_good:
             "まちえ「失礼しました」\n" +
             "こはく「うむ」",
@@ -15525,7 +15525,7 @@ const schoolData = [
             "きょう「まぁ、正論だけど」",
         text: "議論は良いですが、今は問題文を確認してください。",
         kana: "ぎろんはよいですが、いまはもんだいぶんをかくにんしてください。",
-        romaji: "giron wa yoi desu ga ima wa mondai bun o kakunin shite kudasai",
+        romaji: "giron wa yoi desu ga ima wa mondai bunn wo kakunin shite kudasai",
         reaction_good:
             "ゆうじ「了解しました」\n" +
             "きょう「……はい」",
@@ -15630,7 +15630,7 @@ const schoolData = [
         "こはく「規律は守るためにある」",
     text: "今は授業中です。続きは休み時間にしてください。",
     kana: "いまはじゅぎょうちゅうです。つづきはやすみじかんにしてください。",
-    romaji: "ima wa jugyouchuu desu. tsuzuki wa yasumijikan ni shite kudasai",
+    romaji: "ima ha jugyouchuu desu. tsuzuki wa yasumijikann ni shite kudasai",
     reaction_good:
         "ぶんた「はいはい、あとでな」\n" +
         "こはく「了解しました」",
@@ -20909,7 +20909,7 @@ const schoolData = [
             "こうた「主導権取れない実験は、実験じゃない」",
         text: "話し合いをやめなさい。",
         kana: "はなしあいをやめなさい。",
-        romaji: "hanashiai o yamenasai",
+        romaji: "hanashiai wo yamenasai",
         reaction_good:
             "こうた「了解しました」\n" +
             "のりおみ「……失敗だ」",
@@ -22273,7 +22273,7 @@ const schoolData = [
             "こうた「結果が出てないなら、そうだね」",
         text: "少し声のトーンを落としてください。", 
         kana: "すこしこえのとーんをおとしてください。",
-        romaji: "sukoshi koe no toon wo otoshite kudasai",
+        romaji: "sukoshi koe no to-nn wo otoshite kudasai",
         reaction_good:
             "こうた「……失礼しました。続けます」\n" +
             "のりおみ「……いえ。大丈夫、です」",
@@ -22881,7 +22881,7 @@ const schoolData = [
         "こうた「結果が全てだ」",
     text: "言い方には気をつけてください。",
     kana: "いいかたにはきをつけてください。",
-    romaji: "iikata ni wa ki o tsukete kudasai",
+    romaji: "iikata ni ha ki wo tsukete kudasai",
     reaction_good:
         "こうた「承知しました。ですが主張は変えません」\n" +
         "ほのか「まぁ、正論だよね〜」",
@@ -23098,7 +23098,7 @@ const schoolData = [
             "りつ「心が動かなきゃ意味ないよ☆」",
         text: "論点を整理してください。",
         kana: "ろんてんをせいりしてください。",
-        romaji: "ronten o seiri shite kudasai",
+        romaji: "ronten wo seiri shite kudasai",
         reaction_good:
             "こうた「承知しました」\n" +
             "りつ「さすが先生〜☆」",
@@ -24311,7 +24311,7 @@ const schoolData = [
             "たより「大丈夫。ここにいよう」",
         text: "声をかけますか？",
         kana: "こえをかけますか？",
-        romaji: "koe o kakemasu ka",
+        romaji: "koe wo kakemasu ka",
         reaction_good:
             "たより「ありがとうございます」\n" +
             "きそら「……ほっとしました」",
@@ -28711,7 +28711,7 @@ const schoolData = [
             "さだま「失敗前提で考えてる」",
         text: "相談は簡潔にお願いします。",
         kana: "そうだんはかんけつにおねがいします。",
-        romaji: "soudan wa kanketsu ni onegai shimasu",
+        romaji: "soudan ha kannketsu ni onegai shimasu",
         reaction_good:
             "たいち「安心しました」\n" +
             "さだま「それでいい」",
@@ -29895,7 +29895,7 @@ const schoolData = [
             "まあや「ふふ、楽しみやね」",
         text: "おしゃべりは休み時間にしましょう。", 
         kana: "おしゃべりはやすみじかんにしましょう。",
-        romaji: "oshaberi wa yasumi jikan ni shimashou",
+        romaji: "oshaberi wa yasumi jikann ni shimashou",
         reaction_good:
             "はるか「はーい！」\n" +
             "まあや「失礼しました」",
@@ -31915,7 +31915,7 @@ const schoolData = [
         "さだま「切らなくていい。優先度を下げればいい」",
     text: "表現に気をつけてください。",
     kana: "ひょうげんにきをつけてください。",
-    romaji: "hyougen ni ki o tsukete kudasai",
+    romaji: "hyougen ni ki wo tsukete kudasai",
     reaction_good:
         "さだま「了解しました」\n" +
         "みこと「さすがやな」",
@@ -32854,7 +32854,7 @@ const schoolData = [
             "まりあ「ふふ、落ち着くね✨」",
         text: "今日はゆっくりで大丈夫だよ。", 
         kana: "きょうはゆっくりでだいじょうぶだよ。",
-        romaji: "kyou wa yukkuri de daijoubu da yo",
+        romaji: "kyou ha yukkuri de daijoubu da yo",
         reaction_good:
             "あめり「……ほっ」\n" +
             "ゆこ「安心しました」\n" +
@@ -34798,7 +34798,7 @@ const schoolData = [
             "ゆこ「……ありがとう」",
         text: "私語は控えて。", 
         kana: "しごはひかえて。",
-        romaji: "shigo wa hikaete",
+        romaji: "shigo ha hikaete",
         reaction_good:
             "あめり「……ごめんなさい」\n" +
             "ゆこ「失礼しました」",
@@ -34819,7 +34819,7 @@ const schoolData = [
             "ざくろ「……はい」",
         text: "指導はほどほどに。", 
         kana: "しどうはほどほどに。",
-        romaji: "shidou wa hodohodo ni",
+        romaji: "shidou ha hodohodo ni",
         reaction_good:
             "わたる「了解しました」\n" +
             "ざくろ「……助かります」",
@@ -35057,7 +35057,7 @@ const schoolData = [
             "みりや「承知しました」",
         text: "私語は控えてください。", 
         kana: "しごはひかえてください。",
-        romaji: "shigo wa hikaete kudasai",
+        romaji: "shigo ha hikaete kudasai",
         reaction_good:
             "みりや「失礼しました」\n" +
             "まりあ「はい」",
@@ -37618,7 +37618,7 @@ const schoolData = [
             "はこも「じゃあ、確認する」",
         text: "提出状況を確認してください。",
         kana: "ていしゅつじょうきょうをかくにんしてください。",
-        romaji: "teishutsu joukyou o kakunin shite kudasai",
+        romaji: "teishutsu joukyou wo kakunin shite kudasai",
         reaction_good:
             "しずか「……それで良いです」\n" +
             "はこも「了解」",
@@ -40869,8 +40869,8 @@ const schoolData = [
             "わたる「必要ない。規律に休みはないからな。」\n" +
             "すず「（真面目すぎますに……。これでは体がもちませんよ……）」",
         text: "適度な休憩も任務のうちです。", 
-        kana: "てきどなきゅうけいもにん務のうちです。",
-        romaji: "tekido na kyuukei mo ninmu no uchi desu",
+        kana: "てきどなきゅうけいもにんむのうちです。",
+        romaji: "tekido na kyuukei mo ninnmu no uchi desu",
         reaction_good:
             "わたる「……先生がそう言うなら、5分だけ休むとするか。」\n" +
             "すず「ありがとうございます、先生。先輩も人の子でしたね。」",
@@ -42933,7 +42933,7 @@ const schoolData = [
             "まほ「あ、えっと……東京から来ました……羊は好きです……」",
         text: "一人ずつ質問しなさい。",
         kana: "ひとりずつしつもんしなさい。",
-        romaji: "hitori zutsu shitsumon shinasai",
+        romaji: "hitori zutsu shitsumonn shinasai",
         reaction_good:
             "まほ「ありがとうございます……ちょっと安心しました……」\n" +
             "りん「きっといいことあるよ〜」",
@@ -43364,7 +43364,7 @@ const schoolData = [
             "ご褒美「えぇ！？拙者たち、生命力の塊だぞ！？」",
         text: "落ち着いて距離を保ってください。",
         kana: "おちついてきょりをたもってください。",
-        romaji: "ochitsuite kyori o tamotte kudasai",
+        romaji: "ochitsuite kyori wo tamotte kudasai",
         reaction_good:
             "じゅん「理解しました。最低限の安全距離を確保します」\n" +
             "えいじ「よし！じゃあ5メートル筋トレだ！」",
