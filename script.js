@@ -15,27 +15,22 @@ let questionStartTime = 0;
 let timerInterval = null;
 let missCount = 0;
 let currentMiss = 0;
-let totalTyped = 0; // 総タイプ数（スコア計算用）
-
-// ★苦手キー分析用
-let missedKeysMap = {}; // {'a': 5, 'k': 2} みたいに記録
+let totalTyped = 0;
+let missedKeysMap = {};
 
 let isPlaying = false;
 let isWaitingNext = false;
 
-// ★音の設定
 let isMuted = false;
 const soundCorrect = new Audio('sounds/correct.mp3');
 const soundMiss = new Audio('sounds/miss.mp3');
 const soundClear = new Audio('sounds/clear.mp3');
 
-// 音量調整（うるさすぎないように）
 soundCorrect.volume = 0.5;
 soundMiss.volume = 0.3;
 soundClear.volume = 0.6;
 
 let saveData = JSON.parse(localStorage.getItem('tori_save')) || {};
-// ★ベストスコア用データも読み込む
 let scoreData = JSON.parse(localStorage.getItem('tori_score')) || {};
 
 // HTML要素取得
@@ -67,7 +62,6 @@ function toggleSound() {
 
 function playSound(type) {
     if (isMuted) return;
-    // 連続再生できるように時間をリセット
     if (type === 'correct') {
         soundCorrect.currentTime = 0;
         soundCorrect.play();
@@ -159,7 +153,6 @@ function applyModeStyles() {
     const body = document.body;
     const title = document.getElementById('app-title');
     const subInfo = document.getElementById('sub-info');
-    const soundBtn = document.getElementById('sound-btn');
     
     gameContainer.className = "";
     document.getElementById('question-area').className = "";
@@ -206,18 +199,28 @@ function prepareQuestions() {
 }
 
 /* ==========================================
-   キー入力制御
+   ★キー入力制御（Backspace無効化追加！）
    ========================================== */
 window.addEventListener('keydown', (e) => {
+    // 画面が表示されていない時は何もしない
     if (!startScreen.classList.contains('hidden')) return;
     if (!resultScreen.classList.contains('hidden')) return;
 
+    // ★重要：Backspaceキーを無効化！
+    // ユーザーが消す必要はないので、誤操作防止のために無効にする
+    if (e.key === 'Backspace') {
+        e.preventDefault();
+        return; // 何もさせない
+    }
+
+    // スペースキー処理
     if (!isPlaying) {
         if (e.code === 'Space' || e.key === ' ' || e.key === 'Spacebar') {
             e.preventDefault();
             startGame();
         }
     } else {
+        // ゲーム中、スペースキーでのスクロール等を防ぐ
         if (e.code === 'Space' || e.key === ' ' || e.key === 'Spacebar') {
             e.preventDefault();
         }
@@ -242,8 +245,8 @@ inputField.addEventListener('input', (e) => {
         if (isMatch) {
             // ✅ 正解
             typedCount++;
-            totalTyped++; // 総タイプ数加算
-            playSound('correct'); // 音！
+            totalTyped++;
+            playSound('correct');
             
             skipSpaces();
             updateRomajiDisplay();
@@ -265,9 +268,8 @@ inputField.addEventListener('input', (e) => {
             // ❌ ミス
             missCount++;
             currentMiss++;
-            playSound('miss'); // 音！
+            playSound('miss');
             
-            // ★苦手キーの記録
             if (expectedChar) {
                 missedKeysMap[expectedChar] = (missedKeysMap[expectedChar] || 0) + 1;
             }
@@ -291,7 +293,7 @@ function checkFlexibleInput(inputChar) {
 
     const replacements = [
         { from: "shi", to: "si" }, { from: "chi", to: "ti" }, { from: "tsu", to: "tu" }, 
-        { from: "fu",  to: "hu" }, { from: "ji",  to: "zi" }, 
+        { from: "fu",  to: "hu" }, { from: "ji",  to: "zi" },  { from: "ti", to: "chi" }, 
         { from: "sha", to: "sya" }, { from: "shu", to: "syu" }, { from: "sho", to: "syo" },
         { from: "cha", to: "tya" }, { from: "chu", to: "tyu" }, { from: "cho", to: "tyo" },
         { from: "ja",  to: "zya" }, { from: "ju",  to: "zyu" }, { from: "jo",  to: "zyo" },
@@ -326,7 +328,7 @@ function startGame() {
     missCount = 0;
     currentMiss = 0;
     totalTyped = 0;
-    missedKeysMap = {}; // 苦手キーリセット
+    missedKeysMap = {};
     startTime = Date.now();
     
     if(timerInterval) clearInterval(timerInterval);
@@ -340,9 +342,6 @@ function startGame() {
     nextQuestion();
 }
 
-/* ==========================================
-   問題進行 & 画像管理
-   ========================================= */
 function nextQuestion() {
     if (currentIndex >= currentQuestions.length) {
         finishGame();
@@ -463,7 +462,7 @@ function updateCharExpression(emotion) {
 }
 
 /* ==========================================
-   修正する関数：questionClear
+   ★クリア処理（モード別スピード調整！）
    ========================================== */
 function questionClear() {
     isWaitingNext = true;
@@ -501,14 +500,16 @@ function questionClear() {
     updateRomajiDisplay();
     highlightKey(null);
 
-    // ★ここを修正！テンポアップ！
+    // ★重要！モードによって待ち時間を変える！
+    // Business: 0.5秒, School: 1.2秒 (セリフ読む用)
+    let delay = (currentMode === 'business') ? 500 : 1200;
+
     setTimeout(() => {
         currentIndex++;
         nextQuestion();
-    }, 800); // ← ここを 2000 から 800 に変更！（0.8秒）
+    }, delay);
 }
 
-// ...（表示更新系は省略、そのまま）...
 function updateRomajiDisplay() {
     let html = "";
     for (let i = 0; i < targetRomaji.length; i++) {
@@ -539,22 +540,17 @@ function flashKeyboardError() {
     }
 }
 
-/* ==========================================
-   ★終了画面（ランク・ベストスコア・苦手キー計算！）
-   ========================================== */
 function finishGame() {
     isPlaying = false;
     clearInterval(timerInterval);
-    playSound('clear'); // 業務完了音！
+    playSound('clear');
 
     const finalTime = parseFloat(document.getElementById('time-display').innerText);
-    const wpm = (totalTyped / finalTime) * 60; // 1分あたりの打鍵数
+    const wpm = (totalTyped / finalTime) * 60; 
     
-    // スコア計算: (WPM * 10) - (ミス * 50)
     let score = Math.round((wpm * 10) - (missCount * 50));
     if (score < 0) score = 0;
 
-    // ランク計算
     let rank = "D";
     let rankClass = "rank-d";
     if (score >= 3000) { rank = "S"; rankClass = "rank-s"; }
@@ -562,8 +558,6 @@ function finishGame() {
     else if (score >= 1000) { rank = "B"; rankClass = "rank-b"; }
     else if (score >= 500) { rank = "C"; rankClass = "rank-c"; }
 
-    // ベストスコア保存・取得
-    // 保存キー例: "best_school_roster_2-1_5" (モード_サブ_クラス_問数)
     const saveKey = `best_${currentMode}_${currentSubMode}_${currentClass}_${maxQuestions}`;
     const prevBest = scoreData[saveKey] || 0;
 
@@ -572,10 +566,9 @@ function finishGame() {
         localStorage.setItem('tori_score', JSON.stringify(scoreData));
     }
 
-    // 苦手キー分析（ミスの多い順にソート）
     const sortedWeakKeys = Object.entries(missedKeysMap)
-        .sort((a, b) => b[1] - a[1]) // 回数多い順
-        .slice(0, 5); // トップ5
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 5); 
 
     let weakKeysHtml = "";
     if (sortedWeakKeys.length > 0) {
@@ -586,14 +579,13 @@ function finishGame() {
         weakKeysHtml = "なし (Perfect!)";
     }
 
-    // 結果表示
     document.removeEventListener('click', keepFocus);
     gameContainer.classList.add('hidden');
     resultScreen.classList.remove('hidden');
 
     const rankBadge = document.getElementById('rank-badge');
     rankBadge.innerText = rank;
-    rankBadge.className = ""; // クラスリセット
+    rankBadge.className = ""; 
     rankBadge.classList.add(rankClass);
 
     document.getElementById('result-score').innerText = score;
