@@ -34,7 +34,7 @@ const businessData = [
     { id: "b25", text: "ご査収ください", kana: "ごさしゅうください", romaji: "gosasyuukudasai", subtype: "basic" },
     { id: "b26", text: "ご対応ありがとうございます", kana: "ごたいおうありがとうございます", romaji: "gotaiouarigatougozaimasu", subtype: "basic" },
     { id: "b27", text: "引き続きよろしくお願いいたします", kana: "ひきつづきよろしくおねがいいたします", romaji: "hikitsuzukiyoroshikuonegaishimasu", subtype: "basic" },
-    { id: "b28", text: "メールを確認いたしました", kana: "めーるをかくにんいたしました", romaji: "me-ruwokakuninnitaishimasita", subtype: "basic" },
+    { id: "b28", text: "メールを確認いたしました", kana: "めーるをかくにんいたしました", romaji: "me-ruwokakuninnitashimasita", subtype: "basic" },
     { id: "b29", text: "資料をご提出ください", kana: "しりょうをごていしゅつください", romaji: "siryouwogoteishutsukudasai", subtype: "basic" },
     { id: "b30", text: "会議室を予約します", kana: "かいぎしつをよやくします", romaji: "kaigisitsuwoyoyakusimasu", subtype: "basic" },
 
