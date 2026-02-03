@@ -462,6 +462,9 @@ function updateCharExpression(emotion) {
     };
 }
 
+/* ==========================================
+   修正する関数：questionClear
+   ========================================== */
 function questionClear() {
     isWaitingNext = true;
     const q = currentQuestions[currentIndex];
@@ -476,7 +479,7 @@ function questionClear() {
     if (currentMiss === 0) {
         reaction = "Perfect!!✨ " + reaction;
         color = "#f1c40f";
-        playSound('correct'); // クリア音鳴らすのもありだけど、ここはあえて静かに
+        playSound('correct'); 
     } else if (speed > 5 && q.reaction_fast) {
         reaction = q.reaction_fast;
         color = "#e67e22";
@@ -498,10 +501,11 @@ function questionClear() {
     updateRomajiDisplay();
     highlightKey(null);
 
+    // ★ここを修正！テンポアップ！
     setTimeout(() => {
         currentIndex++;
         nextQuestion();
-    }, 2000); 
+    }, 800); // ← ここを 2000 から 800 に変更！（0.8秒）
 }
 
 // ...（表示更新系は省略、そのまま）...
