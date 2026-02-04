@@ -295,7 +295,7 @@ function checkFlexibleInput(inputChar) {
         { from: "shi", to: "si" }, { from: "chi", to: "ti" }, { from: "tsu", to: "tu" }, { from: "tsu", to: "cyu" },  { from: "jyu", to: "10" },   { from: "ju", to: "10" }, 
         { from: "fu",  to: "hu" }, { from: "ji",  to: "zi" },  { from: "ti", to: "chi" },  { from: "ha", to: "wa" },  { from: "wa", to: "ha" }, 
         { from: "sha", to: "sya" }, { from: "shu", to: "syu" }, { from: "sho", to: "syo" }, { from: "o", to: "wo" },
-        { from: "cha", to: "tya" }, { from: "chu", to: "tyu" }, { from: "cho", to: "tyo" },
+        { from: "cha", to: "tya" }, { from: "chu", to: "tyu" }, { from: "cho", to: "tyo" }, { from: "zu", to: "du" },{ from: "du", to: "zu" },
         { from: "ja",  to: "zya" }, { from: "ju",  to: "zyu" }, { from: "jo",  to: "zyo" },
         { from: "hi", to: "i", prev: "s" }, { from: "su", to: "u", prev: "t" }, 
         { from: "ha", to: "ya", prev: "s" }, { from: "hu", to: "yu", prev: "s" }, { from: "ho", to: "yo", prev: "s" }
