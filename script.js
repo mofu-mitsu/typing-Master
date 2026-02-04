@@ -293,7 +293,7 @@ function checkFlexibleInput(inputChar) {
 
     const replacements = [
         { from: "shi", to: "si" }, { from: "chi", to: "ti" }, { from: "tsu", to: "tu" }, { from: "tsu", to: "cyu" },  { from: "jyu", to: "10" },   { from: "ju", to: "10" }, 
-        { from: "fu",  to: "hu" }, { from: "ji",  to: "zi" },  { from: "ti", to: "chi" }, 
+        { from: "fu",  to: "hu" }, { from: "ji",  to: "zi" },  { from: "ti", to: "chi" },  { from: "ha", to: "wa" },  { from: "wa", to: "ha" }, 
         { from: "sha", to: "sya" }, { from: "shu", to: "syu" }, { from: "sho", to: "syo" },
         { from: "cha", to: "tya" }, { from: "chu", to: "tyu" }, { from: "cho", to: "tyo" },
         { from: "ja",  to: "zya" }, { from: "ju",  to: "zyu" }, { from: "jo",  to: "zyo" },
