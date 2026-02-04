@@ -292,7 +292,7 @@ function checkFlexibleInput(inputChar) {
     const prevChar = typedCount > 0 ? targetRomaji[typedCount - 1] : "";
 
     const replacements = [
-        { from: "shi", to: "si" }, { from: "chi", to: "ti" }, { from: "tsu", to: "tu" }, { from: "tsu", to: "cyu" }, 
+        { from: "shi", to: "si" }, { from: "chi", to: "ti" }, { from: "tsu", to: "tu" }, { from: "tsu", to: "cyu" },  { from: "jyu", to: "10" },   { from: "ju", to: "10" }, 
         { from: "fu",  to: "hu" }, { from: "ji",  to: "zi" },  { from: "ti", to: "chi" }, 
         { from: "sha", to: "sya" }, { from: "shu", to: "syu" }, { from: "sho", to: "syo" },
         { from: "cha", to: "tya" }, { from: "chu", to: "tyu" }, { from: "cho", to: "tyo" },
