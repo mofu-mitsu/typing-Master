@@ -1510,7 +1510,7 @@ const schoolData = [
         group: "2-1",
         text: "水上 亮吾",
         kana: "みずかみりょうご",
-        romaji: "mizukami_ryogo",
+        romaji: "mizukami ryogo",
         start_msg: "りょうご「では…入力、お願いします。僕も確認しますね。」",
         reaction_good: "りょうご「正確ですね。素晴らしい…本当に。」",
         reaction_bad: "りょうご「すみません、少しズレてます…もう一度だけ調整を。」",
