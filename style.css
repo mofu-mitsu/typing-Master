@@ -1,364 +1,1124 @@
-@charset "UTF-8";
-
-/* =========================================
-   全体レイアウト
-   ========================================= */
+/* 全体のリセットと背景 */
 body {
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    overflow-y: auto;
-    background-color: #f4f6f9;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #1a0b2e, #4a1c40); /* 夜っぽい紫グラデ */
+    color: #fff;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* 上寄せにする */
-    padding-top: 40px;
+    align-items: center;
+}
+
+.app-container {
+    width: 90%;
+    max-width: 800px;
+    height: 90vh;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+/* --- ★修正: ホームリンクのデザイン --- */
+.home-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    display: inline-block;
+}
+.home-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+/* --- ★修正: 選択画面ヘッダー（戻るボタン左寄せ） --- */
+.selection-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 両端と中央に配置 */
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+.header-center {
+    display: flex;
+    flex-direction: column; /* タイトルと人数は縦に並べる（見やすい） */
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* 余ったスペースを使う */
+}
+
+.selection-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.selection-header p {
+    margin: 5px 0 0 0; /* タイトルとの隙間 */
+    font-size: 0.9rem;
+    color: #ff0055;
+}
+/* --- ★修正: フッターのボタン間隔 --- */
+.footer-action {
+    gap: 15px; /* ボタン同士の隙間 */
+}
+
+/* --- ★修正: 中断ボタンの位置（ヘッダー内） --- */
+.exit-btn {
+    margin-right: 15px; /* 右側に隙間を作る */
+    background: #444;
+    border: 1px solid #aaa;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.back-btn {
+    background: transparent;
+    border: 1px solid #ff0055;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap; /* 文字が折り返さないように */
+    flex-shrink: 0; /* ボタンが潰れないように */
+}
+.back-btn:hover { background: #ff0055; }
+/* 画面切り替え用 */
+.screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 上下左右に配置 */
+    align-items: center;
+    overflow: hidden; /* 画面全体はスクロールさせない */
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* タイトル画面 */
+.game-title {
+    font-size: 3rem;
+    margin-top: 100px;
+    text-shadow: 0 0 10px #ff0055;
+}
+
+.input-area {
+    margin: 40px 0;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ボタン共通 */
+.main-btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background: #ff0055;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.main-btn:active {
+    transform: scale(0.95);
+}
+
+.main-btn.disabled {
+    background: #555;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* 選択画面 */
+.tabs-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    background: #fff;
+    color: #1a0b2e;
+    font-weight: bold;
+}
+
+/* キャラ一覧グリッド（横スクロール版） */
+.char-grid {
+    width: 100%;
+    /* グリッドではなくフレックスボックスにする */
+    display: flex;
+    flex-wrap: nowrap; /* 折り返さない */
+    overflow-x: auto;  /* 横スクロール有効 */
+    gap: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    /* スクロールバーを少し綺麗に */
+    scrollbar-width: thin;
+    scrollbar-color: #ff0055 rgba(0,0,0,0.3);
+}
+
+/* Chrome/Safari用スクロールバー装飾 */
+.char-grid::-webkit-scrollbar {
+    height: 8px;
+}
+.char-grid::-webkit-scrollbar-thumb {
+    background: #ff0055;
+    border-radius: 4px;
+}
+
+/* キャラカードの幅を固定して崩れないようにする */
+.char-card {
+    flex: 0 0 100px; /* 幅100px固定・縮小しない */
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;       /* flex追加 */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.char-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.char-card.selected {
+    border-color: #00ffcc; /* 選んだら青緑に光る */
+    background: rgba(0, 255, 204, 0.1);
+}
+
+.char-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover; /* ★ここが重要！画像をトリミングして比率を保つ */
+    background: #333;
+    margin-bottom: 5px;
+    border: 2px solid #fff; /* 枠線もつけておく */
+}
+
+.char-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.char-mbti {
+    font-size: 0.7rem;
+    color: #ccc;
+}
+
+/* --- 既存のコードに追加・変更 --- */
+
+/* タイトルロゴ周り */
+.title-logo {
+    font-size: 4rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.game-title {
+    font-size: 3rem;
+    line-height: 1;
+    margin: 10px 0;
+    text-shadow: 0 0 15px rgba(255, 0, 85, 0.6);
+    text-align: center;
+}
+/* タイトル画面の調整 */
+#title-screen {
+    padding-bottom: 150px !important; /* 60px -> 150px に増量 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+/* スクロールバーのデザイン（タイトル画面用） */
+#title-screen::-webkit-scrollbar { width: 8px; }
+#title-screen::-webkit-scrollbar-thumb { background: #ff0055; border-radius: 4px; }
+#show-rules-btn {
+    flex-shrink: 0; 
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+/* 入力エリアの縮小防止 */
+.input-area {
+    flex-shrink: 0; 
+}
+/* --- ここから新しいゲーム画面用 --- */
+
+/* 自分の役職表示エリア */
+.role-reveal-area {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* CSSで作る役職カード */
+.role-card {
+    width: 200px;
+    height: 140px;
+    margin: 0 auto;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    border: 4px solid #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.role-card i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.role-card span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 役職ごとの色分け */
+.role-villager { background: linear-gradient(135deg, #4facfe, #00f2fe); } /* 青系 */
+.role-wolf     { background: linear-gradient(135deg, #ff0844, #ffb199); } /* 赤系 */
+.role-seer     { background: linear-gradient(135deg, #667eea, #764ba2); } /* 紫系 */
+.role-medium   { background: linear-gradient(135deg, #43e97b, #38f9d7); } /* 緑系 */
+.role-knight   { background: linear-gradient(135deg, #f093fb, #f5576c); } /* ピンク系 */
+.role-madman   { background: linear-gradient(135deg, #fa709a, #fee140); } /* オレンジ系 */
+
+/* メンバーリストのグリッド */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 8px;
+    width: 100%;
+    /* max-height指定は削除！scroll-contentに任せる */
+}
+
+.member-chip {
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member-chip img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    border: 2px solid transparent;
+    object-fit: cover; /* これも追加 */
+}
+.member-chip.is-player img {
+    border-color: #ffd700; /* 自分は金色枠 */
+}
+
+/* --- プロフィール表示エリア (NEW) --- */
+.char-details-box {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ff0055;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    animation: fadeIn 0.3s ease;
+}
+
+.details-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.details-content img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+
+.text-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: #ff0055;
+}
+
+.meta-info {
+    font-size: 0.8rem;
+    color: #ccc;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 10px;
+}
+
+.profile-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+    color: #eee;
+}
+
+/* --- ゲーム画面のレイアウト調整 --- */
+#game-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* app-containerの高さを使う */
+}
+
+#game-setup-area { /* 旧 #game-header-area */
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+/* gameSetupAreaが隠れる時のCSS */
+#game-setup-area.hidden {
+    height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 議論ログのメッセージ部分の幅を調整 */
+.dialogue-container div > div:last-child {
+    max-width: calc(100% - 70px); /* アイコンの幅 + margin分を引く */
+}
+
+/* 議論モードになった時の変化（ヘッダーを隠す/小さくする） */
+#game-screen.discussion-mode #game-header-area {
+    /* 役職カードなどを隠してスペースを確保 */
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin: 0;
+}
+
+/* 議論モードの時は、上部に「自分の役職：◯◯」だけ小さく出す */
+#game-screen.discussion-mode::before {
+    content: "あなたの役職：" attr(data-my-role);
+    display: block;
+    background: #ff0055;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+}
+
+/* チャットログエリア */
+.dialogue-container {
+    flex: 1; /* 残りのスペース全部使う */
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    padding: 15px;
+    overflow-y: auto; /* スクロール有効 */
+    margin-bottom: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.dialogue-container.hidden {
+    display: none;
+}
+/* --- 議論中の固定ヘッダー --- */
+.discussion-header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #ff0055;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-sizing: border-box; /* paddingを含めてwidth100%になるように */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#mini-role-icon {
+    width: 40px; /* 親要素のサイズを指定 */
+    height: 40px;
+    display: flex; /* flexboxにして子要素を中央寄せ */
+    justify-content: center;
+    align-items: center;
+}
+
+#mini-role-icon img {
+    width: 100%; /* 親要素いっぱいに広げる */
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    object-fit: cover;
+}
+
+
+.sub-btn {
+    background: #444;
+    color: #fff;
+    border: 1px solid #888;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.sub-btn:hover {
+    background: #666;
+}
+
+/* --- モーダル（ポップアップ） --- */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: #2a1a3a;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #ff0055;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
     padding-bottom: 40px;
 }
 
-.hidden { display: none !important; }
-
-/* =========================================
-   1. スタート画面
-   ========================================= */
-#start-screen {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-    display: flex; justify-content: center; align-items: center;
-    z-index: 2000;
+#role-breakdown-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 20px 0;
 }
 
-.menu-card {
-    background: #fff;
-    width: 450px;
-    padding: 40px;
+#role-breakdown-list li {
+    padding: 5px;
+    border-bottom: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 投票ボタン用色 */
+.vote-color {
+    background: #ff4400 !important;
+}
+/* メンバーリスト（議論中は下に固定とかにしてもいいけど今回はヘッダーごと消す仕様でスッキリさせる） */
+/* アクションタイプ切り替えボタン */
+.action-type-selector {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.act-type-btn {
+    padding: 8px 16px;
+    background: #444;
+    border: 1px solid #888;
+    color: #fff;
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    text-align: center;
-    border: 1px solid #eee;
-    max-height: 90vh; /* 画面からはみ出さないように */
-    overflow-y: auto; /* メニューが長い場合はスクロール */
+    cursor: pointer;
 }
 
-.menu-header h1 {
-    font-size: 28px; color: #2c3e50; margin: 10px 0 5px;
+.act-type-btn.selected {
+    background: #22cc88; /* 選択中は緑 */
+    border-color: #fff;
+    font-weight: bold;
 }
-.menu-header i { color: #3498db; }
-.menu-header p { color: #7f8c8d; font-size: 14px; margin-bottom: 30px; }
 
-.setting-area { text-align: left; margin-bottom: 30px; }
-.setting-group { margin-bottom: 15px; }
-.setting-group label {
-    display: block; font-weight: bold; color: #555; margin-bottom: 8px; font-size: 14px;
+/* セレクトボックス周り */
+.selector-area {
+    margin-bottom: 20px;
+    text-align: left;
 }
-.setting-group select {
-    width: 100%; padding: 12px; font-size: 16px;
-    border: 2px solid #eee; border-radius: 8px; outline: none; transition: 0.3s;
-}
-.setting-group select:focus { border-color: #3498db; }
 
-.start-btn {
-    width: 100%; padding: 15px; font-size: 18px; font-weight: bold;
-    background: linear-gradient(to right, #3498db, #2980b9);
-    color: white; border: none; border-radius: 50px; cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s;
+.selector-area label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+    font-size: 0.9rem;
 }
-.start-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4); }
 
-/* =========================================
-   2. ゲーム画面コンテナ
-   ========================================= */
-#game-container {
-    width: 800px;
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 8px;
     background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    padding: 30px;
-    position: relative;
-    margin-bottom: 50px; /* 下に余裕を持たせる */
+    color: #333;
 }
 
-/* 🏢 一般企業モード */
-.business-mode { border-top: 5px solid #2c3e50; }
-.business-mode #header h1 { color: #2c3e50; font-size: 20px; }
-.business-mode #sub-info { color: #7f8c8d; }
-.business-mode #sound-btn { color: #555; border-color: #ccc; }
-
-/* 🏫 教育実習モード */
-.school-mode {
-    border: 4px solid #ffb7d2;
-    background-color: #fffcfd;
-    box-shadow: 0 10px 30px rgba(255, 183, 210, 0.4);
-    font-family: "M PLUS Rounded 1c", "Varela Round", sans-serif;
-}
-.school-mode #header { border-bottom: 2px dashed #ffb7d2; padding-bottom: 15px; margin-bottom: 20px; }
-.school-mode #app-title { color: #ff66a3; font-size: 24px; text-shadow: 1px 1px 0 #fff; }
-.school-mode #sub-info { color: #ff8fb8; font-weight: bold; }
-.school-mode #back-btn { background: #ff99cc; border-radius: 20px; }
-.school-mode #sound-btn { background: #ffb7d2; color: #fff; border: none; }
-
-/* LINE風吹き出し */
-.line-style #display-text {
-    background: #e9f5ff;
-    border: 2px solid #cce5ff;
-    padding: 15px 25px;
-    border-radius: 25px;
-    border-top-left-radius: 0;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+.modal-footer {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-/* ヘッダー共通 */
-#header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-.header-right { display: flex; gap: 10px; align-items: center; }
-#app-title { margin: 0; }
-#sub-info { font-size: 14px; margin-top: 5px; }
-
-#back-btn {
-    background: #95a5a6; color: white; border: none; padding: 8px 15px;
-    cursor: pointer; border-radius: 5px; font-size: 14px; transition: 0.2s;
+/* --- 投票画面モーダル --- */
+#vote-modal {
+    z-index: 2000; /* 最前面 */
 }
-#back-btn:hover { opacity: 0.8; }
 
-#sound-btn {
-    background: none; border: 2px solid #ccc; color: #555;
-    width: 36px; height: 36px; border-radius: 50%; cursor: pointer;
-    display: flex; justify-content: center; align-items: center; transition: 0.2s;
+.vote-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
 }
-#sound-btn:hover { background: rgba(0,0,0,0.05); }
 
-/* ステータスバー */
-#status-bar {
-    display: flex; gap: 20px; margin-bottom: 20px; font-weight: bold; color: #555;
-    background: #f8f9fa; padding: 10px 15px; border-radius: 8px;
+.vote-card {
+    background: #444;
+    border: 2px solid #666;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
 }
-.status-item i { margin-right: 5px; color: #aaa; }
 
-/* =========================================
-   表示エリア（画像・テキスト）
-   ========================================= */
+.vote-card:hover {
+    background: #666;
+    border-color: #ff4400;
+}
 
-/* 画像が入る箱（Flexboxで真ん中に寄せる！） */
-#char-image-box { 
-    height: 140px;
-    margin-bottom: 15px; 
+.vote-card.selected {
+    background: #ff4400;
+    border-color: #fff;
+    transform: scale(1.05);
+}
+
+.vote-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    object-fit: cover; /* これも追加 */
+}
+
+/* 処刑演出用 */
+.execution-log {
+    color: #ff0055;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 2px solid #ff0055;
+    padding: 20px;
+    background: rgba(0,0,0,0.8);
+    margin: 20px 0;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+/* --- 人狼・占い結果のマーク --- */
+.wolf-mark {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff0055;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px; /* グルチャ用 */
-}
-
-/* ① 単体キャラの画像設定（★これでデカくなりすぎない！） */
-.char-img-single {
-    height: 100%;           /* 箱の高さに合わせる */
-    width: auto;            /* 比率維持 */
-    object-fit: contain;    /* はみ出さない */
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-}
-
-/* ② グルチャ用の丸アイコン設定 */
-.char-img-group {
-    height: 80px;
-    width: 80px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* お題テキストエリア */
-#question-area { 
-    text-align: center; 
-    min-height: 140px; 
-    margin-bottom: 10px; 
-}
-
-/* 送信者情報 */
-#sender-info { 
-    font-size: 14px; color: #888; margin-bottom: 5px; 
-    display: flex; align-items: center; justify-content: center; gap: 5px; 
-}
-
-/* メインの日本語テキスト */
-#display-text { 
-    font-size: 26px; font-weight: bold; margin: 10px 0; 
-    line-height: 1.4; white-space: pre-wrap; 
-}
-
-/* 読み仮名 */
-#reading-text { color: #888; font-size: 15px; margin-bottom: 5px; }
-
-/* コメント（リアクション）エリアの調整 */
-#char-comment-box {
-    width: 85%;
-    max-height: 100px;
-    overflow-y: auto; /* スクロール可能に */
-    background-color: #fff;
-    border: 2px solid #eee;
-    border-radius: 12px;
-    margin: 15px auto;
-    padding: 10px 15px;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
-    display: block;
-}
-
-#char-comment { 
-    font-size: 15px; font-weight: normal; color: #555;
-    line-height: 1.6; text-align: left; white-space: pre-wrap; display: block;
-}
-
-/* スクロールバー装飾 */
-#char-comment-box::-webkit-scrollbar { width: 8px; }
-#char-comment-box::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
-#char-comment-box::-webkit-scrollbar-thumb { background: #ffb7d2; border-radius: 10px; }
-
-/* 入力エリア */
-#input-area { position: relative; } 
-
-#romaji-display {
-    font-family: 'Courier New', monospace; font-size: 22px; letter-spacing: 2px;
-    color: #bbb; text-align: center; min-height: 35px; margin-bottom: 5px;
-}
-.typed-char { color: #2ecc71; }
-.highlight-char { color: #e74c3c; font-weight: bold; font-size: 26px; }
-
-#type-input {
-    width: 100%; padding: 15px; font-size: 20px; text-align: center;
-    border: 2px solid #eee; border-radius: 10px; outline: none;
-    box-sizing: border-box; background: #fff;
-}
-#type-input:focus { border-color: #3498db; background: #fdfdfd; }
-.school-mode #type-input:focus { border-color: #ff99cc; background: #fff5f8; }
-
-/* キーボード */
-#keyboard-guide {
-    margin-top: 25px; background: #fdfdfd; padding: 20px;
-    border-radius: 12px; text-align: center; border: 1px solid #eee;
-}
-.key-row { display: flex; justify-content: center; margin-bottom: 6px; }
-.key {
-    width: 45px; height: 45px; border: 1px solid #e0e0e0; border-radius: 8px;
-    margin: 3px; display: flex; justify-content: center; align-items: center;
-    font-weight: bold; color: #777; background: #fff;
-    box-shadow: 0 3px 0 #eee; transition: 0.1s; font-size: 14px;
-}
-.space-key { width: 300px; }
-.active-key {
-    background-color: #f1c40f; border-color: #f39c12; color: #fff;
-    transform: translateY(3px); box-shadow: none;
-}
-.error-key { background-color: #ff7675 !important; color: white !important; border-color: #d63031 !important; }
-
-/* =========================================
-   3. 結果画面（見切れ完全防止版！）
-   ========================================= */
-
-#result-screen {
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
-    background: rgba(44, 62, 80, 0.95);
-    z-index: 3000;
-    
-    /* 上寄せにしてスクロールさせる設定 */
-    display: flex; 
-    justify-content: center; 
-    align-items: flex-start; 
-    
-    overflow-y: auto; /* 縦スクロールOK */
-    
-    /* ★ここ調整！上は少し詰めて、下はたっぷり余白を取る！ */
-    padding-top: 60px; 
-    padding-bottom: 150px; /* ←これでボタンの下に空間ができる！ */
-    padding-left: 20px;    /* スマホ用横余白 */
-    padding-right: 20px;
-}
-
-.result-box {
-    background: #fff; 
-    padding: 40px; 
-    border-radius: 20px; 
-    text-align: center; 
-    width: 500px; 
-    max-width: 100%; /* スマホ対応 */
-    
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-    position: relative; /* バッジの位置基準 */
-    
-    /* ★ここ調整！上に無駄な隙間を作らない */
-    margin-top: 40px;    
-    margin-bottom: 50px; 
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* ランクバッジ */
-#rank-badge {
-    position: absolute; 
-    top: -40px; 
-    left: 50%; 
-    transform: translateX(-50%);
-    width: 80px; height: 80px; 
-    background: #f1c40f; 
-    color: #fff;
-    font-size: 40px; font-weight: bold; 
-    border-radius: 50%;
-    display: flex; justify-content: center; align-items: center;
-    border: 5px solid #fff; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 2px solid #fff;
     z-index: 10;
 }
-.rank-s { background: linear-gradient(135deg, #ffd700, #fdb931) !important; border-color: #fff8dc !important; }
-.rank-a { background: #e74c3c !important; }
-.rank-b { background: #3498db !important; }
-.rank-c { background: #2ecc71 !important; }
-.rank-d { background: #95a5a6 !important; }
 
-#result-title { margin-top: 20px; margin-bottom: 30px; font-size: 24px; color: #2c3e50; }
-
-.result-grid {
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 15px;
-    margin-bottom: 30px;
+.member-chip {
+    position: relative; /* バッジ表示用 */
 }
 
-.result-item {
-    background: #f8f9fa; 
-    padding: 15px; 
-    border-radius: 8px;
-    display: flex; 
-    flex-direction: column; 
+/* 夜フェーズの演出 */
+.night-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(10, 0, 20, 0.95);
+    z-index: 3000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    border: 1px solid #eee;
-}
-.result-item .label { font-size: 12px; color: #7f8c8d; margin-bottom: 5px; }
-.result-item .value { font-size: 24px; font-weight: bold; color: #2c3e50; }
-
-/* 苦手キー・分析エリア */
-.analysis-area {
-    margin-bottom: 20px; padding: 20px; background: #fff5f8;
-    border-radius: 10px; border: 1px dashed #ffb7d2;
-}
-#best-score-info { font-weight: bold; color: #e67e22; margin-bottom: 15px; }
-
-#weak-keys-list { display: flex; justify-content: center; gap: 10px; }
-.weak-key {
-    background: #e74c3c; color: white; width: 35px; height: 35px;
-    border-radius: 8px; display: flex; justify-content: center; align-items: center;
-    font-weight: bold; font-family: 'Courier New', monospace;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: #fff;
+    text-align: center;
 }
 
-.msg-text { font-size: 16px; font-weight: bold; color: #e67e22; margin-bottom: 30px; line-height: 1.5; }
+.night-title {
+    font-size: 2rem;
+    color: #aaddff;
+    text-shadow: 0 0 10px #0055ff;
+    margin-bottom: 20px;
+}
 
-.retry-btn {
-    padding: 12px 40px; font-size: 16px; background: #2c3e50; color: white;
-    border: none; border-radius: 50px; cursor: pointer; transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    /* ★ボタンの下にも少し余白をつけておく */
+/* リザルトカード */
+.result-card {
+    background: #333;
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.result-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    object-fit: cover;
+}
+
+.result-card .role-badge {
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: #000;
+}
+
+/* 陣営ごとの色 */
+.win-human .role-badge { background: #00ccff; }
+.win-wolf .role-badge { background: #ff0055; }
+
+/* --- ターンカウンター（日没ゲージ） --- */
+.turn-counter {
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffaa00;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 1px solid #ffaa00;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+/* 夜の会話ログ（オーバーレイ内） */
+.night-chat {
+    background: rgba(255, 0, 85, 0.2);
+    border: 1px solid #ff0055;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    text-align: left;
+    width: 80%;
+    max-width: 400px;
+    font-size: 0.9rem;
+}
+
+/* BGMボタン */
+.bgm-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/* オプションエリア */
+.options-area {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.options-area summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.roles-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.roles-options label {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+/* --- オプションの横スクロール --- */
+.roles-options-scroll {
+    display: flex;
+    flex-wrap: nowrap; /* 折り返さない */
+    overflow-x: auto;  /* 横スクロール */
+    gap: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px; /* スクロールバーのスペース */
+    white-space: nowrap; /* 文字折り返し禁止 */
+}
+
+.roles-options-scroll::-webkit-scrollbar { height: 6px; }
+.roles-options-scroll::-webkit-scrollbar-thumb { background: #ff0055; border-radius: 3px; }
+.roles-options-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+
+.roles-options-scroll label {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid rgba(255,255,255,0.2);
+    flex-shrink: 0; /* 縮ませない */
+}
+
+/* 役職カード (リザルト等) */
+.win-fox .role-badge { background: #ffaa00; color: #000; } /* 妖狐勝利色 */
+.win-teru .role-badge { background: #eeeeee; color: #000; } /* てるてる勝利色 */
+
+
+
+.modal-content {
+    overflow-y: auto; /* スクロール許可 */
+    padding-top: 60px !important;  /* モーダル自体の上の余白も増やす */
+}
+.scroll-content {
+    padding-bottom: 50px; 
+}
+/* =========================================
+   ★ 吹き出し「下向き」変更パッチ
+   ========================================= */
+
+/* カード自体の設定（はみ出し許可） */
+.result-card {
+    background: #333;
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    position: relative; /* 基準点 */
+    cursor: pointer;
+    overflow: visible !important; /* 必須：吹き出しをはみ出させる */
+    margin-bottom: 20px;
+}
+
+/* 吹き出し本体 */
+.result-comment {
+    /* --- 形と色の設定 (ここが消えてた！) --- */
+    position: absolute; /* 絶対配置に戻す */
+    background: #fff;
+    color: #000;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    width: 150px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    line-height: 1.2;
+    pointer-events: none;
+    
+    /* --- 位置の設定 (下向き) --- */
+    top: 100%;       /* カードの底辺 */
+    left: 50%;       /* 左右中央 */
+    transform: translateX(-50%); /* 中央補正 */
+    margin-top: 12px; /* カードとの隙間 */
+    z-index: 2000;
+    
+    /* アニメーション */
+    opacity: 0;
+    animation: popIn 0.5s forwards 0.5s;
+}
+
+/* 吹き出しのしっぽ (上向き▲) */
+.result-comment::after {
+    content: '';
+    position: absolute;
+    
+    /* しっぽの位置: 吹き出しの天井の上 */
+    top: -5px; 
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* 上向き三角形を作る */
+    border-width: 0 5px 5px 5px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+/* アニメーション定義 (下からフワッと) */
+@keyframes popIn {
+    from { opacity: 0; transform: translate(-50%, -10px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* 非表示用クラス */
+.hidden-bubble {
+    display: none !important;
+}
+
+/* グリッドの隙間確保 (吹き出しが被らないように) */
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    /* 縦の隙間を大きく取る！ */
+    gap: 80px 15px !important; 
+    
+    margin-top: 20px !important; 
+    padding-top: 20px !important; 
+    padding-bottom: 100px !important;
+}
+
+
+/* ★ NEW: 真ん中のスクロールエリア */
+.scroll-content {
+    flex: 1; /* 余ったスペースを全部使う */
+    width: 100%;
+    overflow-y: auto; /* 縦スクロール許可 */
+    padding: 10px;
+    box-sizing: border-box;
+    
+    /* スクロールバーの見た目 */
+    scrollbar-width: thin;
+    scrollbar-color: #ff0055 rgba(0,0,0,0.3);
+}
+
+/* Chrome/Safari用スクロールバー */
+.scroll-content::-webkit-scrollbar { height: 8px; width: 8px; }
+.scroll-content::-webkit-scrollbar-thumb { background: #ff0055; border-radius: 4px; }
+
+/* フッター（ボタンエリア）を固定化 */
+.footer-action {
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.8); /* 背景を濃くして浮き上がらせる */
+    flex-shrink: 0; /* 縮ませない */
+    z-index: 100;
+    border-top: 1px solid #444;
+}
+
+
+
+/* 議論ログエリア調整 */
+.dialogue-container {
+    width: 100%;
+    /* ここも max-height は削除してOK、または scroll-content 内で自然に伸ばす */
+    background: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    padding: 10px;
     margin-bottom: 10px;
 }
-.retry-btn:hover { background: #34495e; transform: translateY(-2px); }
+/* 視認マークの色分け */
+.mark-wolf { background: #ff0055; } /* 人狼 */
+.mark-fox  { background: #ffaa00; } /* 妖狐 */
+.mark-mason { background: #00aaff; } /* 共有 */
+.mark-fanatic { background: #aa00ff; } /* 狂信者が見る人狼も赤でいいけど区別するなら */
+
+/* 吹き出しの重なり順を最強にする */
+.result-comment {
+    z-index: 1000;
+    width: 160px; /* 少し横長に */
+}
+
+/* ヘッダー内の仲間リスト */
+.ally-list-display {
+    font-size: 0.85rem;
+    color: #00ffcc;
+    margin-left: 15px;
+    background: rgba(0, 255, 204, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid #00ffcc;
+    display: flex;
+    gap: 5px;
+}
+
+/* チャットログ内の名前横マーク */
+.chat-role-mark {
+    display: inline-block;      /* 文字列と同じ並びに */
+    margin-left: 6px;           /* 名前との隙間 */
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    color: #fff;
+    font-weight: bold;
+    vertical-align: middle;     /* 高さ合わせ */
+    line-height: 1.2;
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    position: static; /* ★重要: 絶対配置を解除 */
+}
+
+/* マークの色分け */
+.mark-wolf { background-color: #ff0055; border: 1px solid #fff; }
+.mark-fox { background-color: #ffaa00; border: 1px solid #fff; }
+.mark-dog { background-color: #aaaaaa; border: 1px solid #fff; } /* 飼い主用 */
+.mark-thief { background: #444; border: 1px solid #fff; }
+.mark-mason { background: #00aaff; border: 1px solid #aaddff; }
+.mark-fanatic { background: #aa00ff; border: 1px solid #eeaaff; }
+.mark-seer { background: #8844ff; }
+.mark-medium { background: #4400aa; }
+.mark-knight { background: #0055ff; }
+.mark-madman { background: #ff88aa; }
+.mark-villager { background: #888; }
+
+
+/* 夜のアクションボタン（番犬用） */
+.night-action-btn {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+}
+.btn-protect { background: #00aaff; }
+.btn-attack { background: #ff0055; }
+
+
+/* 画像アップロード周り */
+.file-upload-wrapper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.preview-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+/* --- ★ スマホ対応 (レスポンシブ) --- */
+@media screen and (max-width: 600px) {
+    .app-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        padding: 10px;
+    }
+
+    /* タイトルなどを小さく */
+    .game-title { font-size: 2rem; margin-top: 20px; }
+    
+    /* メンバーリストを少し小さく */
+    .members-grid {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    }
+    .member-chip img { width: 30px; height: 30px; }
+    .member-chip { font-size: 0.6rem; }
+
+    /* 自分の役職カードを小さく */
+    .role-card {
+        width: 120px;
+        height: 90px;
+    }
+    .role-card img { width: 40px; height: 40px; }
+
+    /* ボタンを押しやすく */
+    .main-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* モーダルを画面いっぱいに */
+    .modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+}
