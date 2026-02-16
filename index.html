@@ -3,222 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- ▼ サイトの基本情報（ここは真面目に！） -->
-    <title>実務データ入力演習ソフト / Typing Master</title>
-    <meta name="description" content="就労移行支援や事務職スキル向上のための、実践的なデータ入力・タイピング練習アプリケーションです。ビジネス文書作成からチャット対応まで、実務に近い形式でトレーニングできます。">
-    <meta name="keywords" content="タイピング練習, データ入力, 事務職, 職業訓練, 業務シミュレーション">
-    <meta name="author" content="mofumitsu">
-
-    <!-- ▼ OGP設定（SNSでシェアした時の見え方） -->
+    <title>とりの丘人狼 - 混沌のAI対戦人狼ゲーム</title>
+    
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="とりの丘学園の個性豊かなキャラクターたちとAI人狼で対戦！特殊役職多数、カオスな議論を楽しもう。ブラウザで遊べる無料人狼ゲーム。">
+    <meta name="keywords" content="人狼ゲーム, AI対戦, フリーゲーム, とりの丘学園, 創作キャラ">
+    <meta name="author" content="mofu-mitsu">
+    
+    <!-- OGP (SNSシェア用) -->
+    <meta property="og:title" content="とりの丘人狼 - TORI-OKA WEREWOLF">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mofu-mitsu.github.io/typing-Master/">
-    <meta property="og:title" content="実務データ入力演習ソフト / Typing Master">
-    <meta property="og:description" content="【職業訓練用】ビジネス文書・名簿入力・チャット対応など、実務を想定したタイピング練習ツールです。">
-    <meta property="og:image" content="https://mofu-mitsu.github.io/typing-Master/images/ogp.png"> <!-- ★あとで画像作ったらここに入れる -->
-    <meta property="og:site_name" content="Typing Master">
-    <meta property="og:locale" content="ja_JP">
-
-    <!-- ▼ Twitter Card設定 -->
+    <meta property="og:url" content="https://mofu-mitsu.github.io/Torinooka-Werewolf/">
+    <meta property="og:image" content="https://mofu-mitsu.github.io/Torinooka-Werewolf/img/ogp.png"> <!-- ※OGP画像があればここに配置 -->
+    <meta property="og:description" content="AIたちが暴れまわる！？個性豊かなキャラと人狼ゲームで勝負！役職多数、カオスな展開を楽しもう。">
+    <meta property="og:site_name" content="とりの丘人狼">
+    
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="実務データ入力演習ソフト">
-    <meta name="twitter:description" content="事務職に必要な入力スキルを効率的に習得できるブラウザアプリ。">
-    <meta name="twitter:image" content="https://mofu-mitsu.github.io/typing-Master/images/ogp.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
 
-    <!-- ▼ ファビコン設定（タブのアイコン） -->
-    <link rel="icon" href="images/favicon.ico"> <!-- ★あとで作ったらここに入れる -->
-    <link rel="apple-touch-icon" href="images/icon.png"> <!-- スマホのホーム画面用 -->
-
-    <!-- ▼ スマホのブラウザの色（ここはこっそりピンクにしちゃう？ｗ） -->
-    <meta name="theme-color" content="#ffb7d2">
-
-    <!-- ▼ Font Awesome & CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- BGM -->
+    <!-- ★修正: パスを audio/ に変更 -->
+    <audio id="bgm-title" loop><source src="audio/wolf_title.mp3" type="audio/mp3"></audio>
+    <audio id="bgm-noon" loop><source src="audio/wolf_noon.mp3" type="audio/mp3"></audio>
+    <audio id="bgm-night" loop><source src="audio/wolf_night.mp3" type="audio/mp3"></audio>
+    
+    <button id="bgm-toggle" class="bgm-btn"><i class="fa-solid fa-volume-high"></i></button>
 
-    <!-- 1. スタート画面（メニュー） -->
-    <div id="start-screen">
-        <div class="menu-card">
-            <div class="menu-header">
-                <i class="fa-solid fa-keyboard fa-3x"></i>
-                <h1>Typing Master</h1>
-                <p>事務職のためのタイピングスキル向上プログラム</p>
+    <div class="app-container">
+<!-- 1. タイトル画面 -->
+        <section id="title-screen" class="screen">
+            <!-- ロゴとタイトル -->
+            <div class="title-logo">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-feather-pointed"></i>
+            </div>
+            <h1 class="game-title">TORI-OKA<br>WEREWOLF</h1>
+            <p class="sub-title">とりの丘学園 混沌の人狼ゲーム</p>
+            
+            <!-- 名前・アイコン入力エリア -->
+            <div class="input-area">
+                
+                <!-- 名前入力ブロック -->
+                <div class="input-block">
+                    <p class="input-label">プレイヤー名</p>
+                    <div class="input-group">
+                        <i class="fa-solid fa-user-pen"></i>
+                        <input type="text" id="player-name-input" placeholder="あなた">
+                    </div>
+                </div>
+
+                <!-- 画像選択ブロック -->
+                <div class="input-block">
+                    <p class="input-label">アイコン画像 <span style="font-size:0.7rem; color:#888;">(任意)</span></p>
+                    <div class="file-upload-wrapper">
+                        <!-- プレビュー画像 -->
+                        <img id="preview-icon" src="img/player.png" class="preview-img" onerror="this.src='https://via.placeholder.com/50'">
+                        
+                        <!-- アップロードボタン -->
+                        <label for="player-icon-input" class="icon-upload-btn">
+                            <i class="fa-solid fa-camera"></i> 変更する
+                        </label>
+                        <input type="file" id="player-icon-input" accept="image/*" style="display:none;">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ボタンエリア -->
+            <div class="title-buttons">
+                <button id="to-selection-btn" class="main-btn">
+                    キャラ選択へ <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <button id="spectator-mode-btn" class="main-btn spectator-btn">
+                    観戦モード <i class="fa-solid fa-tv"></i>
+                </button>
             </div>
             
-            <div class="setting-area">
-                <!-- コース選択 -->
-                <div class="setting-group">
-                    <label><i class="fa-solid fa-briefcase"></i> 研修コース選択</label>
-                    <select id="mode-select" onchange="updateSubMode()">
-                        <option value="business">🏢 一般企業 実務コース</option>
-                        <option value="school">🏫 教育機関（とりの丘）実習コース</option>
-                    </select>
-                </div>
+            <button id="show-rules-btn" class="sub-btn">ルール・役職説明</button>
+            <a href="https://mofu-mitsu.github.io/" class="home-link"><i class="fa-solid fa-house"></i> ホームへ戻る</a>
+        </section>
 
-                <!-- 学校コースを選んだ時だけ出る詳細設定 -->
-                <div class="setting-group hidden" id="sub-mode-group">
-                    <label><i class="fa-solid fa-list-check"></i> 業務内容</label>
-                    <!-- 業務内容を変えるとクラス選択肢も変わるように onchange を設定 -->
-                    <select id="sub-mode-select" onchange="updateClassOptions()">
-                        <option value="roster">📋 生徒名簿データ登録</option>
-                        <option value="instruction">📣 先生の指示・業務連絡</option>
-                        <option value="line">💬 生徒連絡（チャット）対応</option>
-                        <option value="request">🙏 生徒からの依頼（DM）</option>
-                        <option value="chat">🗣️ グループチャット参加</option>
-                        <option value="mix">⭐ 総合実務（ランダム）</option>
-                    </select>
+        <!-- 2. キャラ選択画面 -->
+        <section id="selection-screen" class="screen hidden">
+            <!-- ▼ ヘッダー構造を変更 -->
+            <header class="selection-header">
+                <button id="back-to-title-btn" class="back-btn"><i class="fa-solid fa-arrow-left"></i> 戻る</button>
+                <div class="header-center">
+                    <h2>参加メンバー選択</h2>
+                    <p>現在選択中: <span id="selected-count">0</span> 人</p>
                 </div>
+                <!-- レイアウトバランス用のダミー（必要なら） -->
+                <div style="width: 60px;"></div> 
+            </header>
 
-                <!-- クラス選択（ここにあった余分な </div> を削除したよ！） -->
-                <div class="setting-group hidden" id="class-select-group">
-                    <label><i class="fa-solid fa-users"></i> 対象クラス（任意）</label>
-                    <select id="class-select">
-                        <option value="all">指定なし（全校生徒）</option>
-                        <option value="1-1">1年1組</option>
-                        <option value="1-2">1年2組</option>
-                        <option value="1-4">1年4組</option>
-                        <option value="2-1">2年1組</option>
-                        <option value="2-2">2年2組</option>
-                        <option value="3-1">3年1組</option>
-                        <option value="3-2">3年2組</option>
-                        <option value="teacher">教職員</option>
-                    </select>
+            <div class="options-area">
+                <details>
+                    <summary><i class="fa-solid fa-gear"></i> 追加役職オプション</summary>
+                    <div class="roles-options">
+                        <label><input type="checkbox" class="role-opt" value="妖狐"> 妖狐</label>
+                        <label><input type="checkbox" class="role-opt" value="狂信者"> 狂信者</label>
+                        <label><input type="checkbox" class="role-opt" value="共有者"> 共有者</label>
+                        <label><input type="checkbox" class="role-opt" value="てるてる坊主"> てるてる</label>
+                        <label><input type="checkbox" class="role-opt" value="背徳者"> 背徳者</label>
+                        <label><input type="checkbox" class="role-opt" value="猫又"> 猫又</label>
+                        <label><input type="checkbox" class="role-opt" value="番犬"> 番犬</label>
+                        <label><input type="checkbox" class="role-opt" value="訪問者"> 訪問者</label>
+                        <label><input type="checkbox" class="role-opt" value="怪盗"> 怪盗</label>
+                    </div>
+                </details>
+            </div>
+
+            <div id="class-tabs" class="tabs-container"></div>
+            <div id="char-grid" class="char-grid"></div>
+            <div id="char-details-preview" class="char-details-box hidden">
+                <div class="details-content">
+                    <img id="detail-img" src="" alt="icon">
+                    <div class="text-info">
+                        <h3 id="detail-name">名前</h3>
+                        <p class="meta-info">
+                            <span id="detail-gender"></span>
+                            <span id="detail-mbti"></span>
+                            <span id="detail-class"></span>
+                        </p>
+                        <p id="detail-profile" class="profile-text"></p>
+                    </div>
                 </div>
+            </div>
+            <div class="footer-action">
+                <button id="game-start-btn" class="main-btn disabled">配役決定して開始 <i class="fa-solid fa-play"></i></button>
+            </div>
+        </section>
 
-                <!-- 課題数 -->
-                <div class="setting-group">
-                    <label><i class="fa-solid fa-stopwatch"></i> 課題数</label>
-                    <select id="count-select">
-                        <option value="5">5問（クイック）</option>
-                        <option value="10">10問（スタンダード）</option>
-                        <option value="20">20問（ハード）</option>
-                    </select>
-                </div>
-            </div> <!-- setting-area の閉じタグはここが正解！ -->
-
-            <button class="start-btn" onclick="initGame()">
-                研修を開始する <i class="fa-solid fa-play"></i>
-            </button>
+        <!-- 3. ゲーム画面 -->
+<!-- 3. ゲーム画面 -->
+<section id="game-screen" class="screen hidden">
+    <!-- ▼ ヘッダー（固定） -->
+    <div id="discussion-header" class="discussion-header hidden">
+        <div class="header-left">
+            <div id="mini-role-icon"></div>
+            <span id="mini-role-text"></span>
         </div>
+        <button id="show-info-btn" class="sub-btn"><i class="fa-solid fa-circle-info"></i> 内訳</button>
     </div>
 
-    <!-- 2. ゲーム画面 -->
-    <div id="game-container" class="hidden">
+    <!-- ▼▼▼ ここからスクロールエリア開始 ▼▼▼ -->
+    <div class="scroll-content">
         
-        <header id="header">
-            <div class="header-left">
-                <h1 id="app-title">実務データ入力演習</h1>
-                <div id="sub-info"><i class="fa-solid fa-id-card"></i> 教務課・データ管理担当</div>
+        <div id="game-setup-area">
+            <div id="my-role-area" class="role-reveal-area">
+                <h3>あなたの役職</h3>
+                <div id="my-role-card" class="role-card flip-in"></div>
             </div>
-            <div class="header-right">
-                <!-- ★音量切り替えボタン -->
-                <button id="sound-btn" onclick="toggleSound()">
-                    <i id="sound-icon" class="fa-solid fa-volume-high"></i>
-                </button>
-                <button id="back-btn" onclick="location.reload()">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i> 終了
-                </button>
+            <div class="members-area">
+                <h3><i class="fa-solid fa-list-ul"></i> 参加者リスト</h3>
+                <div id="members-list" class="members-grid"></div>
             </div>
-        </header>
+        </div>
 
-        <main>
-            <!-- ステータスバー -->
-            <div id="status-bar">
-                <div class="status-item"><i class="fa-solid fa-layer-group"></i> 残り: <span id="count-display">0</span>問</div>
-                <div class="status-item"><i class="fa-solid fa-clock"></i> Time: <span id="time-display">0.0</span>s</div>
-            </div>
-
-            <!-- お題エリア -->
-            <div id="question-area">
-                <!-- キャラ画像 -->
-                <div id="char-image-box" class="hidden">
-                    <img id="char-img" src="" alt="Character">
-                </div>
-
-                <!-- チャット風の送信者名 -->
-                <div id="sender-info" class="hidden">
-                    <i class="fa-solid fa-user-circle"></i> <span id="sender-name"></span>
-                </div>
-                
-                <!-- お題テキスト -->
-                <div id="display-text"></div>
-                
-                <!-- かな読み -->
-                <div id="reading-text"></div>
-            </div>
-
-            <!-- キャラのセリフ（リアクション） -->
-            <div id="char-comment-box">
-                <span id="char-comment"></span>
-            </div>
-
-            <!-- タイピング入力エリア -->
-            <div id="input-area">
-                <div id="romaji-display"></div>
-                <!-- 常にここにフォーカスを当てる -->
-                <input type="text" id="type-input" autocomplete="off" spellcheck="false" disabled>
-            </div>
-
-            <!-- キーボードガイド -->
-            <div id="keyboard-guide">
-                <div class="key-row">
-                    <div class="key" data-key="q">Q</div><div class="key" data-key="w">W</div><div class="key" data-key="e">E</div><div class="key" data-key="r">R</div><div class="key" data-key="t">T</div><div class="key" data-key="y">Y</div><div class="key" data-key="u">U</div><div class="key" data-key="i">I</div><div class="key" data-key="o">O</div><div class="key" data-key="p">P</div>
-                </div>
-                <div class="key-row">
-                    <div class="key" data-key="a">A</div><div class="key" data-key="s">S</div><div class="key" data-key="d">D</div><div class="key" data-key="f">F</div><div class="key" data-key="g">G</div><div class="key" data-key="h">H</div><div class="key" data-key="j">J</div><div class="key" data-key="k">K</div><div class="key" data-key="l">L</div><div class="key" data-key="-">-</div>
-                </div>
-                <div class="key-row">
-                    <div class="key" data-key="z">Z</div><div class="key" data-key="x">X</div><div class="key" data-key="c">C</div><div class="key" data-key="v">V</div><div class="key" data-key="b">B</div><div class="key" data-key="n">N</div><div class="key" data-key="m">M</div><div class="key" data-key=",">,</div><div class="key" data-key=".">.</div><div class="key" data-key="/">/</div>
-                </div>
-                <div class="key-row">
-                    <div class="key space-key" data-key=" ">Space</div>
-                </div>
-            </div>
-        </main>
+        <div id="dialogue-area" class="dialogue-container hidden"></div>
+        
     </div>
+    <!-- ▲▲▲ スクロールエリア終了 ▲▲▲ -->
 
-    <!-- ↓ 結果画面（result-box）の中身を大幅改造！ ↓ -->
-    <div id="result-screen" class="hidden">
-        <div class="result-box">
-            <div id="rank-badge">-</div> <!-- ランクSとか出る場所 -->
-            <h2 id="result-title">業務完了</h2>
-            
-            <div class="result-grid">
-                <div class="result-item">
-                    <span class="label">スコア</span>
-                    <span class="value" id="result-score">0</span>
-                </div>
-                <div class="result-item">
-                    <span class="label">ランク</span>
-                    <span class="value" id="result-rank">-</span>
-                </div>
-                <div class="result-item">
-                    <span class="label">タイム</span>
-                    <span class="value"><span id="result-time">0.0</span>s</span>
-                </div>
-                <div class="result-item">
-                    <span class="label">ミス</span>
-                    <span class="value" id="result-miss">0</span>
-                </div>
-            </div>
+<!-- ▼ フッター（ボタンエリア・固定） -->
+    <div class="footer-action">
+        <!-- 初日の議論開始ボタン -->
+        <button id="start-day-btn" class="main-btn">
+            初日の議論へ <i class="fa-solid fa-comments"></i>
+        </button>
 
-            <!-- ★新機能：ベストスコア比較 & 苦手キー -->
-            <div class="analysis-area">
-                <p id="best-score-info"><i class="fa-solid fa-crown"></i> 自己ベスト: ---</p>
-                <div id="weak-keys-area">
-                    <p>⚠️ 苦手なキー</p>
-                    <div id="weak-keys-list">なし</div>
-                </div>
-            </div>
+        <!-- ★追加: 中断ボタン（start-day-btnが消えた後も残るように工夫が必要だけど、一旦ここに置くね） -->
+        <!-- ※JSで start-day-btn を hidden にすると、隣のこのボタンも消えちゃうレイアウトだと困るから、独立させる -->
+        
+        <!-- 議論中・アクションボタン -->
+        <div id="action-buttons" class="hidden" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+            <button id="next-turn-btn" class="main-btn">議論を進める <i class="fa-solid fa-forward"></i></button>
+            <button id="player-act-btn" class="main-btn" style="background:#22cc88;">発言する <i class="fa-solid fa-comment-dots"></i></button>
+            <button id="skip-btn" class="main-btn hidden" style="background:#555;">結果までスキップ <i class="fa-solid fa-forward-fast"></i></button>
+            <!-- 中断ボタンをここにも入れておく（議論中用） -->
+            <button id="exit-game-btn-action" class="exit-btn" style="margin-left:10px;"><i class="fa-solid fa-right-from-bracket"></i> 中断</button>
+        </div>
+    </div>
+</section>
 
-            <p id="result-msg" class="msg-text"></p>
-            <button onclick="location.reload()" class="retry-btn"><i class="fa-solid fa-rotate-right"></i> タイトルに戻る</button>
+    <!-- モーダル類 -->
+    <div id="info-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3><i class="fa-solid fa-users-gear"></i> 配役内訳</h3>
+            <ul id="role-breakdown-list"></ul>
+            <button id="close-modal-btn" class="main-btn">閉じる</button>
         </div>
     </div>
 
+    <!-- ★ ルール説明モーダル -->
+    <div id="rules-modal" class="modal hidden">
+        <div class="modal-content" style="max-width:700px; text-align:left; max-height:80vh; overflow-y:auto;">
+            <h3><i class="fa-solid fa-book"></i> ルール・役職説明</h3>
+            <h4>■ 勝利条件</h4>
+            <p><strong>村人陣営:</strong> 人狼を全滅させれば勝利。</p>
+            <p><strong>人狼陣営:</strong> 村人の数を人狼以下に減らせば勝利。</p>
+            <p><strong>第三陣営:</strong> それぞれ固有の条件を満たせば単独勝利。</p>
+            <hr>
+            <h4>■ 配役の目安</h4>
+            <p>人数に応じて以下の役職が自動的に追加されます。</p>
+            <ul>
+                <li>6人以上: 霊媒師 追加</li>
+                <li>9人以上: 人狼 追加（計2匹）</li>
+                <li>12人以上: 人狼 追加（計3匹）</li>
+                <li>15人以上: パン屋 追加</li>
+                <li>20人以上: 人狼 追加（計4匹）</li>
+                <li>30人以上: 人狼 追加（計5匹）</li>
+            </ul>
+            <p>※「追加役職オプション」でチェックを入れた役職は、人数に関わらず優先的に配役されます。</p>
+
+            <hr>
+            <h4>■ 村人陣営</h4>
+            <ul>
+                <li><strong>村人:</strong> 特殊能力はないが、議論と投票で人狼を見つける。</li>
+                <li><strong>占い師:</strong> 夜に1人を占い、「人狼」か「人間」かを知る。</li>
+                <li><strong>霊媒師:</strong> 処刑された人が「人狼」か「人間」かを知る。</li>
+                <li><strong>騎士:</strong> 夜に1人を守る。人狼の襲撃を防ぐ。</li>
+                <li><strong>共有者:</strong> 2人組。お互いを知っており、夜に相談できる。</li>
+                <li><strong>パン屋:</strong> 生きている間、朝に「パン屋の知らせ」が届く。</li>
+                <li><strong>番犬:</strong> 初夜に飼い主を選び、その家を見張る特殊な護衛役。</li>
+                <li><strong>猫又:</strong> 処刑または噛まれた際、ランダムで1人を道連れにする。</li>
+                <li><strong>訪問者:</strong> 夜に誰かの家を訪問する。訪問された人に通知される。</li>
+                <li><strong>怪盗:</strong> 初夜に1人を選び、その人と役職を入れ替える。相手は村人になる。</li>
+            </ul>
+            <h5>▼ 番犬の詳細</h5>
+            <ul style="font-size:0.85rem; line-height:1.6;">
+                <li>初夜に「飼い主」を1人選ぶ。以後、毎晩その飼い主を守る。</li>
+                <li>番犬は飼い主の正体を知らない。</li>
+                <li>飼い主が人狼だと判明した場合、次の夜にその人狼を噛み殺す（1回限り）。</li>
+            </ul>
+            <hr>
+            <h4>■ 人狼陣営</h4>
+            <ul>
+                <li><strong>人狼:</strong> 夜に1人を襲撃する。</li>
+                <li><strong>狂人:</strong> 人狼の味方。能力はない。</li>
+                <li><strong>狂信者:</strong> 人狼が誰か知っている狂人。</li>
+            </ul>
+            <hr>
+            <h4>■ 第三陣営・その他</h4>
+            <ul>
+                <li><strong>妖狐:</strong> 人狼にも村人にも属さない。最後まで生き残れば単独勝利。占われると死ぬ。人狼に噛まれても死なない。</li>
+                <li><strong>てるてる坊主:</strong> 処刑されれば単独勝利。噛まれると負け。</li>
+                <li><strong>背徳者:</strong> 妖狐陣営。妖狐が誰か知っている。妖狐が死ぬと道連れで死ぬ。</li>
+            </ul>
+            <div style="text-align:center; margin-top:20px;">
+                <button id="close-rules-btn" class="main-btn">閉じる</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="action-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3><i class="fa-solid fa-bullhorn"></i> 行動を選択</h3>
+            <div class="action-type-selector">
+                <button class="act-type-btn selected" data-type="accuse">疑う</button>
+                <button class="act-type-btn" data-type="defend">かばう</button>
+                <button class="act-type-btn" data-type="co">役職CO</button>
+                <button class="act-type-btn" data-type="report">結果報告</button>
+            </div>
+            <div id="target-selector-area" class="selector-area">
+                <label>誰に対して？</label>
+                <select id="target-select"></select>
+            </div>
+            <div id="role-selector-area" class="selector-area hidden">
+                <label>なんと名乗る？</label>
+                <select id="role-co-select">
+                    <option value="村人">村人</option>
+                    <option value="占い師">占い師</option>
+                    <option value="霊媒師">霊媒師</option>
+                    <option value="騎士">騎士</option>
+                    <option value="狂人">狂人</option>
+                    <option value="人狼">人狼</option>
+                </select>
+            </div>
+            <div id="result-selector-area" class="selector-area hidden">
+                <label>判定結果は？</label>
+                <select id="result-select">
+                    <option value="white">人間 (シロ)</option>
+                    <option value="black">人狼 (クロ)</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button id="execute-action-btn" class="main-btn">発言する</button>
+                <button id="close-action-modal-btn" class="sub-btn">キャンセル</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="result-modal" class="modal hidden">
+        <div class="modal-content" style="max-width: 800px;">
+            <h2 id="result-title" style="font-size: 2rem; margin-bottom: 20px;">WINNER</h2>
+            <div id="result-grid" class="vote-list"></div>
+            <button onclick="location.reload()" class="main-btn" style="margin-top: 20px;">タイトルへ戻る</button>
+        </div>
+    </div>
+    <div id="skip-modal" class="modal hidden">
+        <div class="modal-content" style="max-width: 400px;">
+            <h3><i class="fa-solid fa-forward-fast"></i> スキップ確認</h3>
+            <p>結果が出るまで高速進行しますか？<br><span style="font-size:0.8rem; color:#aaa;">(処理中は操作できません)</span></p>
+            <div style="display:flex; gap:10px; justify-content:center; margin-top:20px;">
+                <button id="skip-yes-btn" class="main-btn" style="background:#ff0055;">はい</button>
+                <button id="skip-no-btn" class="sub-btn">いいえ</button>
+            </div>
+        </div>
+    </div>
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
