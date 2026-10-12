@@ -2217,7 +2217,7 @@ const schoolData = [
         id: "teacher_abusaki",
         subtype: "roster",
         group: "teacher",
-        text: "虻崎 捺江",
+        text: "虻崎 夏江",
         kana: "あぶさきなつえ",
         romaji: "abusaki natsue",
         start_msg: "なつえ先生「研修生の先生ですね。…あの、無理しなくて大丈夫ですから」",
