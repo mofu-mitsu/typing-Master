@@ -11,35 +11,35 @@
       gtag('js', new Date());
       gtag('config', 'G-GNTX973GET');
     </script>
-    <!-- ▼ サイトの基本情報（ここは真面目に！） -->
-    <title>無料タイピング練習＆実務データ入力演習ソフト | 事務職向け Typing Master</title>
-    <meta name="description" content="就労移行支援や事務職スキル向上のための、実践的なデータ入力・タイピング練習アプリケーションです。ビジネス文書作成からチャット対応まで、実務に近い形式でトレーニングできます。">
-    <meta name="keywords" content="タイピング練習, データ入力, 事務職, 職業訓練, 業務シミュレーション">
-    <meta name="author" content="mofumitsu">
+    
+    <!-- ▼ サイトの基本情報 -->
+    <title>Typing Master | 実務データ入力・タイピング練習ソフト</title>
+    <meta name="description" content="実務データ入力・タイピング練習アプリケーション。ビジネス定型文から名簿入力、学園ロールプレイまで実践的なデータ入力を効率的にトレーニングできます。">
+    <meta name="keywords" content="タイピング練習, データ入力, 事務職, 業務シミュレーション, タイピング">
 
-    <!-- ▼ OGP設定（SNSでシェアした時の見え方） -->
+    <!-- ▼ OGP設定 -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mofu-mitsu.github.io/typing-Master/">
-    <meta property="og:title" content="実務データ入力演習ソフト / Typing Master">
-    <meta property="og:description" content="【職業訓練用】ビジネス文書・名簿入力・チャット対応など、実務を想定したタイピング練習ツールです。">
-    <meta property="og:image" content="https://mofu-mitsu.github.io/typing-Master/images/ogp.png"> <!-- ★あとで画像作ったらここに入れる -->
+    <meta property="og:title" content="実務データ入力演習ソフト | Typing Master">
+    <meta property="og:description" content="ビジネス文書・名簿入力・チャット対応など、実務を想定したタイピング練習ツールです。">
+    <meta property="og:image" content="images/ogp.png">
     <meta property="og:site_name" content="Typing Master">
     <meta property="og:locale" content="ja_JP">
 
     <!-- ▼ Twitter Card設定 -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="実務データ入力演習ソフト">
+    <meta name="twitter:title" content="実務データ入力演習ソフト | Typing Master">
     <meta name="twitter:description" content="事務職に必要な入力スキルを効率的に習得できるブラウザアプリ。">
-    <meta name="twitter:image" content="https://mofu-mitsu.github.io/typing-Master/images/ogp.png">
+    <meta name="twitter:image" content="images/ogp.png">
 
-    <!-- ▼ ファビコン設定（タブのアイコン） -->
-    <link rel="icon" href="images/favicon.ico"> <!-- ★あとで作ったらここに入れる -->
-    <link rel="apple-touch-icon" href="images/icon.png"> <!-- スマホのホーム画面用 -->
+    <!-- ▼ ファビコン設定 -->
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icon.png">
+    <meta name="theme-color" content="#3b82f6">
 
-    <!-- ▼ スマホのブラウザの色（ここはこっそりピンクにしちゃう？ｗ） -->
-    <meta name="theme-color" content="#ffb7d2">
-
-    <!-- ▼ Font Awesome & CSS -->
+    <!-- ▼ Google Fonts & Font Awesome & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
@@ -48,70 +48,193 @@
     <!-- 1. スタート画面（メニュー） -->
     <div id="start-screen">
         <div class="menu-card">
-            <div class="menu-header">
-                <i class="fa-solid fa-keyboard fa-3x"></i>
+            <header class="menu-header">
+                <div class="app-logo-badge">
+                    <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="3" ry="3"></rect>
+                        <line x1="6" y1="8" x2="6.01" y2="8"></line>
+                        <line x1="10" y1="8" x2="10.01" y2="8"></line>
+                        <line x1="14" y1="8" x2="14.01" y2="8"></line>
+                        <line x1="18" y1="8" x2="18.01" y2="8"></line>
+                        <line x1="6" y1="12" x2="6.01" y2="12"></line>
+                        <line x1="10" y1="12" x2="10.01" y2="12"></line>
+                        <line x1="14" y1="12" x2="14.01" y2="12"></line>
+                        <line x1="18" y1="12" x2="18.01" y2="12"></line>
+                        <line x1="7" y1="16" x2="17" y2="16"></line>
+                    </svg>
+                </div>
                 <h1>Typing Master</h1>
-                <p>事務職のためのタイピングスキル向上プログラム</p>
-            </div>
+                <p class="subtitle">実務スキルを高めるデータ入力＆タイピングトレーニング</p>
+            </header>
             
             <div class="setting-area">
-                <!-- コース選択 -->
-                <div class="setting-group course-setting">
-                    <label><i class="fa-solid fa-briefcase"></i> 研修コース選択</label>
-                    <div class="school-course-notice">
-                        <i class="fa-solid fa-star"></i>
-                        <span><strong>とりの丘の生徒・先生と実習したい方はこちら！</strong><br>「教育機関（とりの丘）実習コース」を選ぶと、名簿登録や校内チャットなどの課題に挑戦できます。</span>
+                <!-- ▼ コース選択：プルダウンではなく大きく分かれたカードメニュー -->
+                <div class="setting-section">
+                    <div class="section-label">
+                        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+                            <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+                            <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+                            <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+                        </svg>
+                        <span>研修コースの選択</span>
                     </div>
-                    <select id="mode-select" onchange="updateSubMode()">
+
+                    <!-- 互換性維持用の隠しselect -->
+                    <select id="mode-select" class="sr-only" onchange="updateSubMode()">
                         <option value="business">🏢 一般企業 実務コース</option>
                         <option value="school">🏫 教育機関（とりの丘）実習コース</option>
                     </select>
+
+                    <div class="course-cards-grid">
+                        <!-- カード1: 一般企業コース -->
+                        <div class="course-card active" id="card-business" onclick="selectCourse('business')" role="button" tabindex="0">
+                            <div class="card-indicator">
+                                <svg viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="card-icon-wrap business-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                    <line x1="9" y1="22" x2="9" y2="22.01"></line>
+                                    <line x1="15" y1="22" x2="15.01" y2="22.01"></line>
+                                    <line x1="9" y1="6" x2="9.01" y2="6"></line>
+                                    <line x1="15" y1="6" x2="15.01" y2="6"></line>
+                                    <line x1="9" y1="10" x2="9.01" y2="10"></line>
+                                    <line x1="15" y1="10" x2="15.01" y2="10"></line>
+                                    <line x1="9" y1="14" x2="9.01" y2="14"></line>
+                                    <line x1="15" y1="14" x2="15.01" y2="14"></line>
+                                    <line x1="9" y1="18" x2="9.01" y2="18"></line>
+                                    <line x1="15" y1="18" x2="15.01" y2="18"></line>
+                                </svg>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title-row">
+                                    <h3>一般企業 実務コース</h3>
+                                    <span class="card-badge business-badge">定番実務</span>
+                                </div>
+                                <p class="card-desc">ビジネス定型文、メール送受信、議事録作成、データ整理などの実務入力スキルを習得</p>
+                            </div>
+                        </div>
+
+                        <!-- カード2: 教育機関実習コース -->
+                        <div class="course-card" id="card-school" onclick="selectCourse('school')" role="button" tabindex="0">
+                            <div class="card-indicator">
+                                <svg viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="card-icon-wrap school-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title-row">
+                                    <h3>教育機関 実習コース</h3>
+                                    <span class="card-badge school-badge">とりの丘</span>
+                                </div>
+                                <p class="card-desc">生徒名簿登録や校内連絡、先生からの指示、チャット対応など学園を舞台にした実践課題</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 学校コースを選んだ時だけ出る詳細設定 -->
-                <div class="setting-group hidden" id="sub-mode-group">
-                    <label><i class="fa-solid fa-list-check"></i> 業務内容</label>
-                    <!-- 業務内容を変えるとクラス選択肢も変わるように onchange を設定 -->
-                    <select id="sub-mode-select" onchange="updateClassOptions()">
-                        <option value="roster">📋 生徒名簿データ登録</option>
-                        <option value="instruction">📣 先生の指示・業務連絡</option>
-                        <option value="line">💬 生徒連絡（チャット）対応</option>
-                        <option value="request">🙏 生徒からの依頼（DM）</option>
-                        <option value="chat">🗣️ グループチャット参加</option>
-                        <option value="mix">⭐ 総合実務（ランダム）</option>
-                    </select>
+                <div class="school-details-panel hidden" id="school-details-panel">
+                    <div class="panel-header">
+                        <svg class="panel-sparkle" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/>
+                        </svg>
+                        <span>教育機関コース 詳細実習メニュー</span>
+                    </div>
+
+                    <!-- 業務内容 -->
+                    <div class="setting-group" id="sub-mode-group">
+                        <label for="sub-mode-select">
+                            <i class="fa-solid fa-list-check"></i> 業務内容
+                        </label>
+                        <div class="select-wrapper">
+                            <select id="sub-mode-select" onchange="updateClassOptions()">
+                                <option value="roster">📋 生徒名簿データ登録</option>
+                                <option value="instruction">📣 先生の指示・業務連絡</option>
+                                <option value="line">💬 生徒連絡（チャット）対応</option>
+                                <option value="request">🙏 生徒からの依頼（DM）</option>
+                                <option value="chat">🗣️ グループチャット参加</option>
+                                <option value="mix">⭐ 総合実務（ランダム）</option>
+                            </select>
+                            <svg class="chevron-svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- クラス選択 -->
+                    <div class="setting-group" id="class-select-group">
+                        <label for="class-select">
+                            <i class="fa-solid fa-users"></i> 対象クラス（任意）
+                        </label>
+                        <div class="select-wrapper">
+                            <select id="class-select" onchange="onClassChange()">
+                                <option value="all">指定なし（全校生徒）</option>
+                                <option value="1-1">1年1組</option>
+                                <option value="1-2">1年2組</option>
+                                <option value="1-4">1年4組</option>
+                                <option value="2-1">2年1組</option>
+                                <option value="2-2">2年2組</option>
+                                <option value="3-1">3年1組</option>
+                                <option value="3-2">3年2組</option>
+                                <option value="teacher">教職員</option>
+                            </select>
+                            <svg class="chevron-svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- クラス選択（ここにあった余分な </div> を削除したよ！） -->
-                <div class="setting-group hidden" id="class-select-group">
-                    <label><i class="fa-solid fa-users"></i> 対象クラス（任意）</label>
-                    <select id="class-select">
-                        <option value="all">指定なし（全校生徒）</option>
-                        <option value="1-1">1年1組</option>
-                        <option value="1-2">1年2組</option>
-                        <option value="1-4">1年4組</option>
-                        <option value="2-1">2年1組</option>
-                        <option value="2-2">2年2組</option>
-                        <option value="3-1">3年1組</option>
-                        <option value="3-2">3年2組</option>
-                        <option value="teacher">教職員</option>
-                    </select>
-                </div>
+                <!-- 課題数（ボタンスタイル） -->
+                <div class="setting-group count-group">
+                    <label>
+                        <svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        課題数
+                    </label>
 
-                <!-- 課題数 -->
-                <div class="setting-group">
-                    <label><i class="fa-solid fa-stopwatch"></i> 課題数</label>
-                    <select id="count-select">
-                        <option value="5">5問（クイック）</option>
-                        <option value="10">10問（スタンダード）</option>
-                        <option value="20">20問（ハード）</option>
+                    <select id="count-select" class="sr-only">
+                        <option value="5">5問</option>
+                        <option value="10" selected>10問</option>
+                        <option value="20">20問</option>
                     </select>
-                </div>
-            </div> <!-- setting-area の閉じタグはここが正解！ -->
 
-            <button class="start-btn" onclick="initGame()">
-                研修を開始する <i class="fa-solid fa-play"></i>
+                    <div class="count-pill-grid">
+                        <button type="button" class="count-pill" data-count="5" onclick="selectQuestionCount(5)">
+                            <span class="count-num">5</span>
+                            <span class="count-label">クイック</span>
+                        </button>
+                        <button type="button" class="count-pill active" data-count="10" onclick="selectQuestionCount(10)">
+                            <span class="count-num">10</span>
+                            <span class="count-label">標準</span>
+                        </button>
+                        <button type="button" class="count-pill" data-count="20" onclick="selectQuestionCount(20)">
+                            <span class="count-num">20</span>
+                            <span class="count-label">じっくり</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="start-btn" id="start-btn" onclick="initGame()">
+                <span>研修を開始する</span>
+                <svg class="btn-arrow-svg" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
             </button>
+            <p class="start-hint">💡 タイトル画面で Enter キーを押しても開始できます</p>
         </div>
     </div>
 
@@ -120,15 +243,19 @@
         
         <header id="header">
             <div class="header-left">
+                <div class="header-badge" id="header-mode-badge">
+                    <span id="badge-dot"></span>
+                    <span id="badge-text">一般実務</span>
+                </div>
                 <h1 id="app-title">実務データ入力演習</h1>
                 <div id="sub-info"><i class="fa-solid fa-id-card"></i> 教務課・データ管理担当</div>
             </div>
             <div class="header-right">
-                <!-- ★音量切り替えボタン -->
-                <button id="sound-btn" onclick="toggleSound()">
+                <!-- 音量切り替えボタン -->
+                <button id="sound-btn" onclick="toggleSound()" title="音量切替" aria-label="音量切替">
                     <i id="sound-icon" class="fa-solid fa-volume-high"></i>
                 </button>
-                <button id="back-btn" onclick="location.reload()">
+                <button id="back-btn" onclick="backToTitle()" title="タイトルに戻る">
                     <i class="fa-solid fa-arrow-right-from-bracket"></i> 終了
                 </button>
             </div>
@@ -137,8 +264,21 @@
         <main>
             <!-- ステータスバー -->
             <div id="status-bar">
-                <div class="status-item"><i class="fa-solid fa-layer-group"></i> 残り: <span id="count-display">0</span>問</div>
-                <div class="status-item"><i class="fa-solid fa-clock"></i> Time: <span id="time-display">0.0</span>s</div>
+                <div class="status-pill">
+                    <svg class="status-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    <span>残り: <strong id="count-display">0</strong> 問</span>
+                </div>
+                <div class="status-pill">
+                    <svg class="status-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>タイム: <strong id="time-display">0.0</strong>s</span>
+                </div>
             </div>
 
             <!-- お題エリア -->
@@ -150,7 +290,7 @@
 
                 <!-- チャット風の送信者名 -->
                 <div id="sender-info" class="hidden">
-                    <i class="fa-solid fa-user-circle"></i> <span id="sender-name"></span>
+                    <i class="fa-solid fa-circle-user"></i> <span id="sender-name"></span>
                 </div>
                 
                 <!-- お題テキスト -->
@@ -190,43 +330,60 @@
         </main>
     </div>
 
-    <!-- ↓ 結果画面（result-box）の中身を大幅改造！ ↓ -->
+    <!-- 3. 結果画面（同じ設定でもう一度ボタンを排除し、タイトル復帰時に設定維持） -->
     <div id="result-screen" class="hidden">
         <div class="result-box">
-            <div id="rank-badge">-</div> <!-- ランクSとか出る場所 -->
-            <h2 id="result-title">業務完了</h2>
+            <div id="rank-badge">-</div> <!-- ランクS, A, B, C, D -->
+            <h2 id="result-title">実務研修 完了</h2>
             
             <div class="result-grid">
                 <div class="result-item">
+                    <div class="result-item-icon score-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
                     <span class="label">スコア</span>
                     <span class="value" id="result-score">0</span>
                 </div>
                 <div class="result-item">
+                    <div class="result-item-icon rank-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
                     <span class="label">ランク</span>
                     <span class="value" id="result-rank">-</span>
                 </div>
                 <div class="result-item">
-                    <span class="label">タイム</span>
+                    <div class="result-item-icon time-icon">
+                        <i class="fa-solid fa-stopwatch"></i>
+                    </div>
+                    <span class="label">所要タイム</span>
                     <span class="value"><span id="result-time">0.0</span>s</span>
                 </div>
                 <div class="result-item">
-                    <span class="label">ミス</span>
+                    <div class="result-item-icon miss-icon">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <span class="label">ミスタイプ</span>
                     <span class="value" id="result-miss">0</span>
                 </div>
             </div>
 
-            <!-- ★新機能：ベストスコア比較 & 苦手キー -->
+            <!-- 分析エリア（ベストスコア & 苦手キー） -->
             <div class="analysis-area">
                 <p id="best-score-info"><i class="fa-solid fa-crown"></i> 自己ベスト: ---</p>
                 <div id="weak-keys-area">
-                    <p>⚠️ 苦手なキー</p>
+                    <p class="weak-title">⚠️ ミスが多かったキー</p>
                     <div id="weak-keys-list">なし</div>
                 </div>
             </div>
 
             <p id="result-msg" class="msg-text"></p>
-            <button onclick="retryWithSameSettings()" class="retry-btn same-settings-btn"><i class="fa-solid fa-repeat"></i> 同じ設定でもう一度</button>
-            <button onclick="location.reload()" class="retry-btn"><i class="fa-solid fa-rotate-right"></i> タイトルに戻る</button>
+            
+            <div class="result-actions">
+                <button onclick="backToTitle()" class="retry-btn">
+                    <i class="fa-solid fa-arrow-left"></i> タイトル画面に戻る
+                </button>
+            </div>
+            <p class="result-sub-hint">※ 前回のコース・課題数の設定はそのまま維持されます</p>
         </div>
     </div>
 

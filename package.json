@@ -1,0 +1,17 @@
+{
+  "name": "typing-master",
+  "version": "1.0.0",
+  "description": "実務データ入力・タイピング練習アプリケーション",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo 'Static app, no build step needed'"
+  },
+  "keywords": [
+    "typing",
+    "practice"
+  ],
+  "author": "",
+  "license": "MIT"
+}

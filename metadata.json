@@ -1,0 +1,7 @@
+{
+  "name": "Typing Master",
+  "description": "実務データ入力演習・タイピング練習アプリケーション",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
