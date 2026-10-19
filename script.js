@@ -520,20 +520,56 @@ function checkFlexibleInput(inputChar) {
     const remaining = targetRomaji.substring(typedCount);
     const prevChar = typedCount > 0 ? targetRomaji[typedCount - 1] : "";
 
+    // 1. 「ん」の柔軟入力対応
+    // お題が単一の "n" で直前に 'n' を入力済みの時、ユーザーが追加で 'n'（計2回）を押した場合
+    // 次の文字が母音や 'y' 以外（子音、記号、文末など）であれば、'nn' として受け入れて targetRomaji を拡張する
+    if (inputChar.toLowerCase() === 'n' && prevChar.toLowerCase() === 'n') {
+        const isNotAlreadyDoubleN = (typedCount < 2 || targetRomaji[typedCount - 2].toLowerCase() !== 'n');
+        const nextChar = remaining.length > 0 ? remaining[0].toLowerCase() : "";
+        const vowelsAndY = ['a', 'i', 'u', 'e', 'o', 'y'];
+        const isNotVowelOrY = !nextChar || !vowelsAndY.includes(nextChar);
+
+        if (isNotAlreadyDoubleN && isNotVowelOrY) {
+            const head = targetRomaji.substring(0, typedCount);
+            targetRomaji = head + 'n' + remaining;
+            return true;
+        }
+    }
+
+    // 2. 「ん」がお題側で "nn" の時に、ユーザーが1回の 'n' の後に直接次の文字を打った場合
+    if (prevChar.toLowerCase() === 'n' && remaining.toLowerCase().startsWith('n')) {
+        const afterSecondN = remaining.substring(1);
+        if (afterSecondN.toLowerCase().startsWith(inputChar.toLowerCase())) {
+            const head = targetRomaji.substring(0, typedCount);
+            targetRomaji = head + afterSecondN;
+            return true;
+        }
+    }
+
+    // 3. ローマ字の柔軟表記対応（ヘボン式・訓令式・各種ゆらぎ）
     const replacements = [
-        { from: "shi", to: "si" }, { from: "chi", to: "ti" }, { from: "tsu", to: "tu" }, { from: "tsu", to: "cyu" }, { from: "jyu", to: "10" }, { from: "ju", to: "10" },
-        { from: "fu",  to: "hu" }, { from: "ji",  to: "zi" },  { from: "ti", to: "chi" },  { from: "ha", to: "wa" },  { from: "wa", to: "ha" }, { from: "o", to: "wo" },
-        { from: "sha", to: "sya" }, { from: "shu", to: "syu" }, { from: "sho", to: "syo" },
-        { from: "cha", to: "tya" }, { from: "chu", to: "tyu" }, { from: "cho", to: "tyo" },
-        { from: "ja",  to: "zya" }, { from: "ju",  to: "zyu" }, { from: "jo",  to: "zyo" },
-        { from: "hi", to: "i", prev: "s" }, { from: "su", to: "u", prev: "t" },
-        { from: "ha", to: "ya", prev: "s" }, { from: "hu", to: "yu", prev: "s" }, { from: "ho", to: "yo", prev: "s" }
+        { from: "shi", to: "si" }, { from: "si", to: "shi" },
+        { from: "chi", to: "ti" }, { from: "ti", to: "chi" },
+        { from: "tsu", to: "tu" }, { from: "tu", to: "tsu" },
+        { from: "fu",  to: "hu" }, { from: "hu", to: "fu" },
+        { from: "ji",  to: "zi" }, { from: "zi", to: "ji" },
+        { from: "sha", to: "sya" }, { from: "sya", to: "sha" },
+        { from: "shu", to: "syu" }, { from: "syu", to: "shu" },
+        { from: "sho", to: "syo" }, { from: "syo", to: "sho" },
+        { from: "cha", to: "tya" }, { from: "tya", to: "cha" },
+        { from: "chu", to: "tyu" }, { from: "tyu", to: "chu" },
+        { from: "cho", to: "tyo" }, { from: "tyo", to: "cho" },
+        { from: "ja",  to: "zya" }, { from: "zya", to: "ja" },
+        { from: "ju",  to: "zyu" }, { from: "zyu", to: "ju" }, { from: "jyu", to: "zyu" }, { from: "ju", to: "jyu" },
+        { from: "jo",  to: "zyo" }, { from: "zyo", to: "jo" },
+        { from: "ha", to: "wa" },  { from: "wa", to: "ha" },
+        { from: "o", to: "wo" },   { from: "wo", to: "o" }
     ];
 
     for (let r of replacements) {
         if (r.prev && r.prev !== prevChar) continue;
-        if (remaining.startsWith(r.from)) {
-            if (r.to.startsWith(inputChar)) {
+        if (remaining.toLowerCase().startsWith(r.from)) {
+            if (r.to.startsWith(inputChar.toLowerCase())) {
                 const newTail = r.to + remaining.substring(r.from.length);
                 const head = targetRomaji.substring(0, typedCount);
                 targetRomaji = head + newTail;
@@ -674,11 +710,28 @@ function highlightKey(char) {
     if (keyElement) keyElement.classList.add('active-key');
 }
 
-function flashKeyboardError() {
-    const active = document.querySelector('.active-key');
-    if (active) {
-        active.classList.add('error-key');
-        setTimeout(() => active.classList.remove('error-key'), 200);
+function flashKeyboardError(missedChar) {
+    let keyElement = null;
+    if (missedChar) {
+        const searchChar = missedChar.toLowerCase();
+        keyElement = document.querySelector(`.key[data-key="${searchChar}"]`);
+    }
+
+    if (keyElement) {
+        // 実際にミスして押した位置のキーを赤く光らせてシェイク
+        keyElement.classList.remove('error-key');
+        void keyElement.offsetWidth; // リフローしてアニメーションを再実行
+        keyElement.classList.add('error-key');
+        setTimeout(() => {
+            keyElement.classList.remove('error-key');
+        }, 260);
+    } else {
+        // ガイドにない文字の場合は見本キーを軽く点滅
+        const active = document.querySelector('.active-key');
+        if (active) {
+            active.classList.add('error-key');
+            setTimeout(() => active.classList.remove('error-key'), 200);
+        }
     }
 }
 
@@ -828,7 +881,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
 
                     inputField.value = val.slice(0, -1);
-                    flashKeyboardError();
+                    flashKeyboardError(lastChar);
 
                     const q = currentQuestions[currentIndex];
                     if (q.reaction_bad) {
