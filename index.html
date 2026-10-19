@@ -56,8 +56,12 @@
             
             <div class="setting-area">
                 <!-- コース選択 -->
-                <div class="setting-group">
+                <div class="setting-group course-setting">
                     <label><i class="fa-solid fa-briefcase"></i> 研修コース選択</label>
+                    <div class="school-course-notice">
+                        <i class="fa-solid fa-star"></i>
+                        <span><strong>とりの丘の生徒・先生と実習したい方はこちら！</strong><br>「教育機関（とりの丘）実習コース」を選ぶと、名簿登録や校内チャットなどの課題に挑戦できます。</span>
+                    </div>
                     <select id="mode-select" onchange="updateSubMode()">
                         <option value="business">🏢 一般企業 実務コース</option>
                         <option value="school">🏫 教育機関（とりの丘）実習コース</option>
@@ -221,6 +225,7 @@
             </div>
 
             <p id="result-msg" class="msg-text"></p>
+            <button onclick="retryWithSameSettings()" class="retry-btn same-settings-btn"><i class="fa-solid fa-repeat"></i> 同じ設定でもう一度</button>
             <button onclick="location.reload()" class="retry-btn"><i class="fa-solid fa-rotate-right"></i> タイトルに戻る</button>
         </div>
     </div>
