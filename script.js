@@ -293,7 +293,7 @@ function checkFlexibleInput(inputChar) {
 
     const replacements = [
         { from: "shi", to: "si" }, { from: "chi", to: "ti" }, { from: "tsu", to: "tu" }, { from: "tsu", to: "cyu" },  { from: "jyu", to: "10" },   { from: "ju", to: "10" }, 
-        { from: "fu",  to: "hu" }, { from: "ji",  to: "zi" },  { from: "ti", to: "chi" },  { from: "ha", to: "wa" },  { from: "wa", to: "ha" }, { from: "o", to: "wo" }
+        { from: "fu",  to: "hu" }, { from: "ji",  to: "zi" },  { from: "ti", to: "chi" },  { from: "ha", to: "wa" },  { from: "wa", to: "ha" }, { from: "o", to: "wo" },
         { from: "sha", to: "sya" }, { from: "shu", to: "syu" }, { from: "sho", to: "syo" },
         { from: "cha", to: "tya" }, { from: "chu", to: "tyu" }, { from: "cho", to: "tyo" },
         { from: "ja",  to: "zya" }, { from: "ju",  to: "zyu" }, { from: "jo",  to: "zyo" },
@@ -609,4 +609,10 @@ function finishGame() {
     } else {
         msg.innerText = "本日のデータ入力業務は全て完了しました。\nお疲れ様でした。";
     }
+}
+
+// 結果画面から、直前と同じコース・課題数で再挑戦
+function retryWithSameSettings() {
+    resultScreen.classList.add('hidden');
+    initGame();
 }
