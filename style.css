@@ -362,3 +362,39 @@ body {
     margin-bottom: 10px;
 }
 .retry-btn:hover { background: #34495e; transform: translateY(-2px); }
+
+
+/* 教育機関実習コースを見つけやすくする案内 */
+.school-course-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0 0 12px;
+    padding: 13px 14px;
+    color: #a43c70;
+    background: linear-gradient(135deg, #fff0f7, #fff9fc);
+    border: 2px solid #ffacd0;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.65;
+}
+.school-course-notice > i {
+    color: #f05a9d;
+    font-size: 19px;
+    margin-top: 2px;
+}
+.school-course-notice strong {
+    color: #d63384;
+}
+#mode-select option[value="school"] {
+    font-weight: bold;
+}
+.same-settings-btn {
+    display: block;
+    width: 100%;
+    margin: 0 auto 12px;
+    background: linear-gradient(135deg, #ff8fbd, #e85d9e);
+}
+.same-settings-btn:hover {
+    background: linear-gradient(135deg, #f477ac, #d9488b);
+}
