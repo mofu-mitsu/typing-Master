@@ -274,15 +274,44 @@ function initGame() {
     isWaitingNext = false;
     inputField.disabled = false;
     inputField.value = "";
-    inputField.placeholder = "Spaceキーを押して開始";
     inputField.focus();
 
+    showStartPrompt();
+
     document.addEventListener('click', keepFocus);
+}
+
+function showStartPrompt() {
+    const prompt = document.getElementById('start-prompt');
+    if (prompt) prompt.classList.remove('hidden');
+
+    const spaceKey = document.querySelector('.space-key');
+    if (spaceKey) spaceKey.classList.add('space-ready-pulse');
+
+    if (displayTextField) displayTextField.innerText = "";
+    if (readingTextField) readingTextField.innerText = "";
+    if (romajiDisplay) {
+        romajiDisplay.innerHTML = `<span class="prompt-placeholder-romaji">Press [ Space ] to Start</span>`;
+    }
+    if (commentField) {
+        commentField.innerText = "スペースキーを押して研修をスタートしてください";
+        commentField.style.color = "#64748b";
+    }
+}
+
+function hideStartPrompt() {
+    const prompt = document.getElementById('start-prompt');
+    if (prompt) prompt.classList.add('hidden');
+
+    const spaceKey = document.querySelector('.space-key');
+    if (spaceKey) spaceKey.classList.remove('space-ready-pulse');
 }
 
 function backToTitle() {
     isPlaying = false;
     if (timerInterval) clearInterval(timerInterval);
+
+    hideStartPrompt();
 
     document.removeEventListener('click', keepFocus);
 
@@ -402,6 +431,7 @@ window.addEventListener('keydown', (e) => {
    ゲーム進行ロジック
    ========================================== */
 function startGame() {
+    hideStartPrompt();
     isPlaying = true;
     currentIndex = 0;
     missCount = 0;

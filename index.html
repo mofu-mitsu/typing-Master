@@ -283,6 +283,22 @@
 
             <!-- お題エリア -->
             <div id="question-area">
+                <!-- スペースキー待機表示バナー -->
+                <div id="start-prompt" class="start-prompt-banner" onclick="if (!isPlaying) startGame();">
+                    <div class="prompt-icon-ring">
+                        <svg class="prompt-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <rect x="2" y="6" width="20" height="12" rx="3"></rect>
+                            <line x1="6" y1="14" x2="18" y2="14" stroke-width="3"></line>
+                        </svg>
+                    </div>
+                    <div class="prompt-text-group">
+                        <div class="prompt-main-badge">
+                            <span class="prompt-kbd">Space</span> キーを押してスタート！
+                        </div>
+                        <p class="prompt-sub-desc">スペースキーを押すと第1問のタイピングが開始されます（クリックでも開始可）</p>
+                    </div>
+                </div>
+
                 <!-- キャラ画像 -->
                 <div id="char-image-box" class="hidden">
                     <img id="char-img" src="" alt="Character">

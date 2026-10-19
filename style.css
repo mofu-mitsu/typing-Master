@@ -699,6 +699,99 @@ body {
     border-color: #bbf7d0;
 }
 
+/* スペースキー開始待機バナー */
+.start-prompt-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+    user-select: none;
+    animation: fadeInPrompt 0.3s ease-out;
+}
+
+@keyframes fadeInPrompt {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.prompt-icon-ring {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.school-mode .prompt-icon-ring {
+    background: #ffe4e6;
+    color: #f43f5e;
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.15);
+}
+
+.prompt-svg {
+    width: 26px;
+    height: 26px;
+}
+
+.prompt-text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.prompt-main-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.prompt-kbd {
+    display: inline-block;
+    padding: 3px 14px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 800;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    border-radius: 8px;
+    box-shadow: 0 3px 0 #1e40af, 0 4px 10px rgba(37, 99, 235, 0.35);
+    animation: pulseBadge 1.4s infinite ease-in-out;
+}
+
+.school-mode .prompt-kbd {
+    background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+    box-shadow: 0 3px 0 #be123c, 0 4px 10px rgba(244, 63, 94, 0.35);
+}
+
+@keyframes pulseBadge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+.prompt-sub-desc {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.prompt-placeholder-romaji {
+    font-size: 15px;
+    color: #64748b;
+    letter-spacing: 0.05em;
+}
+
 #sender-info {
     font-size: 13px;
     font-weight: 700;
@@ -861,6 +954,31 @@ body {
     font-size: 12px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+}
+
+/* スペースキーのガイドパルス発光 */
+.space-key.space-ready-pulse {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 0 #1d4ed8, 0 0 15px rgba(59, 130, 246, 0.5) !important;
+    animation: spaceGlow 1.2s infinite alternate ease-in-out;
+}
+
+.school-mode .space-key.space-ready-pulse {
+    background: linear-gradient(135deg, #fb7185 0%, #f43f5e 100%) !important;
+    box-shadow: 0 2px 0 #be123c, 0 0 15px rgba(244, 63, 94, 0.5) !important;
+}
+
+@keyframes spaceGlow {
+    from {
+        opacity: 0.85;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(1px);
+        box-shadow: 0 1px 0 #1d4ed8, 0 0 22px rgba(59, 130, 246, 0.85) !important;
+    }
 }
 
 .key.active-key {
