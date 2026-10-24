@@ -1307,3 +1307,52 @@ body {
         left: 10px !important;
     }
 }
+
+/* =========================================
+   ★ 絶対に潰れないようにする最強設定
+   ========================================= */
+
+/* 画面内のすべての大きなブロックが「縮む」のを強制的に禁止する */
+#selection-screen > * {
+    flex-shrink: 0 !important;
+}
+
+/* キャラクターカードの「最低限の高さ」を固定して、物理的に潰れなくする */
+.char-card {
+    min-height: 120px !important; /* ★これでペチャンコにならない！ */
+}
+
+/* タブのボタンも縮まないようにする */
+.tab-btn {
+    flex-shrink: 0 !important;
+}
+
+/* =========================================
+   ★ ヘッダーのボタン重なり解消
+   （無理な固定配置をやめて、自然に並べる）
+   ========================================= */
+
+/* ヘッダーの中身を「左(戻る)」「中(タイトル)」「右(全解除)」に自然に分ける */
+.selection-header {
+    display: flex !important;
+    align-items: flex-start !important; /* 上で揃える */
+    justify-content: space-between !important; /* 両端に散らす */
+    width: 100% !important;
+    padding-top: 15px !important; /* BGMボタンを避けるために少し下に下げる */
+    margin-bottom: 25px !important;
+}
+
+/* 戻るボタンと全解除ボタンを、画面の端に無理やり固定(absolute)するのをやめる */
+.back-btn, .clear-btn {
+    position: static !important; /* ★絶対配置を解除して、自然な位置へ */
+    margin: 0 !important;
+    z-index: 10;
+}
+
+/* 中央のタイトルエリアを真ん中にキープする */
+.header-center {
+    flex: 1 !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
