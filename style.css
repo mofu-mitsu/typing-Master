@@ -1259,3 +1259,51 @@ body {
         min-width: 130px;
     }
 }
+
+/* =========================================
+   ★ レイアウトの詰まり（潰れ）防止 & 余白調整
+   ========================================= */
+
+/* 画面内の各要素が勝手に縮んで潰れるのを防ぐ！
+   （これでオプションを開いても下のキャラ一覧が潰れず、下に伸びるようになります） */
+#selection-screen > * {
+    flex-shrink: 0;
+}
+
+/* 役職オプションエリアの上下にしっかり余白を取る */
+.options-area {
+    margin-bottom: 30px !important; /* 下のタブとの隙間を広げる */
+    padding: 15px !important;
+}
+
+/* 開いた中身のボタンの間隔を広げて見やすく・タップしやすくする */
+.roles-options {
+    gap: 12px 15px; /* 縦・横の隙間 */
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.roles-options label {
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* =========================================
+   ★ スマホ時の「全解除」ボタン被り修正
+   ========================================= */
+@media screen and (max-width: 600px) {
+    .clear-btn {
+        /* BGMボタン（スピーカー）の下にズラして被りを防ぐ */
+        top: 55px !important; 
+        right: 10px !important;
+        background: rgba(0, 0, 0, 0.6); /* 背景に少し色をつけて読みやすく */
+    }
+    
+    /* 戻るボタンも少し調整 */
+    .back-btn {
+        top: 10px !important;
+        left: 10px !important;
+    }
+}
