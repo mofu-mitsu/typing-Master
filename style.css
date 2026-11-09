@@ -829,6 +829,69 @@ body {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 
+/* 生徒からの受信メッセージ吹き出し（DM・LINE用） */
+.dm-bubble {
+    background: #ffffff;
+    border: 1.5px solid #bbf7d0;
+    border-radius: 16px;
+    padding: 12px 18px;
+    margin: 4px 0 16px;
+    max-width: 92%;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.08);
+    animation: fadeInPrompt 0.25s ease-out;
+}
+
+.school-mode .dm-bubble {
+    border-color: #fecdd3;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.08);
+}
+
+.dm-bubble-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #059669;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+}
+
+.school-mode .dm-bubble-header {
+    color: #e11d48;
+}
+
+.dm-bubble-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+    line-height: 1.55;
+}
+
+/* 返信指示ラベル */
+.reply-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #2563eb;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.1);
+}
+
+.school-mode .reply-label {
+    background: #ffe4e6;
+    color: #e11d48;
+    box-shadow: 0 2px 6px rgba(225, 29, 72, 0.1);
+}
+
 #display-text {
     font-size: 26px;
     font-weight: 800;

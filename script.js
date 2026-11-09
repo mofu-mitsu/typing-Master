@@ -285,11 +285,19 @@ function showStartPrompt() {
     const prompt = document.getElementById('start-prompt');
     if (prompt) prompt.classList.remove('hidden');
 
+    const dmBubble = document.getElementById('dm-bubble');
+    if (dmBubble) dmBubble.classList.add('hidden');
+    const replyLabel = document.getElementById('reply-label');
+    if (replyLabel) replyLabel.classList.add('hidden');
+
     const spaceKey = document.querySelector('.space-key');
     if (spaceKey) spaceKey.classList.add('space-ready-pulse');
 
     if (displayTextField) displayTextField.innerText = "";
-    if (readingTextField) readingTextField.innerText = "";
+    if (readingTextField) {
+        readingTextField.innerText = "";
+        readingTextField.classList.remove('hidden');
+    }
     if (romajiDisplay) {
         romajiDisplay.innerHTML = `<span class="prompt-placeholder-romaji">Press [ Space ] to Start</span>`;
     }
@@ -491,6 +499,10 @@ function nextQuestion() {
 
     renderCharImages(q, initialFace);
 
+    const dmBubble = document.getElementById('dm-bubble');
+    const dmBubbleText = document.getElementById('dm-bubble-text');
+    const replyLabel = document.getElementById('reply-label');
+
     if (q.subtype === 'line' || q.subtype === 'chat' || q.subtype === 'request') {
         senderInfo.classList.remove('hidden');
         senderName.innerText = q.sender || "";
@@ -498,8 +510,26 @@ function nextQuestion() {
         senderInfo.classList.add('hidden');
     }
 
-    displayTextField.innerText = q.text;
-    readingTextField.innerText = q.kana;
+    if (q.subtype === 'line') {
+        // 生徒からのDM・LINE：生徒のセリフを受信吹き出しに表示し、打つ返信文を大きく表示！
+        if (dmBubble && dmBubbleText) {
+            dmBubble.classList.remove('hidden');
+            dmBubbleText.innerText = q.text;
+        }
+        if (replyLabel) replyLabel.classList.remove('hidden');
+
+        // 打つ文章（返信）を大文字・黒字でメイン表示！
+        displayTextField.innerText = q.kana;
+        readingTextField.innerText = "";
+        readingTextField.classList.add('hidden');
+    } else {
+        if (dmBubble) dmBubble.classList.add('hidden');
+        if (replyLabel) replyLabel.classList.add('hidden');
+        readingTextField.classList.remove('hidden');
+
+        displayTextField.innerText = q.text;
+        readingTextField.innerText = q.kana;
+    }
 
     updateRomajiDisplay();
     if (typedCount < targetRomaji.length) {
@@ -546,28 +576,99 @@ function checkFlexibleInput(inputChar) {
         }
     }
 
-    // 3. ローマ字の柔軟表記対応（ヘボン式・訓令式・各種ゆらぎ）
-    const replacements = [
-        { from: "shi", to: "si" }, { from: "si", to: "shi" },
-        { from: "chi", to: "ti" }, { from: "ti", to: "chi" },
-        { from: "tsu", to: "tu" }, { from: "tu", to: "tsu" },
-        { from: "fu",  to: "hu" }, { from: "hu", to: "fu" },
-        { from: "ji",  to: "zi" }, { from: "zi", to: "ji" },
-        { from: "sha", to: "sya" }, { from: "sya", to: "sha" },
-        { from: "shu", to: "syu" }, { from: "syu", to: "shu" },
-        { from: "sho", to: "syo" }, { from: "syo", to: "sho" },
-        { from: "cha", to: "tya" }, { from: "tya", to: "cha" },
-        { from: "chu", to: "tyu" }, { from: "tyu", to: "chu" },
-        { from: "cho", to: "tyo" }, { from: "tyo", to: "cho" },
-        { from: "ja",  to: "zya" }, { from: "zya", to: "ja" },
-        { from: "ju",  to: "zyu" }, { from: "zyu", to: "ju" }, { from: "jyu", to: "zyu" }, { from: "ju", to: "jyu" },
-        { from: "jo",  to: "zyo" }, { from: "zyo", to: "jo" },
-        { from: "ha", to: "wa" },  { from: "wa", to: "ha" },
-        { from: "o", to: "wo" },   { from: "wo", to: "o" }
+    // 3. 子音入力途中での異綴り切り替え（sy <-> sh, jy <-> j, ty <-> ch, tu <-> tsu など）
+    const midSwaps = [
+        // 'j' の後に u, o, a が続く時、yを挟んで jyu, jyo, jya と打つ、またはその逆
+        { prev: 'j', rem: 'u', in: 'y', to: 'yu' },   // ju -> jyu
+        { prev: 'j', rem: 'yu', in: 'u', to: 'u' },   // jyu -> ju
+        { prev: 'j', rem: 'o', in: 'y', to: 'yo' },   // jo -> jyo
+        { prev: 'j', rem: 'yo', in: 'o', to: 'o' },   // jyo -> jo
+        { prev: 'j', rem: 'a', in: 'y', to: 'ya' },   // ja -> jya
+        { prev: 'j', rem: 'ya', in: 'a', to: 'a' },   // jya -> ja
+
+        // 'z' の後に u, o, a が続く時 (zyu, zyo, zya など)
+        { prev: 'z', rem: 'u', in: 'y', to: 'yu' },
+        { prev: 'z', rem: 'yu', in: 'u', to: 'u' },
+        { prev: 'z', rem: 'o', in: 'y', to: 'yo' },
+        { prev: 'z', rem: 'yo', in: 'o', to: 'o' },
+        { prev: 'z', rem: 'a', in: 'y', to: 'ya' },
+        { prev: 'z', rem: 'ya', in: 'a', to: 'a' },
+
+        // 's' の後に続く時 (sho <-> syo, shu <-> syu, sha <-> sya, shi <-> si)
+        { prev: 's', rem: 'ho', in: 'y', to: 'yo' },  // sho -> syo (shou -> syou)
+        { prev: 's', rem: 'yo', in: 'h', to: 'ho' },  // syo -> sho (syou -> shou)
+        { prev: 's', rem: 'hu', in: 'y', to: 'yu' },  // shu -> syu
+        { prev: 's', rem: 'yu', in: 'h', to: 'hu' },  // syu -> shu
+        { prev: 's', rem: 'ha', in: 'y', to: 'ya' },  // sha -> sya
+        { prev: 's', rem: 'ya', in: 'h', to: 'ha' },  // sya -> sha
+        { prev: 's', rem: 'hi', in: 'i', to: 'i' },   // shi -> si
+        { prev: 's', rem: 'i', in: 'h', to: 'hi' },   // si -> shi
+
+        // 'c' または 't' の後に続く時 (cha <-> tya, chu <-> tyu, cho <-> tyo, tsu <-> tu, chi <-> ti)
+        { prev: 'c', rem: 'ha', in: 'y', to: 'ya' },
+        { prev: 'c', rem: 'hu', in: 'y', to: 'yu' },
+        { prev: 'c', rem: 'ho', in: 'y', to: 'yo' },
+        { prev: 't', rem: 'ya', in: 'h', to: 'ha' },
+        { prev: 't', rem: 'yu', in: 'h', to: 'hu' },
+        { prev: 't', rem: 'yo', in: 'h', to: 'ho' },
+        { prev: 't', rem: 'su', in: 'u', to: 'u' },   // tsu -> tu
+        { prev: 't', rem: 'u', in: 's', to: 'su' },   // tu -> tsu
+        { prev: 't', rem: 'i', in: 'y', to: 'yi' }
     ];
 
-    for (let r of replacements) {
-        if (r.prev && r.prev !== prevChar) continue;
+    for (const ms of midSwaps) {
+        if (prevChar.toLowerCase() === ms.prev && remaining.toLowerCase().startsWith(ms.rem)) {
+            if (inputChar.toLowerCase() === ms.in) {
+                const newTail = ms.to + remaining.substring(ms.rem.length);
+                const head = targetRomaji.substring(0, typedCount);
+                targetRomaji = head + newTail;
+                return true;
+            }
+        }
+    }
+
+    // 4. 音節全体の置き換え（先頭キー入力前の対応）
+    const replacements = [
+        // shi / si / ci
+        { from: 'shi', to: 'si' }, { from: 'si', to: 'shi' }, { from: 'ci', to: 'shi' }, { from: 'ci', to: 'si' },
+        // chi / ti
+        { from: 'chi', to: 'ti' }, { from: 'ti', to: 'chi' },
+        // tsu / tu
+        { from: 'tsu', to: 'tu' }, { from: 'tu', to: 'tsu' },
+        // fu / hu
+        { from: 'fu', to: 'hu' }, { from: 'hu', to: 'fu' },
+        // ji / zi
+        { from: 'ji', to: 'zi' }, { from: 'zi', to: 'ji' },
+        // sha / sya
+        { from: 'sha', to: 'sya' }, { from: 'sya', to: 'sha' },
+        // shu / syu
+        { from: 'shu', to: 'syu' }, { from: 'syu', to: 'shu' },
+        // sho / syo
+        { from: 'sho', to: 'syo' }, { from: 'syo', to: 'sho' },
+        // cha / tya
+        { from: 'cha', to: 'tya' }, { from: 'tya', to: 'cha' },
+        // chu / tyu
+        { from: 'chu', to: 'tyu' }, { from: 'tyu', to: 'chu' },
+        // cho / tyo
+        { from: 'cho', to: 'tyo' }, { from: 'tyo', to: 'cho' },
+        // ja / jya / zya
+        { from: 'ja', to: 'jya' }, { from: 'ja', to: 'zya' },
+        { from: 'jya', to: 'ja' }, { from: 'jya', to: 'zya' },
+        { from: 'zya', to: 'ja' }, { from: 'zya', to: 'jya' },
+        // ju / jyu / zyu
+        { from: 'ju', to: 'jyu' }, { from: 'ju', to: 'zyu' },
+        { from: 'jyu', to: 'ju' }, { from: 'jyu', to: 'zyu' },
+        { from: 'zyu', to: 'ju' }, { from: 'zyu', to: 'jyu' },
+        // jo / jyo / zyo
+        { from: 'jo', to: 'jyo' }, { from: 'jo', to: 'zyo' },
+        { from: 'jyo', to: 'jo' }, { from: 'jyo', to: 'zyo' },
+        { from: 'zyo', to: 'jo' }, { from: 'zyo', to: 'jyo' },
+        // particles & vowels
+        { from: 'ha', to: 'wa' }, { from: 'wa', to: 'ha' },
+        { from: 'wo', to: 'o' },  { from: 'o', to: 'wo' }
+    ];
+
+    for (const r of replacements) {
         if (remaining.toLowerCase().startsWith(r.from)) {
             if (r.to.startsWith(inputChar.toLowerCase())) {
                 const newTail = r.to + remaining.substring(r.from.length);
