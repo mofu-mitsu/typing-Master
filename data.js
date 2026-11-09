@@ -1,4 +1,4 @@
-// data.js
+\// data.js
 
 /* =========================================
    🏢 実務訓練モード（表）データ
@@ -2530,7 +2530,7 @@ const schoolData = [
         sender: "橘定 由子",
         text: "先生……差し出がましかったらすみません。今日のクラス、少し空気が張りつめている気がして……。",
         kana: "きづいてくれてたすかります。こちらでたいおうしますね。",
-        romaji: "kidzuite kurete tasukarimasu kochira de taiou shimasu ne",
+        romaji: "kizuite kurete tasukarimasu kochira de taiou shimasu ne",
         start_msg: "（ゆこからLINEが届きました）",
         reaction_good: "ゆこ「……先生、やっぱり頼りになります。」",
         reaction_bad: "ゆこ「……そうですか。私の考えすぎでしたね。」",
@@ -2665,7 +2665,7 @@ const schoolData = [
         sender: "舟濤 汀",
         text: "先生、水兵部の準備が長引いてます。少し遅れても問題ありませんか？", // 先生用・猫かぶりモード
         kana: "はい。かたづけをしてからきなさい。",
-        romaji: "hai katazuke o shite kara kinasai",
+        romaji: "hai katazuke wo shite kara kinasai",
         start_msg: "（みぎわからLINEが届きました）",
         
         // リアクションで素が出る（岡山弁）
@@ -3212,7 +3212,7 @@ const schoolData = [
         sender: "笑原 瞳",
         text: "先生、今日の授業内容、少し難しそうな子がいました。後でフォローできたらと思います。",
         kana: "気づいてくれてありがとう。無理のない範囲で大丈夫ですよ。",
-        romaji: "kizuite kurete arigatou. muri no nai han'i de daijoubu desu yo.",
+        romaji: "kiduite kurete arigatou. muri no nai han'i de daijoubu desu yo.",
         start_msg: "（ひとみからLINEが届きました）",
         reaction_good: "ひとみ「そう言っていただけて、少し安心しました。」",
         reaction_bad: "ひとみ「先生、誤字があります…。大丈夫ですか？」",
@@ -3432,7 +3432,7 @@ const schoolData = [
         sender: "黒見 晃",
         text: "なぁ先生！今日ハロウィンの飾り見た？オレあれテンション上がるんだけど！🎃🐈‍⬛",
         kana: "たのしみにできるのはいいことですね。ただしじゅんびはきそくをまもりましょう。",
-        romaji: "tanoshimi ni dekiru no wa ii koto desu ne. tadashi junbi wa kisoku o mamorimashou.",
+        romaji: "tanoshimi ni dekiru no wa ii koto desu ne. tadashi junbi wa kisoku wo mamorimashou.",
         start_msg: "（ひかるからLINEが届きました）",
         reaction_good: "ひかる「さすが先生！話わかる〜！」",
         reaction_bad: "ひかる「先生、そこ噛んでない？w」",
@@ -3507,7 +3507,7 @@ const schoolData = [
         sender: "小路 虎作",
         text: "せんせー！今日のお昼のお好み焼き、マジで俺ん家レベルやったで！誇ってええ？",
         kana: "そうですね。じまんはほどほどにして、まわりにもきをくばりましょう。",
-        romaji: "sou desu ne. jiman wa hodohodo ni shite, mawari ni mo ki o kubarimashou.",
+        romaji: "sou desu ne. jiman wa hodohodo ni shite, mawari ni mo ki wo kubarimashou.",
         start_msg: "（こさくからLINEが届きました）",
         reaction_good: "こさく「さすが先生、ツッコミ上手やな〜！」",
         reaction_bad: "こさく「先生、そこ日本語おかしない？w」",
@@ -3537,7 +3537,7 @@ const schoolData = [
         sender: "雑敷 言",
         text: "先生、写真部の申請出しちょきました。今日はちょっと寒かったです。",
         kana: "れんらくありがとう。からだをひやさないようにしてください。",
-        romaji: "renraku arigatou. karada o hiyasanai you ni shite kudasai.",
+        romaji: "renraku arigatou. karada wo hiyasanai you ni shite kudasai.",
         start_msg: "（ことからLINEが届きました）",
         reaction_good: "こと「気にかけてくれて助かります」",
         reaction_bad: "こと「先生、文字間違うちゅうが」",
@@ -3552,7 +3552,7 @@ const schoolData = [
         sender: "杉山 虎毱",
         text: "せんせい、これ見て。おうちで作った棚なの。教室に置いてもいいかな？",
         kana: "すてきですね。あんぜんをかくにんしてからそうだんしましょう。",
-        romaji: "suteki desu ne. anzen o kakunin shite kara soudan shimashou.",
+        romaji: "suteki desu ne. anzen wo kakunin shite kara soudan shimashou.",
         start_msg: "（こまりからLINEが届きました）",
         reaction_good: "こまり「よかった…ほめられた」",
         reaction_bad: "こまり「せんせい、へんな文字あるよ？」",
@@ -3597,7 +3597,7 @@ const schoolData = [
         sender: "二瓶 小次郎",
         text: "先生、今日の音楽室、少し長く使ってしまいました。問題ありませんでしたか？",
         kana: "れんらくありがとう。つぎからはじかんをいしきしましょう。",
-        romaji: "renraku arigatou. tsugi kara wa jikan o ishiki shimashou.",
+        romaji: "renraku arigatou. tsugi kara wa jikan wo ishiki shimashou.",
         start_msg: "（こじろうからLINEが届きました）",
         reaction_good: "こじろう「はい、気をつけます」",
         reaction_bad: "こじろう「先生、変換が違います」",
@@ -3642,7 +3642,7 @@ const schoolData = [
         sender: "谷幡 節捺",
         text: "せんせぇ…メモ帳どこ入れたか分からんくなったと。新聞のネタも一緒に消えた…",
         kana: "まずはおちついて、かばんのなかをいっしょにかくにんしましょう。",
-        romaji: "mazu wa ochitsuite, kaban no naka o issho ni kakunin shimashou.",
+        romaji: "mazu wa ochitsuite, kaban no naka wo issho ni kakunin shimashou.",
         start_msg: "（せつなからLINEが届きました）",
         reaction_good: "せつな「やさしかぁ…助かる」",
         reaction_bad: "せつな「せんせ、へんな字あるばい」",
@@ -3748,7 +3748,7 @@ const schoolData = [
         sender: "遠藤 海松",
         text: "せんせー！今日ね、めっちゃ笑ったんだけど聞いてほしい〜！",
         kana: "またあした、がっこうでおはなしをきかせてください。",
-        romaji: "mata ashita, gakkou de ohanashi o kikasete kudasai.",
+        romaji: "mata ashita, gakkou de ohanashi wo kikasete kudasai.",
         start_msg: "（みるからLINEが届きました）",
         reaction_good: "みる「やったー！絶対話す！」",
         reaction_bad: "みる「せんせ、へんかんミスってる！」",
@@ -3778,7 +3778,7 @@ const schoolData = [
         sender: "柏倉 佑",
         text: "先生、これ可愛いと思って買ったんですけど…男が持ってても変じゃないですか？",
         kana: "すきなものをたいせつにしていいとおもいますよ。",
-        romaji: "suki na mono o taisetsu ni shite ii to omoimasu yo.",
+        romaji: "suki na mono wo taisetsu ni shite ii to omoimasu yo.",
         start_msg: "（ゆうからLINEが届きました）",
         reaction_good: "ゆう「……少し自信出ました」",
         reaction_bad: "ゆう「先生、文字まちがってます…」",
@@ -3793,7 +3793,7 @@ const schoolData = [
         sender: "雲然 翔暖",
         text: "せんせー！今日さ、オレのモノマネ見た？🐦✨ ちょっと似とらんかった？w",
         kana: "もくひょうをもってれんしゅうするのは、とてもいいことですよ。",
-        romaji: "mokuhyou o motte renshuu suru no wa totemo ii koto desu yo",
+        romaji: "mokuhyou wo motte renshuu suru no wa totemo ii koto desu yo",
         start_msg: "（かのんからLINEが届きました）",
         reaction_good: "かのん「やろ〜？えへへ、せんせーにほめられた✨」",
         reaction_bad: "かのん「せんせ、そこ誤字しとるちゃ！w」",
@@ -3913,7 +3913,7 @@ const schoolData = [
         sender: "根峯 萠",
         text: "先生、クラスのことで少し気になることがあってさ。今度時間もらえる？",
         kana: "はい、らいしゅうでよければはなしをききますよ。",
-        romaji: "hai raishuu de yokereba hanashi o kikimasu yo",
+        romaji: "hai raishuu de yokereba hanashi wo kikimasu yo",
         start_msg: "（めぐむからLINEが届きました）",
         reaction_good: "めぐむ「助かる。やっぱ先生だわ」",
         reaction_bad: "めぐむ「先生、誤字ってるからw」",
@@ -4258,7 +4258,7 @@ const schoolData = [
         sender: "楽得 響",
         text: "せんせぇぇ！！あしたの体育、ぜったいオレが一番やからな！！コケコッコー！！！🐔🔥",
         kana: "けがをしないように、がんばってください。",
-        romaji: "kega o shinai you ni ganbatte kudasai",
+        romaji: "kega wo shinai you ni ganbatte kudasai",
         start_msg: "（ひびきからLINEが届きました）",
         reaction_good: "ひびき「おう！！せんせも見とけよォ！！」",
         reaction_bad: "ひびき「はぁ！？せんせ、誤字っとるやんけ！！」",
@@ -4273,7 +4273,7 @@ const schoolData = [
         sender: "池里 雪彦",
         text: "せんせー！きょう、わちのノートどっかいっちゃってさ〜！ゆきひこ団のだいじなページだったのに〜！！🐩💦",
         kana: "おちついて、まわりをよくさがしてみましょう。",
-        romaji: "ochitsuite mawari o yoku sagashite mimashou",
+        romaji: "ochitsuite mawari wo yoku sagashite mimashou",
         start_msg: "（ゆきひこからLINEが届きました）",
         reaction_good: "ゆきひこ「さすがせんせー！わち、ちょっと元気でた！」",
         reaction_bad: "ゆきひこ「えっ、せんせ、そこ誤字ってるよ！？わちでもわかる！」",
@@ -4288,7 +4288,7 @@ const schoolData = [
         sender: "市川 宥暉",
         text: "せんせ、きょうの運勢みる？いまなら無料だよ〜🔮✨",
         kana: "ありがとう。でも、じゅぎょうをゆうせんしてください。",
-        romaji: "arigatou demo jugyou o yuusen shite kudasai",
+        romaji: "arigatou demo jugyou wo yuusen shite kudasai",
         start_msg: "（ゆうきからLINEが届きました）",
         reaction_good: "ゆうき「さすが先生！現実派だね〜！」",
         reaction_bad: "ゆうき「あれ？先生、漢字ちがくない？占いより気になるw」",
@@ -4483,7 +4483,7 @@ const schoolData = [
         sender: "御厨 夜",
         text: "せんせ〜、あした朝ムリかもしれん。夜、全然寝れんかったとよ🐈‍⬛",
         kana: "無理のないように、気をつけて来てください。",
-        romaji: "muri no nai you ni ki o tsukete kite kudasai",
+        romaji: "muri no nai you ni ki wo tsukete kite kudasai",
         start_msg: "（よるからLINEが届きました）",
         reaction_good: "よる「やさしか〜……」",
         reaction_bad: "よる「先生、誤字しとるばい？」",
@@ -4718,7 +4718,7 @@ const schoolData = [
     start_msg: "ともき「先生、クラス掲示用の文章まとめたい。入力お願いできる？」",
     text: "協力と規律を大切にし全員で目標を達成する",
     kana: "きょうりょくときりつをたいせつにしぜんいんでもくひょうをたっせいする",
-    romaji: "kyouryoku to kiritsu o taisetsu ni shi zenin de mokuhyou o tassei suru",
+    romaji: "kyouryoku to kiritsu wo taisetsu ni shi zenin de mokuhyou wo tassei suru",
     reaction_good: "ともき「いいね、読みやすい。助かったよ先生」",
     reaction_bad: "ともき「あれ？誤字あるぞ先生。詰めが甘いな」",
     image: "tomoki.png"
@@ -4731,7 +4731,7 @@ const schoolData = [
     start_msg: "わたる「先生。提出用資料の一文を入力してほしい」",
     text: "細部まで妥協せず完成度を追求する姿勢",
     kana: "さいぶまでだきょうせずかんせいどをついきゅうするしせい",
-    romaji: "saibu made dakyou sezu kanseido o tsuikyuu suru shisei",
+    romaji: "saibu made dakyou sezu kanseido wo tsuikyuu suru shisei",
     reaction_good: "わたる「問題ない。正確だ」",
     reaction_bad: "わたる「……誤りがある。やり直してくれ、先生」",
     image: "wataru.png"
@@ -4757,7 +4757,7 @@ const schoolData = [
     start_msg: "ことり「先生〜、課題の一文だけ入力してくれん？」",
     text: "ほどほどに力を抜いて楽しむことも大切",
     kana: "ほどほどにちからをぬいてたのしむこともたいせつ",
-    romaji: "hodohodo ni chikara o nuite tanoshimu koto mo taisetsu",
+    romaji: "hodohodo ni chikara wo nuite tanoshimu koto mo taisetsu",
     reaction_good: "ことり「おー、完璧やん。先生できるねぇ」",
     reaction_bad: "ことり「あれ？ミスっとるよ先生。気ぃ抜きすぎやろ」",
     image: "kotori.png"
@@ -4770,7 +4770,7 @@ const schoolData = [
     start_msg: "みきな「先生、イベント用の説明文、入力お願い！」",
     text: "みんなで笑顔になれる楽しい時間を届けます",
     kana: "みんなでえがおになれるたのしいじかんをとどけます",
-    romaji: "minna de egao ni nareru tanoshii jikan o todokemasu",
+    romaji: "minna de egao ni nareru tanoshii jikan wo todokemasu",
     reaction_good: "みきな「いいね！さすが先生！」",
     reaction_bad: "みきな「あれ〜？先生ミスってるよ？」",
     image: "mikina.png"
@@ -4796,7 +4796,7 @@ const schoolData = [
     start_msg: "まりあ「先生、教会のお知らせ文を入力していただけますか？」",
     text: "静かな祈りと温かな心を大切にしています",
     kana: "しずかないのりとあたたかなこころをたいせつにしています",
-    romaji: "shizuka na inori to atataka na kokoro o taisetsu ni shiteimasu",
+    romaji: "shizuka na inori to atataka na kokoro wo taisetsu ni shiteimasu",
     reaction_good: "まりあ「ありがとうございます。とても助かりました」",
     reaction_bad: "まりあ「あら……少し間違っているみたいですね」",
     image: "maria.png"
@@ -4812,7 +4812,7 @@ const schoolData = [
     
     text: "仲間と支え合いながら海を目指して進む",
     kana: "なかまとささえあいながらうみをめざしてすすむ",
-    romaji: "nakama to sasaeai nagara umi o mezashite susumu",
+    romaji: "nakama to sasaeai nagara umi wo mezashite susumu",
     // Good: 感動して方言が出る
     reaction_good: "みぎわ「完璧です！ ありがとうございます先生！ さすがじゃわ〜！」",
     // Bad: 思わずツッコミが出る
@@ -4868,7 +4868,7 @@ const schoolData = [
     start_msg: "やえ「……先生。日記に書く言葉……入力してほしい。」",
     text: "自分の気持ちを探しながらゆっくり進む",
     kana: "じぶんのきもちをさがしながらゆっくりすすむ",
-    romaji: "jibun no kimochi o sagashinagara yukkuri susumu",
+    romaji: "jibun no kimochi wo sagashinagara yukkuri susumu",
     reaction_good: "やえ「……ありがとう。これで……忘れずにすむ。」",
     reaction_bad: "やえ「……誤字、ある。ちゃんと見て……。」",
     image: "yae.png"
@@ -4881,7 +4881,7 @@ const schoolData = [
     start_msg: "あかり「せんせー！クラスの目標、この文入力してほしいなっ！」",
     text: "毎日を楽しく前向きに過ごそう",
     kana: "まいにちをたのしくまえむきにすごそう",
-    romaji: "mainichi o tanoshiku maemuki ni sugosou",
+    romaji: "mainichi wo tanoshiku maemuki ni sugosou",
     reaction_good: "あかり「わー！完璧〜！さすが先生！元気出たー！」",
     reaction_bad: "あかり「あれ？先生ミスってない？w ドンマイ！」",
     image: "akari.png"
@@ -4894,7 +4894,7 @@ const schoolData = [
     start_msg: "えにし「……個展のキャプション（説明文）、入力頼めるけ？」",
     text: "静かな線の中に感情を込めて描く",
     kana: "しずかなせんのなかにかんじょうをこめてえがく",
-    romaji: "shizuka na sen no naka ni kanjou o komete egaku",
+    romaji: "shizuka na sen no naka ni kanjou wo komete egaku",
     reaction_good: "えにし「……悪くない。ありがとう。いい感じや。」",
     reaction_bad: "えにし「……先生、線がブレとるよ。集中して。」",
     image: "enishi.png"
@@ -4907,7 +4907,7 @@ const schoolData = [
     start_msg: "まとい「先生、オレのメモ帳にこの一文、入力してけろ。」",
     text: "身体で感じたことを信じて進む",
     kana: "からだでかんじたことをしんじてすすむ",
-    romaji: "karada de kanjita koto o shinjite susumu",
+    romaji: "karada de kanjita koto wo shinjite susumu",
     reaction_good: "まとい「……いいな。助かった。」",
     reaction_bad: "まとい「そこ違ぇべ。ちゃんと打て。」",
     image: "matoi.png"
@@ -4920,7 +4920,7 @@ const schoolData = [
     start_msg: "すず「先生、この掟（おきて）、入力をお願いしますに。」",
     text: "決まりを守ることで全体の調和が保たれる",
     kana: "きまりをまもることでぜんたいのちょうわがたもたれる",
-    romaji: "kimari o mamoru koto de zentai no chouwa ga tamotareru",
+    romaji: "kimari wo mamoru koto de zentai no chouwa ga tamotareru",
     reaction_good: "すず「正確やんな。ありがとうございます。」",
     reaction_bad: "すず「誤字がありますに。やり直してください。」",
     image: "suzu.png"
@@ -4946,7 +4946,7 @@ const schoolData = [
     start_msg: "やさし「先生、体操部の掲示用にこれ入力してもらってもいいですか？」",
     text: "柔軟性を高めることで怪我を防ぐ",
     kana: "じゅうなんせいをたかめることでけがをふせぐ",
-    romaji: "juunansei o takameru koto de kega o fusegu",
+    romaji: "juunansei wo takameru koto de kega wo fusegu",
     reaction_good: "やさし「ありがとうございます！先生ほんと優しいですね。」",
     reaction_bad: "やさし「あっ…先生、そこ打ち間違えてますよ。」",
     image: "yasashi.png"
@@ -4972,7 +4972,7 @@ const schoolData = [
     start_msg: "まきし「センセ！僕の格言！サクッと入力お願い♪」",
     text: "マヨネーズはすべてを解決する",
     kana: "まよねーずはすべてをかいけつする",
-    romaji: "mayoneezu wa subete o kaiketsu suru",
+    romaji: "mayoneezu wa subete wo kaiketsu suru",
     reaction_good: "まきし「っしゃ！完璧じゃん！先生最高〜！」",
     reaction_bad: "まきし「あれ？センセ、指すべってない？w」",
     image: "makishi.png"
@@ -4985,7 +4985,7 @@ const schoolData = [
     start_msg: "しげ「せ、先生……昼休みの目標、入力お願いしてもよかですか……？」",
     text: "自分のペースで、落ち着いて食事をする",
     kana: "じぶんのぺーすでおちついてしょくじをする",
-    romaji: "jibun no peesu de ochitsuite shokuji o suru",
+    romaji: "jibun no peesu de ochitsuite shokuji wo suru",
     reaction_good: "しげ「あ……ありがとうございます。これなら、できそうです。」",
     reaction_bad: "しげ「す、すみません……先生、意味がちょっと違う気がして……」",
     image: "shige.png"
@@ -4998,7 +4998,7 @@ const schoolData = [
     start_msg: "はこも「……先生。ふと思ったこと……入力、頼んでいい？」",
     text: "考えることをやめないでいよう",
     kana: "かんがえることをやめないでいよう",
-    romaji: "kangaeru koto o yamenai de iyou",
+    romaji: "kangaeru koto wo yamenai de iyou",
     reaction_good: "はこも「……うん。ありがと。」",
     reaction_bad: "はこも「……違う。そこ。」",
     image: "hakomo.png"
@@ -5011,7 +5011,7 @@ const schoolData = [
     start_msg: "しずか「先生、学習計画の表紙、入力をお願いいたします。」",
     text: "基礎を完璧に理解することが重要です",
     kana: "きそをかんぺきにりかいすることがじゅうようです",
-    romaji: "kiso o kanpeki ni rikai suru koto ga juuyou desu",
+    romaji: "kiso wo kanpeki ni rikai suru koto ga juuyou desu",
     reaction_good: "しずか「ありがとうございます。満点です。」",
     reaction_bad: "しずか「誤字があります。評価が下がります。」",
     image: "shizuka.png"
@@ -5024,7 +5024,7 @@ const schoolData = [
     start_msg: "みりん「せんせ〜♡インスタのキャプション、入力してほしいなっ♪」",
     text: "かわいいは正義で世界を救う",
     kana: "かわいいはせいぎでせかいをすくう",
-    romaji: "kawaii wa seigi de sekai o sukuu",
+    romaji: "kawaii wa seigi de sekai wo sukuu",
     reaction_good: "みりん「さすが先生〜！だいすきっ♡」",
     reaction_bad: "みりん「えー？先生ミスってるよ〜？w」",
     image: "mirin.png"
@@ -5037,7 +5037,7 @@ const schoolData = [
     start_msg: "ゆず「先生、商品の説明……入力してもらえますか。」",
     text: "福を呼ぶ招き猫の置物",
     kana: "ふくをよぶまねきねこのおきもの",
-    romaji: "fuku o yobu manekineko no okimono",
+    romaji: "fuku wo yobu manekineko no okimono",
     reaction_good: "ゆず「……うん。ありがとう。運、上がった気がする。」",
     reaction_bad: "ゆず「先生、そこ違う。運、逃げる。」",
     image: "yuzu.png"
@@ -5103,7 +5103,7 @@ const schoolData = [
         start_msg: "ご褒美「せんせぇ〜！拙者、今日の戦利品（フィギュア）をXに載せるんだゾ！その…魂の一文、入力してほしいやんけ！」",
         text: "推しは人生を豊かにする最高の栄養だぞ",
         kana: "おしはじんせいをゆたかにするさいこうのえいようだぞ",
-        romaji: "oshi wa jinsei o yutaka ni suru saikou no eiyou dazo",
+        romaji: "oshi wa jinsei wo yutaka ni suru saikou no eiyou dazo",
         reaction_good: "ご褒美「うおお！先生わかってるやんけ！これぞ拙者の哲学だゾ〜！」",
         reaction_bad: "ご褒美「先生、誤字ってるやんけ！推しへの愛が足りんゾ！」",
         image: "nui.png"
@@ -5142,7 +5142,7 @@ const schoolData = [
         start_msg: "こうめ「先生！神社の行事写真あげるんだけどさ、ちょっと締まる一文入れてほしくて！」",
         text: "今日も平和を全力で守りました",
         kana: "きょうもへいわをぜんりょくでまもりました",
-        romaji: "kyou mo heiwa o zenryoku de mamorimashita",
+        romaji: "kyou mo heiwa wo zenryoku de mamorimashita",
         reaction_good: "こうめ「よっしゃ！シンプルでいいじゃん！」",
         reaction_bad: "こうめ「先生、そこミスるとダサいから気をつけな？」",
         image: "koume.png"
@@ -5181,7 +5181,7 @@ const schoolData = [
         start_msg: "かほこ「先生。掲示用の注意喚起文を作成中なのですが、文面の最終入力をお願いできますか。私情は一切入れていません」",
         text: "規則を守ることは全体の効率を高める最適解です",
         kana: "きそくをまもることはぜんたいのこうりつをたかめるさいてきかいです",
-        romaji: "kisoku o mamoru koto wa zentai no kouritsu o takameru saiteki kai desu",
+        romaji: "kisoku wo mamoru koto wa zentai no kouritsu wo takameru saiteki kai desu",
         reaction_good: "かほこ「ありがとうございます。論理的にも整合性があります」",
         reaction_bad: "かほこ「……誤字があります。この文章では説得力が落ちます」",
         image: "kahoko.png"
@@ -5207,7 +5207,7 @@ const schoolData = [
         start_msg: "じゅん「先生。清掃強化週間の掲示文です。私が触らずに済むよう、入力をお願いします」",
         text: "清潔な環境は心と身体の安全を守ります",
         kana: "せいけつなかんきょうはこころとからだのあんぜんをまもります",
-        romaji: "seiketsu na kankyou wa kokoro to karada no anzen o mamorimasu",
+        romaji: "seiketsu na kankyou wa kokoro to karada no anzen wo mamorimasu",
         reaction_good: "じゅん「問題ありません。非常に適切です」",
         reaction_bad: "じゅん「誤字です。すぐ修正してください。不衛生です」",
         image: "jun.png"
@@ -5260,7 +5260,7 @@ const schoolData = [
         start_msg: "しおり「先生！クラスのお知らせ掲示、私がまとめたんですけど…最終入力だけお願いしてもいいですか？」",
         text: "困ったときはお互いさまです。気軽に声をかけてください",
         kana: "こまったときはおたがいさまです。きがるにこえをかけてください",
-        romaji: "komatta toki wa otagaisama desu. kigaru ni koe o kakete kudasai",
+        romaji: "komatta toki wa otagaisama desu. kigaru ni koe wo kakete kudasai",
         reaction_good: "しおり「ありがとうございます！これで安心して出せます！」",
         reaction_bad: "しおり「えっ、先生そこ誤字です！私もう一回見直しますね！」",
         image: "shiori.png"
@@ -5286,7 +5286,7 @@ const schoolData = [
         start_msg: "とろ「先生。弓道大会の掲示用だ。俺が触ると汚れるから、入力頼む」",
         text: "基本を守れば結果は後からついてくる",
         kana: "きほんをまもればけっかはあとからついてくる",
-        romaji: "kihon o mamoreba kekka wa ato kara tsuite kuru",
+        romaji: "kihon wo mamoreba kekka wa ato kara tsuite kuru",
         reaction_good: "とろ「……問題ない」",
         reaction_bad: "とろ「そこ違う。そういうの、気になる」",
         image: "toro.png"
@@ -5299,7 +5299,7 @@ const schoolData = [
         start_msg: "すみれ「先生…お花係のポスターなんですけど…文字、入力してもらえますか？」",
         text: "きれいなものに触れる時間を大切にしましょう",
         kana: "きれいなものにふれるじかんをたいせつにしましょう",
-        romaji: "kirei na mono ni fureru jikan o taisetsu ni shimashou",
+        romaji: "kirei na mono ni fureru jikan wo taisetsu ni shimashou",
         reaction_good: "すみれ「……うん。やさしい文章です」",
         reaction_bad: "すみれ「あっ……先生、そこ違います。ちょっと、かなしいです」",
         image: "sumire.png"
@@ -5312,7 +5312,7 @@ const schoolData = [
         start_msg: "うらら「先生。ガーデニング委員の注意書きよ。私が書くと角立つから、入力して」",
         text: "植物にも人にも丁寧な扱いを心がけましょう",
         kana: "しょくぶつにもひとにもていねいなあつかいをこころがけましょう",
-        romaji: "shokubutsu ni mo hito ni mo teinei na atsukai o kokorogakemashou",
+        romaji: "shokubutsu ni mo hito ni mo teinei na atsukai wo kokorogakemashou",
         reaction_good: "うらら「……まあ、悪くないわ」",
         reaction_bad: "うらら「は？先生、そこ間違えてる。ちゃんとやって」",
         image: "urara.png"
@@ -5325,7 +5325,7 @@ const schoolData = [
         start_msg: "まゆこ「せんせー！ダンスの発表会ポスターなんだけどさ、文字入力むずくて〜！」",
         text: "思いきり体を動かして楽しもう",
         kana: "おもいきりからだをうごかしてたのしもう",
-        romaji: "omoikiri karada o ugokashite tanoshimou",
+        romaji: "omoikiri karada wo ugokashite tanoshimou",
         reaction_good: "まゆこ「やったー！先生天才じゃん！」",
         reaction_bad: "まゆこ「えー？先生そこちがくない？まあいっか！」",
         image: "mayuko.png"
@@ -5351,7 +5351,7 @@ const schoolData = [
         start_msg: "やよい「先生、工芸展に出す作品説明文…文字起こしお願いできます？」",
         text: "手の感覚を信じて、ひとつひとつ仕上げました",
         kana: "てのかんかくをしんじて、ひとつひとつしあげました",
-        romaji: "te no kankaku o shinjite, hitotsu hitotsu shiagemashita",
+        romaji: "te no kankaku wo shinjite, hitotsu hitotsu shiagemashita",
         reaction_good: "やよい「……ありがとうございます。これで出せます」",
         reaction_bad: "やよい「そこ違います。意味、変わっちゃいます」",
         image: "yayoi.png"
@@ -5390,7 +5390,7 @@ const schoolData = [
         start_msg: "ほし「先生、天体観測会のお知らせば入力してほしいっちゃ！」",
         text: "夜空を見上げて、同じ星を探してみよう",
         kana: "よぞらをみあげて、おなじほしをさがしてみよう",
-        romaji: "yozora o miagete, onaji hoshi o sagashite miyou",
+        romaji: "yozora wo miagete, onaji hoshi wo sagashite miyou",
         reaction_good: "ほし「よっしゃ！これで伝わるばい！」",
         reaction_bad: "ほし「先生、そこ違うっちゃ！星の名前間違えとる！」",
         image: "hoshi.png"
@@ -5508,7 +5508,7 @@ const schoolData = [
     start_msg: "まい「先生、掲示用の注意書き、入力してもらえます？」",
     text: "丁寧な暮らしは、心を守るための嘘",
     kana: "ていねいなくらしはこころをまもるためのうそ",
-    romaji: "teinei na kurashi wa kokoro o mamoru tame no uso",
+    romaji: "teinei na kurashi wa kokoro wo mamoru tame no uso",
     reaction_good: "まい「……ふふ、信じてくれるんですね。」",
     reaction_bad: "まい「あれ？そこ、わざと間違えました？」",
     image: "mai.png"
@@ -5573,7 +5573,7 @@ const schoolData = [
     start_msg: "あい「先生、文画部の提出用コメントをお願いしますわ。」",
     text: "静かな言葉ほど、人を刺しますの",
     kana: "しずかなことばほどひとをさしますの",
-    romaji: "shizuka na kotoba hodo hito o sashimasu no",
+    romaji: "shizuka na kotoba hodo hito wo sashimasu no",
     reaction_good: "あい「あらあら…素敵ですわ。」",
     reaction_bad: "あい「ふふ、その程度の確認もできませんの？」",
     image: "ai.png"
@@ -5638,7 +5638,7 @@ const schoolData = [
     start_msg: "せつな「先生〜、新聞に載せる見出し、頼んでいい？」",
     text: "今を切り取る、それがスクープたい",
     kana: "いまをきりとるそれがすくーぷたい",
-    romaji: "ima o kiritoru sore ga sukuupu tai",
+    romaji: "ima wo kiritoru sore ga sukuupu tai",
     reaction_good: "せつな「よかよか〜！助かったばい。」",
     reaction_bad: "せつな「あれ？そこ違っとらん？」",
     image: "setsuna.png"
@@ -5651,7 +5651,7 @@ const schoolData = [
     start_msg: "こふく「先生、山の写真展の説明文を頼む。」",
     text: "静かな山は、多くを語る",
     kana: "しずかなやまはおおくをかたる",
-    romaji: "shizuka na yama wa ooku o kataru",
+    romaji: "shizuka na yama wa ooku wo kataru",
     reaction_good: "こふく「……問題ない。」",
     reaction_bad: "こふく「誤字だ。直してくれ。」",
     image: "kofuku.png"
@@ -5795,7 +5795,7 @@ const schoolData = [
     start_msg: "ふみこ「先生…調理の展示用コメント、お願いできますか？」",
     text: "心をこめて作りました",
     kana: "こころをこめてつくりました",
-    romaji: "kokoro o komete tsukurimashita",
+    romaji: "kokoro wo komete tsukurimashita",
     reaction_good: "ふみこ「ありがとうございます。とても温かいです」",
     reaction_bad: "ふみこ「あ…少し違っています」",
     image: "fumiko.png"
@@ -5886,7 +5886,7 @@ const schoolData = [
     start_msg: "ゆたすけ「先生…農業体験のお知らせ文、お願いしてもええですか？」",
     text: "自然と向き合う時間を大切にしましょう",
     kana: "しぜんとむきあうじかんをたいせつにしましょう",
-    romaji: "shizen to mukiau jikan o taisetsu ni shimashou",
+    romaji: "shizen to mukiau jikan wo taisetsu ni shimashou",
     reaction_good: "ゆたすけ「ありがとうございます…助かります。」",
     reaction_bad: "ゆたすけ「あっ…そこ、ちくと違うみたいです。」",
     image: "yutasuke.png"
@@ -5925,7 +5925,7 @@ const schoolData = [
     start_msg: "みばな「先生、提出用のコメント文…お願い。」",
     text: "実践を重ねることで完成度は上がる",
     kana: "じっせんをかさねることでかんせいどはあがる",
-    romaji: "jissen o kasaneru koto de kanseido wa agaru",
+    romaji: "jissen wo kasaneru koto de kanseido wa agaru",
     reaction_good: "みばな「……別に。悪くない。」",
     reaction_bad: "みばな「誤字。そこ、違うから。」",
     image: "mibana.png"
@@ -5991,7 +5991,7 @@ const schoolData = [
     start_msg: "ほのか「先生、討論用のテーマ文、入れといて。」",
     text: "疑問を持つことは成長の第一歩だ",
     kana: "ぎもんをもつことはせいちょうのだいいっぽだ",
-    romaji: "gimon o motsu koto wa seichou no daiippo da",
+    romaji: "gimon wo motsu koto wa seichou no daiippo da",
     reaction_good: "ほのか「ふーん、まあ合格点。」",
     reaction_bad: "ほのか「誤字？論外なんだけど。」",
     image: "honoka.png"
@@ -6017,7 +6017,7 @@ const schoolData = [
     start_msg: "たより「先生、提出用の文章、入力をお願いできますか。」",
     text: "相手の立場を考えた言葉を選びたい",
     kana: "あいてのたちばをかんがえたことばをえらびたい",
-    romaji: "aite no tachiba o kangaeta kotoba o erabitai",
+    romaji: "aite no tachiba wo kangaeta kotoba wo erabitai",
     reaction_good: "たより「ありがとうございます。とても助かりました。」",
     reaction_bad: "たより「あ、そこ誤字がありますね。直しましょう。」",
     image: "tayori.png"
@@ -6043,7 +6043,7 @@ const schoolData = [
     start_msg: "あおい「先生…掲示用のお知らせ文、入力お願いできますか」",
     text: "毎日の積み重ねを大切にしたいです",
     kana: "まいにちのつみかさねをたいせつにしたいです",
-    romaji: "mainichi no tsumikasané o taisetsu ni shitai desu",
+    romaji: "mainichi no tsumikasané wo taisetsu ni shitai desu",
     reaction_good: "あおい「ありがとうございます。助かりました」",
     reaction_bad: "あおい「あ、少し違いますね。ここ直しましょう」",
     image: "aoi.png"
@@ -6108,7 +6108,7 @@ const schoolData = [
     start_msg: "めり「先生…図書委員会の掲示文、入力お願いしてもいいでしょうか…？」",
     text: "本は心をそっと支えてくれます",
     kana: "ほんはこころをそっとささえてくれます",
-    romaji: "hon wa kokoro o sotto sasaete kuremasu",
+    romaji: "hon wa kokoro wo sotto sasaete kuremasu",
     reaction_good: "めり「ありがとうございます…本当に助かりました」",
     reaction_bad: "めり「あっ…ここ、少し違ってます…すみません…」",
     image: "meri.png"
@@ -6134,7 +6134,7 @@ const schoolData = [
     start_msg: "こうた「先生、生徒会の提出文を入力していただけますか」",
     text: "皆が安心して過ごせる環境を目指します",
     kana: "みながあんしんしてすごせるかんきょうをめざします",
-    romaji: "mina ga anshin shite sugoseru kankyou o mezashimasu",
+    romaji: "mina ga anshin shite sugoseru kankyou wo mezashimasu",
     reaction_good: "こうた「ありがとうございます。助かりました」",
     reaction_bad: "こうた「申し訳ありません、そこ誤字があります」",
     image: "kouta.png"
@@ -6200,7 +6200,7 @@ const schoolData = [
     start_msg: "ゆうき「せんせー、占いアカの今日のひとこと、入力お願いしてもいい？」",
     text: "今日は直感を信じると運気アップ",
     kana: "きょうはちょっかんをしんじるとうんきあっぷ",
-    romaji: "kyou wa chokkan o shinjiru to unki appu",
+    romaji: "kyou wa chokkan wo shinjiru to unki appu",
     reaction_good: "ゆうき「さすが先生！この文、めっちゃ当たりそうな気する！」",
     reaction_bad: "ゆうき「あれ？せんせ、文字ズレてない？これだと運気下がりそうなんだけど〜？」",
     image: "yuuki.png"
@@ -6265,7 +6265,7 @@ const schoolData = [
     start_msg: "あやと「せんせー！提出用のひとこと、オラ字が苦手だから頼むべ！」",
     text: "今日は最後まで席に座ることを目標にする",
     kana: "きょうはさいごまでせきにすわることをもくひょうにする",
-    romaji: "kyou wa saigo made seki ni suwaru koto o mokuhyou ni suru",
+    romaji: "kyou wa saigo made seki ni suwaru koto wo mokuhyou ni suru",
     reaction_good: "あやと「おおー！なんかできそうな気してきたぞ！」",
     reaction_bad: "あやと「えっ、せんせ誤字！？それオラのせいにされっからやめて〜！」",
     image: "ayato.png"
@@ -6278,7 +6278,7 @@ const schoolData = [
     start_msg: "みこと「せんせ、掲示用の注意文やけど…言葉選び、任せてもええ？」",
     text: "静かに過ごす時間を大切にしましょう",
     kana: "しずかにすごすじかんをたいせつにしましょう",
-    romaji: "shizuka ni sugosu jikan o taisetsu ni shimashou",
+    romaji: "shizuka ni sugosu jikan wo taisetsu ni shimashou",
     reaction_good: "みこと「ええやん。角立たへんし、効く言い方やわ」",
     reaction_bad: "みこと「……先生、ここ誤字あるで？詰めが甘いんは好きやないな」",
     image: "mikoto.png"
@@ -6330,7 +6330,7 @@ const schoolData = [
     start_msg: "あかつき「……せんせ。作曲提出用のコメント、適当に入れてくんない？」",
     text: "未完成でも今の自分を形にする",
     kana: "みかんせいでもいまのじぶんをかたちにする",
-    romaji: "mikansei demo ima no jibun o katachi ni suru",
+    romaji: "mikansei demo ima no jibun wo katachi ni suru",
     reaction_good: "あかつき「……悪くない。まあ、これでいい」",
     reaction_bad: "あかつき「は？先生、誤字ってる。ちゃんと見ろよ」",
     image: "akatsuki.png"
@@ -6343,7 +6343,7 @@ const schoolData = [
     start_msg: "えんや「せんせ！オレのSNS用決めゼリフ、入力頼むわ！」",
     text: "世界を救うのは今日もオレだ",
     kana: "せかいをすくうのはきょうもおれだ",
-    romaji: "sekai o sukuu no wa kyou mo ore da",
+    romaji: "sekai wo sukuu no wa kyou mo ore da",
     reaction_good: "えんや「っしゃ！完璧！これでバズる未来見えた！」",
     reaction_bad: "えんや「ちょ、先生！？誤字ってたらヒーロー台無しなんだけど！」",
     image: "enya.png"
@@ -6395,7 +6395,7 @@ const schoolData = [
     start_msg: "かじ「せんせ！これ配る紙の一言、打ってくんね？」",
     text: "自由な発想を大切にしよう",
     kana: "じゆうなはっそうをたいせつにしよう",
-    romaji: "jiyuu na hassou o taisetsu ni shiyou",
+    romaji: "jiyuu na hassou wo taisetsu ni shiyou",
     reaction_good: "かじ「おお！なんかそれっぽい！いいじゃん！」",
     reaction_bad: "かじ「え、せんせ誤字ってるぞ？逆に味ってやつ？」",
     image: "kaji.png"
@@ -6408,7 +6408,7 @@ const schoolData = [
     start_msg: "ありす「……せんせ。提出用の一文、眠いから代わりに入力して」",
     text: "考察は夢の中で得た発想を元にしている",
     kana: "こうさつはゆめのなかでえたはっそうをもとにしている",
-    romaji: "kousatsu wa yume no naka de eta hassou o moto ni shite iru",
+    romaji: "kousatsu wa yume no naka de eta hassou wo moto ni shite iru",
     reaction_good: "ありす「……まあ、悪くない」",
     reaction_bad: "ありす「誤字。起こされた上にこれは最悪」",
     image: "alice.png"
@@ -6421,7 +6421,7 @@ const schoolData = [
     start_msg: "しゅんき「せんせ〜、レポートの締め文、いい感じに入れてくんない？」",
     text: "今回は最低限の内容をまとめた",
     kana: "こんかいはさいていげんのないようをまとめた",
-    romaji: "konkai wa saiteigen no naiyou o matometa",
+    romaji: "konkai wa saiteigen no naiyou wo matometa",
     reaction_good: "しゅんき「お〜助かる助かる。これで一仕事終わりだわ」",
     reaction_bad: "しゅんき「え、誤字？……まぁ先生だし、しゃーないか」",
     image: "shunki.png"
@@ -6444,7 +6444,7 @@ const schoolData = [
             "みみか「……そこが好きだけど」",
         text: "落ち着いて続きを確認しましょう。",
         kana: "おちついてつづきをかくにんしましょう。",
-        romaji: "ochitsuite tsuzuki o kakunin shimashou",
+        romaji: "ochitsuite tsuzuki wo kakunin shimashou",
         reaction_good:
             "みみか「その判断は合理的」\n" +
             "ももか「ふん。あたしの勝ちね」",
@@ -6488,7 +6488,7 @@ const schoolData = [
             "せいな「今は統一するの！」",
         text: "意見を整理しましょう。",
         kana: "いけんをせいりしましょう。",
-        romaji: "iken o seiri shimashou",
+        romaji: "iken wo seiri shimashou",
         reaction_good:
             "せいな「そう、それ！」\n" +
             "てつ「なるほど〜！」",
@@ -6510,7 +6510,7 @@ const schoolData = [
             "とわ「神か？」",
         text: "今は課題を優先してください。",
         kana: "いまはかだいをゆうせんしてください。",
-        romaji: "ima wa kadai o yuusen shite kudasai",
+        romaji: "ima wa kadai wo yuusen shite kudasai",
         reaction_good:
             "とわ「はーい……」\n" +
             "あかる「あとでね！」",
@@ -6579,7 +6579,7 @@ const schoolData = [
             "せつな「あっ、カバンの奥！」",
         text: "話題を整理してください。",
         kana: "わだいをせいりしてください。",
-        romaji: "wadai o seiri shite kudasai",
+        romaji: "wadai wo seiri shite kudasai",
         reaction_good:
             "せつな「メモ見たら思い出した〜！」\n" +
             "こと「ほらな」",
@@ -6709,7 +6709,7 @@ const schoolData = [
         "ももか「……一枚だけよ。ブレたら噛む」",
     text: "姿勢に気をつけてね。",
     kana: "しせいにきをつけてね。",
-    romaji: "shisei ni ki o tsukete ne",
+    romaji: "shisei ni ki wo tsukete ne",
     reaction_good:
         "みみか「先生、意外と観察眼ある」\n" +
         "ももか「ふん…悪くないわ」",
@@ -6801,7 +6801,7 @@ const schoolData = [
         "とわ「被せんなって！」",
     text: "教室では節度を守りましょう。",
     kana: "きょうしつではせつどをまもりましょう。",
-    romaji: "kyoushitsu dewa setsudo o mamorimashou",
+    romaji: "kyoushitsu dewa setsudo wo mamorimashou",
     reaction_good:
         "あかる「はーい！ほどほどにしまーす！」\n" +
         "とわ「ほどほどってなんだ？」",
@@ -6847,7 +6847,7 @@ const schoolData = [
         "こと「それが一番問題やろ」",
     text: "撮影は許可を取ろう。",
     kana: "さつえいはきょかをとろう。",
-    romaji: "satsuei wa kyoka o torou",
+    romaji: "satsuei wa kyoka wo torou",
     reaction_good:
         "せつな「はーい！メモするね！」\n" +
         "こと「それ忘れるやつや」",
@@ -6962,7 +6962,7 @@ const schoolData = [
         "みみか「あなたは遊んでいる」",
     text: "他人を挑発しないように。",
     kana: "たにんをちょうはつしないように。",
-    romaji: "tanin o chouhatsu shinai youni",
+    romaji: "tanin wo chouhatsu shinai youni",
     reaction_good:
         "あい「ご明察〜♡」\n" +
         "みみか「自覚があるなら尚更厄介」",
@@ -6984,7 +6984,7 @@ const schoolData = [
         "ひなか「それも可愛いけん！」",
     text: "適切な距離を保ちましょう。",
     kana: "てきせつなきょりをたもちましょう。",
-    romaji: "tekisetsuna kyori o tamochimashou",
+    romaji: "tekisetsuna kyori wo tamochimashou",
     reaction_good:
         "ひなか「先生わかっとる〜！」\n" +
         "ももか「まぁ、悪くない」",
@@ -7054,7 +7054,7 @@ const schoolData = [
         "あい「褒め言葉です♡」",
     text: "相手を責めすぎないでください。",
     kana: "あいてをせめすぎないでください。",
-    romaji: "aite o semesuginai de kudasai",
+    romaji: "aite wo semesuginai de kudasai",
     reaction_good:
         "あい「自覚はあります〜」\n" +
         "とわ「止める気ねぇな」",
@@ -7255,7 +7255,7 @@ const schoolData = [
         "ひかる「でもさ、楽しんだ方がうまくいくって！」",
     text: "話をまとめてください。",
     kana: "はなしをまとめてください。",
-    romaji: "hanashi o matomete kudasai",
+    romaji: "hanashi wo matomete kudasai",
     reaction_good:
         "ももか「……後で文句言うから覚悟しなさい」\n" +
         "ひかる「はいはい、褒め言葉な！」",
@@ -7320,7 +7320,7 @@ const schoolData = [
         "こまり「……そう言われると安心する」",
     text: "良い点をまとめましょう。",
     kana: "よいてんをまとめましょう。",
-    romaji: "yoi ten o matomemashou",
+    romaji: "yoi ten wo matomemashou",
     reaction_good:
         "こまり「じゃあ、この案で行く」\n" +
         "てつ「やったぁ！」",
@@ -7343,7 +7343,7 @@ const schoolData = [
         "せい「結果は“みんなで”出すんだ！」",
     text: "意見を整理してください。",
     kana: "いけんをせいりしてください。",
-    romaji: "iken o seiri shite kudasai",
+    romaji: "iken wo seiri shite kudasai",
     reaction_good:
         "ももか「……役割分担なら認める」\n" +
         "せい「よし！前線は任せた！」",
@@ -7366,7 +7366,7 @@ const schoolData = [
         "こと「長引かせる方がしんどいき」",
     text: "意見を共有しましょう。",
     kana: "いけんをきょうゆうしましょう。",
-    romaji: "iken o kyouyuu shimashou",
+    romaji: "iken wo kyouyuu shimashou",
     reaction_good:
         "てつ「なるほど〜！助かる〜！」\n" +
         "こと「それなら役に立ったな」",
@@ -7387,7 +7387,7 @@ const schoolData = [
         "こふく「山道でも問題ない」",
     text: "話を進めてください。",
     kana: "はなしをすすめてください。",
-    romaji: "hanashi o susumete kudasai",
+    romaji: "hanashi wo susumete kudasai",
     reaction_good:
         "みみか「無駄がないですね」\n" +
         "こふく「当然だ」",
@@ -7805,7 +7805,7 @@ const schoolData = [
             "せつな「その“余計”がどこか、読んだ人に任せるだけたい」",
         text: "憶測で誤解を生まないように。",
         kana: "おくそくでごかいをうまないように。",
-        romaji: "okusoku de gokai o umanai you ni",
+        romaji: "okusoku de gokai wo umanai you ni",
         reaction_good:
             "せつな「大丈夫です。事実しか書かんけん」\n" +
             "てつ「それが一番強いんだよね〜」",
@@ -7830,7 +7830,7 @@ const schoolData = [
             "ももか「……観察やめろ」",
         text: "話題を変えましょう。",
         kana: "わだいをかえましょう。",
-        romaji: "wadai o kaemashou",
+        romaji: "wadai wo kaemashou",
         reaction_good:
             "みみか「了解。これ以上は非効率」\n" +
             "ももか「……助かる」",
@@ -12147,7 +12147,7 @@ const schoolData = [
             "あい「……ふふ、理想論」",
         text: "言い方に気をつけてください。",
         kana: "いいかたにきをつけてください。",
-        romaji: "iikata ni ki o tsukete kudasai",
+        romaji: "iikata ni ki wo tsukete kudasai",
         reaction_good:
             "こたろう「はい、すみません！」\n" +
             "あい「あら、素直。嫌いじゃないです」",
@@ -12403,7 +12403,7 @@ const schoolData = [
             "こはく「……馴れ合う気はない」",
         text: "落ち着いて話を続けましょう。",
         kana: "おちついてはなしをつづけましょう。",
-        romaji: "ochitsuite hanashi o tsuzukemashou",
+        romaji: "ochitsuite hanashi wo tsuzukemashou",
         reaction_good:
             "まちえ「ですね。感情論になりすぎました」\n" +
             "こはく「冷静な介入だ。感謝する」",
@@ -12425,7 +12425,7 @@ const schoolData = [
             "みる「でしょ！？人生そうあるべき！」",
         text: "少し声のボリュームを下げましょう。",
         kana: "すこしこえのぼりゅーむをさげましょう。",
-        romaji: "sukoshi koe no boryuumu o sagemashou",
+        romaji: "sukoshi koe no boryuumu wo sagemashou",
         reaction_good:
             "みる「あっ、ごめんなさーい！」\n" +
             "ぶんた「先生、助かるわ」",
@@ -12598,7 +12598,7 @@ const schoolData = [
             "しるべ「……いつもこう」",
         text: "会話を続けましょう。",
         kana: "かいわをつづけましょう。",
-        romaji: "kaiwa o tsuzukemashou",
+        romaji: "kaiwa wo tsuzukemashou",
         reaction_good:
             "えるあ「まぁ、いっか」\n" +
             "しるべ「……ありがとう」",
@@ -12643,7 +12643,7 @@ const schoolData = [
         "みらい「強くないよ。怖いまま突っ込んでるだけ！」",
     text: "様子を見守る。",
     kana: "ようすをみまもる。",
-    romaji: "yousu o mimamoru",
+    romaji: "yousu wo mimamoru",
     reaction_good:
         "みらい「ほらね、まりもちゃんと前進してる」\n" +
         "まり「……ありがとう。少し、安心した」",
@@ -12666,7 +12666,7 @@ const schoolData = [
         "しるべ「……才能の使い道、間違ってる」",
     text: "二人の空気を壊さない。",
     kana: "ふたりのくうきをこわさない。",
-    romaji: "futari no kuuki o kowasanai",
+    romaji: "futari no kuuki wo kowasanai",
     reaction_good:
         "こめ「しるべ、否定しねの優しいねぇ」\n" +
         "しるべ「……してる」",
@@ -12754,7 +12754,7 @@ const schoolData = [
         "こはく「硬すぎる」",
     text: "二人をなだめる。",
     kana: "ふたりをなだめる。",
-    romaji: "futari o nadameru",
+    romaji: "futari wo nadameru",
     reaction_good:
         "ゆうじ「……今回は見逃す」\n" +
         "こはく「妥協ではなく調整だ」",
@@ -12798,7 +12798,7 @@ const schoolData = [
         "めぐむ「頼もしいわ」",
     text: "話を聞く。",
     kana: "はなしをきく。",
-    romaji: "hanashi o kiku",
+    romaji: "hanashi wo kiku",
     reaction_good:
         "えるあ「まぁ、なんとかなる」\n" +
         "めぐむ「そういうの助かる」",
@@ -12896,7 +12896,7 @@ const schoolData = [
             "すおう「へぇ。\nそれでも話しかけてくる？」",
         text: "立場の違いを、言葉で噛み砕け。",
         kana: "たちばのちがいをことばでかみくだけ。",
-        romaji: "tachiba no chigai o kotoba de kamikudake",
+        romaji: "tachiba no chigai wo kotoba de kamikudake",
         reaction_good:
             "なぎさ「……まあ。\n嫌いだけど、嫌いじゃない」\n" +
             "すおう「矛盾、大好物だ」",
@@ -12917,7 +12917,7 @@ const schoolData = [
             "ももか「安い賭けね。\n私が負けると思ってる？」",
         text: "条件付きの取引を成立させよ。",
         kana: "じょうけんつきのとりひきをせいりつさせよ。",
-        romaji: "jouken tsuki no torihiki o seiritsu sasero",
+        romaji: "jouken tsuki no torihiki wo seiritsu sasero",
         reaction_good:
             "ゆうひ「うわ勝てねぇw」\n" +
             "ももか「当然よ。\n等価じゃないもの」",
@@ -12938,7 +12938,7 @@ const schoolData = [
             "しのん「……泣いていいですか」",
         text: "相手の感情を、受け止めよ。",
         kana: "あいてのかんじょうをうけとめよ。",
-        romaji: "aite no kanjou o uketomeyo",
+        romaji: "aite no kanjou wo uketomeyo",
         reaction_good:
             "ご褒美「よしよしするゾ……」\n" +
             "しのん「……ありがとう、ございます」",
@@ -12959,7 +12959,7 @@ const schoolData = [
             "すおう「……否定はしない」",
         text: "本音を引き出せ。",
         kana: "ほんねをひきだせ。",
-        romaji: "honne o hikidase",
+        romaji: "honne wo hikidase",
         reaction_good:
             "みりん「ほらね〜💕」\n" +
             "すおう「してやられた」",
@@ -12982,7 +12982,7 @@ const schoolData = [
             "のりおみ「迷惑じゃない。ただ……逃げ場がなくなる」",
         text: "相手の気持ちを想像しすぎないように。",
         kana: "あいてのきもちをそうぞうしすぎないように。",
-        romaji: "aite no kimochi o souzou shisuginai you ni",
+        romaji: "aite no kimochi wo souzou shisuginai you ni",
         reaction_good:
             "まり「……うん。考えすぎんように、する」\n" +
             "のりおみ「それでいい。俺も、黙る努力する」",
@@ -13004,7 +13004,7 @@ const schoolData = [
             "りょうご「装置……か。たぶん、故障を見つけるセンサー」",
         text: "相手の発言の意図を整理しながら入力しなさい。",
         kana: "あいてのはつげんのいとをせいりしながらにゅうりょくしなさい。",
-        romaji: "aite no hatsugen no ito o seiri shinagara nyuuryoku shinasai",
+        romaji: "aite no hatsugen no ito wo seiri shinagara nyuuryoku shinasai",
         reaction_good:
             "ありす「……退屈しない答え」\n" +
             "りょうご「それなら良かった」",
@@ -13026,7 +13026,7 @@ const schoolData = [
             "ゆい「……あは。やっぱ上手いね」",
         text: "感情に流されず、発言の裏を読もう。",
         kana: "かんじょうにながされず、はつげんのうらをよもう。",
-        romaji: "kanjou ni nagasarez u, hatsugen no ura o yomou",
+        romaji: "kanjou ni nagasarez u, hatsugen no ura wo yomou",
         reaction_good:
             "すおう「冷静だね、先生」\n" +
             "ゆい「ふふ、ちゃんと見てる」",
@@ -13048,7 +13048,7 @@ const schoolData = [
             "ゆうき「……なんで分かったの」",
         text: "先入観を持たずに文章を入力しよう。",
         kana: "せんにゅうかんをもたずにぶんしょうをにゅうりょくしよう。",
-        romaji: "sennyuukan o motazu ni bunshou o nyuuryoku shiyou",
+        romaji: "sennyuukan wo motazu ni bunshou wo nyuuryoku shiyou",
         reaction_good:
             "ももか「……まぁ、悪くはないわね」\n" +
             "ゆうき「やった！」",
@@ -13092,7 +13092,7 @@ const schoolData = [
             "みりん「正直でよろしい♡」",
         text: "表と裏の違いが伝わる会話を意識して打とう。",
         kana: "おもてとうらのちがいがつたわるかいわをいしきしてうとう。",
-        romaji: "omote to ura no chigai ga tsutawaru kaiwa o ishiki shite utou",
+        romaji: "omote to ura no chigai ga tsutawaru kaiwa wo ishiki shite utou",
         reaction_good:
             "ゆい「先生、ちゃんと温度差出てる」\n" +
             "みりん「分かってる人だ〜♡」",
@@ -13113,7 +13113,7 @@ const schoolData = [
             "すおう「……だから気楽なんだ」",
         text: "距離の近さと冷たさの両立を意識して入力しよう。",
         kana: "きょりのちかさとつめたさのりょうりつをいしきしてにゅうりょくしよう。",
-        romaji: "kyori no chikasato tsumetasa no ryouritsu o ishiki shite nyuuryoku shiyou",
+        romaji: "kyori no chikasato tsumetasa no ryouritsu wo ishiki shite nyuuryoku shiyou",
         reaction_good:
             "なみ「ふふ、観察眼ありますわ」\n" +
             "すおう「余計な感情入ってない」",
@@ -13135,7 +13135,7 @@ const schoolData = [
             "なみ「分かってますわ。壊れる瞬間が一番人間的ですもの」",
         text: "言葉の刃がどこに向いているかを意識して打とう。",
         kana: "ことばのやいばがどこにむいているかをいしきしてうとう。",
-        romaji: "kotoba no yaiba ga doko ni muiteiru ka o ishiki shite utou",
+        romaji: "kotoba no yaiba ga doko ni muiteiru ka wo ishiki shite utou",
         reaction_good:
             "のりおみ「……嫌な精度だ」\n" +
             "なみ「褒め言葉ですわ」",
@@ -13221,7 +13221,7 @@ const schoolData = [
             "あい「ええ。倫理は置いてきましたの」",
         text: "二人とも相手を人ではなく“反応する対象”として見ている。",
         kana: "ふたりともあいてをひとではなくはんのうするたいしょうとしてみている。",
-        romaji: "futari tomo aite o hito de wa naku hannou suru taishou to shite miteiru",
+        romaji: "futari tomo aite wo hito de wa naku hannou suru taishou to shite miteiru",
         reaction_good:
             "なみ「観察が鋭いですわ」\n" +
             "あい「先生、素質ありますわよ？」",
@@ -13242,7 +13242,7 @@ const schoolData = [
             "ゆたすけ「それだけで十分やき」",
         text: "二人とも相手を変えようとはしていない。",
         kana: "ふたりともあいてをかえようとはしていない。",
-        romaji: "futari tomo aite o kaeyou to wa shiteinai",
+        romaji: "futari tomo aite wo kaeyou to wa shiteinai",
         reaction_good:
             "まり「……落ち着く」\n" +
             "ゆたすけ「それなら良かった」",
@@ -13264,7 +13264,7 @@ const schoolData = [
             "ももか「ぼーっとしすぎ。倒れるわよ」",
         text: "ももかは乱暴だが、相手の異変にはすぐ気づいている。",
         kana: "ももかはらんぼうだが、あいてのいへんにはすぐきづいている。",
-        romaji: "momoka wa ranbou daga, aite no ihen ni wa sugu kizuiteiru",
+        romaji: "momoka wa ranbou daga, aite no ihen ni wa sugu kiduiteiru",
         reaction_good:
             "ももか「……分かってるならいい」\n" +
             "しのん「ありがとう……」",
@@ -13286,7 +13286,7 @@ const schoolData = [
             "すおう「他人事ならね」",
         text: "すおうはのりおみを玩具にせず、構造として観察している。",
         kana: "すおうはのりおみをがんぐにせず、こうぞうとしてかんさつしている。",
-        romaji: "suo wa noriomi o gangu ni sezu, kouzou to shite kansatsu shiteiru",
+        romaji: "suo wa noriomi wo gangu ni sezu, kouzou to shite kansatsu shiteiru",
         reaction_good:
             "すおう「妥当」\n" +
             "のりおみ「……助かる」",
@@ -13307,7 +13307,7 @@ const schoolData = [
             "みこと「生き方や」",
         text: "二人とも冗談を交えつつ、互いの危険度を測っている。",
         kana: "ふたりともじょうだんをまじえつつ、たがいのきけんどをはかっている。",
-        romaji: "futari tomo joudan o majetsutsu, tagai no kikendo o hakatteiru",
+        romaji: "futari tomo joudan wo majetsutsu, tagai no kikendo wo hakatteiru",
         reaction_good:
             "みこと「よう見とるな」\n" +
             "すおう「まぁね」",
@@ -13328,7 +13328,7 @@ const schoolData = [
             "まり「……助かる」",
         text: "みことは相手を鍛えず、今の状態を尊重している。",
         kana: "みことはあいてをきたえず、いまのじょうたいをそんちょうしている。",
-        romaji: "mikoto wa aite o kitaezu, ima no joutai o sonchou shiteiru",
+        romaji: "mikoto wa aite wo kitaezu, ima no joutai wo sonchou shiteiru",
         reaction_good:
             "まり「……安心する」\n" +
             "みこと「それでええ」",
@@ -13370,7 +13370,7 @@ const schoolData = [
             "くう「そう」",
         text: "感情を排した会話だが、互いに理解は成立している。",
         kana: "かんじょうをはいしたかいわだが、たがいにりかいはせいりつしている。",
-        romaji: "kanjou o haishita kaiwa daga, tagai ni rikai wa seiritsu shiteiru",
+        romaji: "kanjou wo haishita kaiwa daga, tagai ni rikai wa seiritsu shiteiru",
         reaction_good:
             "りょうご「納得」\n" +
             "くう「問題ない」",
@@ -13392,7 +13392,7 @@ const schoolData = [
         "あゆ「……ありがと」",
     text: "会話を促す。",
     kana: "かいわをうながす。",
-    romaji: "kaiwa o unagasu",
+    romaji: "kaiwa wo unagasu",
     reaction_good:
         "すおう「で、どうしたの」\n" +
         "あゆ「えへへ、話すね！」",
@@ -13414,7 +13414,7 @@ const schoolData = [
         "ぶんた「ほらな」",
     text: "様子を見る。",
     kana: "ようすをみる。",
-    romaji: "yousu o miru",
+    romaji: "yousu wo miru",
     reaction_good:
         "みばな「無駄は省く」\n" +
         "ぶんた「合理的やな」",
@@ -13611,7 +13611,7 @@ const schoolData = [
         "みらい「強くないよ。怖いまま突っ込んでるだけ！」",
     text: "様子を見守る。",
     kana: "ようすをみまもる。",
-    romaji: "yousu o mimamoru",
+    romaji: "yousu wo mimamoru",
     reaction_good:
         "みらい「ほらね、まりもちゃんと前進してる」\n" +
         "まり「……ありがとう。少し、安心した」",
@@ -13634,7 +13634,7 @@ const schoolData = [
         "しるべ「……才能の使い道、間違ってる」",
     text: "二人の空気を壊さない。",
     kana: "ふたりのくうきをこわさない。",
-    romaji: "futari no kuuki o kowasanai",
+    romaji: "futari no kuuki wo kowasanai",
     reaction_good:
         "こめ「しるべ、否定しねの優しいねぇ」\n" +
         "しるべ「……してる」",
@@ -13701,7 +13701,7 @@ const schoolData = [
         "こはく「硬すぎる」",
     text: "二人をなだめる。",
     kana: "ふたりをなだめる。",
-    romaji: "futari o nadameru",
+    romaji: "futari wo nadameru",
     reaction_good:
         "ゆうじ「……今回は見逃す」\n" +
         "こはく「妥協ではなく調整だ」",
@@ -13745,7 +13745,7 @@ const schoolData = [
         "めぐむ「頼もしいわ」",
     text: "話を聞く。",
     kana: "はなしをきく。",
-    romaji: "hanashi o kiku",
+    romaji: "hanashi wo kiku",
     reaction_good:
         "えるあ「まぁ、なんとかなる」\n" +
         "めぐむ「そういうの助かる」",
@@ -13767,7 +13767,7 @@ const schoolData = [
         "あゆ「……ありがと」",
     text: "会話を促す。",
     kana: "かいわをうながす。",
-    romaji: "kaiwa o unagasu",
+    romaji: "kaiwa wo unagasu",
     reaction_good:
         "すおう「で、どうしたの」\n" +
         "あゆ「えへへ、話すね！」",
@@ -13789,7 +13789,7 @@ const schoolData = [
         "ぶんた「ほらな」",
     text: "様子を見る。",
     kana: "ようすをみる。",
-    romaji: "yousu o miru",
+    romaji: "yousu wo miru",
     reaction_good:
         "みばな「無駄は省く」\n" +
         "ぶんた「合理的やな」",
@@ -14059,7 +14059,7 @@ const schoolData = [
         "みばな「……まぁ、否定はしない」",
     text: "距離感を保ちなさい。",
     kana: "きょりかんをたもちなさい。",
-    romaji: "kyorikan o tamochinasai",
+    romaji: "kyorikan wo tamochinasai",
     reaction_good:
         "あゆ「ちょうどいい距離ってやつ？」\n" +
         "みばな「近すぎると、息苦しい」",
@@ -14127,7 +14127,7 @@ const schoolData = [
         "ゆう「ううん、ありがとう」",
     text: "話題を変えなさい。",
     kana: "わだいをかえなさい。",
-    romaji: "wadai o kae nasai",
+    romaji: "wadai wo kae nasai",
     reaction_good:
         "まり「……外、行く？」\n" +
         "ゆう「うん……少しだけ」",
@@ -14193,7 +14193,7 @@ const schoolData = [
         "かのん「厳し〜！」",
     text: "規律を守りなさい。",
     kana: "きりつをまもりなさい。",
-    romaji: "kiritsu o mamorinasai",
+    romaji: "kiritsu wo mamorinasai",
     reaction_good:
         "こはく「理解したなら良い」\n" +
         "みる「はいは〜い」",
@@ -14238,7 +14238,7 @@ const schoolData = [
         "えるあ「よく見てるじゃん」",
     text: "意見を言ってもいいですよ。",
     kana: "いけんをいってもいいですよ。",
-    romaji: "iken o itte mo ii desu yo",
+    romaji: "iken wo itte mo ii desu yo",
     reaction_good:
         "しるべ「……まぁ」\n" +
         "えるあ「その一言が貴重」",
@@ -14598,7 +14598,7 @@ const schoolData = [
         "ゆたすけ「それが、難しいがです」",
     text: "前を向いてください。",
     kana: "まえをむいてください。",
-    romaji: "mae o muite kudasai",
+    romaji: "mae wo muite kudasai",
     reaction_good:
         "ゆたすけ「はい……」\n" +
         "ふみこ「ありがとうございます」",
@@ -14770,7 +14770,7 @@ const schoolData = [
             "ゆう「わかる……」",
         text: "会話を止めてください。",
         kana: "かいわをとめてください。",
-        romaji: "kaiwa o tomete kudasai",
+        romaji: "kaiwa wo tomete kudasai",
         reaction_good:
             "まり「……うん」\n" +
             "ゆう「はい……」",
@@ -14855,7 +14855,7 @@ const schoolData = [
             "ふみこ「うん。ゆうくんらしい」",
         text: "会話を止めてください。",
         kana: "かいわをとめてください。",
-        romaji: "kaiwa o tomete kudasai",
+        romaji: "kaiwa wo tomete kudasai",
         reaction_good:
             "ゆう「は、はい……」\n" +
             "ふみこ「ごめんね」",
@@ -14918,7 +14918,7 @@ const schoolData = [
             "ゆたすけ「ちゃんと後でやればええ」",
         text: "課題を進めてください。",
         kana: "かだいをすすめてください。",
-        romaji: "kadai o susumete kudasai",
+        romaji: "kadai wo susumete kudasai",
         reaction_good:
             "こめ「はーい……」\n" +
             "ゆたすけ「うん」",
@@ -14960,7 +14960,7 @@ const schoolData = [
             "ゆたすけ「ゆうくんらしいき」",
         text: "手を止めてください。",
         kana: "てをとめてください。",
-        romaji: "te o tomete kudasai",
+        romaji: "te wo tomete kudasai",
         reaction_good:
             "ゆう「あ、はい……」\n" +
             "ゆたすけ「ごめんな」",
@@ -15149,7 +15149,7 @@ const schoolData = [
             "みばな「目閉じてる時点でアウト」",
         text: "姿勢を正しなさい。",
         kana: "しせいをただしなさい。",
-        romaji: "shisei o tadashi nasai",
+        romaji: "shisei wo tadashi nasai",
         reaction_good:
             "こめ「はーい……」\n" +
             "みばな「よし」",
@@ -15364,7 +15364,7 @@ const schoolData = [
             "ゆう「でしょ！？」",
         text: "趣味の共有は大切ですが、今は教材に目を向けましょう。",
         kana: "しゅみのきょうゆうはたいせつですが、いまはきょうざいにめをむけましょう。",
-        romaji: "shumi no kyouyuu wa taisetsu desu ga ima wa kyouzai ni me o mukemashou",
+        romaji: "shumi no kyouyuu wa taisetsu desu ga ima wa kyouzai ni me wo mukemashou",
         reaction_good:
             "ゆう「は、はいっ」\n" +
             "ふみこ「すみません」",
@@ -15384,7 +15384,7 @@ const schoolData = [
             "かのん「ひど！？褒めて！？」",
         text: "発想は面白いですが、今は一人分の役割を果たしてください。",
         kana: "はっそうはおもしろいですが、いまはひとりぶんのやくわりをはたしてください。",
-        romaji: "hassou wa omoshiroi desu ga ima wa hitoribun no yakuwari o hatashite kudasai",
+        romaji: "hassou wa omoshiroi desu ga ima wa hitoribun no yakuwari wo hatashite kudasai",
         reaction_good:
             "かのん「はーい！」\n" +
             "ぶんた「せやな」",
@@ -15404,7 +15404,7 @@ const schoolData = [
             "こめ「お米あれば生きれるし」",
         text: "怠ける理由の説明は不要です。まず姿勢を正しましょう。",
         kana: "なまけるりゆうのせつめいはふようです。まずしせいをただしましょう。",
-        romaji: "namakeru riyuu no setsumei wa fuyou desu mazu shisei o tadashimashou",
+        romaji: "namakeru riyuu no setsumei wa fuyou desu mazu shisei wo tadashimashou",
         reaction_good:
             "こめ「……はーい」\n" +
             "めぐむ「よし」",
@@ -15445,7 +15445,7 @@ const schoolData = [
             "まり「……わかる」",
         text: "授業中に夢の話をする余裕があるようですね。",
         kana: "じゅぎょうちゅうにゆめのはなしをするよゆうがあるようですね。",
-        romaji: "jugyou chuu ni yume no hanashi o suru yoyuu ga aru you desu ne",
+        romaji: "jugyou chuu ni yume no hanashi wo suru yoyuu ga aru you desu ne",
         reaction_good:
             "こめ「……起きる」\n" +
             "まり「……はい」",
@@ -15465,7 +15465,7 @@ const schoolData = [
             "へびき「溶ける未来しか見えん」",
         text: "地域差の話は興味深いですが、今は板書を追いましょう。",
         kana: "ちいきさのはなしはきょうみぶかいですが、いまはばんしょをおいましょう。",
-        romaji: "chiikisa no hanashi wa kyoumi bukai desu ga ima wa bansho o oimashou",
+        romaji: "chiikisa no hanashi wa kyoumi bukai desu ga ima wa bansho wo oimashou",
         reaction_good:
             "ゆたすけ「はい」\n" +
             "へびき「了解さぁ」",
@@ -15505,7 +15505,7 @@ const schoolData = [
             "みらい「今回は違うって！」",
         text: "意欲は十分です。あとは手順を丁寧に。",
         kana: "いよくはじゅうぶんです。あとはてじゅんをていねいに。",
-        romaji: "iyoku wa juubun desu ato wa tejun o teinei ni",
+        romaji: "iyoku wa juubun desu ato wa tejun wo teinei ni",
         reaction_good:
             "あゆ「りょーかいっ！」\n" +
             "みらい「はい！」",
@@ -15545,7 +15545,7 @@ const schoolData = [
             "すおう「冷たいねぇ」",
         text: "作業効率を下げる会話は控えましょう。",
         kana: "さぎょうこうりつをさげるかいわはひかえましょう。",
-        romaji: "sagyou kouritsu o sageru kaiwa wa hikaemashou",
+        romaji: "sagyou kouritsu wo sageru kaiwa wa hikaemashou",
         reaction_good:
             "えるあ「了解」\n" +
             "すおう「はーい」",
@@ -15782,7 +15782,7 @@ const schoolData = [
             "こはく「一瞬でも違反だ」",
         text: "前を向きなさい。",
         kana: "まえをむきなさい。",
-        romaji: "mae o muki nasai",
+        romaji: "mae wo muki nasai",
         reaction_good:
             "みる「はーい……」\n" +
             "こはく「よろしい」",
@@ -15933,7 +15933,7 @@ const schoolData = [
             "へびき「誰も喋らんさー」",
         text: "姿勢を正しなさい。",
         kana: "しせいをただしなさい。",
-        romaji: "shisei o tadashi nasai",
+        romaji: "shisei wo tadashi nasai",
         reaction_good:
             "へびき「はーい」\n" +
             "こめ「……がんばる」\n" +
@@ -16071,7 +16071,7 @@ const schoolData = [
             "えるあ「そういうもん」",
         text: "過去より今を大切にしなさい。", 
         kana: "かこよりいまをたいせつにしなさい。",
-        romaji: "kako yori ima o taisetsu ni shinasai",
+        romaji: "kako yori ima wo taisetsu ni shinasai",
         reaction_good:
             "めぐむ「……まぁ、悪くないな」\n" +
             "えるあ「でしょ」",
@@ -16159,7 +16159,7 @@ const schoolData = [
             "みる「へびきくん暑さ弱すぎwww」",
         text: "服装には気をつけなさい。", 
         kana: "ふくそうにはきをつけなさい。",
-        romaji: "fukusou ni wa ki o tsuke nasai",
+        romaji: "fukusou ni wa ki wo tsuke nasai",
         reaction_good:
             "へびき「はーい」\n" +
             "みる「気をつけまーす！」",
@@ -16181,7 +16181,7 @@ const schoolData = [
             "みらい「正直でよろしい！」",
         text: "時間管理を意識しなさい。", 
         kana: "じかんかんりをいしきしなさい。",
-        romaji: "jikan kanri o ishiki shinasai",
+        romaji: "jikan kanri wo ishiki shinasai",
         reaction_good:
             "みらい「気をつけまーす！」\n" +
             "こめ「……がんばる」",
@@ -17482,7 +17482,7 @@ const schoolData = [
         "あおい「感情でも、結果は出とるで」",
     text: "言い方に気をつけて。",
     kana: "いいかたにきをつけて。",
-    romaji: "iikata ni ki o tsukete",
+    romaji: "iikata ni ki wo tsukete",
     reaction_good:
         "ほのか「……まぁ、結果出てるなら」\n" +
         "あおい「ありがとう」",
@@ -17590,7 +17590,7 @@ const schoolData = [
             "なぎさ「めりは悪くないよ。世界が荒いだけ」",
         text: "役割分担を見直してみましょう。",
         kana: "やくわりぶんたんをみなおしてみましょう。",
-        romaji: "yakuwari buntan o minaoshite mimashou",
+        romaji: "yakuwari buntan wo minaoshite mimashou",
         reaction_good:
             "めり「……ありがとうございます」\n" +
             "ほのか「効率上がりそうじゃん？」\n" +
@@ -17612,7 +17612,7 @@ const schoolData = [
             "くう「群れる趣味はない」",
         text: "人との距離感を考えなさい。",
         kana: "ひととのきょりかんをかんがえなさい。",
-        romaji: "hito to no kyori kan o kangae nasai",
+        romaji: "hito to no kyori kan wo kangae nasai",
         reaction_good:
             "ゆうひ「はいはいw」\n" +
             "くう「……無駄ではないかもな」",
@@ -17633,7 +17633,7 @@ const schoolData = [
             "ゆい「りつくん優しい……ゆい、撫でられてる気分……」",
         text: "距離感を考えなさい。",
         kana: "きょりかんをかんがえなさい。",
-        romaji: "kyori kan o kangae nasai",
+        romaji: "kyori kan wo kangae nasai",
         reaction_good:
             "りつ「おっと、先生の視線が入ったね☆」\n" +
             "ゆい「……でも、ちょっとだけならいいよね？」",
@@ -17654,7 +17654,7 @@ const schoolData = [
             "きそら「ち、ちが……違くないけど……！」",
         text: "相手の希望を尊重しなさい。",
         kana: "あいてのきぼうをそんちょうしなさい。",
-        romaji: "aite no kibou o sonchou shinasai",
+        romaji: "aite no kibou wo sonchou shinasai",
         reaction_good:
             "りつ「なるほど……じゃあ、きそらちゃん」\n" +
             "きそら「……うん……それなら……」",
@@ -17717,7 +17717,7 @@ const schoolData = [
             "ほのか「うわ出た、強者理論」",
         text: "言い方に気をつけなさい。",
         kana: "いいかたにきをつけなさい。",
-        romaji: "iikata ni ki o tsukenasai",
+        romaji: "iikata ni ki wo tsukenasai",
         reaction_good:
             "りのん「……事実は曲げないけどね」\n" +
             "ほのか「まぁ、そこは嫌いじゃない」",
@@ -17737,7 +17737,7 @@ const schoolData = [
             "きそら「……えへ……」",
         text: "会話を続けなさい。",
         kana: "かいわをつづけなさい。",
-        romaji: "kaiwa o tsuzuke nasai",
+        romaji: "kaiwa wo tsuzuke nasai",
         reaction_good:
             "あおい「ゆっくりでいいよ」\n" +
             "きそら「……うん……」",
@@ -17797,7 +17797,7 @@ const schoolData = [
             "あつし「でも希望は必要だよ！」",
         text: "考えを尊重しなさい。",
         kana: "かんがえをそんちょうしなさい。",
-        romaji: "kangae o sonchou shinasai",
+        romaji: "kangae wo sonchou shinasai",
         reaction_good:
             "なぎさ「……まぁ、嫌いじゃない」\n" +
             "あつし「やった！」",
@@ -17820,7 +17820,7 @@ const schoolData = [
             "あおい「……感情も、判断材料だよ」",
         text: "一度立ち止まって、相手の意見を整理しよう。",
         kana: "いちどたちどまって、あいてのいけんをせいりしよう。",
-        romaji: "ichido tachidomatte, aite no iken o seiri shiyou",
+        romaji: "ichido tachidomatte, aite no iken wo seiri shiyou",
         reaction_good:
             "ほのか「……まぁ、聞くだけは聞くか」\n" +
             "あおい「うん、ありがとう」",
@@ -17884,7 +17884,7 @@ const schoolData = [
             "りのん「夢は勝ってから見なさい」",
         text: "評価基準の違いを認めよう。",
         kana: "ひょうかきじゅんのちがいをみとめよう。",
-        romaji: "hyouka kijun no chigai o mitomeyou",
+        romaji: "hyouka kijun no chigai wo mitomeyou",
         reaction_good:
             "りつ「……まぁ、それも美学か」\n" +
             "りのん「理解が早くて助かる」",
@@ -17905,7 +17905,7 @@ const schoolData = [
             "くう「詮索すんな。舌打ちするぞ」",
         text: "距離感を大切にしよう。",
         kana: "きょりかんをたいせつにしよう。",
-        romaji: "kyorikan o taisetsu ni shiyou",
+        romaji: "kyorikan wo taisetsu ni shiyou",
         reaction_good:
             "そうじ「はいはい、了解〜」\n" +
             "くう「……助かる」",
@@ -17928,7 +17928,7 @@ const schoolData = [
             "そうし「地球では慎重が大事なんだ…」",
         text: "一度、現実的な手順を整理しましょう。",
         kana: "いちど、げんじつてきなてじゅんをせいりしましょう。",
-        romaji: "ichido, genjitsuteki na tejun o seiri shimashou",
+        romaji: "ichido, genjitsuteki na tejun wo seiri shimashou",
         reaction_good:
             "そうじ「お、じゃあ段階踏むか！」\n" +
             "そうし「はい…それなら安心です」",
@@ -17949,7 +17949,7 @@ const schoolData = [
             "あおい「……それ、褒めてる？」",
         text: "互いのやり方を尊重してください。",
         kana: "たがいのやりかたをそんちょうしてください。",
-        romaji: "tagai no yarikata o sonchou shite kudasai",
+        romaji: "tagai no yarikata wo sonchou shite kudasai",
         reaction_good:
             "ゆうひ「まぁ好きにやればいっかw」\n" +
             "あおい「ありがとう」",
@@ -17992,7 +17992,7 @@ const schoolData = [
             "りのん「勝たなきゃ歌えないでしょ」",
         text: "目的の違いを言語化してみよう。",
         kana: "もくてきのちがいをごげんかしてみよう。",
-        romaji: "mokuteki no chigai o gogenka shite miyou",
+        romaji: "mokuteki no chigai wo gogenka shite miyou",
         reaction_good:
             "りつ「……なるほどね」\n" +
             "りのん「理解が早い」",
@@ -18013,7 +18013,7 @@ const schoolData = [
             "ほのか「無駄が嫌いなだけ」",
         text: "価値観の違いを認識しましょう。",
         kana: "かちかんのちがいをにんしきしましょう。",
-        romaji: "kachikan no chigai o ninshiki shimashou",
+        romaji: "kachikan no chigai wo ninshiki shimashou",
         reaction_good:
             "ほのか「……まぁ、そうかも」\n" +
             "なぎさ「でしょ」",
@@ -18106,7 +18106,7 @@ const schoolData = [
             "あおい「……感情も、判断材料だよ」",
         text: "一度立ち止まって、相手の意見を整理しよう。",
         kana: "いちどたちどまって、あいてのいけんをせいりしよう。",
-        romaji: "ichido tachidomatte, aite no iken o seiri shiyou",
+        romaji: "ichido tachidomatte, aite no iken wo seiri shiyou",
         reaction_good:
             "ほのか「……まぁ、聞くだけは聞くか」\n" +
             "あおい「うん、ありがとう」",
@@ -18170,7 +18170,7 @@ const schoolData = [
             "りのん「夢は勝ってから見なさい」",
         text: "評価基準の違いを認めよう。",
         kana: "ひょうかきじゅんのちがいをみとめよう。",
-        romaji: "hyouka kijun no chigai o mitomeyou",
+        romaji: "hyouka kijun no chigai wo mitomeyou",
         reaction_good:
             "りつ「……まぁ、それも美学か」\n" +
             "りのん「理解が早くて助かる」",
@@ -18191,7 +18191,7 @@ const schoolData = [
             "くう「詮索すんな。舌打ちするぞ」",
         text: "距離感を大切にしよう。",
         kana: "きょりかんをたいせつにしよう。",
-        romaji: "kyorikan o taisetsu ni shiyou",
+        romaji: "kyorikan wo taisetsu ni shiyou",
         reaction_good:
             "そうじ「はいはい、了解〜」\n" +
             "くう「……助かる」",
@@ -18214,7 +18214,7 @@ const schoolData = [
             "そうし「地球では慎重が大事なんだ…」",
         text: "一度、現実的な手順を整理しましょう。",
         kana: "いちど、げんじつてきなてじゅんをせいりしましょう。",
-        romaji: "ichido, genjitsuteki na tejun o seiri shimashou",
+        romaji: "ichido, genjitsuteki na tejun wo seiri shimashou",
         reaction_good:
             "そうじ「お、じゃあ段階踏むか！」\n" +
             "そうし「はい…それなら安心です」",
@@ -18235,7 +18235,7 @@ const schoolData = [
             "あおい「……それ、褒めてる？」",
         text: "互いのやり方を尊重してください。",
         kana: "たがいのやりかたをそんちょうしてください。",
-        romaji: "tagai no yarikata o sonchou shite kudasai",
+        romaji: "tagai no yarikata wo sonchou shite kudasai",
         reaction_good:
             "ゆうひ「まぁ好きにやればいっかw」\n" +
             "あおい「ありがとう」",
@@ -18278,7 +18278,7 @@ const schoolData = [
             "りのん「勝たなきゃ歌えないでしょ」",
         text: "目的の違いを言語化してみよう。",
         kana: "もくてきのちがいをごげんかしてみよう。",
-        romaji: "mokuteki no chigai o gogenka shite miyou",
+        romaji: "mokuteki no chigai wo gogenka shite miyou",
         reaction_good:
             "りつ「……なるほどね」\n" +
             "りのん「理解が早い」",
@@ -18299,7 +18299,7 @@ const schoolData = [
             "くう「だから疲れる」",
         text: "最低限の連携を意識してください。",
         kana: "さいていげんのれんけいをいしきしてください。",
-        romaji: "saiteigen no renkei o ishiki shite kudasai",
+        romaji: "saiteigen no renkei wo ishiki shite kudasai",
         reaction_good:
             "のりおみ「まぁ、建前としてはね」\n" +
             "くう「……了解」",
@@ -18320,7 +18320,7 @@ const schoolData = [
             "ほのか「無駄が嫌いなだけ」",
         text: "価値観の違いを認識しましょう。",
         kana: "かちかんのちがいをにんしきしましょう。",
-        romaji: "kachikan no chigai o ninshiki shimashou",
+        romaji: "kachikan no chigai wo ninshiki shimashou",
         reaction_good:
             "ほのか「……まぁ、そうかも」\n" +
             "なぎさ「でしょ」",
@@ -18527,7 +18527,7 @@ const schoolData = [
             "こうた「本音なんて……わからなくなってきた」",
         text: "無理をしすぎていませんか。", 
         kana: "むりをしすぎていませんか。",
-        romaji: "muri o shisugite imasen ka",
+        romaji: "muri wo shisugite imasen ka",
         reaction_good:
             "こうた「……ありがとうございます」\n" +
             "こうた「少し、考えてみます」",
@@ -18552,7 +18552,7 @@ const schoolData = [
             "のりおみ「ああ……それが一番、厄介だ」",
         text: "距離感を考えましょう。", 
         kana: "きょりかんをかんがえましょう。",
-        romaji: "kyorikan o kangaemashou",
+        romaji: "kyorikan wo kangaemashou",
         reaction_good:
             "のりおみ「配慮、ありがとうございます」\n" +
             "ゆい「……うん」",
@@ -18690,7 +18690,7 @@ const schoolData = [
             "こうた「……正解をなぞってるだけで、何も残らない」",
         text: "言い方に気をつけなさい。",
         kana: "いいかたにきをつけなさい。",
-        romaji: "iikata ni ki o tsukenasai",
+        romaji: "iikata ni ki wo tsukenasai",
         reaction_good:
             "こうた「……すみません。でも、本音です」\n" +
             "りのん「それでいい」",
@@ -18801,7 +18801,7 @@ const schoolData = [
             "ほのか「煽りしかできないなら黙って」",
         text: "口調に気をつけなさい。",
         kana: "くちょうにきをつけなさい。",
-        romaji: "kuchou ni ki o tsukenasai",
+        romaji: "kuchou ni ki wo tsukenasai",
         reaction_good:
             "ゆうひ「はーいw」\n" +
             "ほのか「信用しない」",
@@ -18915,7 +18915,7 @@ const schoolData = [
             "たより「違う。大事だから、依存にはなりたくない」",
         text: "少し距離を置いてみては？", 
         kana: "すこしきょりをおいてみては？",
-        romaji: "sukoshi kyori o oite mite wa?",
+        romaji: "sukoshi kyori wo oite mite wa?",
         reaction_good:
             "ゆい「……じゃあ、考える」\n" +
             "たより「それでいい」",
@@ -19139,7 +19139,7 @@ const schoolData = [
             "なぎさ「謝る癖、やめなよ」",
         text: "自分を責めすぎないで。", 
         kana: "じぶんをせめすぎないで。",
-        romaji: "jibun o semesuginai de",
+        romaji: "jibun wo semesuginai de",
         reaction_good:
             "めり「……はい」\n" +
             "なぎさ「それでいい」",
@@ -19279,7 +19279,7 @@ const schoolData = [
             "みさき「ち、違うよ……！」",
         text: "一度話を止めましょう。", 
         kana: "いちどはなしをとめましょう。",
-        romaji: "ichido hanashi o tomemashou",
+        romaji: "ichido hanashi wo tomemashou",
         reaction_good:
             "みさき「……はい」\n" +
             "ゆい「……ごめん」",
@@ -19368,7 +19368,7 @@ const schoolData = [
             "きそら「……りのんちゃん、つよいね」",
         text: "お互いの良さを認め合いましょう。",
         kana: "おたがいのよさをみとめあいましょう。",
-        romaji: "otagai no yosa o mitomeaimashou",
+        romaji: "otagai no yosa wo mitomeaimashou",
         reaction_good:
             "りのん「合理的」\n" +
             "きそら「……うん」",
@@ -19598,7 +19598,7 @@ const schoolData = [
             "そうじ「草！まぁイキっていこ！」",
         text: "言い方に気をつけてください。", 
         kana: "いいかたにきをつけてください。",
-        romaji: "iikata ni ki o tsukete kudasai",
+        romaji: "iikata ni ki wo tsukete kudasai",
         reaction_good:
             "そうじ「はいはーい！」\n" +
             "りつ「……ありがとう」",
@@ -19807,7 +19807,7 @@ const schoolData = [
         "くう「……それ、全部社交辞令だから」",
     text: "人間関係には節度を持ちましょう。",
     kana: "にんげんかんけいにはせつどをもちましょう。",
-    romaji: "ningen kankei ni wa setsudo o mochimashou",
+    romaji: "ningen kankei ni wa setsudo wo mochimashou",
     reaction_good:
         "のりおみ「ええ、その通りです」\n" +
         "ゆい「は〜い……」\n" +
@@ -19832,7 +19832,7 @@ const schoolData = [
         "ゆい「……なにそれ」",
     text: "言い方に気をつけなさい。",
     kana: "いいかたにきをつけなさい。",
-    romaji: "iikata ni ki o tsukenasai",
+    romaji: "iikata ni ki wo tsukenasai",
     reaction_good:
         "なぎさ「はーいはい」\n" +
         "ゆい「むぅ……」",
@@ -19853,7 +19853,7 @@ const schoolData = [
         "そうじ「勢い大事」",
     text: "現実を見なさい。",
     kana: "げんじつをみなさい。",
-    romaji: "genjitsu o minasai",
+    romaji: "genjitsu wo minasai",
     reaction_good:
         "そうじ「現実もイケてるっしょ」\n" +
         "むぎ「な〜！」",
@@ -20478,7 +20478,7 @@ const schoolData = [
         "なぎさ「余計とか他人が決めることじゃないでしょ」",
     text: "自分を責めすぎないでください。",
     kana: "じぶんをせめすぎないでください。",
-    romaji: "jibun o semesugi naide kudasai",
+    romaji: "jibun wo semesugi naide kudasai",
     reaction_good:
         "なぎさ「ほら、先生も言ってる」\n" +
         "めり「……うん」",
@@ -20502,7 +20502,7 @@ const schoolData = [
         "ゆい「だったらさ、ゆいと仲良くしよ？」",
     text: "相手の気持ちを尊重しましょう。",
     kana: "あいてのきもちをそんちょうしましょう。",
-    romaji: "aite no kimochi o sonchou shimashou",
+    romaji: "aite no kimochi wo sonchou shimashou",
     reaction_good:
         "ゆい「えへ、優しい先生♡」\n" +
         "くう「……話終わった？」",
@@ -20860,7 +20860,7 @@ const schoolData = [
             "ゆい「一緒だね♡」",
         text: "距離感を大切にしましょう。",
         kana: "きょりかんをたいせつにしましょう。",
-        romaji: "kyorikan o taisetsu ni shimashou",
+        romaji: "kyorikan wo taisetsu ni shimashou",
         reaction_good:
             "ゆい「えへへ、怒られちゃった」\n" +
             "のりおみ「……助かった」",
@@ -21000,7 +21000,7 @@ const schoolData = [
             "ゆうひ「壊すかw」",
         text: "私語を慎みなさい。",
         kana: "しごをつつしみなさい。",
-        romaji: "shigo o tsutsushiminasai",
+        romaji: "shigo wo tsutsushiminasai",
         reaction_good:
             "そうじ「はーい」\n" +
             "ゆうひ「了解w」",
@@ -21283,7 +21283,7 @@ const schoolData = [
             "のりおみ「こうた、俺のこと嫌いになった？」",
         text: "少し言葉を選びなさい。",
         kana: "すこしことばをえらびなさい",
-        romaji: "sukoshi kotoba o erabi nasai",
+        romaji: "sukoshi kotoba wo erabi nasai",
         reaction_good:
             "こうた「……配慮はする」\n" +
             "のりおみ「……ありがとう」",
@@ -21401,7 +21401,7 @@ const schoolData = [
             "ゆい「のりおみくんのこと、嫌ってない」",
         text: "感情を整理しましょう。",
         kana: "かんじょうをせいりしましょう",
-        romaji: "kanjou o seiri shimashou",
+        romaji: "kanjou wo seiri shimashou",
         reaction_good:
             "のりおみ「……それ、今言われるの……怖い」\n" +
             "ゆい「え〜♡助けたいだけなのに」",
@@ -21424,7 +21424,7 @@ const schoolData = [
             "こうた「謝る必要はない。修正すればいい」",
         text: "言葉を選びなさい。",
         kana: "ことばをえらびなさい",
-        romaji: "kotoba o erabi nasai",
+        romaji: "kotoba wo erabi nasai",
         reaction_good:
             "のりおみ「……わかった」\n" +
             "こうた「それでいい」",
@@ -21490,7 +21490,7 @@ const schoolData = [
             "ゆい「言わないってことは、嫌じゃないってことでしょ？」",
         text: "相手の気持ちを尊重しなさい。",
         kana: "あいてのきもちをそんちょうしなさい",
-        romaji: "aite no kimochi o sonchou shinasai",
+        romaji: "aite no kimochi wo sonchou shinasai",
         reaction_good:
             "のりおみ「……っ、胸……痛い……」\n" +
             "ゆい「え……？ごめん……でも、ゆい悪くないよね？」",
@@ -21613,7 +21613,7 @@ const schoolData = [
             "くう「……出てく。頭冷やす」",
         text: "一度休憩を入れなさい。",
         kana: "いちどきゅうけいをいれなさい。",
-        romaji: "ichido kyuukei o irenasai",
+        romaji: "ichido kyuukei wo irenasai",
         reaction_good:
             "くう「……分かった」\n" +
             "のりおみ「……ありがとうございます」",
@@ -21638,7 +21638,7 @@ const schoolData = [
             "ゆい「嫌って言わないと、分かんないよ♡」",
         text: "距離感に気をつけなさい。",
         kana: "きょりかんにきをつけなさい。",
-        romaji: "kyorikan ni ki o tsukenasai",
+        romaji: "kyorikan ni ki wo tsukenasai",
         reaction_good:
             "ゆい「はーい♡」\n" +
             "のりおみ「……助かった」",
@@ -21684,7 +21684,7 @@ const schoolData = [
             "ゆい「やった♡逃げないでね？」",
         text: "静かに昼食をとりなさい。",
         kana: "しずかにちゅうしょくをとりなさい。",
-        romaji: "shizuka ni chuushoku o torinasai",
+        romaji: "shizuka ni chuushoku wo torinasai",
         reaction_good:
             "ゆい「はーい♡」\n" +
             "のりおみ「……いただきます」",
@@ -21729,7 +21729,7 @@ const schoolData = [
             "のりおみ「……ああ」",
         text: "私語を控えなさい。",
         kana: "しごをひかえなさい。",
-        romaji: "shigo o hikaenasai",
+        romaji: "shigo wo hikaenasai",
         reaction_good:
             "くう「……」\n" +
             "のりおみ「……」",
@@ -21839,7 +21839,7 @@ const schoolData = [
             "めり「大切にしてあげてね…！」",
         text: "周囲への配慮を忘れないように。",
         kana: "しゅういへのはいりょをわすれないように。",
-        romaji: "shuui e no hairyo o wasurena i you ni",
+        romaji: "shuui e no hairyo wo wasurena i you ni",
         reaction_good:
             "めり「はい…！」\n" +
             "のりおみ「……努力はする」",
@@ -21885,7 +21885,7 @@ const schoolData = [
             "ゆい「やった♡逃げないでね？」",
         text: "静かに昼食をとりなさい。",
         kana: "しずかにちゅうしょくをとりなさい。",
-        romaji: "shizuka ni chuushoku o torinasai",
+        romaji: "shizuka ni chuushoku wo torinasai",
         reaction_good:
             "ゆい「はーい♡」\n" +
             "のりおみ「……いただきます」",
@@ -21908,7 +21908,7 @@ const schoolData = [
             "ゆい「でも断らないでしょ？」",
         text: "下校時は寄り道を控えなさい。",
         kana: "げこうじはよりみちをひかえなさい。",
-        romaji: "gekouji wa yorimichi o hikaenasai",
+        romaji: "gekouji wa yorimichi wo hikaenasai",
         reaction_good:
             "ゆい「じゃあ真っ直ぐ一緒に帰ろ♡」\n" +
             "のりおみ「……話が早いな」",
@@ -21953,7 +21953,7 @@ const schoolData = [
             "のりおみ「……ああ」",
         text: "私語を控えなさい。",
         kana: "しごをひかえなさい。",
-        romaji: "shigo o hikaenasai",
+        romaji: "shigo wo hikaenasai",
         reaction_good:
             "くう「……」\n" +
             "のりおみ「……」",
@@ -22019,7 +22019,7 @@ const schoolData = [
             "めり「大切にしてあげてね…！」",
         text: "周囲への配慮を忘れないように。",
         kana: "しゅういへのはいりょをわすれないように。",
-        romaji: "shuui e no hairyo o wasurena i you ni",
+        romaji: "shuui e no hairyo wo wasurena i you ni",
         reaction_good:
             "めり「はい…！」\n" +
             "のりおみ「……努力はする」",
@@ -22076,7 +22076,7 @@ const schoolData = [
             "（言葉にならない）",
         text: "考えを言語化しましょう。",
         kana: "かんがえをげんごかしましょう。",
-        romaji: "kangae o gengoka shimashou",
+        romaji: "kangae wo gengoka shimashou",
         reaction_good:
             "くう「無理に言葉にしなくていい」\n" +
             "くう「今は、壊れろ」",
@@ -22158,7 +22158,7 @@ const schoolData = [
             "のりおみ「……全部、嫌われてた」",
         text: "画面を閉じましょう。",
         kana: "がめんをとじましょう。",
-        romaji: "gamen o tojimarimashou",
+        romaji: "gamen wo tojimarimashou",
         reaction_good:
             "のりおみ「……無理」",
         reaction_bad:
@@ -23011,7 +23011,7 @@ const schoolData = [
             "ゆうひ「雑すぎw」",
         text: "要点をまとめなさい。",
         kana: "ようてんをまとめなさい。",
-        romaji: "youten o matome nasai",
+        romaji: "youten wo matome nasai",
         reaction_good:
             "むぎ「がんばる〜！！」\n" +
             "ゆうひ「はいはい」",
@@ -23034,7 +23034,7 @@ const schoolData = [
             "なぎさ「否定から入るのやめなよ」",
         text: "互いの意見を尊重しなさい。",
         kana: "たがいのいけんをそんちょうしなさい。",
-        romaji: "tagai no iken o sonchou shinasai",
+        romaji: "tagai no iken wo sonchou shinasai",
         reaction_good:
             "なぎさ「まぁ…先生が言うなら」\n" +
             "ほのか「一旦、聞くだけ聞く」",
@@ -23056,7 +23056,7 @@ const schoolData = [
             "あつし「でしょ！！」",
         text: "話題をまとめてください。",
         kana: "わだいをまとめてください。",
-        romaji: "wadai o matomete kudasai",
+        romaji: "wadai wo matomete kudasai",
         reaction_good:
             "そうし「要約します」\n" +
             "あつし「りょーかい！！」",
@@ -23077,7 +23077,7 @@ const schoolData = [
             "りのん「完璧は更新するもの」",
         text: "会話を続けなさい。",
         kana: "かいわをつづけなさい。",
-        romaji: "kaiwa o tsudzukenasai",
+        romaji: "kaiwa wo tsudzukenasai",
         reaction_good:
             "むぎ「すごーい！！」\n" +
             "りのん「前向きに捉えます」",
@@ -23163,7 +23163,7 @@ const schoolData = [
             "そうし「否定も一種の思考実験だよ」",
         text: "話題を整理してください。",
         kana: "わだいをせいりしてください。",
-        romaji: "wadai o seiri shite kudasai",
+        romaji: "wadai wo seiri shite kudasai",
         reaction_good:
             "そうし「要約します」\n" +
             "そうじ「お、珍しく噛み合ったな」",
@@ -23250,7 +23250,7 @@ const schoolData = [
             "ほのか「……あーもう！理屈多い！」",
         text: "ちゃんと話を聞きなさい。",
         kana: "ちゃんとはなしをききなさい。",
-        romaji: "chanto hanashi o kiki nasai",
+        romaji: "chanto hanashi wo kiki nasai",
         reaction_good:
             "ほのか「まあ…嫌いじゃないけどさ」\n" +
             "そうし「それは好意と受け取っていい？」",
@@ -23976,7 +23976,7 @@ const schoolData = [
             "なぎさ「疲れるけど、黙るよりマシ」",
         text: "意見を尊重し合いましょう。",
         kana: "いけんをそんちょうしあいましょう。",
-        romaji: "iken o sonchou shi aimashou",
+        romaji: "iken wo sonchou shi aimashou",
         reaction_good:
             "あつし「そっか！それも星だね！」\n" +
             "なぎさ「……嫌いじゃない」",
@@ -24040,7 +24040,7 @@ const schoolData = [
             "くう「事実」",
         text: "言い方に気をつけましょう。",
         kana: "いいかたにきをつけましょう。",
-        romaji: "iikata ni ki o tsukemashou",
+        romaji: "iikata ni ki wo tsukemashou",
         reaction_good:
             "くう「私は冷静」\n" +
             "ゆい「泣けばよかった？」",
@@ -24062,7 +24062,7 @@ const schoolData = [
             "なぎさ「私は割り切るよ」",
         text: "意見を尊重してください。",
         kana: "いけんをそんちょうしてください。",
-        romaji: "iken o sonchou shite kudasai",
+        romaji: "iken wo sonchou shite kudasai",
         reaction_good:
             "のりおみ「否定されないの、久しぶりだ」\n" +
             "なぎさ「でしょ」",
@@ -24196,7 +24196,7 @@ const schoolData = [
             "りつ「……ふふ、もういいや☆」",
         text: "声をかけますか？",
         kana: "こえをかけますか？",
-        romaji: "koe o kakemasu ka",
+        romaji: "koe wo kakemasu ka",
         reaction_good:
             "りつ「先生も優しいね☆」\n" +
             "そうじ「ほら復活！」",
@@ -24242,7 +24242,7 @@ const schoolData = [
             "のりおみ「それだけで助かる」",
         text: "声をかけますか？",
         kana: "こえをかけますか？",
-        romaji: "koe o kakemasu ka",
+        romaji: "koe wo kakemasu ka",
         reaction_good:
             "くう「……配慮は感謝する」\n" +
             "のりおみ「ありがとうございます」",
@@ -24379,7 +24379,7 @@ const schoolData = [
             "ゆい「……へぇ」",
         text: "様子を見ますか？",
         kana: "ようすをみますか？",
-        romaji: "yousu o mimasu ka",
+        romaji: "yousu wo mimasu ka",
         reaction_good:
             "ゆい「ちょっと楽になった」\n" +
             "めり「それなら、よかったです」",
@@ -25121,7 +25121,7 @@ const schoolData = [
             "ありす（心の声）「……耳が死ぬ」",
         text: "教室の状況を把握しなさい。",
         kana: "きょうしつのじょうきょうをはあくしなさい。",
-        romaji: "kyoushitsu no joukyou o haaku shinasai",
+        romaji: "kyoushitsu no joukyou wo haaku shinasai",
         reaction_good:
             "ありす「……把握はしてる。問題は騒音」\n" +
             "ろい「騒音源が多すぎるニダ」",
@@ -27469,7 +27469,7 @@ const schoolData = [
             "ありす「分かんないなら静かにして」",
         text: "二人に声をかけます。",
         kana: "ふたりにこえをかけます。",
-        romaji: "futari ni koe o kakemasu",
+        romaji: "futari ni koe wo kakemasu",
         reaction_good:
             "ありす「先生、かじが騒音です」\n" +
             "かじ「騒音！？オレ音じゃないよ！？」",
@@ -27491,7 +27491,7 @@ const schoolData = [
             "ろい「合理的だニダ」",
         text: "二人の会話を続けさせます。",
         kana: "ふたりのかいわをつづけさせます。",
-        romaji: "futari no kaiwa o tsuzukesasemasu",
+        romaji: "futari no kaiwa wo tsuzukesasemasu",
         reaction_good:
             "ありす「……静か」\n" +
             "ろい「最高の環境ニダ」",
@@ -27514,7 +27514,7 @@ const schoolData = [
             "ありす「……静かな場所、落ちてないかな」",
         text: "二人に声をかけます。",
         kana: "ふたりにこえをかけます。",
-        romaji: "futari ni koe o kakemasu",
+        romaji: "futari ni koe wo kakemasu",
         reaction_good:
             "ありす「……今、起きてる判定になった」\n" +
             "よる「先生、夢ん中では静かにして」",
@@ -27580,7 +27580,7 @@ const schoolData = [
             "すい「チッ……」",
         text: "教室を見回します。",
         kana: "きょうしつをみまわします。",
-        romaji: "kyoushitsu o mimawashimasu",
+        romaji: "kyoushitsu wo mimawashimasu",
         reaction_good:
             "みこと「判断、はやくて助かるわ」\n" +
             "ろい「合理的制圧ニダ」",
@@ -27602,7 +27602,7 @@ const schoolData = [
             "ゆうき「ノリ！」",
         text: "占いを止めさせます。",
         kana: "うらないをとめさせます。",
-        romaji: "uranai o tomesasemasu",
+        romaji: "uranai wo tomesasemasu",
         reaction_good:
             "ゆうき「はーい！また放課後ね！」\n" +
             "さやか「ちょっと残念やけど…」",
@@ -27623,7 +27623,7 @@ const schoolData = [
             "すい「……チッ」",
         text: "二人を注意します。",
         kana: "ふたりをちゅういします。",
-        romaji: "futari o chuui shimasu",
+        romaji: "futari wo chuui shimasu",
         reaction_good:
             "たいち「ありがとうございます」\n" +
             "すい「まぁ、守るわ」",
@@ -27752,7 +27752,7 @@ const schoolData = [
             "あかつき「才能ないなら、やる意味ねぇだろ」",
         text: "声をかけます。",
         kana: "こえをかけます。",
-        romaji: "koe o kakemasu",
+        romaji: "koe wo kakemasu",
         reaction_good:
             "あかつき「……別に、慰めはいらねぇ」\n" +
             "あかつき「でも……聞いてくれただけでいい」",
@@ -27795,7 +27795,7 @@ const schoolData = [
             "えんや「止めるな！使命なんだ！」",
         text: "えんやを落ち着かせます。",
         kana: "えんやをおちつかせます。",
-        romaji: "enya o ochitsukasemasu",
+        romaji: "enya wo ochitsukasemasu",
         reaction_good:
             "えんや「……今は、待つ時か」\n" +
             "はるか「うん！今は教室守ろ！」",
@@ -27817,7 +27817,7 @@ const schoolData = [
             "ろい「……低レベルな推理だ」",
         text: "誤解を解きます。",
         kana: "ごかいをときます。",
-        romaji: "gokai o tokimasu",
+        romaji: "gokai wo tokimasu",
         reaction_good:
             "ろい「理解が早くて助かるニダ」\n" +
             "ゆきひこ「わち、ちょっと残念！」",
@@ -27861,7 +27861,7 @@ const schoolData = [
             "ありす「ふーん。夢より面白いかも」",
         text: "二人の会話を止めます。",
         kana: "ふたりのかいわをとめます。",
-        romaji: "futari no kaiwa o tomemasu",
+        romaji: "futari no kaiwa wo tomemasu",
         reaction_good:
             "ありす「別に授業の邪魔はしてない」\n" +
             "ろい「問題ないニダ」",
@@ -28032,7 +28032,7 @@ const schoolData = [
             "かじ「それ壊れるやつ！」",
         text: "何をしているんですか。", 
         kana: "なにをしているんですか。",
-        romaji: "nani o shiteirun desu ka",
+        romaji: "nani wo shiteirun desu ka",
         reaction_good:
             "ゆきひこ「工作です！」\n" +
             "あやと「多分！」\n" +
@@ -28120,7 +28120,7 @@ const schoolData = [
         "あやと「納豆投げる！」",
     text: "何をしているのですか。",
     kana: "なにをしているのですか。",
-    romaji: "nani o shiteiru no desu ka",
+    romaji: "nani wo shiteiru no desu ka",
     reaction_good:
         "ゆきひこ「遊びです！」\n" +
         "かじ「授業前です！」",
@@ -28303,7 +28303,7 @@ const schoolData = [
             "かじ「早すぎた！」",
         text: "何をしているんですか。",
         kana: "なにをしているんですか。",
-        romaji: "nani o shiteirun desu ka",
+        romaji: "nani wo shiteirun desu ka",
         reaction_good:
             "ゆきひこ「わち、生存…」\n" +
             "あやと「楽しかったな！」",
@@ -28370,7 +28370,7 @@ const schoolData = [
             "ゆうき「細かいことは気にしない派でしょ？」",
         text: "授業中に占いをしないでください。",
         kana: "じゅぎょうちゅうにうらないをしないでください。",
-        romaji: "jugyou chuu ni uranai o shinaide kudasai",
+        romaji: "jugyou chuu ni uranai wo shinaide kudasai",
         reaction_good:
             "ゆうき「はーい、放課後ね！」\n" +
             "はるか「楽しみにしてる〜！」",
@@ -28481,7 +28481,7 @@ const schoolData = [
             "（沈黙）",
         text: "会話を続けてください。",
         kana: "かいわをつづけてください。",
-        romaji: "kaiwa o tsuzukete kudasai",
+        romaji: "kaiwa wo tsuzukete kudasai",
         reaction_good:
             "まあや「無理せんでええよ」\n" +
             "さやか「……優しおす」",
@@ -28501,7 +28501,7 @@ const schoolData = [
             "あかつき「才能ないなら、やめりゃいいのに」",
         text: "手を止めてください。",
         kana: "てをとめてください。",
-        romaji: "te o tomete kudasai",
+        romaji: "te wo tomete kudasai",
         reaction_good:
             "あかつき「……悪い」",
         reaction_bad:
@@ -28521,7 +28521,7 @@ const schoolData = [
             "まあや「……大事にしたらええ」",
         text: "物の整理をしてください。",
         kana: "もののせいりをしてください。",
-        romaji: "mono no seiri o shite kudasai",
+        romaji: "mono no seiri wo shite kudasai",
         reaction_good:
             "まや「……うん」\n" +
             "まあや「ゆっくりでええよ」",
@@ -28562,7 +28562,7 @@ const schoolData = [
             "よる「無理」",
         text: "時間を守りましょう。",
         kana: "じかんをまもりましょう。",
-        romaji: "jikan o mamorimashou",
+        romaji: "jikan wo mamorimashou",
         reaction_good:
             "よる「努力はする」\n" +
             "たいち「それでいい」",
@@ -28648,7 +28648,7 @@ const schoolData = [
             "ゆきひこ「心で被る！」",
         text: "何をしているんですか。",
         kana: "なにをしているんですか。",
-        romaji: "nani o shiteirundesuka",
+        romaji: "nani wo shiteirundesuka",
         reaction_good:
             "あやと「遊び！」\n" +
             "かじ「教育的！」",
@@ -28669,7 +28669,7 @@ const schoolData = [
             "よる「本能」",
         text: "授業態度を改めなさい。",
         kana: "じゅぎょうたいどをあらためなさい。",
-        romaji: "jugyou taido o aratamena sai",
+        romaji: "jugyou taido wo aratamena sai",
         reaction_good:
             "すい「はいはい」\n" +
             "よる「努力はする」",
@@ -28774,7 +28774,7 @@ const schoolData = [
             "すい「やめろ……って投げてんじゃねぇ！！」",
         text: "授業中に物を投げるのはやめてください。",
         kana: "じゅぎょうちゅうにものをなげるのはやめてください。",
-        romaji: "jugyou chuu ni mono o nageru no wa yamete kudasai",
+        romaji: "jugyou chuu ni mono wo nageru no wa yamete kudasai",
         reaction_good:
             "あやと「はーい……」\n" +
             "すい「ったく」",
@@ -28795,7 +28795,7 @@ const schoolData = [
             "うるう「役に立つならやる」",
         text: "落ち着いて作業を続けてください。",
         kana: "おちついてさぎょうをつづけてください。",
-        romaji: "ochitsuite sagyou o tsuzukete kudasai",
+        romaji: "ochitsuite sagyou wo tsuzukete kudasai",
         reaction_good:
             "うるう「了解」\n" +
             "はるか「ありがとう！」",
@@ -28986,7 +28986,7 @@ const schoolData = [
             "ゆきひこ「役職ふえた！」",
         text: "何をしているんですか。",
         kana: "なにをしているんですか。",
-        romaji: "nani o shite irun desu ka",
+        romaji: "nani wo shite irun desu ka",
         reaction_good:
             "ゆきひこ「活動停止！」\n" +
             "あやと「解散だー！」\n" +
@@ -29243,7 +29243,7 @@ const schoolData = [
         "うるう「走れって言ったろ」",
     text: "状況を見て行動してください。",
     kana: "じょうきょうをみてこうどうしてください。",
-    romaji: "joukyou o mite koudou shite kudasai",
+    romaji: "joukyou wo mite koudou shite kudasai",
     reaction_good:
         "すい「まぁ…結果的に間に合ったな」\n" +
         "うるう「役には立った」",
@@ -29378,7 +29378,7 @@ const schoolData = [
         "ゆきひこ「気持ちが大事！」",
     text: "目的を明確にしてください。",
     kana: "もくてきをめいかくにしてください。",
-    romaji: "mokuteki o meikaku ni shite kudasai",
+    romaji: "mokuteki wo meikaku ni shite kudasai",
     reaction_good:
         "はるか「じゃあまず人助けからね！」\n" +
         "ゆきひこ「おお！ 団っぽい！」",
@@ -29577,7 +29577,7 @@ const schoolData = [
             "うるう「役に立つなら、するだけたい」",
         text: "換気をお願いします。", 
         kana: "かんきをおねがいします。",
-        romaji: "kanki o onegaishimasu",
+        romaji: "kanki wo onegaishimasu",
         reaction_good:
             "まあや「ありがとう、気持ちええね」\n" +
             "うるう「ん。これで作業しやすか」",
@@ -29619,7 +29619,7 @@ const schoolData = [
             "ありす「でも、壊す価値はある」",
         text: "静かに作業を続けなさい。", 
         kana: "しずかにさぎょうをつづけなさい。",
-        romaji: "shizuka ni sagyou o tsudzukenasai",
+        romaji: "shizuka ni sagyou wo tsudzukenasai",
         reaction_good:
             "ろい「了解ニダ」\n" +
             "ありす「……続けよ」",
@@ -29661,7 +29661,7 @@ const schoolData = [
             "ゆきひこ「ゆきひこ団、ここに爆誕！！」",
         text: "授業の準備をしなさい。", 
         kana: "じゅぎょうのじゅんびをしなさい。",
-        romaji: "jugyou no junbi o shinasai",
+        romaji: "jugyou no junbi wo shinasai",
         reaction_good:
             "かじ「あとで続きな！」\n" +
             "あやと「オラ今は座る！」\n" +
@@ -29769,7 +29769,7 @@ const schoolData = [
             "まや「……捨てられないよね」",
         text: "作業を進めましょう。", 
         kana: "さぎょうをすすめましょう。",
-        romaji: "sagyou o susumemashou",
+        romaji: "sagyou wo susumemashou",
         reaction_good:
             "まあや「せやね」\n" +
             "さやか「がんばるえ」\n" +
@@ -30767,7 +30767,7 @@ const schoolData = [
         "すい「じゃあ勝手に吠えてろ」",
     text: "廊下を走ってはいけません。",
     kana: "ろうかをはしってはいけません。",
-    romaji: "rouka o hashitte wa ikemasen",
+    romaji: "rouka wo hashitte wa ikemasen",
     reaction_good:
         "すい「チッ……」\n" +
         "えんや「今回は従ってやる」",
@@ -30924,7 +30924,7 @@ const schoolData = [
         "かじ「でも可愛いだろ！」",
     text: "無駄なものを作らないでください。",
     kana: "むだなものをつくらないでください。",
-    romaji: "muda na mono o tsukuranaide kudasai",
+    romaji: "muda na mono wo tsukuranaide kudasai",
     reaction_good:
         "さだま「まぁ片付けるならいい」\n" +
         "かじ「よっしゃ！」",
@@ -31073,7 +31073,7 @@ const schoolData = [
             "まあや「比べんでええんよ」",
         text: "前を向きましょう。",
         kana: "まえをむきましょう。",
-        romaji: "mae o mukimashou",
+        romaji: "mae wo mukimashou",
         reaction_good:
             "まあや「ゆっくりでええんよ」\n" +
             "あかつき「……そういうのが一番刺さる」",
@@ -31356,7 +31356,7 @@ const schoolData = [
             "よる「夜のが落ち着く」",
         text: "時間を守りましょう。",
         kana: "じかんをまもりましょう。",
-        romaji: "jikan o mamorimashou",
+        romaji: "jikan wo mamorimashou",
         reaction_good:
             "よる「……努力はする」\n" +
             "はるか「えらい！」",
@@ -31399,7 +31399,7 @@ const schoolData = [
             "ありす「結論急ぐタイプじゃないのは、まあ嫌いじゃない」",
         text: "何を調べているんですか？",
         kana: "なにをしらべているんですか？",
-        romaji: "nani o shirabete iru n desu ka",
+        romaji: "nani wo shirabete iru n desu ka",
         reaction_good:
             "ろい「校内の安全確認ニダ」\n" +
             "ありす「先生にはそのくらいで十分」",
@@ -31487,7 +31487,7 @@ const schoolData = [
             "えんや「毎日世界は危機に瀕してるからな」",
         text: "SNSの使い方に気をつけてください。",
         kana: "えすえぬえすのつかいかたにきをつけてください。",
-        romaji: "esu enu esu no tsukaikata ni ki o tsukete kudasai",
+        romaji: "esu enu esu no tsukaikata ni ki wo tsukete kudasai",
         reaction_good:
             "えんや「啓蒙活動だよ、これは」\n" +
             "しゅんき「便利な言い訳だな」",
@@ -31787,7 +31787,7 @@ const schoolData = [
             "ゆきひこ「罠も仕掛けるわち！」",
         text: "何をしているんですか？",
         kana: "なにをしているんですか？",
-        romaji: "nani o shite iru n desu ka",
+        romaji: "nani wo shite iru n desu ka",
         reaction_good:
             "かじ「宝探し！」\n" +
             "あやと「今から最終局面！」\n" +
@@ -31894,7 +31894,7 @@ const schoolData = [
             "よる「生存時間帯が違う」",
         text: "時間を守りましょう。",
         kana: "じかんをまもりましょう。",
-        romaji: "jikan o mamorimashou",
+        romaji: "jikan wo mamorimashou",
         reaction_good:
             "よる「努力はする」\n" +
             "はるか「えらい！」",
@@ -32130,7 +32130,7 @@ const schoolData = [
         "たいち「でしょうね……」",
     text: "今の行動、目的を説明してください。",
     kana: "いまのこうどう、もくてきをせつめいしてください。",
-    romaji: "ima no koudou mokuteki o setsumei shite kudasai",
+    romaji: "ima no koudou mokuteki wo setsumei shite kudasai",
     reaction_good:
         "あやと「暇つぶし！」\n" +
         "たいち「正直でいいと思います……」",
@@ -32216,7 +32216,7 @@ const schoolData = [
         "はるか「友達として！」",
     text: "役割分担を明確にしてください。",
     kana: "やくわりぶんたんをめいかくにしてください。",
-    romaji: "yakuwari buntan o meikaku ni shite kudasai",
+    romaji: "yakuwari buntan wo meikaku ni shite kudasai",
     reaction_good:
         "はるか「了解！」\n" +
         "えんや「……まぁいい」",
@@ -32629,7 +32629,7 @@ const schoolData = [
             "れい「……ふぅん。ちゃんと効率上がってるのね」",
         text: "今日は予定通り点検を進めてください。", 
         kana: "きょうはよていどおりてんけんをすすめてください。", 
-        romaji: "kyou wa yotei doori tenken o susumete kudasai", 
+        romaji: "kyou wa yotei doori tenken wo susumete kudasai", 
         reaction_good: 
             "けつい「了解じゃ。あとで進捗、見といてもええよ」\n" +
             "りょうご「写真まとめとく」\n" +
@@ -32653,7 +32653,7 @@ const schoolData = [
             "れい「……ふぅん。ちゃんと効率上がってるのね」",
         text: "今日は予定通り点検を進めてください。", 
         kana: "きょうはよていどおりてんけんをすすめてください。", 
-        romaji: "kyou wa yotei doori tenken o susumete kudasai", 
+        romaji: "kyou wa yotei doori tenken wo susumete kudasai", 
         reaction_good: 
             "けつい「了解じゃ。あとで進捗、見といてもええよ」\n" +
             "りょうご「写真まとめとく」\n" +
@@ -32676,7 +32676,7 @@ const schoolData = [
             "りょうご「数値的にも横流れ強い」",
         text: "無理はしないで、状況を見て判断しよう。", 
         kana: "むりはしないで、じょうきょうをみてはんだんしよう。", 
-        romaji: "muri wa shinaide, joukyou o mite handan shiyou", 
+        romaji: "muri wa shinaide, joukyou wo mite handan shiyou", 
         reaction_good: 
             "けつい「ほら、意見一致じゃ」\n" +
             "みぎわ「珍し！全会一致とか！」",
@@ -32722,7 +32722,7 @@ const schoolData = [
             "れい「ふふ、否定しないわ」",
         text: "全体を引き上げる方法を考えて。", 
         kana: "ぜんたいをひきあげるほうほうをかんがえて。",
-        romaji: "zentai o hikiageru houhou o kangaete",
+        romaji: "zentai wo hikiageru houhou wo kangaete",
         reaction_good:
             "ともき「役割分担だな」\n" +
             "れい「合理的ね」\n" +
@@ -33254,7 +33254,7 @@ const schoolData = [
             "ことり「戻ってきてから考えりゃよか」",
         text: "話を戻しなさい。", 
         kana: "はなしをもどしなさい。",
-        romaji: "hanashi o modoshi nasai",
+        romaji: "hanashi wo modoshi nasai",
         reaction_good:
             "じは「しゃーなしやな」\n" +
             "ことり「はいはい、現実」",
@@ -33386,7 +33386,7 @@ const schoolData = [
             "いせり「ごめんって〜！」",
         text: "声量を下げなさい。", 
         kana: "せいりょうをさげなさい。",
-        romaji: "seiryou o sage nasai",
+        romaji: "seiryou wo sage nasai",
         reaction_good:
             "まりあ「ありがとう✨」\n" +
             "いせり「気ぃつけるわ！」",
@@ -33478,7 +33478,7 @@ const schoolData = [
             "みきな「パスタ！？え、でもそれならさ——」",
         text: "話をまとめなさい。", 
         kana: "はなしをまとめなさい。",
-        romaji: "hanashi o matome nasai",
+        romaji: "hanashi wo matome nasai",
         reaction_good:
             "みきな「え、どこまで話したっけ？」\n" +
             "まきし「マヨの話！」",
@@ -33638,7 +33638,7 @@ const schoolData = [
             "しょうご「次のページ行こう」",
         text: "私語を控えなさい。", 
         kana: "しごをひかえなさい。",
-        romaji: "shigo o hikaenasai",
+        romaji: "shigo wo hikaenasai",
         reaction_good:
             "ひとり「……封印した」",
         reaction_bad:
@@ -33676,7 +33676,7 @@ const schoolData = [
             "ことり「うわ正論」",
         text: "話を続けてください。", 
         kana: "はなしをつづけてください。",
-        romaji: "hanashi o tsuzukete kudasai",
+        romaji: "hanashi wo tsuzukete kudasai",
         reaction_good:
             "わたる「以上だ」",
         reaction_bad:
@@ -33791,7 +33791,7 @@ const schoolData = [
             "ゆこ「……次の問題、見よっか」",
         text: "話を戻しましょう。", 
         kana: "はなしをもどしましょう。",
-        romaji: "hanashi o modoshimashou",
+        romaji: "hanashi wo modoshimashou",
         reaction_good:
             "じは「はーい」",
         reaction_bad:
@@ -33884,7 +33884,7 @@ const schoolData = [
             "ひとり「貴様には分からんか」",
         text: "会話を続けて。", 
         kana: "かいわをつづけて。",
-        romaji: "kaiwa o tsuzukete",
+        romaji: "kaiwa wo tsuzukete",
         reaction_good:
             "ことり「まぁ好きにしたら」",
         reaction_bad:
@@ -33921,7 +33921,7 @@ const schoolData = [
             "じは「やろやろ！」",
         text: "声を落としてください。", 
         kana: "こえをおとしてください。",
-        romaji: "koe o otoshite kudasai",
+        romaji: "koe wo otoshite kudasai",
         reaction_good:
             "じは「はーい」\n" +
             "いせり「気ぃつけるわ」",
@@ -35946,7 +35946,7 @@ const schoolData = [
             "じは「それもう負けやろ」",
         text: "テスト勉強をしなさい。", 
         kana: "てすとべんきょうをしなさい。",
-        romaji: "tesuto benkyou o shinasai",
+        romaji: "tesuto benkyou wo shinasai",
         reaction_good:
             "ことり「……5分だけやる」\n" +
             "じは「短っ！」",
@@ -35972,7 +35972,7 @@ const schoolData = [
             "ことり「はい解散〜。もう10分経った気がする」",
         text: "集中して勉強を続けなさい。", 
         kana: "しゅうちゅうしてべんきょうをつづけなさい。",
-        romaji: "shuuchuu shite benkyou o tsuzuke nasai",
+        romaji: "shuuchuu shite benkyou wo tsuzuke nasai",
         reaction_good:
             "じは「え、先生見てたん？」\n" +
             "ひとり「チッ……監視者か」\n" +
@@ -36001,7 +36001,7 @@ const schoolData = [
             "りょうご「……大丈夫、続ける」",
         text: "その調子で説明を続けてください。", 
         kana: "そのちょうしでせつめいをつづけてください。",
-        romaji: "sono choushi de setsumei o tsuzukete kudasai",
+        romaji: "sono choushi de setsumei wo tsuzukete kudasai",
         reaction_good:
             "りょうご「はい……続けます」\n" +
             "じは「えら」\n" +
@@ -36028,7 +36028,7 @@ const schoolData = [
             "ことり「まぁ赤点でも人生は続くし」",
         text: "私語をやめて試験を始めなさい。", 
         kana: "しごをやめてしけんをはじめなさい。",
-        romaji: "shigo o yamete shiken o hajime nasai",
+        romaji: "shigo wo yamete shiken wo hajime nasai",
         reaction_good:
             "じは「はーい…」\n" +
             "ひとり「沈黙こそ力」\n" +
@@ -36241,7 +36241,7 @@ const schoolData = [
             "ひとり「必要だ」",
         text: "締切を守ってください。", 
         kana: "しめきりをまもってください。",
-        romaji: "shimekiri o mamotte kudasai",
+        romaji: "shimekiri wo mamotte kudasai",
         reaction_good:
             "じは「間に合った！」\n" +
             "ことり「奇跡や」",
@@ -36284,7 +36284,7 @@ const schoolData = [
             "ひとり「俺の左腕が“詩的であれ”って囁いた」",
         text: "提出されたレポートのタイトルを読み上げます。", 
         kana: "ていしゅつされたれぽーとのたいとるをよみあげます。",
-        romaji: "teishutsu sareta repooto no taitoru o yomiagemasu",
+        romaji: "teishutsu sareta repooto no taitoru wo yomiagemasu",
         reaction_good:
             "みきな「ちょ、想像以上にカオスなんだけど」\n" +
             "ともき「……読む前から嫌な予感しかしない」",
@@ -36314,7 +36314,7 @@ const schoolData = [
             "先生「最後まで読ませる力はあります」",
         text: "採点コメントを確認してください。", 
         kana: "さいてんこめんとをかくにんしてください。",
-        romaji: "saiten komento o kakunin shite kudasai",
+        romaji: "saiten komento wo kakunin shite kudasai",
         reaction_good:
             "しょうご「なるほど…改善点が明確ですね」\n" +
             "れい「次は構成を意識すればもっと良くなるわ」",
@@ -36664,7 +36664,7 @@ const schoolData = [
             "書かない自由は存在するが、\n" +
             "その代償は高い。",
         kana: "れぽーとをかかないというせんたくし",
-        romaji: "repooto o kakanai to iu sentakushi",
+        romaji: "repooto wo kakanai to iu sentakushi",
         reaction_good:
             "ことり「まぁ、そういうこと」",
         reaction_bad:
@@ -37292,7 +37292,7 @@ const schoolData = [
             "しのん「うん……大丈夫」",
         text: "落ち着いて昼食を取りましょう。",
         kana: "おちついてちゅうしょくをとりましょう。",
-        romaji: "ochitsuite chuushoku o torimashou",
+        romaji: "ochitsuite chuushoku wo torimashou",
         reaction_good:
             "しげ「……ありがとう」\n" +
             "しのん「……一緒でよかった」",
@@ -37313,7 +37313,7 @@ const schoolData = [
             "はこも「そういう日もある」",
         text: "感情の整理をしましょう。",
         kana: "かんじょうのせいりをしましょう。",
-        romaji: "kanjou no seiri o shimashou",
+        romaji: "kanjou no seiri wo shimashou",
         reaction_good:
             "しのん「……少し楽」\n" +
             "はこも「それならよかった」",
@@ -37576,7 +37576,7 @@ const schoolData = [
             "しげ「似とるもん」",
         text: "互いに気を遣いすぎないように。",
         kana: "たがいにきをつかいすぎないように。",
-        romaji: "tagai ni ki o tsukaisuginai you ni",
+        romaji: "tagai ni ki wo tsukaisuginai you ni",
         reaction_good:
             "しのん「……ありがとう」\n" +
             "しげ「こちらこそ」",
@@ -37597,7 +37597,7 @@ const schoolData = [
             "しずか「その“楽しい”の定義が理解できないわ」",
         text: "価値観の違いを尊重しましょう。",
         kana: "かちかんのちがいをそんちょうしましょう。",
-        romaji: "kachikan no chigai o sonchou shimashou",
+        romaji: "kachikan no chigai wo sonchou shimashou",
         reaction_good:
             "みりん「まぁ、そーゆーとこも嫌いじゃないけど♡」\n" +
             "しずか「……褒めていないですよね？」",
@@ -38863,7 +38863,7 @@ const schoolData = [
             "ざくろ「……生きてる……生きてるから……」",
         text: "お互いの存在に気づいてあげて。", 
         kana: "おたがいのそんざいにきづいてあげて。",
-        romaji: "otagai no sonzai ni kidzuite agete",
+        romaji: "otagai no sonzai ni kizuite agete",
         reaction_good:
             "あめり「い、生きてた……よかったぁ……」\n" +
             "ざくろ「……先生には、見えてたんやな。ありがとう」",
@@ -42846,7 +42846,7 @@ const schoolData = [
         "こうめ「神社の境内でその会話したら即追い出すけどな？」",
     text: "朝からグループチャットを荒らさない。",
     kana: "あさからぐるーぷちゃっとをあらさない。",
-    romaji: "asa kara group chatto o arasanai",
+    romaji: "asa kara group chatto wo arasanai",
     reaction_good:
         "じんや「その判断は論理的だっちゃ」\n" +
         "かほこ「注意として妥当。再発防止も期待できるわね」\n" +
@@ -42911,7 +42911,7 @@ const schoolData = [
             "じゅん「結晶でも菌は菌です」",
         text: "距離を保ちなさい。",
         kana: "きょりをたもちなさい。",
-        romaji: "kyori o tamochinasai",
+        romaji: "kyori wo tamochinasai",
         reaction_good:
             "えいじ「よっしゃ！2mスクワットだ！」\n" +
             "じゅん「……それなら許容範囲です」",
@@ -43038,7 +43038,7 @@ const schoolData = [
             "みいか「いや無理無理無理！！！」",
         text: "変なものを配らないでください。",
         kana: "へんなものをくばらないでください。",
-        romaji: "henna mono o kubaranaide kudasai",
+        romaji: "henna mono wo kubaranaide kudasai",
         reaction_good:
             "ご褒美「ぬぅ…拙者の善意が…」\n" +
             "みいか「善意の方向おかしいって！」",
@@ -43080,7 +43080,7 @@ const schoolData = [
             "まほ「ダメ。距離感覚えて」",
         text: "距離を保ちなさい。",
         kana: "きょりをたもちなさい。",
-        romaji: "kyori o tamochinasai",
+        romaji: "kyori wo tamochinasai",
         reaction_good:
             "ご褒美「ぬぅ…理性…！」\n" +
             "まほ「理性は大事」",
@@ -43252,7 +43252,7 @@ const schoolData = [
             "りん「……なんか、見てたら元気出るね。きっといいことあるよ〜」",
         text: "何をしているんですか。",
         kana: "なにをしているんですか。",
-        romaji: "nani o shiteirun desu ka",
+        romaji: "nani wo shiteirun desu ka",
         reaction_good:
             "みわ「先生にも包んであげるたい！」\n" +
             "うちゅう「ブラックホール風でよくね？」",
@@ -43409,7 +43409,7 @@ const schoolData = [
             "かほこ「意味はありますか？」",
         text: "コンセプトを説明してください。",
         kana: "こんせぷとをせつめいしてください。",
-        romaji: "konseputo o setsumei shite kudasai",
+        romaji: "konseputo wo setsumei shite kudasai",
         reaction_good:
             "みわ「気持ちたい！それで十分たい！」\n" +
             "うちゅう「気持ちは重力より強い」",
@@ -43431,7 +43431,7 @@ const schoolData = [
             "ご褒美「冷たすぎやんけ！青森の吹雪か！？」",
         text: "適切な距離を保ちなさい。",
         kana: "てきせつなきょりをたもちなさい。",
-        romaji: "tekisetsu na kyori o tamochinasai",
+        romaji: "tekisetsu na kyori wo tamochinasai",
         reaction_good:
             "ふくみ「それでいい」\n" +
             "ご褒美「先生ぇ！距離が心まで来てるゾ！」",
@@ -43670,7 +43670,7 @@ const schoolData = [
             "まゆこ「しおりママすぎ〜w」",
         text: "提出期限を守りましょう。", 
         kana: "ていしゅつきげんをまもりましょう。",
-        romaji: "teishutsu kigen o mamorimasho",
+        romaji: "teishutsu kigen wo mamorimasho",
         reaction_good:
             "しおり「ほら〜！先生も言ってる！」\n" +
             "まゆこ「はーい…あとで出す〜」",
@@ -43752,7 +43752,7 @@ const schoolData = [
             "なみ「面白いですわ〜」",
         text: "話題を広げすぎないでください。", 
         kana: "わだいをひろげすぎないでください。",
-        romaji: "wadai o hirogesuginai de kudasai",
+        romaji: "wadai wo hirogesuginai de kudasai",
         reaction_good:
             "ほし「はーい」\n" +
             "なみ「了解ですわ」",
@@ -44223,7 +44223,7 @@ const schoolData = [
         "やよい「場所はここが一番、手ぇ動く」",
     text: "ルールを守りましょう。",
     kana: "るーるをまもりましょう。",
-    romaji: "ru-ru o mamorimashou",
+    romaji: "ru-ru wo mamorimashou",
     reaction_good:
         "うらら「ほら、先生もこう言ってる！」\n" +
         "やよい「……後で掃く」",
@@ -44286,7 +44286,7 @@ const schoolData = [
         "あいこ「“でも”は禁止。戦力は守って使うもんだ」",
     text: "無理をしないように。",
     kana: "むりをしないように。",
-    romaji: "muri o shinai you ni",
+    romaji: "muri wo shinai you ni",
     reaction_good:
         "ひとみ「……はい」\n" +
         "あいこ「よし、それでいい」",
@@ -44502,7 +44502,7 @@ const schoolData = [
             "ぶんた「バレたか」",
         text: "話を整理して説明しなさい。",
         kana: "はなしをせいりしてせつめいしなさい。",
-        romaji: "hanashi o seiri shite setsumei shinasai",
+        romaji: "hanashi wo seiri shite setsumei shinasai",
         reaction_good:
             "みみか「要点は三つ。無駄は省く」\n" +
             "ぶんた「助かるわ、さすが理屈猫」",
@@ -45536,7 +45536,7 @@ const schoolData = [
             "かじ「気分が上がる！」",
         text: "今やる作業を一回確認しよう。",
         kana: "いまやるさぎょうをいっかいかくにんしよう。",
-        romaji: "ima yaru sagyou o ikkai kakunin shiyou",
+        romaji: "ima yaru sagyou wo ikkai kakunin shiyou",
         reaction_good:
             "まちえ「じゃあ段取り組み直そ？」\n" +
             "うるう「それなら動きやすか」",
@@ -45981,7 +45981,7 @@ const schoolData = [
             "ももか「……あんたの切り替え速度どうなってんの」",
         text: "テンションの差を意識しよう。",
         kana: "てんしょんのさをいしきしよう。",
-        romaji: "tenshon no sa o ishiki shiyou",
+        romaji: "tenshon no sa wo ishiki shiyou",
         reaction_good:
             "みる「じゃあ少し静かにする！」\n" +
             "ももか「最初からそうしなさい」",
@@ -46006,7 +46006,7 @@ const schoolData = [
         "あい「可哀想に。壊れかけでも“正常です”って仮面を被る癖……治りませんわね」",
     text: "落ち着いて、自分の気持ちを整理しよう。",
     kana: "おちついて じぶんのきもちを せいりしよう。",
-    romaji: "ochitsuite jibun no kimochi o seiri shiyou",
+    romaji: "ochitsuite jibun no kimochi wo seiri shiyou",
     reaction_good:
         "ゆい「えへ、先生って優しいよね……でもさ？」\n" +
         "こうた「整理する以前に、本人が向き合う意思を持っていない」\n" +
@@ -46033,7 +46033,7 @@ const schoolData = [
         "ほのか「数が増えるほど、論点がボケるんだけど」",
     text: "課題を一文でまとめなさい。",
     kana: "かだいを いちぶんで まとめなさい。",
-    romaji: "kadai o ichibun de matomenasai",
+    romaji: "kadai wo ichibun de matomenasai",
     reaction_good:
         "てつ「じゃあ“みんなが納得できる形”にしよ！」\n" +
         "そうし「いいね、その制約条件！」\n" +
@@ -46056,7 +46056,7 @@ const schoolData = [
         "えるあ「褒めてんのかそれ」",
     text: "フォームを意識して練習しよう。",
     kana: "ふぉーむを いしきして れんしゅうしよう。",
-    romaji: "fo-mu o ishiki shite renshuu shiyou",
+    romaji: "fo-mu wo ishiki shite renshuu shiyou",
     reaction_good:
         "せいな「そうそう、それそれ！」\n" +
         "えるあ「次は成功させる」",
@@ -47336,7 +47336,7 @@ const schoolData = [
             "あかつき「どうせお前は全部できる」",
         text: "音をよく聴いて弾き直しなさい。",
         kana: "おとをよくきいてひきなおしなさい。",
-        romaji: "oto o yoku kiite hikinaoshinasai",
+        romaji: "oto wo yoku kiite hikinaoshinasai",
         reaction_good:
             "こじろう「今の、少し良くなった」\n" +
             "あかつき「……そうかよ」",
@@ -47405,7 +47405,7 @@ const schoolData = [
             "すおう「夢は否定しないけど責任は誰？」",
         text: "話題を整理して発言しなさい。",
         kana: "わだいをせいりしてはつげんしなさい。",
-        romaji: "wadai o seiri shite hatsugen shinasai",
+        romaji: "wadai wo seiri shite hatsugen shinasai",
         reaction_good:
             "こたろう「役割分担しよう」\n" +
             "てつ「それいいね！」",
@@ -47427,7 +47427,7 @@ const schoolData = [
             "ありす「観測対象としては面白い」",
         text: "会話の流れを意識しなさい。",
         kana: "かいわのながれをいしきしなさい。",
-        romaji: "kaiwa no nagare o ishiki shinasai",
+        romaji: "kaiwa no nagare wo ishiki shinasai",
         reaction_good:
             "ろい「まあ…退屈ではない」\n" +
             "ありす「壊す価値はある」",
@@ -47714,7 +47714,7 @@ const schoolData = [
             "すおう「観測対象としては面白いけど関与はしない」",
         text: "自分と他人の立場を区別しなさい。",
         kana: "じぶんとたにんのたちばをくべつしなさい。",
-        romaji: "jibun to tanin no tachiba o kubetsu shinasai",
+        romaji: "jibun to tanin no tachiba wo kubetsu shinasai",
         reaction_good:
             "えんや「……なるほどな。さすが狐」\n" +
             "すおう「理解早いと楽でいい」",
@@ -47737,7 +47737,7 @@ const schoolData = [
             "みばな「通常運転だけど」",
         text: "感情と事実を混同しないように。",
         kana: "かんじょうとじじつをこんどうしないように。",
-        romaji: "kanjou to jijitsu o kondou shinai you ni",
+        romaji: "kanjou to jijitsu wo kondou shinai you ni",
         reaction_good:
             "みばな「その言い方なら分かる」\n" +
             "あゆ「なるほどね〜！」",
@@ -47790,7 +47790,7 @@ const schoolData = [
             "さだま「壊れてる人間は、\n“直す対象”じゃなくて“保護対象”だ」",
         text: "正論の使い道を考えなさい。",
         kana: "せいろんのつかいみちをかんがえなさい。",
-        romaji: "seiron no tsukaimichi o kangaenasai",
+        romaji: "seiron no tsukaimichi wo kangaenasai",
         reaction_good:
             "こうた「……理解は、しました」\n" +
             "さだま「それでいい」",
@@ -47832,7 +47832,7 @@ const schoolData = [
             "すい「……お前、\nなんかキモくね？」",
         text: "規則は感情を持ちません。",
         kana: "きそくはかんじょうをもちません。",
-        romaji: "kisoku wa kanjou o mochimasen",
+        romaji: "kisoku wa kanjou wo mochimasen",
         reaction_good:
             "こうた「是正完了です」",
         reaction_bad:
@@ -48119,7 +48119,7 @@ const schoolData = [
             "みりん「え〜強気！\nでもそういうとこ、\n嫌いじゃない♡」",
         text: "主役を間違えないでください。",
         kana: "しゅやくを まちがえないでください。",
-        romaji: "shuyaku o machigaenaide kudasai",
+        romaji: "shuyaku wo machigaenaide kudasai",
         reaction_good:
             "ももか「ま、\nあんたはあんたで生きなさいよ」\n" +
             "みりん「きゃ♡ ツンデレ後輩〜」",
@@ -48445,7 +48445,7 @@ const schoolData = [
             "やまと「無駄に燃えると、\n疲れるぞ」",
         text: "温度差を感じながら打ちましょう。",
         kana: "おんどさを かんじながら うちましょう。",
-        romaji: "ondosa o kanjinagara uchimashou",
+        romaji: "ondosa wo kanjinagara uchimashou",
         reaction_good:
             "せい「なるほど！！\n省エネ大事！！」\n" +
             "やまと「分かればいい」",
@@ -48468,7 +48468,7 @@ const schoolData = [
             "ゆい「わたしは、\n壊れたまま\n笑ってるだけなのに」",
         text: "感情を隠しても、文字は正直です。",
         kana: "かんじょうを かくしても もじは しょうじきです。",
-        romaji: "kanjou o kakushitemo moji wa shoujiki desu",
+        romaji: "kanjou wo kakushitemo moji wa shoujiki desu",
         reaction_good:
             "ゆい「……でも、\n見ちゃうんだよね」",
         reaction_bad:
@@ -48491,7 +48491,7 @@ const schoolData = [
             "のりおみ「息はしてます。\n生きてるかは、知りませんが」",
         text: "静かな空気を感じながら打ちましょう。",
         kana: "しずかな くうきを かんじながら うちましょう。",
-        romaji: "shizukana kuuki o kanjinagara uchimashou",
+        romaji: "shizukana kuuki wo kanjinagara uchimashou",
         reaction_good:
             "しのん「……分かるよ。\nそれ」\n" +
             "のりおみ「……分かんなくていい」",
@@ -48563,7 +48563,7 @@ const schoolData = [
             "こうた「この生徒会は、\n安心できる場所でありたい」",
         text: "思いやりを込めて入力しましょう。",
         kana: "おもいやりを こめて にゅうりょく しましょう。",
-        romaji: "omoiyari o komete nyuuryoku shimashou",
+        romaji: "omoiyari wo komete nyuuryoku shimashou",
         reaction_good:
             "さつき「いいね。\nその姿勢」\n" +
             "こずえ「……優しいな」",
@@ -48585,7 +48585,7 @@ const schoolData = [
             "こうた「正しさは、\n迷わないことです」",
         text: "論点を意識して打ちましょう。",
         kana: "ろんてんを いしきして うちましょう。",
-        romaji: "ronten o ishiki shite uchimashou",
+        romaji: "ronten wo ishiki shite uchimashou",
         reaction_good:
             "こずえ「……合理的やな」\n" +
             "さつき「でも、冷たいね」",
@@ -48636,7 +48636,7 @@ const schoolData = [
             "すみれ「……褒められてる？」",
         text: "話題を戻してください。",
         kana: "わだいを もどして ください。",
-        romaji: "wadai o modoshite kudasai",
+        romaji: "wadai wo modoshite kudasai",
         reaction_good:
             "うらら「チッ……」\n" +
             "りょうご「了解です」\n" +
@@ -48660,7 +48660,7 @@ const schoolData = [
             "やよい「手止まってる」",
         text: "作業を再開してください。",
         kana: "さぎょうを さいかい して ください。",
-        romaji: "sagyou o saikai shite kudasai",
+        romaji: "sagyou wo saikai shite kudasai",
         reaction_good:
             "えにし「了解」\n" +
             "こまり「はーい」\n" +
@@ -48686,7 +48686,7 @@ const schoolData = [
             "りんか「否定はしないかな」",
         text: "私語を控えてください。",
         kana: "しごを ひかえて ください。",
-        romaji: "shigo o hikaete kudasai",
+        romaji: "shigo wo hikaete kudasai",
         reaction_good:
             "ももか「……チッ」\n" +
             "るい「はーい！」",
@@ -48711,7 +48711,7 @@ const schoolData = [
             "こはく「……理解不能」",
         text: "規則を守りなさい。",
         kana: "きそくを まもりなさい。",
-        romaji: "kisoku o mamorinasai",
+        romaji: "kisoku wo mamorinasai",
         reaction_good:
             "こはく「よし」\n" +
             "えいじ「了解！」",
@@ -48734,7 +48734,7 @@ const schoolData = [
             "ゆたすけ「胃が……」",
         text: "注意を続けてください。",
         kana: "ちゅういを つづけて ください。",
-        romaji: "chuui o tsuzukete kudasai",
+        romaji: "chuui wo tsuzukete kudasai",
         reaction_good:
             "こはく「……続ける」",
         reaction_bad:
@@ -48881,7 +48881,7 @@ const schoolData = [
             "れい「困ります……！」",
         text: "善意が理解を追い越しています。",
         kana: "ぜんい が りかい を おいこして います。",
-        romaji: "zeni ga rikai o oikoshite imasu",
+        romaji: "zeni ga rikai wo oikoshite imasu",
         reaction_good:
             "れい「……丁寧に\n断れてよかった……」",
         reaction_bad:
@@ -49008,7 +49008,7 @@ const schoolData = [
             "みりん「それ褒めてないからね！？」",
         text: "可愛いは距離感を誤ると事故になります。",
         kana: "かわいい は きょりかん を あやまると じこ に なります。",
-        romaji: "kawaii wa kyori kan o ayamaru to jiko ni narimasu",
+        romaji: "kawaii wa kyori kan wo ayamaru to jiko ni narimasu",
         reaction_good:
             "みりん「……次触ったら\n通報だから」",
         reaction_bad:
